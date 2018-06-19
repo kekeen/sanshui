@@ -13,16 +13,17 @@ npm下载最好翻墙，npm服务器在国外，网络影响大。这时，可�
 npm install cnpm -g --registry=https://registry.npm.taobao.org
 然后，以下步骤中，npm可以换成cnpm （比如：npm install --> cnpm install）
 
+【不使用bower了】2. 全局安装bower（用bower --version检测是否安装bower，没有安装过可执行下面的命令，已安装跳过）
 npm install -g bower
 
 3. 全局安装gulp  (用gulp -v检查是否全局安装gulp，没有安装过可执行下面的命令，已安装跳过)
 npm install --global gulp
 
 4. 将工程下载到本地
-git clone http://192.168.1.253:3000/web/URun.gulp.UI.git
+git clone http://192.168.1.253:3000/web_js/u-starter-kit.git
 
 5. 进入工程目录
-cd URun.gulp.UI/
+cd u-starter-kit/
 
 6. 通过npm安装项目依赖 （等待的时间会有点长）
 npm install
@@ -37,22 +38,8 @@ npm install
 按照gulpfile.js的代码，gulp对app文件夹的源码，进行了一系列的处理（less编译，js语法检查，图片压缩，css压缩，部署至静态服务后实时监控...）
 然后将结果放到了dist文件夹。所以，我们应该在app文件夹进行开发。
 
-# 二、bower前端资源管理
-我们做页面通常需要用到jQuery，bootstrap这样的框架，以前可能是手动到github下载，然后把需要的文件粘贴进项目中。
-现在我们尝试一些自动化的处理方式 -- 通过bower
-bower可以简单理解为一个前端资源管理器，bower.json中的dependencies规定了项目的原始依赖:
-```
-
-  "dependencies": {
-    "jquery": "~1.9.1",
-    "bootstrap": "~3.3.5"
-  }
-```
-通过执行bower install，即可安照dependencies的描述前端依赖。
-
-但是依赖包只是下载到了app/libs(这个路径由.bowerrc指定)，这里面有很多文件我们并不需要，所以我们需要指定哪一些文件是项目正真需要的。
-于是，在gulpfiel.js中有了下列代码：
-```
+# 二、拷贝前端资源
+gulpfiel.js中配置控件，自动生成到dist文件夹
 
 // 拷贝前端资源
 gulp.task('copy', function(){
@@ -116,3 +103,20 @@ gulp.dest(path[, options])
 # 参考
 [bower简明指南](http://wwsun.github.io/posts/bower-post.html)
 [gulp快速上手](https://segmentfault.com/a/1190000003003847)
+
+
+# 四、gulp + ejs + less 全面解析
+1. 所有的操作在app中执行，dist文件是自动生成的
+2. html文件夹：各文件json为独有样式、js引入方式
+3. less文件夹：base初始化文件，custom为boostrap样式
+4. templates文件夹：ejs模板库，文件夹里global.json为全局样式和js
+
+
+
+
+
+
+
+
+
+
