@@ -40,7 +40,7 @@ npm install
 
 # 二、拷贝前端资源
 gulpfiel.js中配置控件，自动生成到dist文件夹
-
+```
 // 拷贝前端资源
 gulp.task('copy', function(){
     gulp.src([
