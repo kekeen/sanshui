@@ -102,7 +102,7 @@ gulp.task('less', function () {
         .pipe(c$.autoprefixer({
             browsers: ['last 2 versions', 'Android >= 4.0'],
             cascade: true, //是否美化属性值 默认：true
-            remove: true //是否去掉不必要的前缀 默认：true
+            remove: false //是否去掉不必要的前缀 默认：true
         }))
         .pipe(c$.sourcemaps.write('./'))
         .pipe(gulp.dest('./dist/css')); //将会在dist/css下生成main.css

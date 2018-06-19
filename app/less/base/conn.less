@@ -6,12 +6,17 @@
 @ori:#fcb537;
 @shadow-color:#061327;
 @im-color:#4f5f6f;
+@red:red;
 
 
 
-
-
-.border-radius(){
+.br3(){
+    border-radius: 3px;
+}
+.br4(){
+    border-radius: 4px;
+}
+.br5(){
     border-radius: 5px;
 }
 .border(){
@@ -22,10 +27,12 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    display: block;
 }
 .txtmore(@number){
+    display: block;
     overflow: hidden;
-    display: -webkit-box; 
+    display: -webkit-box;
     -webkit-line-clamp:@number;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
@@ -75,6 +82,22 @@
          -o-transform: rotate(@deg);
             transform: rotate(@deg);
 }
+
+
+.flex{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.l_flex{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 
 
 
