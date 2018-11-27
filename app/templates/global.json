@@ -1,15 +1,13 @@
 {
-    "site": "ejs-demo",
+    "site": "山水",
     "styles": [
         "../css/custom-bootstrap.css",
         "../libs/icheck/skins/flat/_all.css",
         "../css/global.css"
     ],
-    "script": [
-        "../libs/jquery/jquery.min.js",
-        "../js/resize.js"
-    ],
     "scripts": [
+        "../libs/jquery/jquery.min.js",
+        "../js/resize.js",
         "../libs/bootstrap/dist/bootstrap.min.js",
         "../libs/icheck/icheck.min.js",
         "../libs/nicescroll/jquery.nicescroll.js",

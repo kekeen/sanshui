@@ -1,8 +1,6 @@
 @charset "utf-8";
 @import "./base/conn.less";
 @import "./base/base.less";
-@import "./_module.less";
-
 .blue{
     color:@blue;
 }
@@ -12,8 +10,14 @@
 .ori{
     color:@ori;
 }
-
-
+//初始化
+.sprite(){
+    background-image: url(../images/sprite-icon.png);
+}
+.bg(){
+    background: rgba(0,0,0,0.15);
+}
+@import "./home.less";
 
 
 
