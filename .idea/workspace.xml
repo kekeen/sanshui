@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="743cd344-ede5-4600-935c-1bfbee9dea4b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/html/index.html" afterPath="$PROJECT_DIR$/app/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/less/global.less" afterPath="$PROJECT_DIR$/app/less/global.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/less/home.less" afterPath="$PROJECT_DIR$/app/less/home.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/header.ejs" afterPath="$PROJECT_DIR$/app/templates/header.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/global.css" afterPath="$PROJECT_DIR$/dist/css/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/global.css.map" afterPath="$PROJECT_DIR$/dist/css/global.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/global.min.css" afterPath="$PROJECT_DIR$/dist/css/global.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/home.css" afterPath="$PROJECT_DIR$/dist/css/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/home.css.map" afterPath="$PROJECT_DIR$/dist/css/home.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/home.min.css" afterPath="$PROJECT_DIR$/dist/css/home.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/html/index.html" afterPath="$PROJECT_DIR$/dist/html/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/html/icon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/html/icon.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/html/生态环境.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/html/生态环境.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/less/icon.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/css/icon.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/css/icon.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/css/icon.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/html/icon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/html/生态环境.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/less/home.less">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="552">
-              <caret line="127" column="20" lean-forward="true" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
+              <caret line="127" column="20" lean-forward="false" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
               <folding>
                 <element signature="e#51#2366#0" expanded="false" />
                 <element signature="e#1360#1612#0" expanded="false" />
@@ -71,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="global.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="global.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/less/global.less">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="460">
@@ -155,7 +153,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="80" />
     <option name="width" value="1717" />
@@ -192,13 +190,8 @@
             <path>
               <item name="URun.Sanshui_City_Signs.UI" type="b2602c69:ProjectViewProjectNode" />
               <item name="URun.Sanshui_City_Signs.UI" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="URun.Sanshui_City_Signs.UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="URun.Sanshui_City_Signs.UI" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="less" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -246,15 +239,15 @@
       <option name="presentableId" value="Default" />
       <updated>1543285878452</updated>
       <workItem from="1543285880031" duration="7203000" />
-      <workItem from="1543299498501" duration="13451000" />
+      <workItem from="1543299498501" duration="13553000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20654000" />
+    <option name="totallyTimeSpent" value="20756000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="80" width="1920" height="1037" extended-state="6" />
+    <frame x="10" y="80" width="1920" height="1037" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -509,14 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/less/global.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -531,7 +516,7 @@
     <entry file="file://$PROJECT_DIR$/app/less/home.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
-          <caret line="127" column="20" lean-forward="true" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
+          <caret line="127" column="20" lean-forward="false" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
           <folding>
             <element signature="e#51#2366#0" expanded="false" />
             <element signature="e#1360#1612#0" expanded="false" />
@@ -542,6 +527,14 @@
             <element signature="e#3116#3290#0" expanded="false" />
             <element signature="e#3316#3857#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/less/global.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

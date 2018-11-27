@@ -1,0 +1,89 @@
+<%- include('../templates/head') %>
+<style>
+  html,body{
+    background: #000;
+    padding: 50px;
+    padding-bottom: 0;
+  }
+  ul{
+    height: 100%
+  }
+  li{
+    float: left;
+    width: 140px;
+    height: 70px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  i{
+    border: 1px solid #fff;
+    box-sizing: border-box;
+  }
+</style>
+<body>
+  <ul class="clearfix nicescroll">
+    <%
+      var data = [
+        {cls:['home','home-y','infr','infr-y','ecotope','ecotope-y','livelihood','livelihood-y','gover','gover-y','culture','culture-y','transportation','transportation-y','water','water-y','expect','expect-y','construction','construction2','calculator','protect','thermometer','water_drop','navigation','weather']},
+      ],
+      small_data = [
+        {cls:['rise','decline','rise2','decline2','trend','house','card']}
+      ],
+      large_data = [
+        {cls:['car1','car2','car3','car4','water','flow','signal','monitor','disk','code','line_car','leaf','bottle']}
+      ],
+      big_data = [
+        {cls:['refresh','clean','clean_car','house','person','rivers','sun','heart','fork','hat','medical','book']}
+      ];
+      for(var i in data){
+        for(var j in data[i].cls){
+    %>
+    <li>
+      <i class="ic <%= data[i].cls[j] %>"></i><br>
+      ic <%= data[i].cls[j] %>
+    </li>
+    <%
+      }
+      for(var s_j in small_data[i].cls){
+    %>
+    <li>
+      <i class="ic-small <%= small_data[i].cls[s_j] %>"></i><br>
+      ic-small <%= small_data[i].cls[s_j] %>
+    </li>
+    <%
+      }
+    }
+    %>
+    <li>
+      <i class="ic-small-s rise"></i><br>
+      ic-small-s rise
+    </li>
+    <li>
+      <i class="ic-small-s decline"></i><br>
+      ic-small-s decline
+    </li>
+    <%
+      for(var i in data){
+        for(var l_j in large_data[i].cls){
+    %>
+    <li>
+      <i class="ic-large <%= large_data[i].cls[l_j] %>"></i><br>
+      ic-large <%= large_data[i].cls[l_j] %>
+    </li>
+    <%
+        }
+        for(var b_j in big_data[i].cls){
+    %>
+    <li>
+      <i class="ic-big <%= big_data[i].cls[b_j] %>"></i><br>
+      ic-big <%= big_data[i].cls[b_j] %>
+    </li>
+    <%
+        }
+      }
+    %>
+  </ul>
+  <%- include('../templates/foot') %>
+</body>
+</html>
