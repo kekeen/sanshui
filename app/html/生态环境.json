@@ -1,7 +1,11 @@
 {
   "title": "生态环境",
+  "fname": "生态环境",
   "styles": [
-    "../css/icon.css"
+    "../css/common.css",
+    "../css/ecotope.css"
   ],
-  "scripts":[]
+  "scripts":[
+  	"../js/footnav.js"
+  ]
 }

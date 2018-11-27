@@ -1,0 +1,64 @@
+.cont-center {
+  margin-top: 10px;
+  width: 50%;
+}
+.cont-center .cont-title {
+  width: 270px;
+  margin: 0 auto;
+}
+.cont-center .cont-title span {
+  display: block;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 20px;
+  background: -webkit-linear-gradient(#3e9bdd, rgba(255, 255, 255, 0));
+  background: linear-gradient(#3e9bdd, rgba(255, 255, 255, 0));
+}
+.cont-center .cont-list {
+  text-align: center;
+}
+.cont-center .cont-list ul {
+  margin-top: 10px;
+  display: inline-block;
+}
+.cont-center .cont-list ul li {
+  width: 220px;
+  float: left;
+  height: 130px;
+  border-radius: 10px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.cont-center .cont-list ul li:last-child {
+  margin-right: 0;
+}
+.cont-center .cont-list ul li span {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+}
+.cont-center .cont-list ul li p {
+  margin: 10px auto 0 auto;
+  width: 140px;
+  height: 50px;
+  border-radius: 20px;
+  background: rgba(41, 111, 221, 0.9);
+  text-align: center;
+}
+.cont-center .cont-list ul li:nth-child(1) {
+  background: url(../images/cont-list1.png);
+  background-size: 100% 100%;
+}
+.cont-center .cont-list ul li:nth-child(2) {
+  background: url(../images/cont-list2.png);
+  background-size: 100% 100%;
+}
+.cont-center .cont-list ul li:nth-child(3) {
+  background: url(../images/cont-list3.png);
+  background-size: 100% 100%;
+}
+
+/*# sourceMappingURL=ecotope.css.map */

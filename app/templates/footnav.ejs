@@ -1,0 +1,21 @@
+<div class="footnav">
+    <ul class="clearfix">
+   		<%
+   			 data = [
+   			 	{icon:['home','infr','ecotope','livelihood','gover','culture','transportation','water','expect'],title:['首页','经济运行','基础设施','生态环境','民生舆情','政务效能','文化建设','交通运输','敬请期待','敬请期待']}
+   			 ];
+   			 for(var i in data){
+   			 	for(var j in data[i].icon){
+   		%>
+      <li class="<%= local.fname == data[i].title[j] ? 'active' : '' %>">
+	      <a href="<%= data[i].title[j] %>">
+	        <i class="ic <%= data[i].icon[j] %>"></i>
+	        <%= data[i].title[j] %>
+        </a>
+      </li>
+      <%
+	      	}
+	      }
+      %>
+    </ul>
+  </div>

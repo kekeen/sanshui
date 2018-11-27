@@ -3,7 +3,8 @@
     "styles": [
         "../css/custom-bootstrap.css",
         "../libs/icheck/skins/flat/_all.css",
-        "../css/global.css"
+        "../css/global.css",
+        "../css/icon.css"
     ],
     "scripts": [
         "../libs/jquery/jquery.min.js",
