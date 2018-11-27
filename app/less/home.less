@@ -17,6 +17,7 @@
             font-size: .26rem;
             line-height: .78rem;
             margin-left: 0.22rem;
+            color: #85f4fb;
             >span{
                 &.ht-month{
                     letter-spacing: 4px;
@@ -31,26 +32,109 @@
             }
         }
         .head-weather{
+            line-height: .78rem;
             >a{
                 font-size: 0.18rem;
                 color: white;
-                letter-spacing: 2px;
                 font-weight: bold;
+                margin-right: 0.20rem;
+                .icons{
+                    .sprite;
+                    margin-right: 0.12rem;
+                    vertical-align: -.08rem;
+                    display: inline-block;
+                }
                 &.hw-day{
+                    letter-spacing: 2px;
                     .icons{
-                        .sprite;
-                        background-size: 11.7rem 3.7rem;
-                        background-position: -0.80rem -0.10rem;
-                        width: .42rem;
-                        height: .38rem;
-                        display: inline-block;
+                        width: .40rem;
+                        height: .36rem;
+                        background-position: -3.4rem -1.01rem;
+                    }
+                }
+                &.hw-thermometer{
+                    .icons{
+                        width: .19rem;
+                        height: .36rem;
+                        background-position: -2.03rem -1rem;
+                    }
+                }
+                &.hw-humidity{
+                    .icons{
+                        width: .23rem;
+                        height: .29rem;
+                        background-position: -2.51rem -1.05rem;
+                    }
+                }
+                &.hw-wind{
+                    .icons{
+                        width: .28rem;
+                        height: .28rem;
+                        background-position: -2.97rem -1.05rem;
                     }
                 }
             }
         }
     }
 }
-
+.cont-list{
+    padding: 0.1rem;
+    width: 100%;
+    .cont-list-left{
+        float: left;
+        width: 30%;
+        height: 100%;
+        .cont-box{
+            position: relative;
+            width: 100%;
+            height: 3.8rem;
+            border: 1px solid #59aceb;
+            background-color: rgba(5,35,110,0.9215686274509803);
+            &:before,&:after{
+                content: '';
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top:0;
+                z-index: 1;
+                background:url(../images/list_jiao1.png) no-repeat -1px -1px, url(../images/list_jiao2.png) no-repeat right -1px;
+            }
+            &:after{
+                bottom:0;
+                background:url(../images/list_jiao3.png) no-repeat -1px bottom, url(../images/list_jiao.png) no-repeat right bottom;
+            }
+            .cont-box-all{
+                width: 100%;
+                position: relative;
+                z-index: 2;
+                .cont-title{
+                    background-size: 100% 100%;
+                    width: 3.4rem;
+                    height: .36rem;
+                    line-height: .36rem;
+                    font-size: 0.22rem;
+                    color: #dcfdff;
+                    text-align: center;
+                    margin: -1px auto;
+                    background: url("../images/head_s.png") no-repeat;
+                }
+            }
+            margin-bottom: 0.1rem;
+        }
+    }
+    .cont-list-center{
+        width: 50%;
+        float: left;
+        padding: 0 0.1rem 0.1rem;
+        .ce-box-cdi{
+            width: 100%;
+            height: 3.8rem;
+            border-radius: .18rem;
+            background-image: linear-gradient(190deg, rgba(109,216,255,0.8) 0%, rgba(135,248,228,0.8) 100%);
+        }
+    }
+}
 
 
 
