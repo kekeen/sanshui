@@ -2,15 +2,19 @@
     "site": "ejs-demo",
     "styles": [
         "../css/custom-bootstrap.css",
-        "../css/normalize.css",
         "../libs/icheck/skins/flat/_all.css",
         "../css/global.css"
     ],
-    "scripts": [
+    "script": [
         "../libs/jquery/jquery.min.js",
+        "../js/resize.js"
+    ],
+    "scripts": [
         "../libs/bootstrap/dist/bootstrap.min.js",
         "../libs/icheck/icheck.min.js",
         "../libs/nicescroll/jquery.nicescroll.js",
+        "../libs/echarts/echarts.js",
+        "../libs/countUp/countUp.min.js",
         "../js/global.js"
     ]
 }
