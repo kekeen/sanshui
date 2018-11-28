@@ -2,50 +2,75 @@
 <style>
 </style>
 <body>
-	<div class="contain clearfix">
-		<%- include('../templates/newheader') %>
-		<div class="cont-left pull-left">
-			<div class="cont-box jiao" style="width: 480px;height: 320px;">
-		
+	<%- include('../templates/newheader') %>
+	<div class="contain ecotope  clearfix">
+		<div class="cont-left">
+			<div class="cont-box jiao sanitation" style="height: 3.2rem;">
+					<div class="title">环卫动态</div>
+					<ul class="clearfix">
+						<%
+							var san_data = [
+								{cls:['ic-large car1','ic-large car3','ic-large car2','ic-large car4'],num:['40','20','80','20'],txt:['作业中','休息中','作业中','休息中']}
+							];
+							for(var i in san_data){
+								for(var j in san_data[i].cls){
+						%>
+						<li class="<%= j == 2 ? 'active' : '' %>"><a href="javascript:void(0);">
+							<i class="<%= san_data[i].cls[j] %>"></i>
+							<span><%= san_data[i].num[j] %></span>
+							<%= san_data[i].txt[j] %>
+						</a></li>
+						<%
+							}
+						}
+						%>
+					</ul>
 			</div>
-			<div class="cont-box jiao" style="width: 480px;height: 550px;">
-		
+			<div class="cont-box jiao" style="height: 5.5rem;">
+					<div class="title">市容美貌</div>
 			</div>
 		</div>
-		<div class="cont-center pull-left">
-			<div class="cont-title jiao">
+		<div class="cont-center">
+			<div class="cont-title jiao gradient">
 				<span>生态环境指数</span>
 			</div>
 			<div class="cont-list">
 				<ul class="clearfix">
 					<li>
 						<span>2016</span>
-						<p></p>
+						<p>78.6</p>
 					</li>
 					<li>
 						<span>2017</span>
-						<p></p>
+						<p>78.6</p>
 					</li>
 					<li>
 						<span>2018</span>
-						<p></p>
+						<p>90.3</p>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<div class="cont-right pull-right">
-			<div class="cont-box jiao" style="width: 480px;height: 220px;">
-		
+		<div class="cont-right">
+			<div class="cont-box jiao" style="height: 2.2rem;">
+					<div class="title">预警</div>
 			</div>
-			<div class="cont-box jiao" style="width: 480px;height: 318px;">
-		
+			<div class="cont-box jiao" style="height: 3.18rem;">
+					<div class="title">水质达标率</div>
 			</div>
-			<div class="cont-box jiao" style="width: 480px;height: 326px;">
-		
+			<div class="cont-box jiao" style="height: 3.26rem;">
+					<div class="title">环保政务</div>
 			</div>
-		</div>	
-		<%- include('../templates/footnav') %>
-	</div>  
+		</div>
+	</div>
+	<%- include('../templates/footnav') %>
   <%- include('../templates/foot') %>
 </body>
+<script>
+	$(".ecotope.contain .cont-left .sanitation ul li").each(function() {
+		$(this).click(function() {
+			console.log(1)
+		});
+	});
+</script>
 </html>

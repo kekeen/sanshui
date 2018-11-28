@@ -4,7 +4,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 95px;
+    height: 1rem;
     background: url(../images/foot_nav_bg.png) no-repeat;
     background-size: cover;
     padding-top: 1px;
@@ -12,11 +12,11 @@
     text-align: center;
     ul{
         display: inline-block;
-        margin-top: 20px;
+        margin-top: .2rem;
         li{
             float: left;
-            text-align: center;  
-            margin:0 10px;
+            text-align: center;
+            margin:0 .1rem;
             border-radius: 5px;
             i{
                 display: block;
@@ -26,7 +26,7 @@
                 display: inline-block;
                 width: 100%;
                 height: 100%;
-                padding: 2px 10px;
+                padding: 2px .1rem;
                 box-sizing: border-box;
                 color: #fff;
                 &:hover,&:active{
@@ -43,9 +43,12 @@
 
 .newheader{
     width: 100%;
-    height: .88rem;
+    height: 7vh;
     background: url(../images/head.png) no-repeat;
     background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    z-index: 9;
     &.money{
         background: url(../images/head_money.png) no-repeat;
     }
@@ -55,10 +58,12 @@
     &.infrastructure{
         background: url(../images/head_Infrastructure.png) no-repeat;
     }
+    .head-time,.head-weather{
+      line-height: 7vh;
+    }
     .head-time{
         font-family: 'digital';
         font-size: .26rem;
-        line-height: .78rem;
         margin-left: 0.22rem;
         color: #85f4fb;
         >span{
@@ -71,16 +76,16 @@
                 font-size: .22rem;
                 letter-spacing: 2px;
                 font-weight: bold;
+                font-style: italic;
             }
         }
     }
     .head-weather{
-        line-height: .78rem;
         >a{
             font-size: 0.18rem;
             color: white;
             font-weight: bold;
-            margin-right: 10px;
+            margin-right: .1rem;
         }
         i{
             vertical-align: middle;
@@ -107,6 +112,17 @@
 .cont-box{
     border: 1px solid #59aceb;
     background-color: rgba(5,35,110,0.9215686274509803);
+    .title{
+      width: 3.4rem;
+      height: .35rem;
+      background: url(../images/head_s.png);
+      background-size:100% 100%;
+      margin: -1px auto 0 auto;
+      font-size: .2rem;
+      color: #dcfdff;
+      text-align: center;
+      line-height: .35rem;
+    }
     .cont-box-all{
         width: 100%;
         position: relative;
@@ -124,4 +140,67 @@
         }
     }
     margin-bottom: 0.1rem;
+}
+.gradient{
+  background: linear-gradient(rgba(62,155,221,.7) 40%, rgba(255,255,255,0));
+}
+.cont-center{
+    margin-top: .1rem;
+    .cont-title{
+        width: 2.7rem;
+        margin: 0 auto;
+        span{
+            display: block;
+            height: .5rem;
+            text-align: center;
+            line-height: .5rem;
+            color: #fff;
+            font-size: .2rem;
+        }
+    }
+    .cont-list{
+        text-align: center;
+        ul{
+            margin-top: .1rem;
+            display: inline-block;
+            li{
+                float: left;
+                border-radius: .1rem;
+                margin-right: .1rem;
+                box-sizing: border-box;
+                padding:.1rem 0;
+                &:last-child{
+                    margin-right: 0;
+                }
+                span{
+                    font-size: .26rem;
+                    font-weight: bold;
+                    color: #fff;
+                }
+                p{
+                    margin: .1rem auto 0 auto;
+                    width: 1.4rem;
+                    height: .5rem;
+                    line-height: .6rem;
+                    font-size: .44rem;
+                    border-radius: .2rem;
+                    background: rgba(41,111,221,.9);
+                    text-align: center;
+                    font-family: 'digital';
+                }
+                &:nth-child(1){
+                    background: url(../images/cont-list1.png);
+                    background-size: 100% 100%;
+                }
+                &:nth-child(2){
+                    background: url(../images/cont-list2.png);
+                    background-size: 100% 100%;
+                }
+                &:nth-child(3){
+                    background: url(../images/cont-list3.png);
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
 }

@@ -12,8 +12,7 @@
         "../libs/bootstrap/dist/bootstrap.min.js",
         "../libs/icheck/icheck.min.js",
         "../libs/nicescroll/jquery.nicescroll.js",
-        "../libs/echarts/echarts.js",
-        "../libs/countUp/countUp.min.js",
+        "../libs/echarts/echarts.min.js",
         "../js/global.js"
     ]
 }

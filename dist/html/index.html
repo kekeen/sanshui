@@ -33,7 +33,7 @@
         <a href="javascript:void(0)" class="hw-wind"><i class="icons"></i>北风  3级  微风</a>
      </div>
 </header>
-        <div class="cont-list">
+        <div class="cont-list clearfix">
              <div class="cont-list-left">
                  <div class="cont-box">
                       <div class="cont-box-all">
@@ -47,10 +47,76 @@
                  </div>
              </div>
              <div class="cont-list-center">
-                  <div class="ce-box-cdi">
-
-                  </div>
+                 <div class="ce-res-all clearfix">
+                     <div class="ce-box-cdi pull-left">
+                         <div class="cdi-title">综合发展指数CDI</div>
+                         <ul class="cdi-number">
+                             <li>
+                                 <div class="nums">78.6</div>
+                                 <p>2016</p>
+                             </li>
+                             <li>
+                                 <div class="nums">78.6</div>
+                                 <p>2017</p>
+                             </li>
+                             <li>
+                                 <div class="nums">98.6</div>
+                                 <p>2018<i>预测</i></p>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="ce-box-early pull-right"></div>
+                 </div>
+                 <div class="ce-res-bottom clearfix">
+                     <div class="ce-box-early pull-left"></div>
+                     <div class="ce-box-early pull-left"></div>
+                     <div class="ce-box-early pull-left"></div>
+                 </div>
              </div>
+             <div class="cont-list-right">
+                <div class="cont-box">
+                    <div class="cont-box-all">
+                        <div class="cont-title">基础设施</div>
+                    </div>
+                </div>
+                <div class="cont-box">
+                    <div class="cont-box-all">
+                        <div class="cont-title">生态坏境</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cont-bots">
+            <div class="cont-box">
+                <div class="cont-box-all">
+                    <div class="cont-title">政务效能</div>
+                </div>
+            </div>
+            <div class="cont-box">
+                <div class="cont-box-all">
+                    <div class="cont-title">公共安全</div>
+                    <div class="bots-body">敬请期待</div>
+                </div>
+            </div>
+            <div class="cont-box">
+                <div class="cont-box-all">
+                    <div class="cont-title">文化建设</div>
+                </div>
+            </div>
+            <div class="cont-box">
+                <div class="cont-box-all">
+                    <div class="cont-title">敬请期待</div>
+                    <div class="bots-body">敬请期待</div>
+                </div>
+            </div>
+            <div class="cont-box">
+                <div class="cont-box-all">
+                    <div class="cont-title">交通运输</div>
+                    <div class="chart-boxs">
+                        <div id="chartTrans" class="chart-pics"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -59,10 +125,299 @@
 <script src="../libs/bootstrap/dist/bootstrap.min.js"></script>
 <script src="../libs/icheck/icheck.min.js"></script>
 <script src="../libs/nicescroll/jquery.nicescroll.js"></script>
-<script src="../libs/echarts/echarts.js"></script>
-<script src="../libs/countUp/countUp.min.js"></script>
+<script src="../libs/echarts/echarts.min.js"></script>
 <script src="../js/global.js"></script>
 
+
+<script>
+    $(function () {
+        var arrchart=[];
+        //交通运输
+        chartTrans();
+        function chartTrans() {
+            var myChart = echarts.init(document.getElementById('chartTrans'));
+            var radius = ['25%', '35%'];
+            var t1 = '22%';
+            var t2 = '68%';
+            option = {
+                title: [
+                    {
+                        text: '交通运输',
+                        top: '40%',
+                        left: '16%',
+                        textStyle: {
+                            color: '#fff',
+                            left:'center',
+                            fontSize: 14,
+                        }
+                    },
+                    {
+                        text: '货物运输',
+                        top: '40%',
+                        left: '46%',
+                        textStyle: {
+                            color: '#fff',
+                            left:'center',
+                            fontSize: 14,
+                        }
+                    },
+                    {
+                        text: '文明交通',
+                        top: '40%',
+                        left: '76%',
+                        textStyle: {
+                            color: '#fff',
+                            left:'center',
+                            fontSize: 14,
+                        }
+                    },
+                    {
+                        text: '公共出行',
+                        top: '86%',
+                        left: '16%',
+                        textStyle: {
+                            color: '#fff',
+                            left:'center',
+                            fontSize: 14,
+                        }
+                    }
+                ],
+                tooltip : {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                series: [
+                    {
+                        name: '交通运输',
+                        type: 'pie',
+                        radius: radius,
+                        center:['20%',t1],
+                        color:'#46bff5',
+                        label: {
+                            normal: {
+                                position: 'center'
+                            }
+                        },
+                        data: [
+                            {
+                                value: 320,
+                                name: '交通运输',
+                                label: {
+                                    normal: {
+                                        formatter: '{c}',
+                                        lineHeight:100,
+                                        textStyle: {
+                                            color:'#fff',
+                                            fontSize:16
+                                        }
+                                    }
+                                },
+                                tooltip:{
+                                    trigger: 'item'
+                                }
+                            }, {
+                                value: 720,
+                                name: '',
+                                label: {
+                                    show:false,
+                                    normal: {
+                                        position: 'outside'
+                                    }
+                                },
+                                labelLine:{
+                                    show:false,
+                                    emphasis:{
+                                        show:false,
+                                    }
+                                },
+                                itemStyle: {
+                                    show:false,
+                                    normal: {
+                                        color: 'rgba(43,132,243,0.3)'
+                                    }
+                                },
+                                tooltip:{
+                                    show:false,
+                                    trigger: 'item'
+                                }
+                            }]
+                    },
+                    {
+                        name: '货物运输',
+                        type: 'pie',
+                        radius: radius,
+                        center:['50%',t1],
+                        color:'#50cb74',
+                        label: {
+                            normal: {
+                                position: 'center'
+                            }
+                        },
+                        data: [
+                            {
+                                value:19920,
+                                name: '货物运输',
+                                label: {
+                                    normal: {
+                                        formatter: '{c}',
+                                        textStyle: {
+                                            color:'#fff',
+                                            fontSize:16
+                                        }
+                                    }
+                                },
+                                tooltip:{
+                                    trigger: 'item',
+                                }
+                            }, {
+                                value: 7200,
+                                name: '',
+                                label: {
+                                    show:false,
+                                    normal: {
+                                        position: 'outside'
+                                    }
+                                },
+                                labelLine:{
+                                    show:false,
+                                    emphasis:{
+                                        show:false,
+                                    }
+                                },
+                                itemStyle: {
+                                    show:false,
+                                    normal: {
+                                        color: 'rgba(43,132,243,0.3)'
+                                    }
+                                },
+                                tooltip:{
+                                    show:false,
+                                    trigger: 'item',
+                                }
+                            }]
+                    },
+                    {
+                        name: '文明交通',
+                        type: 'pie',
+                        radius: radius,
+                        center:['80%',t1],
+                        color:'#f2637b',
+                        label: {
+                            normal: {
+                                position: 'center'
+                            }
+                        },
+                        data: [
+                            {
+                                value: 3200,
+                                name: '文明交通',
+                                label: {
+                                    normal: {
+                                        formatter: '{c}',
+                                        textStyle: {
+                                            color:'#fff',
+                                            fontSize:16
+                                        }
+                                    }
+                                },
+                                tooltip:{
+                                    trigger: 'item',
+                                }
+                            }, {
+                                value: 7200,
+                                name: '',
+                                label: {
+                                    show:false,
+                                    normal: {
+                                        position: 'outside'
+                                    }
+                                },
+                                labelLine:{
+                                    show:false,
+                                    emphasis:{
+                                        show:false,
+                                    }
+                                },
+                                itemStyle: {
+                                    show:false,
+                                    normal: {
+                                        color: 'rgba(43,132,243,0.3)'
+                                    }
+                                },
+                                tooltip:{
+                                    show:false,
+                                    trigger: 'item',
+                                }
+                            }]
+                    },
+                    {
+                        name: '公共出行',
+                        type: 'pie',
+                        radius: radius,
+                        center:['20%',t2],
+                        color:'#fad348',
+                        label: {
+                            normal: {
+                                position: 'center'
+                            }
+                        },
+                        data: [
+                            {
+                                value: 1320,
+                                name: '公共出行',
+                                label: {
+                                    normal: {
+                                        formatter: '{c}',
+                                        textStyle: {
+                                            color:'#fff',
+                                            fontSize:16
+                                        }
+                                    }
+                                },
+                                tooltip:{
+                                    trigger: 'item',
+                                }
+                            }, {
+                                value: 720,
+                                name: '',
+                                label: {
+                                    show:false,
+                                    normal: {
+                                        position: 'outside'
+                                    }
+                                },
+                                labelLine:{
+                                    show:false,
+                                    emphasis:{
+                                        show:false,
+                                    }
+                                },
+                                itemStyle: {
+                                    show:false,
+                                    normal: {
+                                        color: 'rgba(43,132,243,0.3)'
+                                    }
+                                },
+                                tooltip:{
+                                    show:false,
+                                    trigger: 'item',
+                                }
+                            }]
+                    }
+                ]
+            };
+            myChart.setOption(option);
+            arrchart.push(myChart);
+        }
+        // 图表自适应
+        window.onresize = function(){
+            for(var i = 0; i < arrchart.length; i++){
+                arrchart[i].resize();
+            }
+        };
+
+    })
+</script>
 
 </body>
 </html>
