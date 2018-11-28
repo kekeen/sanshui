@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="743cd344-ede5-4600-935c-1bfbee9dea4b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/html/index.html" afterPath="$PROJECT_DIR$/app/html/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/pic_line.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/pic_line.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/html/经济运行.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/html/经济运行.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/less/zlm.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/css/zlm.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/css/zlm.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/css/zlm.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/html/经济运行.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/less/global.less" afterPath="$PROJECT_DIR$/app/less/global.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/less/home.less" afterPath="$PROJECT_DIR$/app/less/home.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/common.css" afterPath="$PROJECT_DIR$/dist/css/common.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/common.css.map" afterPath="$PROJECT_DIR$/dist/css/common.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/common.min.css" afterPath="$PROJECT_DIR$/dist/css/common.min.css" />
@@ -15,7 +21,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/home.css" afterPath="$PROJECT_DIR$/dist/css/home.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/home.css.map" afterPath="$PROJECT_DIR$/dist/css/home.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/home.min.css" afterPath="$PROJECT_DIR$/dist/css/home.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/html/index.html" afterPath="$PROJECT_DIR$/dist/html/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -69,8 +75,8 @@
       <file leaf-file-name="home.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/less/home.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="212" column="17" lean-forward="false" selection-start-line="212" selection-start-column="17" selection-end-line="212" selection-end-column="17" />
+            <state relative-caret-position="478">
+              <caret line="215" column="22" lean-forward="true" selection-start-line="215" selection-start-column="22" selection-end-line="215" selection-end-column="22" />
               <folding>
                 <element signature="e#161#2476#0" expanded="false" />
                 <element signature="e#335#2474#0" expanded="false" />
@@ -127,11 +133,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="footnav.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/footnav.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/global.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="global.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/less/global.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="299">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zlm.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/less/zlm.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -254,14 +290,13 @@
               <item name="URun.Sanshui_City_Signs.UI" type="b2602c69:ProjectViewProjectNode" />
               <item name="URun.Sanshui_City_Signs.UI" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="less" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="URun.Sanshui_City_Signs.UI" type="b2602c69:ProjectViewProjectNode" />
               <item name="URun.Sanshui_City_Signs.UI" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="less" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -312,12 +347,12 @@
       <workItem from="1543285880031" duration="7203000" />
       <workItem from="1543299498501" duration="13553000" />
       <workItem from="1543368959142" duration="13323000" />
-      <workItem from="1543391402562" duration="8985000" />
+      <workItem from="1543391402562" duration="9019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43064000" />
+    <option name="totallyTimeSpent" value="43098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="80" width="1920" height="1037" extended-state="6" />
@@ -781,13 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/global.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/resize.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -868,14 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/less/global.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -911,10 +931,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/footnav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/less/global.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/less/zlm.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/less/home.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="212" column="17" lean-forward="false" selection-start-line="212" selection-start-column="17" selection-end-line="212" selection-end-column="17" />
+        <state relative-caret-position="478">
+          <caret line="215" column="22" lean-forward="true" selection-start-line="215" selection-start-column="22" selection-end-line="215" selection-end-column="22" />
           <folding>
             <element signature="e#161#2476#0" expanded="false" />
             <element signature="e#335#2474#0" expanded="false" />

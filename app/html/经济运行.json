@@ -1,0 +1,12 @@
+
+{
+  "title": "经济运行",
+  "fname": "经济运行",
+  "styles": [
+    "../css/common.css",
+    "../css/ecotope.css"
+  ],
+  "scripts":[
+  	"../js/footnav.js"
+  ]
+}
