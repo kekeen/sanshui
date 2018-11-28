@@ -9,7 +9,7 @@
    		%>
       <li class="<%= local.fname == data[i].title[j] ? 'active' : '' %>">
 	      <a href="<%= data[i].title[j] %>">
-	        <i class="ic <%= data[i].icon[j] %>"></i>
+	        <i class="ic <%= data[i].icon[j] %><%= local.fname == data[i].title[j] ? '-y' : '' %>"></i>
 	        <%= data[i].title[j] %>
         </a>
       </li>

@@ -10,12 +10,11 @@ function changefootimg(obj,flag){
 }
 $(".footnav li").each(function(){
 	var $this = $(this);
-	if($this.hasClass("active")){
-		changefootimg($this,true);
+	if(!$this.hasClass('active')){
+		$this.hover(function(){
+				changefootimg($this,true);
+		},function(){
+				changefootimg($this);
+		});
 	}
-	$this.hover(function(){
-		changefootimg($this,true);
-	},function(){
-		changefootimg($this);
-	});
 });

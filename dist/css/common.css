@@ -285,9 +285,12 @@ a:focus {
 }
 .newheader {
   width: 100%;
-  height: .88rem;
+  height: 7vh;
   background: url(../images/head.png) no-repeat;
   background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  z-index: 9;
 }
 .newheader.money {
   background: url(../images/head_money.png) no-repeat;
@@ -298,10 +301,13 @@ a:focus {
 .newheader.infrastructure {
   background: url(../images/head_Infrastructure.png) no-repeat;
 }
+.newheader .head-time,
+.newheader .head-weather {
+  line-height: 7vh;
+}
 .newheader .head-time {
   font-family: 'digital';
   font-size: .26rem;
-  line-height: .78rem;
   margin-left: 0.22rem;
   color: #85f4fb;
 }
@@ -314,9 +320,7 @@ a:focus {
   font-size: .22rem;
   letter-spacing: 2px;
   font-weight: bold;
-}
-.newheader .head-weather {
-  line-height: .78rem;
+  font-style: italic;
 }
 .newheader .head-weather > a {
   font-size: 0.18rem;
@@ -365,6 +369,68 @@ a:focus {
   text-align: center;
   margin: -1px auto;
   background: url("../images/head_s.png") no-repeat;
+}
+.cont-center {
+  margin-top: 10px;
+}
+.cont-center .cont-title {
+  width: 270px;
+  margin: 0 auto;
+}
+.cont-center .cont-title span {
+  display: block;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 20px;
+  background: -webkit-linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
+  background: linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
+}
+.cont-center .cont-list {
+  text-align: center;
+}
+.cont-center .cont-list ul {
+  margin-top: 10px;
+  display: inline-block;
+}
+.cont-center .cont-list ul li {
+  float: left;
+  border-radius: 10px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.cont-center .cont-list ul li:last-child {
+  margin-right: 0;
+}
+.cont-center .cont-list ul li span {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+}
+.cont-center .cont-list ul li p {
+  margin: 10px auto 0 auto;
+  width: 140px;
+  height: 50px;
+  line-height: 60px;
+  font-size: 44px;
+  border-radius: 20px;
+  background: rgba(41, 111, 221, 0.9);
+  text-align: center;
+  font-family: 'digital';
+}
+.cont-center .cont-list ul li:nth-child(1) {
+  background: url(../images/cont-list1.png);
+  background-size: 100% 100%;
+}
+.cont-center .cont-list ul li:nth-child(2) {
+  background: url(../images/cont-list2.png);
+  background-size: 100% 100%;
+}
+.cont-center .cont-list ul li:nth-child(3) {
+  background: url(../images/cont-list3.png);
+  background-size: 100% 100%;
 }
 
 /*# sourceMappingURL=common.css.map */
