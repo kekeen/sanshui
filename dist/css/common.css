@@ -245,7 +245,7 @@ a:focus {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 95px;
+  height: 1rem;
   background: url(../images/foot_nav_bg.png) no-repeat;
   background-size: cover;
   padding-top: 1px;
@@ -254,12 +254,12 @@ a:focus {
 }
 .footnav ul {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: .2rem;
 }
 .footnav ul li {
   float: left;
   text-align: center;
-  margin: 0 10px;
+  margin: 0 .1rem;
   border-radius: 5px;
 }
 .footnav ul li i {
@@ -270,7 +270,7 @@ a:focus {
   display: inline-block;
   width: 100%;
   height: 100%;
-  padding: 2px 10px;
+  padding: 2px .1rem;
   box-sizing: border-box;
   color: #fff;
 }
@@ -326,7 +326,7 @@ a:focus {
   font-size: 0.18rem;
   color: white;
   font-weight: bold;
-  margin-right: 10px;
+  margin-right: .1rem;
 }
 .newheader .head-weather i {
   vertical-align: middle;
@@ -354,6 +354,17 @@ a:focus {
   background-color: rgba(5, 35, 110, 0.92156863);
   margin-bottom: 0.1rem;
 }
+.cont-box .title {
+  width: 3.4rem;
+  height: .35rem;
+  background: url(../images/head_s.png);
+  background-size: 100% 100%;
+  margin: -1px auto 0 auto;
+  font-size: .2rem;
+  color: #dcfdff;
+  text-align: center;
+  line-height: .35rem;
+}
 .cont-box .cont-box-all {
   width: 100%;
   position: relative;
@@ -370,52 +381,54 @@ a:focus {
   margin: -1px auto;
   background: url("../images/head_s.png") no-repeat;
 }
+.gradient {
+  background: -webkit-linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
+  background: linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
+}
 .cont-center {
-  margin-top: 10px;
+  margin-top: .1rem;
 }
 .cont-center .cont-title {
-  width: 270px;
+  width: 2.7rem;
   margin: 0 auto;
 }
 .cont-center .cont-title span {
   display: block;
-  height: 50px;
+  height: .5rem;
   text-align: center;
-  line-height: 50px;
+  line-height: .5rem;
   color: #fff;
-  font-size: 20px;
-  background: -webkit-linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
-  background: linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
+  font-size: .2rem;
 }
 .cont-center .cont-list {
   text-align: center;
 }
 .cont-center .cont-list ul {
-  margin-top: 10px;
+  margin-top: .1rem;
   display: inline-block;
 }
 .cont-center .cont-list ul li {
   float: left;
-  border-radius: 10px;
-  margin-right: 10px;
+  border-radius: .1rem;
+  margin-right: .1rem;
   box-sizing: border-box;
-  padding: 10px 0;
+  padding: .1rem 0;
 }
 .cont-center .cont-list ul li:last-child {
   margin-right: 0;
 }
 .cont-center .cont-list ul li span {
-  font-size: 26px;
+  font-size: .26rem;
   font-weight: bold;
   color: #fff;
 }
 .cont-center .cont-list ul li p {
-  margin: 10px auto 0 auto;
-  width: 140px;
-  height: 50px;
-  line-height: 60px;
-  font-size: 44px;
-  border-radius: 20px;
+  margin: .1rem auto 0 auto;
+  width: 1.4rem;
+  height: .5rem;
+  line-height: .6rem;
+  font-size: .44rem;
+  border-radius: .2rem;
   background: rgba(41, 111, 221, 0.9);
   text-align: center;
   font-family: 'digital';

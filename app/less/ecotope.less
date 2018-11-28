@@ -1,15 +1,81 @@
 .ecotope.contain{
-  padding: .9rem 0;
+  padding: .9rem .1rem;
   display: flex;
   .cont-box{
     width: 25vw;
   }
   .cont-left{
-    margin-left: 10px;
     flex: 3;
+    .sanitation{
+      ul{
+        position: relative;
+        z-index: 2;
+        padding: 0 .5rem;
+        margin-top: .2rem;
+        box-sizing: border-box;
+        li{
+          float: left;
+          position: relative;
+          margin-right: 8vw;
+          text-align: center;
+          &::after{
+            position: absolute;
+            content: "";
+            z-index: 1;
+            bottom: .3rem;
+            left: 0rem;
+            width: 1.25rem;
+            height: .25rem;
+            border-radius: 50%;
+            background: #004986;
+            display: none;
+          }
+          a{
+            font-size: .16rem;
+            color: #dcfdff;
+            font-weight: bold;
+          }
+          i{
+            display: block;
+            position: relative;
+            margin-left: .05rem;
+            z-index: 2;
+          }
+          span{
+            position: absolute;
+            z-index: 3;
+            top: 0;
+            right: 0;
+            display: block;
+            width: .3rem;
+            height: .3rem;
+            line-height: .3rem;
+            border-radius: 50%;
+            background: #ba681e;
+            color: #fff;
+          }
+          &:nth-child(even){
+            margin-right: 0;
+          }
+          &:nth-child(3),&:nth-child(4){
+            i{
+              margin-left: .1rem;
+            }
+            span{
+              top: .1rem;
+              right: .1rem;
+            }
+          }
+          &:hover,&.active{
+            &:after{
+              display: block;
+            }
+          }
+        }
+      }
+    }
   }
   .cont-right{
-    margin-right: 10px;
     flex: 3;
   }
   .cont-center{
@@ -17,8 +83,8 @@
     .cont-list{
       ul{
         li{
-          width: 220px;
-          height: 130px;
+          width: 2.2rem;
+          height: 1.3rem;
           color: #4df1bd;
           &:last-child{
             color: #ffc90d

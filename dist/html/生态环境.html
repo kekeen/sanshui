@@ -47,15 +47,42 @@
 </header>
 	<div class="contain ecotope  clearfix">
 		<div class="cont-left">
-			<div class="cont-box jiao" style="height: 3.2rem;">
-
+			<div class="cont-box jiao sanitation" style="height: 3.2rem;">
+					<div class="title">环卫动态</div>
+					<ul class="clearfix">
+						
+						<li class=""><a href="javascript:void(0);">
+							<i class="ic-large car1"></i>
+							<span>40</span>
+							作业中
+						</a></li>
+						
+						<li class=""><a href="javascript:void(0);">
+							<i class="ic-large car3"></i>
+							<span>20</span>
+							休息中
+						</a></li>
+						
+						<li class="active"><a href="javascript:void(0);">
+							<i class="ic-large car2"></i>
+							<span>80</span>
+							作业中
+						</a></li>
+						
+						<li class=""><a href="javascript:void(0);">
+							<i class="ic-large car4"></i>
+							<span>20</span>
+							休息中
+						</a></li>
+						
+					</ul>
 			</div>
 			<div class="cont-box jiao" style="height: 5.5rem;">
-
+					<div class="title">市容美貌</div>
 			</div>
 		</div>
 		<div class="cont-center">
-			<div class="cont-title jiao">
+			<div class="cont-title jiao gradient">
 				<span>生态环境指数</span>
 			</div>
 			<div class="cont-list">
@@ -77,13 +104,13 @@
 		</div>
 		<div class="cont-right">
 			<div class="cont-box jiao" style="height: 2.2rem;">
-
+					<div class="title">预警</div>
 			</div>
 			<div class="cont-box jiao" style="height: 3.18rem;">
-
+					<div class="title">水质达标率</div>
 			</div>
 			<div class="cont-box jiao" style="height: 3.26rem;">
-
+					<div class="title">环保政务</div>
 			</div>
 		</div>
 	</div>
@@ -170,4 +197,11 @@
 
 
 </body>
+<script>
+	$(".ecotope.contain .cont-left .sanitation ul li").each(function() {
+		$(this).click(function() {
+			console.log(1)
+		});
+	});
+</script>
 </html>
