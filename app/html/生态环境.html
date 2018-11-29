@@ -2,11 +2,17 @@
 <style>
 </style>
 <body>
+	<div id="map"></div>
 	<%- include('../templates/newheader') %>
 	<div class="contain ecotope  clearfix">
 		<div class="cont-left">
 			<div class="cont-box jiao sanitation" style="height: 3.2rem;">
-					<div class="title">环卫动态</div>
+				<div class="title">环卫动态</div>
+				<div class="cont-box-kid">
+					<div class="name-list">
+						<span>环卫车</span>
+						<span>垃圾车</span>
+					</div>
 					<ul class="clearfix">
 						<%
 							var san_data = [
@@ -17,7 +23,7 @@
 						%>
 						<li class="<%= j == 2 ? 'active' : '' %>"><a href="javascript:void(0);">
 							<i class="<%= san_data[i].cls[j] %>"></i>
-							<span><%= san_data[i].num[j] %></span>
+							<span class="num-mark"><%= san_data[i].num[j] %></span>
 							<%= san_data[i].txt[j] %>
 						</a></li>
 						<%
@@ -25,9 +31,45 @@
 						}
 						%>
 					</ul>
+				</div>
 			</div>
-			<div class="cont-box jiao" style="height: 5.5rem;">
+			<div class="cont-box jiao city" style="height: 5.5rem;">
 					<div class="title">市容美貌</div>
+					<div class="cont-box-kid">
+							<div class="echarts" id="city_echart"></div>
+							<p class="tit">2017年保洁投入<span>（单位：元）</span></p>
+							<ul class="clearfix">
+								<%
+										var city_data = [
+											{
+												cls:['ic-big refresh','ic-big clean_car','ic-big clean','ic-big house'],
+												num:['38','37','85.73','19'],
+												unit:['个','辆','%','家'],
+												color:['blue','brown','cyan','green'],
+												txt:['中转站','清扫车辆','清扫率','保洁公司']
+											}
+										];
+										for(var i in city_data){
+											for(var j in city_data[i].cls){
+								%>
+										<li>
+											<div class="city_box clearfix">
+												<i class="<%= city_data[i].cls[j] %> pull-left"></i>
+												<div class="right pull-left">
+													<p>
+														<span class="digital"><%= city_data[i].num[j] %></span>
+														<%= city_data[i].unit[j] %>
+													</p>
+													<label class="<%= city_data[i].color[j] %>"><%= city_data[i].txt[j] %></label>
+												</div>
+											</div>
+										</li>
+								<%
+										}
+									}
+								%>
+							</ul>
+					</div>
 			</div>
 		</div>
 		<div class="cont-center">
@@ -38,28 +80,69 @@
 				<ul class="clearfix">
 					<li>
 						<span>2016</span>
-						<p>78.6</p>
+						<p class="digital">78.6</p>
 					</li>
 					<li>
 						<span>2017</span>
-						<p>78.6</p>
+						<p class="digital">78.6</p>
 					</li>
 					<li>
 						<span>2018</span>
-						<p>90.3</p>
+						<p class="digital">90.3</p>
 					</li>
 				</ul>
 			</div>
 		</div>
 		<div class="cont-right">
-			<div class="cont-box jiao" style="height: 2.2rem;">
+			<div class="cont-box warning jiao" style="height: 2.2rem;">
 					<div class="title">预警</div>
+					<div class="cont-box-kid">
+						<ul class="clearfix">
+							<li>
+								<i class="ic-large water"></i>
+								<p>水质</p>
+								<span class="num-mark">5</span>
+							</li>
+							<li>
+								<i class="ic-large flow"></i>
+								<p>空气</p>
+								<span class="num-mark">5</span>
+							</li>
+						</ul>
+					</div>
 			</div>
-			<div class="cont-box jiao" style="height: 3.18rem;">
+			<div class="cont-box water jiao more-ec-box" style="height: 3.18rem;">
+					<a href="javascript:void(0);" class="y-on-y echarts-change active">同比</a>
 					<div class="title">水质达标率</div>
+					<a href="javascript:void(0);" class="chain-ratio echarts-change">环比</a>
+					<div class="cont-box-kid">
+						<div class="echarts-change2 clearfix">
+							<a href="javascript:void(0);" class="active ec_a">
+								<span>江河水质</span>
+							</a>
+							<a href="javascript:void(0);" class="ec_a"><span>饮用水源水质</span></a>
+						</div>
+						<div class="echarts" id="water_ec1" style="display:block;"></div>
+					</div>
 			</div>
-			<div class="cont-box jiao" style="height: 3.26rem;">
+			<div class="cont-box jiao environmental more-ec-box" style="height: 3.26rem;">
 					<div class="title">环保政务</div>
+					<div class="cont-box-kid">
+						<div class="echarts-change2 clearfix">
+							<a href="javascript:void(0);">
+								<span class="gradient">环保处罚案件</span>
+							</a>
+							<a href="javascript:void(0);"><span>罚没总收入</span></a>
+						</div>
+						<div class="compare">
+							同比
+							<i class="ic-small rise"></i>
+							<span class="txtcol-red">21.34%</span>
+						</div>
+						<div class="echarts" id="environmental_ec1" style="display:block;"></div>
+						<div class="echarts" id="environmental_ec2"></div>
+						</div>
+					</div>
 			</div>
 		</div>
 	</div>
@@ -69,8 +152,764 @@
 <script>
 	$(".ecotope.contain .cont-left .sanitation ul li").each(function() {
 		$(this).click(function() {
-			console.log(1)
+			$(this).addClass('active').siblings().removeClass('active');
 		});
 	});
+	var city_echart = echarts.init(document.getElementById('city_echart')),
+			water_ec1 = echarts.init(document.getElementById('water_ec1')),
+			environmental_ec1 = echarts.init(document.getElementById('environmental_ec1')),
+			environmental_ec2 = echarts.init(document.getElementById('environmental_ec2')),
+			map = echarts.init(document.getElementById('map')),
+			app = {},
+			water_ec1_data1 = [20, 80, 55, 50],
+			water_ec1_data2 = [30, 69, 75, 80],
+			water_ec1_data3 = [30, 69, 75, 80],
+			water_ec1_data4 = [30, 69, 75, 80],
+		option = {
+			grid: {
+					left: '2%',
+					right: '2%',
+					top: '8%',
+					bottom:"2%",
+					containLabel: true
+			},
+			xAxis : [
+					{
+							type : 'category',
+							data : ['西南', '云东海', '白坭', '大塘', '乐平', '芦苞', '南山'],
+							axisLine:{
+									lineStyle:{
+											color:'#3794d4',
+									}
+							},
+							axisLabel:{
+									color:"#a9e0ed"
+							}
+					}
+			],
+			yAxis : [
+					{
+							type : 'value',
+							axisLine:{
+									lineStyle:{
+											color:'#3794d4',
+									}
+							},
+							axisLabel:{
+									color:"#a9e0ed"
+							},
+							splitLine:{
+									show:false
+							}
+					}
+			],
+			series : [
+					{
+							name:'直接访问',
+							type:'bar',
+							barWidth: '60%',
+							data:[8000, 6000, 5400, 4500, 3800, 3000, 3000],
+							label: {
+									normal: {
+											show: true,
+											position: 'top',
+											color:"#a9e0ed"
+									}
+							},
+							itemStyle:{
+									normal:{
+											color:new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+													offset: 0,
+													color: '#46bcf3'
+											}, {
+													offset: 1,
+													color: '#1f77cf'
+											}]),
+									}
+							}
+					}
+			]
+		};
+		var option1 = {
+		  tooltip: {
+		      trigger: 'axis',
+		      axisPointer: {
+		          type: 'shadow'
+		      }
+		  },
+		  legend: {
+		      data: ['2017', '2018'],
+					textStyle:{
+						color:"#a9e0ed"
+					}
+		  },
+		  grid: {
+				left: '2%',
+				right: '2%',
+				top: '24%',
+				bottom:"2%",
+	      containLabel: true
+		  },
+		  xAxis: {
+		      type: 'category',
+		      data: ['Q1','Q2','Q3','Q4'],
+					axisLine:{
+							lineStyle:{
+									color:'#3794d4',
+							}
+					},
+					axisLabel:{
+							color:"#a9e0ed"
+					},
+		  },
+		  yAxis: {
+		      type: 'value',
+		      splitLine:{
+						show:false
+					},
+					axisLine:{
+							lineStyle:{
+									color:'#3794d4',
+							}
+					},
+					axisLabel:{
+							color:"#a9e0ed",
+							formatter:'{value}%'
+					},
+		  },
+		  series: [
+		      {
+		          name: '2017',
+		          type: 'bar',
+		          data: water_ec1_data1,
+							barWidth:"20",
+		          itemStyle:{
+								normal:{
+										color:new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+												offset: 0,
+												color: '#5abf63'
+										}, {
+												offset: 1,
+												color: '#2a9633'
+										}]),
+								}
+							},
+							label:{
+								formatter: function(params){
+									var num,
+											arr = [];
+									for(var i = 0;i<water_ec1_data2.length;i++){
+										num = parseInt(water_ec1_data1[i]) - parseInt(water_ec1_data2[i]);
+										arr.push(num);
+									}
+									if(arr[params.dataIndex] > 0){
+										 return arr[params.dataIndex] + "%";
+									}else{
+										return "";
+									}
+								},
+								show:true,
+								position:"top",
+								color:"#a9e0ed",
+								offset:[15,0]
+							}
+		      },
+		      {
+		          name: '2018',
+		          type: 'bar',
+							barWidth:"20",
+		          data: water_ec1_data2,
+		          itemStyle:{
+								normal:{
+										color:new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+												offset: 0,
+												color: '#d7be3a'
+										}, {
+												offset: 1,
+												color: '#b88618'
+										}]),
+								}
+							},
+							label:{
+								formatter: function(params){
+									var num,
+											arr = [];
+									for(var i = 0;i<water_ec1_data2.length;i++){
+										num = parseInt(water_ec1_data1[i]) - parseInt(water_ec1_data2[i]);
+										arr.push(num);
+									}
+									if(arr[params.dataIndex] < 0){
+										 return arr[params.dataIndex] + "%";
+									}else{
+										return "";
+									}
+								},
+								show:true,
+								position:"top",
+								color:"#a9e0ed",
+								offset:[-15,0]
+							}
+		      }
+		  ]
+		};
+		var option1_2 = {
+		  tooltip: {
+		      trigger: 'axis',
+		      axisPointer: {
+		          type: 'shadow'
+		      }
+		  },
+		  legend: {
+		      data: ['2017', '2018'],
+					textStyle:{
+						color:"#a9e0ed"
+					}
+		  },
+		  grid: {
+				left: '2%',
+				right: '2%',
+				top: '24%',
+				bottom:"2%",
+	      containLabel: true
+		  },
+		  xAxis: {
+		      type: 'category',
+		      data: ['Q1','Q2','Q3','Q4'],
+					axisLine:{
+							lineStyle:{
+									color:'#3794d4',
+							}
+					},
+					axisLabel:{
+							color:"#a9e0ed"
+					},
+		  },
+		  yAxis: {
+		      type: 'value',
+		      splitLine:{
+						show:false
+					},
+					axisLine:{
+							lineStyle:{
+									color:'#3794d4',
+							}
+					},
+					axisLabel:{
+							color:"#a9e0ed",
+							formatter:'{value}%'
+					},
+		  },
+		  series: [
+		      {
+		          name: '2017',
+		          type: 'bar',
+		          data: water_ec1_data3,
+							barWidth:"20",
+		          itemStyle:{
+								normal:{
+										color:new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+												offset: 0,
+												color: '#5abf63'
+										}, {
+												offset: 1,
+												color: '#2a9633'
+										}]),
+								}
+							},
+							label:{
+								formatter: function(params){
+									var num,
+											arr = [];
+									for(var i = 0;i<water_ec1_data2.length;i++){
+										num = parseInt(water_ec1_data1[i]) - parseInt(water_ec1_data2[i]);
+										arr.push(num);
+									}
+									if(arr[params.dataIndex] > 0){
+										 return arr[params.dataIndex] + "%";
+									}else{
+										return "";
+									}
+								},
+								show:true,
+								position:"top",
+								color:"#a9e0ed",
+								offset:[15,0]
+							}
+		      },
+		      {
+		          name: '2018',
+		          type: 'bar',
+							barWidth:"20",
+		          data: water_ec1_data4,
+		          itemStyle:{
+								normal:{
+										color:new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+												offset: 0,
+												color: '#d7be3a'
+										}, {
+												offset: 1,
+												color: '#b88618'
+										}]),
+								}
+							},
+							label:{
+								formatter: function(params){
+									var num,
+											arr = [];
+									for(var i = 0;i<water_ec1_data2.length;i++){
+										num = parseInt(water_ec1_data1[i]) - parseInt(water_ec1_data2[i]);
+										arr.push(num);
+									}
+									if(arr[params.dataIndex] < 0){
+										 return arr[params.dataIndex] + "%";
+									}else{
+										return "";
+									}
+								},
+								show:true,
+								position:"top",
+								color:"#a9e0ed",
+								offset:[-15,0]
+							}
+		      }
+		  ]
+		};
+		var option2 = {
+		    grid: {
+		        left: '2%',
+						right: '2%',
+						top: '24%',
+						bottom:"2%",
+				        containLabel: true
+				    },
+				    xAxis : [
+				        {
+				            type : 'category',
+				            data : ['2018-1', '2018-2', '2018-3'],
+				            axisTick: {
+				                alignWithLabel: true
+				            },
+				            axisLine:{
+									lineStyle:{
+											color:'#3794d4',
+									}
+							},
+							axisLabel:{
+									color:"#a9e0ed",
+									formatter:'{value}%'
+							},
+				        }
+				    ],
+				    yAxis : [
+				        {
+				            type : 'value',
+				            splitLine:{
+				                show:false
+				            },
+				            axisLine:{
+									lineStyle:{
+											color:'#3794d4',
+									}
+							},
+							axisLabel:{
+									color:"#a9e0ed",
+									formatter:'{value}%'
+							},
+				        }
+				    ],
+				    series : [
+				        {
+				            type:'bar',
+				            barWidth: '30%',
+				            data:[40, 80, 75],
+				             itemStyle:{
+								normal:{
+									color:new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+											offset: 0,
+											color: '#5abf63'
+									}, {
+											offset: 1,
+											color: '#2a9633'
+									}]),
+								}
+							},
+							label:{
+							    show:true,
+							    position:"top",
+							    formatter:"{c}%",
+							    color:"#a9e0ed"
+							}
+		        }
+		    ]
+		};
+		var option2_2 = {
+				grid: {
+						left: '2%',
+						right: '2%',
+						top: '24%',
+						bottom:"2%",
+								containLabel: true
+						},
+						xAxis : [
+								{
+										type : 'category',
+										data : ['2018-1', '2018-2', '2018-3'],
+										axisTick: {
+												alignWithLabel: true
+										},
+										axisLine:{
+									lineStyle:{
+											color:'#3794d4',
+									}
+							},
+							axisLabel:{
+									color:"#a9e0ed",
+									formatter:'{value}%'
+							},
+								}
+						],
+						yAxis : [
+								{
+										type : 'value',
+										splitLine:{
+												show:false
+										},
+										axisLine:{
+											lineStyle:{
+													color:'#3794d4',
+											}
+									},
+									axisLabel:{
+											color:"#a9e0ed",
+											formatter:'{value}%'
+									},
+								}
+						],
+						series : [
+								{
+										type:'bar',
+										barWidth: '30%',
+										data:[80, 40, 75],
+									 	itemStyle:{
+											normal:{
+												color:new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+														offset: 0,
+														color: '#5abf63'
+												}, {
+														offset: 1,
+														color: '#2a9633'
+												}]),
+											}
+										},
+										label:{
+												show:true,
+												position:"top",
+												formatter:"{c}%",
+												color:"#a9e0ed"
+										}
+									}
+							]
+					};
+			var option3 = {
+			    grid: {
+			        left: '2%',
+					right: '2%',
+					top: '24%',
+					bottom:"2%",
+			        containLabel: true
+			    },
+			    xAxis: {
+			        type: 'category',
+			        data: ['Q1','Q2','Q3','Q4'],
+					axisLine:{
+						lineStyle:{
+							color:'#3794d4',
+						}
+					},
+					axisLabel:{
+							color:"#a9e0ed",
+							formatter:'{value}%'
+					},
+			    },
+			    yAxis: {
+			        type: 'value',
+			        name:"单位：个",
+			        splitLine:{
+						show:false
+					},
+					axisLine:{
+						lineStyle:{
+							color:'#3794d4',
+						}
+					},
+					axisLabel:{
+							color:"#a9e0ed",
+							formatter:'{value}%'
+					},
+			    },
+			    series: [
+			        {
+			            name: '2016',
+			            type: 'bar',
+			            barWidth: "20",
+			            data: [40, 60, 50, 55],
+			            itemStyle:{
+							normal:{
+								color:new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+										offset: 0,
+										color: '#00cdf8'
+								}, {
+										offset: 1,
+										color: '#006f80'
+								}]),
+							}
+						},
+						label:{
+								show:true,
+								position:"top",
+								formatter:"{c}%",
+								color:"#a9e0ed"
+						}
+			        },
+			        {
+			            name: '2017',
+			            type: 'bar',
+			            barWidth: "20",
+			            data: [45, 40, 60, 80],
+			            itemStyle:{
+							normal:{
+								color:new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+										offset: 0,
+										color: '#fa9400'
+								}, {
+										offset: 1,
+										color: '#9f5c00'
+								}]),
+							}
+						},
+						label:{
+								show:true,
+								position:"top",
+								formatter:"{c}%",
+								color:"#a9e0ed"
+						}
+			        }
+			    ]
+			};
+			var option4 = {
+			    grid: {
+			        left: '2%',
+					right: '2%',
+					top: '24%',
+					bottom:"2%",
+			        containLabel: true
+			    },
+			    xAxis: {
+			        type: 'category',
+			        data: ['Q1','Q2','Q3','Q4'],
+					axisLine:{
+						lineStyle:{
+							color:'#3794d4',
+						}
+					},
+					axisLabel:{
+							color:"#a9e0ed",
+							formatter:'{value}%'
+					},
+			    },
+			    yAxis: {
+			        type: 'value',
+			        name:"单位：个",
+			        splitLine:{
+						show:false
+					},
+					axisLine:{
+						lineStyle:{
+							color:'#3794d4',
+						}
+					},
+					axisLabel:{
+							color:"#a9e0ed",
+							formatter:'{value}%'
+					},
+			    },
+			    series: [
+			        {
+			            name: '2016',
+			            type: 'bar',
+			            barWidth: "20",
+			            data: [45, 40, 60, 80],
+			            itemStyle:{
+							normal:{
+								color:new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+										offset: 0,
+										color: '#00cdf8'
+								}, {
+										offset: 1,
+										color: '#006f80'
+								}]),
+							}
+						},
+						label:{
+								show:true,
+								position:"top",
+								formatter:"{c}%",
+								color:"#a9e0ed"
+						}
+			        },
+			        {
+			            name: '2017',
+			            type: 'bar',
+			            barWidth: "20",
+			            data: [40, 60, 50, 55],
+			            itemStyle:{
+							normal:{
+								color:new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+										offset: 0,
+										color: '#fa9400'
+								}, {
+										offset: 1,
+										color: '#9f5c00'
+								}]),
+							}
+						},
+						label:{
+								show:true,
+								position:"top",
+								formatter:"{c}%",
+								color:"#a9e0ed"
+						}
+			        }
+			    ]
+			};
+
+			$.get('../js/hangzhou-tracks.json', function (data) {
+
+			    var points = [].concat.apply([], data.map(function (track) {
+			        return track.map(function (seg) {
+			            return seg.coord.concat([1]);
+			        });
+			    }));
+			    map.setOption(option = {
+			        animation: false,
+			        bmap: {
+			            center: [120.13066322374, 30.240018034923],
+			            zoom: 14,
+			            roam: true
+			        },
+			        visualMap: {
+			            show: false,
+			            top: 'top',
+			            min: 0,
+			            max: 5,
+			            seriesIndex: 0,
+			            calculable: true,
+			            inRange: {
+			                color: ['blue', 'blue', 'green', 'yellow', 'red']
+			            }
+			        },
+			        series: [{
+			            type: 'heatmap',
+			            coordinateSystem: 'bmap',
+			            data: points,
+			            pointSize: 5,
+			            blurSize: 6
+			        }]
+			    });
+			    if (!app.inNode) {
+			        // 添加百度地图插件
+			        var bmap = map.getModel().getComponent('bmap').getBMap();
+			        bmap.addControl(new BMap.MapTypeControl());
+			    }
+			});
+
+		city_echart.setOption(option);
+		water_ec1.setOption(option1);
+		environmental_ec1.setOption(option3);
+		environmental_ec2.setOption(option4);
+		$(window).resize(function() {
+			var arr = [city_echart,water_ec1,water_ec1_2,water_ec2,water_ec2_2,environmental_ec1,environmental_ec2];
+			for(var i in arr){
+				arr[i].resize();
+			}
+		});
+		$(".environmental .echarts-change2 a").each(function(){
+			$(this).click(function(){
+				var i = $(this).index();
+				$(this).find('span').addClass('gradient');
+				$(this).siblings().find('span').removeClass('gradient');
+				$(".environmental .echarts").eq(i).show().siblings(".echarts").hide();
+				$(".environmental .echarts").eq(i).resize();
+				if(i == 1){
+					$(".environmental").find(".compare i").addClass('decline').removeClass('rise');
+					$(".environmental").find(".compare span").addClass('txtcol-green').removeClass('txtcol-red');
+				}else{
+					$(".environmental").find(".compare i").removeClass('decline').addClass('rise');
+					$(".environmental").find(".compare span").removeClass('txtcol-green').addClass('txtcol-red');
+				}
+			})
+		});
+
+    // 水质达标率
+		water();
+		function water(){
+			var $ec_a = $(".ec_a"),
+					$river = $(".ec_a").eq(0),  //江河水质按钮
+					$drink_water = $(".ec_a").eq(1),  //饮用水源水质按钮
+					$y_on_y = $(".y-on-y"),  //同比按钮
+					$c_r = $(".chain-ratio"), //环比按钮
+					options;
+			/*
+	       option1 => 江河水质同比图  option1_2 => 饮用水源水质同比图
+	       option2 => 江河水质环比图  option2_2 =>  饮用水源水质环比图
+			*/
+			$(".water .echarts-change").each(function() {
+				$(this).click(function(){
+					$(".water .echarts-change").removeClass('active');
+					$(this).addClass('active');
+					if($(this).index() == 0){
+						/* 点击同比 */
+						if($river.hasClass('active')){
+								options = option1;
+						}else{
+							  options = option1_2;
+						}
+					}else{
+						/* 点击环比 */
+						if($river.hasClass('active')){
+								options = option2;
+						}else{
+							  options = option2_2;
+						}
+					}
+					water_ec1.clear();
+					water_ec1.setOption(options);
+				})
+			});
+			$ec_a.each(function() {
+				$(this).click(function(){
+					$ec_a.removeClass('active');
+					$(this).addClass('active');
+					if($(this).index() == 0){
+            /* 点击江河水质 */
+						if($y_on_y.hasClass('active')){
+							options = option1;
+						}else{
+							options = option2;
+						}
+					}else{
+						/* 点击饮用水源水质 */
+						if($y_on_y.hasClass('active')){
+							options = option1_2;
+						}else{
+							options = option2_2;
+						}
+					}
+					water_ec1.clear();
+					water_ec1.setOption(options);
+				})
+			});
+		}
+
 </script>
 </html>

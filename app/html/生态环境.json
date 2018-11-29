@@ -6,6 +6,8 @@
     "../css/ecotope.css"
   ],
   "scripts":[
-  	"../js/footnav.js"
+  	"../js/footnav.js",
+    "../js/api.js",
+    "../js/bmap.js"
   ]
 }

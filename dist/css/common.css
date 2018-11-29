@@ -495,10 +495,18 @@ a:focus {
 .ri-lists > li:nth-of-type(3) a {
   background-position: -10.87rem -2.15rem;
 }
+.digital {
+  font-family: 'digital';
+}
+.gradient {
+  background: -webkit-linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
+  background: linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
+}
 .footnav {
   position: absolute;
   bottom: 0;
   width: 100%;
+  z-index: 2;
   height: 1rem;
   background: url(../images/foot_nav_bg.png) no-repeat;
   background-size: cover;
@@ -606,7 +614,13 @@ a:focus {
 .cont-box {
   border: 1px solid #59aceb;
   background-color: rgba(5, 35, 110, 0.92156863);
+  overflow: hidden;
   margin-bottom: 0.1rem;
+}
+.cont-box .cont-box-kid {
+  position: relative;
+  z-index: 2;
+  padding: 0 .2rem;
 }
 .cont-box .title {
   width: 3.4rem;
@@ -634,10 +648,6 @@ a:focus {
   text-align: center;
   margin: -1px auto;
   background: url("../images/head_s.png") no-repeat;
-}
-.gradient {
-  background: -webkit-linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
-  background: linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
 }
 .cont-center {
   margin-top: .1rem;
@@ -685,7 +695,6 @@ a:focus {
   border-radius: .2rem;
   background: rgba(41, 111, 221, 0.9);
   text-align: center;
-  font-family: 'digital';
 }
 .cont-center .cont-list ul li:nth-child(1) {
   background: url(../images/cont-list1.png);
