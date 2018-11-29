@@ -3,6 +3,12 @@
   display: -ms-flexbox;
   display: flex;
 }
+.infrastructure.contain .tit {
+  text-align: left;
+  margin: .15rem 0;
+  font-size: .16rem;
+  font-weight: bold;
+}
 .infrastructure.contain .cont-left,
 .infrastructure.contain .cont-right,
 .infrastructure.contain .cont-center {
@@ -22,6 +28,7 @@
   margin-bottom: .1rem;
   background: url(../images/infrastructure_list2.png) no-repeat;
   background-size: 100% 100%;
+  margin-right: .12rem;
 }
 .infrastructure.contain .cont-center ul li span {
   font-size: .4rem;
@@ -50,7 +57,10 @@
   margin-top: 0;
   font-size: .8rem;
 }
-.infrastructure.contain .cont-center ul li:last-child p {
+.infrastructure.contain .cont-center ul li:nth-child(3) {
+  margin-right: 0;
+}
+.infrastructure.contain .cont-center ul li:nth-child(3) p {
   color: #ffc90d;
 }
 .infrastructure.contain .cont-center .cont-box {
@@ -58,6 +68,58 @@
 }
 .infrastructure.contain .cont-left .cont-box {
   height: 8.71rem;
+}
+.infrastructure.contain .cont-left .cont-box .cont-box-kid {
+  padding: 0 .3rem;
+}
+.infrastructure.contain .cont-left .echarts {
+  height: 30vh;
+  margin-top: .2rem;
+}
+.infrastructure.contain .cont-left .buildlist li {
+  position: relative;
+  float: left;
+  width: 49%;
+  height: 1.7rem;
+  background: url(../images/build_list_bg.png);
+  background-size: 100% 100%;
+  padding: .3rem .15rem 0 .15rem;
+  box-sizing: border-box;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.infrastructure.contain .cont-left .buildlist li:nth-child(1),
+.infrastructure.contain .cont-left .buildlist li:nth-child(2) {
+  margin-top: 0;
+}
+.infrastructure.contain .cont-left .buildlist li:nth-child(even) {
+  margin-right: 0;
+}
+.infrastructure.contain .cont-left .buildlist li span {
+  display: block;
+}
+.infrastructure.contain .cont-left .buildlist li span i {
+  vertical-align: middle;
+}
+.infrastructure.contain .cont-left .buildlist li span.unit {
+  font-size: .12rem;
+  color: #c7cdcd;
+  position: absolute;
+  top: .1rem;
+  left: .1rem;
+}
+.infrastructure.contain .cont-left .buildlist li span.num {
+  font-size: .28rem;
+}
+.infrastructure.contain .cont-left .buildlist li span.cls {
+  font-size: .16rem;
+}
+.infrastructure.contain .cont-left .buildlist li span.cls i {
+  margin-right: .1rem;
+}
+.infrastructure.contain .cont-left .buildlist li span.compare {
+  margin-top: 1.6vh;
 }
 .infrastructure.contain .cont-right .cont-box {
   height: 4.3rem;

@@ -112,6 +112,7 @@
 }
 .ecotope.contain .cont-left .city .tit {
   margin: .1rem 0;
+  text-align: left;
 }
 .ecotope.contain .cont-left .city .tit span {
   color: #709dd5;
@@ -224,12 +225,6 @@
 }
 .ecotope.contain .cont-right .environmental .compare i {
   vertical-align: middle;
-}
-.ecotope.contain .cont-right .environmental .compare span.txtcol-green {
-  color: #42a651;
-}
-.ecotope.contain .cont-right .environmental .compare span.txtcol-red {
-  color: #f02020;
 }
 .ecotope.contain .cont-right .environmental .echarts {
   margin-top: -4vh;

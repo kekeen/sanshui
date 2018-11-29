@@ -3,10 +3,48 @@
   <%- include('../templates/newheader') %>
   <div class="contain infrastructure clearfix">
     <div class="cont-left">
-      <div class="cont-box jiao sanitation">
+      <div class="cont-box jiao building">
         <div class="title">施工报建</div>
         <div class="cont-box-kid">
-
+          <div class="top">
+            <div class="echarts-change2 clearfix">
+              <a href="javascript:void(0);" class="ec_a active"><span>新报建工程基本情况</span></a>
+              <a href="javascript:void(0);" class="ec_a"><span>新报建工程资金情况</span></a>
+            </div>
+            <div class="echarts" id="build"></div>
+          </div>
+          <p class="tit">2018同比2017</p>
+          <ul class="buildlist clearfix">
+            <%
+                var build_data = [
+                  {
+                    unit:['个','万平方米','万元','万元'],
+                    num:['226','798.65','1251627','44033'],
+                    cls:['ic construction','ic construction2','ic calculator','ic protect'],
+                    txt:['新工程','新工程面积','总造价','保证金'],
+                  }
+                ];
+                for(var i in build_data){
+                  for(var j in build_data[i].unit){
+            %>
+            <li class="jiao">
+                <span class="unit">（单位：<%= build_data[i].unit[j] %>）</span>
+                <span class="num digital"><%= build_data[i].num[j] %></span>
+                <span class="cls">
+                  <i class="<%= build_data[i].cls[j] %>"></i>
+                  <%= build_data[i].txt[j] %>
+                </span>
+                <span class="compare">
+                  同比
+                  <i class="ic-small <%= j == 3 ? 'rise' : 'decline' %>"></i>
+                  <font class="txtcol-<%= j == 3 ? 'red' : 'green' %>">21.34%</font>
+                </span>
+            </li>
+            <%
+                }
+              }
+            %>
+          </ul>
         </div>
       </div>
     </div>
@@ -33,8 +71,10 @@
       <div class="cont-box jiao">
         <div class="title">城市绿化</div>
         <div class="cont-box-kid">
-          <a href="javascript:void(0);" class="ec_a active"><span>建成区绿化情况</span></a>
-          <a href="javascript:void(0);" class="ec_a"><span>公园绿化情况</span></a>
+          <div class="echarts-change2 clearfix">
+            <a href="javascript:void(0);" class="ec_a active"><span>建成区绿化情况</span></a>
+            <a href="javascript:void(0);" class="ec_a"><span>公园绿化情况</span></a>
+          </div>
         </div>
       </div>
     </div>
@@ -42,8 +82,10 @@
       <div class="cont-box jiao">
         <div class="title">地产开发</div>
         <div class="cont-box-kid">
-          <a href="javascript:void(0);" class="ec_a active"><span>房地产开发投资</span></a>
-          <a href="javascript:void(0);" class="ec_a"><span>商品房施工情况</span></a>
+          <div class="echarts-change2 clearfix">
+            <a href="javascript:void(0);" class="ec_a active"><span>房地产开发投资</span></a>
+            <a href="javascript:void(0);" class="ec_a"><span>商品房施工情况</span></a>
+          </div>
         </div>
       </div>
       <div class="cont-box jiao">
