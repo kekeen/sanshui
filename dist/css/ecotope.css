@@ -1,8 +1,27 @@
+#map {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
 .ecotope.contain {
-  padding: .9rem .1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 2;
+  background: none;
+}
+.ecotope.contain .num-mark {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  width: .3rem;
+  height: .3rem;
+  line-height: .3rem;
+  border-radius: 50%;
+  background: #ba681e;
+  color: #fff;
+  text-align: center;
 }
 .ecotope.contain .cont-box {
   width: 25vw;
@@ -12,17 +31,35 @@
       -ms-flex: 3;
           flex: 3;
 }
-.ecotope.contain .cont-left .sanitation ul {
+.ecotope.contain .cont-left .sanitation {
   position: relative;
-  z-index: 2;
-  padding: 0 .5rem;
+}
+.ecotope.contain .cont-left .sanitation .name-list {
+  position: absolute;
+  z-index: 33;
+  left: 9vw;
+  top: .4rem;
+}
+.ecotope.contain .cont-left .sanitation .name-list span {
+  font-size: .14rem;
+  text-align: center;
+  color: #fff;
+  width: 1.35rem;
+  height: .3rem;
+  line-height: .3rem;
+  background: url(../images/car_title.png);
+  background-size: 100% 100%;
+  margin-bottom: .8rem;
+  display: block;
+}
+.ecotope.contain .cont-left .sanitation ul {
   margin-top: .2rem;
   box-sizing: border-box;
 }
 .ecotope.contain .cont-left .sanitation ul li {
   float: left;
   position: relative;
-  margin-right: 8vw;
+  margin-right: 11vw;
   text-align: center;
 }
 .ecotope.contain .cont-left .sanitation ul li::after {
@@ -48,18 +85,9 @@
   margin-left: .05rem;
   z-index: 2;
 }
-.ecotope.contain .cont-left .sanitation ul li span {
-  position: absolute;
-  z-index: 3;
+.ecotope.contain .cont-left .sanitation ul li .num-mark {
   top: 0;
   right: 0;
-  display: block;
-  width: .3rem;
-  height: .3rem;
-  line-height: .3rem;
-  border-radius: 50%;
-  background: #ba681e;
-  color: #fff;
 }
 .ecotope.contain .cont-left .sanitation ul li:nth-child(even) {
   margin-right: 0;
@@ -77,10 +105,134 @@
 .ecotope.contain .cont-left .sanitation ul li.active:after {
   display: block;
 }
+.ecotope.contain .cont-left .city .echarts {
+  margin-top: .1rem;
+  width: 22vw;
+  height: 1.9rem;
+}
+.ecotope.contain .cont-left .city .tit {
+  margin: .1rem 0;
+}
+.ecotope.contain .cont-left .city .tit span {
+  color: #709dd5;
+  font-size: .14rem;
+}
+.ecotope.contain .cont-left .city ul li {
+  float: left;
+  margin: 5px 5px 0;
+  width: 11vw;
+  height: 11vh;
+  background: url(../images/city_list_bg.png);
+  background-size: 100% 100%;
+  padding: .3rem 1vh;
+  text-align: center;
+  box-sizing: border-box;
+}
+.ecotope.contain .cont-left .city ul li:nth-child(even) {
+  margin-right: 0;
+}
+.ecotope.contain .cont-left .city ul li:nth-child(1),
+.ecotope.contain .cont-left .city ul li:nth-child(2) {
+  margin-top: 0;
+}
+.ecotope.contain .cont-left .city ul li .city_box {
+  display: inline-block;
+}
+.ecotope.contain .cont-left .city ul li .right p {
+  text-align: center;
+}
+.ecotope.contain .cont-left .city ul li .right p span {
+  font-size: .25rem;
+}
+.ecotope.contain .cont-left .city ul li .right label {
+  width: .8rem;
+  height: .2rem;
+  text-align: center;
+  line-height: .2rem;
+  font-size: .14rem;
+  color: #fff;
+}
+.ecotope.contain .cont-left .city ul li .right label.blue {
+  background: #2f72ed;
+}
+.ecotope.contain .cont-left .city ul li .right label.brown {
+  background: #a76c37;
+}
+.ecotope.contain .cont-left .city ul li .right label.cyan {
+  background: #1f93c7;
+}
+.ecotope.contain .cont-left .city ul li .right label.green {
+  background: #59aa60;
+}
 .ecotope.contain .cont-right {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
+}
+.ecotope.contain .cont-right .more-ec-box .echarts-change2 {
+  text-align: center;
+  margin-bottom: 1vh;
+}
+.ecotope.contain .cont-right .more-ec-box .echarts {
+  height: 19vh;
+  display: none;
+}
+.ecotope.contain .cont-right .warning ul {
+  margin-top: 3vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.ecotope.contain .cont-right .warning ul li {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  text-align: center;
+  float: left;
+  position: relative;
+}
+.ecotope.contain .cont-right .warning ul li .num-mark {
+  top: 1vh;
+  right: 4vw;
+}
+.ecotope.contain .cont-right .water .echarts-change {
+  display: inline-block;
+  width: .9rem;
+  height: .3rem;
+  line-height: .3rem;
+  background: url(../images/echelon.png);
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+}
+.ecotope.contain .cont-right .water .echarts-change.chain-ratio {
+  right: 0;
+}
+.ecotope.contain .cont-right .water .echarts-change2 a.active span {
+  background: -webkit-linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
+  background: linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
+}
+.ecotope.contain .cont-right .environmental .compare {
+  margin: .1rem 0;
+  font-size: .15rem;
+  text-align: center;
+  position: relative;
+  z-index: 99999;
+}
+.ecotope.contain .cont-right .environmental .compare i {
+  vertical-align: middle;
+}
+.ecotope.contain .cont-right .environmental .compare span.txtcol-green {
+  color: #42a651;
+}
+.ecotope.contain .cont-right .environmental .compare span.txtcol-red {
+  color: #f02020;
+}
+.ecotope.contain .cont-right .environmental .echarts {
+  margin-top: -4vh;
 }
 .ecotope.contain .cont-center {
   -webkit-box-flex: 6;
