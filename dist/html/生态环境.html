@@ -9,7 +9,6 @@
 
 <link rel="stylesheet" href="../css/custom-bootstrap.css">
 <link rel="stylesheet" href="../libs/icheck/skins/flat/_all.css">
-<link rel="stylesheet" href="../css/global.css">
 <link rel="stylesheet" href="../css/icon.css">
 <link rel="stylesheet" href="../css/common.css">
 
@@ -204,10 +203,10 @@
 					<div class="title">环保政务</div>
 					<div class="cont-box-kid">
 						<div class="echarts-change2 clearfix">
-							<a href="javascript:void(0);">
-								<span class="gradient">环保处罚案件</span>
+							<a href="javascript:void(0);" class="ec_a active">
+								<span>环保处罚案件</span>
 							</a>
-							<a href="javascript:void(0);"><span>罚没总收入</span></a>
+							<a href="javascript:void(0);" class="ec_a"><span>罚没总收入</span></a>
 						</div>
 						<div class="compare">
 							同比
@@ -215,7 +214,6 @@
 							<span class="txtcol-red">21.34%</span>
 						</div>
 						<div class="echarts" id="environmental_ec1" style="display:block;"></div>
-						<div class="echarts" id="environmental_ec2"></div>
 						</div>
 					</div>
 			</div>
@@ -316,7 +314,6 @@
 	var city_echart = echarts.init(document.getElementById('city_echart')),
 			water_ec1 = echarts.init(document.getElementById('water_ec1')),
 			environmental_ec1 = echarts.init(document.getElementById('environmental_ec1')),
-			environmental_ec2 = echarts.init(document.getElementById('environmental_ec2')),
 			map = echarts.init(document.getElementById('map')),
 			app = {},
 			water_ec1_data1 = [20, 80, 55, 50],
@@ -984,7 +981,6 @@
 		city_echart.setOption(option);
 		water_ec1.setOption(option1);
 		environmental_ec1.setOption(option3);
-		environmental_ec2.setOption(option4);
 		$(window).resize(function() {
 			var arr = [city_echart,water_ec1,water_ec1_2,water_ec2,water_ec2_2,environmental_ec1,environmental_ec2];
 			for(var i in arr){
@@ -993,18 +989,21 @@
 		});
 		$(".environmental .echarts-change2 a").each(function(){
 			$(this).click(function(){
-				var i = $(this).index();
-				$(this).find('span').addClass('gradient');
-				$(this).siblings().find('span').removeClass('gradient');
-				$(".environmental .echarts").eq(i).show().siblings(".echarts").hide();
-				$(".environmental .echarts").eq(i).resize();
+				var i = $(this).index(),
+						options;
+				$(this).addClass('active');
+				$(this).siblings().removeClass('active');
 				if(i == 1){
+					options = option4;
 					$(".environmental").find(".compare i").addClass('decline').removeClass('rise');
 					$(".environmental").find(".compare span").addClass('txtcol-green').removeClass('txtcol-red');
 				}else{
+					options = option3;
 					$(".environmental").find(".compare i").removeClass('decline').addClass('rise');
 					$(".environmental").find(".compare span").removeClass('txtcol-green').addClass('txtcol-red');
 				}
+				environmental_ec1.clear();
+				environmental_ec1.setOption(options);
 			})
 		});
 

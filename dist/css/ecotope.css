@@ -5,7 +5,6 @@
   height: 100%;
 }
 .ecotope.contain {
-  padding: .9rem .1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,10 +25,6 @@
 }
 .ecotope.contain .cont-box {
   width: 25vw;
-  color: #85f4fb;
-}
-.ecotope.contain .cont-box a {
-  color: #85f4fb;
 }
 .ecotope.contain .cont-left {
   -webkit-box-flex: 3;
@@ -176,30 +171,7 @@
 }
 .ecotope.contain .cont-right .more-ec-box .echarts-change2 {
   text-align: center;
-  margin-top: 2vh;
   margin-bottom: 1vh;
-}
-.ecotope.contain .cont-right .more-ec-box .echarts-change2 a {
-  display: inline-block;
-  margin-right: 1vw;
-  width: 6vw;
-  height: 3vh;
-  line-height: 3vh;
-  background: url(../images/ecotope_jiao.png);
-  background-size: 100% 100%;
-  text-align: center;
-}
-.ecotope.contain .cont-right .more-ec-box .echarts-change2 a:last-child {
-  margin-right: 0;
-}
-.ecotope.contain .cont-right .more-ec-box .echarts-change2 a span {
-  display: block;
-  width: 100%;
-  font-size: .15rem;
-}
-.ecotope.contain .cont-right .more-ec-box .echarts-change2 a span.gradient {
-  color: #85f4fb;
-  font-weight: bold;
 }
 .ecotope.contain .cont-right .more-ec-box .echarts {
   height: 19vh;
