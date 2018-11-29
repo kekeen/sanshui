@@ -7,9 +7,9 @@
    			 for(var i in data){
    			 	for(var j in data[i].icon){
    		%>
-      <li class="<%= local.fname == data[i].title[j] ? 'active' : '' %>">
+      <li class="<%= local.title == data[i].title[j] ? 'active' : '' %>">
 	      <a href="<%= data[i].title[j] %>.html">
-	        <i class="ic <%= data[i].icon[j] %><%= local.fname == data[i].title[j] ? '-y' : '' %>"></i>
+	        <i class="ic <%= data[i].icon[j] %><%= local.title == data[i].title[j] ? '-y' : '' %>"></i>
 	        <%= data[i].title[j] %>
         </a>
       </li>

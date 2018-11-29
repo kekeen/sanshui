@@ -1,0 +1,10 @@
+{
+  "title": "基础设施",
+  "styles": [
+    "../css/common.css",
+    "../css/infrastructure.css"
+  ],
+  "scripts":[
+  	"../js/footnav.js"
+  ]
+}
