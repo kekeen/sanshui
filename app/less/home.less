@@ -85,6 +85,9 @@
 .border-r(){
     border-radius: .18rem;
 }
+.bgs(){
+    background-image: linear-gradient(190deg, rgba(12,91,211,0.4) 0%, rgba(8,17,192,0.4) 100%);
+}
 //盒子1
 .ce-box-early{
     .border-r;
@@ -136,7 +139,66 @@
         width: 24%;
         height: 100%;
         .cont-box{
-
+            .cr-bo-nums{
+                 width: 1.4rem;
+                 position: relative;
+                 margin: .2rem auto 0;
+                 .bo-num{
+                     text-align: left;
+                     font-size: .48rem;
+                     color: #5cc163;
+                     font-family: 'digital';
+                }
+                 .bo-index{
+                     max-width: 0.85rem;
+                     &.bo-index3 {
+                         margin: -0.1rem 0 0.22rem;
+                     }
+                }
+                 &:before{
+                     position: absolute;
+                     right: 0;
+                     bottom: 0;
+                     content: '';
+                     .sprite;
+                     display: inline-block;
+                     width: .45rem;
+                     height: .57rem;
+                     background-position: -3rem -3rem;
+                 }
+            }
+            .cont-rrt{
+                margin-top: .15rem;
+                .chart-boxs{
+                    height: 2.95rem;
+                }
+                .rrt-left,.rrt-right{
+                    .chart-boxs{
+                        position: relative;
+                        &:before{
+                            display: inline-block;
+                            content: '';
+                            width: 100%;
+                            height: 1px;
+                            background: url(../images/list_ri_line.png) no-repeat center;
+                            background-size: cover;
+                            z-index: 3;
+                            position: absolute;
+                            top: 47%;
+                        }
+                    }
+                }
+                >div{
+                    width: 26%;
+                    float: left;
+                    &.rrt-center{
+                        width: 48%;
+                        height: 2.71rem;
+                        background: url("../images/list_bg.png") no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
         }
     }
     .cont-list-center{
@@ -215,8 +277,245 @@
         }
         .ce-box-early{
             width: 32.53%;
-            .ce-box-early{
+            padding: .18rem;
+            .early-title{
+                width:100%;
+                height: .56rem;
+                font-size: .20rem;
+                color: #dcfdff;
+                margin-bottom: .1rem;
+                .border-r;
+                text-align: center;
+                line-height: .56rem;
+                background-image: linear-gradient(0deg, rgba(12, 91, 211, 0.4) 0%, rgba(8, 17, 192, 0.4) 100%);
+            }
+            .ce-rrs{
+                .rrs-left{
+                    width: 36%;
+                    padding: .1rem;
+                    .border-r;
+                    .bgs;
+                    ul{
+                        padding-bottom: .11rem;
+                        >li{
+                            margin-top: .14rem;
+                            p{
+                                &.rrs-num{
+                                    font-size: .28rem;
+                                    color: #85f4fb;
+                                    font-family: "digital";
+                                    i{
+                                        font-size: .14rem;
+                                        color: #c1fbff;
+                                        font-family: "Arial";
+                                    }
+                                }
+                                &.rrs-bor{
+                                    font-size: .14rem;
+                                    color: #ffffff;
+                                    padding: .01rem .02rem;
+                                    height: .20rem;
+                                    border-radius: .12rem;
+                                    background-color: #2f72ed;
+                                    text-align: center;
+                                }
+                            }
+                            &:nth-of-type(2){
+                                p{
+                                    &.rrs-bor{
+                                        background-color: #1f93c7;
+                                    }
+                                }
+                            }
+                            &:nth-of-type(3){
+                                p{
+                                    &.rrs-bor{
+                                        background-color: #0cbcaf;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .rrs-right{
+                    width: 59%;
+                    .bgs;
+                    .border-r;
+                    .ri-lists{
+                        flex-wrap: wrap;
+                        margin-top: 0;
+                        padding: 0 .10rem .15rem;
+                        >li{
+                            position: relative;
+                            margin-left: 0;
+                            margin-right: .39rem;
+                            margin-top: .15rem;
+                            i{
+                                position: absolute;
+                                width: .24rem;
+                                height: .24rem;
+                                line-height: .24rem;
+                                border-radius: .12rem;
+                                font-size: .14rem;
+                                color: #012e9d;
+                                text-align: center;
+                                background-color: #d8be3a;
+                                right: 0;
+                            }
+                            a{
+                                width: .78rem;
+                                height: .78rem;
+                                line-height: 1.85rem;
+                            }
+                            &:nth-of-type(1){
+                                margin-left: 0;
+                                a{
+                                    background-position: -5.45rem -2.15rem;
+                                }
+                            }
+                            &:nth-of-type(2){
+                                a{
+                                    background-position: -6.35rem -2.15rem;
+                                }
+                                margin-right: 0;
+                            }
+                            &:nth-of-type(3){
+                                a{
+                                    background-position: -7.25rem -2.15rem;
+                                }
+                            }
+                            &:nth-of-type(4){
+                                a{
+                                    background-position: -8.15rem -2.15rem;
+                                }
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .weather-early{
+                .bgs;
+                .border-r;
+                ul{
+                    padding: .17rem .15rem;
+                    >li{
+                        width: 44%;
+                        .wea-top{
+                            display: flex;
+                            >i{
+                                .sprite;
+                                display: inline-block;
+                            }
+                            span{
+                                font-size: .16rem;
+                                display: inline-block;
+                            }
+                            >p{
+                                margin-left: .06rem;
+                                display: flex;
+                                flex-direction: column;
+                            }
+                            .wea-icon{
+                                width: .56rem;
+                                height: .40rem;
+                                background-position: -3.67rem -3.15rem;
+                            }
+                            .wea-icon2{
+                                width: .46rem;
+                                height: .46rem;
+                                background-position: -4.49rem -3.10rem;
+                            }
+                            .wea-icon3{
+                                width: .52rem;
+                                height: .46rem;
+                                background-position: -5.13rem -3.1rem;
+                            }
+                            .wea-icon4{
+                                width: .41rem;
+                                height: .51rem;
+                                background-position: -5.93rem -3.1rem;
+                            }
+                            .ts-grade{
 
+                                color: #5cc163;
+                            }
+                            .ts-air{
+                                color: #9ed2e7;
+                            }
+                            .ts-yellow{
+                                color: #d89a00;
+                            }
+                        }
+                        .wea-explain{
+                            margin-top: .07rem;
+                            font-size: .16rem;
+                            color: #85f4fb;
+                        }
+                        &:nth-of-type(3){
+                            margin-top: 0.4rem;
+                        }
+                        &:nth-of-type(4){
+                            margin-top: 0.15rem;
+                        }
+                    }
+                }
+            }
+            //空气质量指数
+            .atmosphere-early{
+                .bgs;
+                .border-r;
+                .atmo-rs{
+                    height: .28rem;
+                    border-radius: .15rem;
+                    border: 1px solid #0c3bb2;
+                    //插件
+                    .ui-widget{
+                        &.ui-widget-content {
+                            height: .20rem;
+                            border-radius: .15rem;
+                            width: 97%;
+                            margin: .03rem auto 0;
+                        }
+                    }
+                    .ui-slider-horizontal .ui-slider-handle {
+                        display: none;
+                    }
+
+
+                    .sl-all{
+                        position: relative;
+                        width: 100%;
+                        span{
+                            display: inline-block;
+                            height: .28rem;
+                            &:nth-of-type(1){
+                                width: 15%;
+                                background-color: #3fa246;
+                            }
+                            &:nth-of-type(2){
+                                width: 15%;
+                                background-color: #5cc163;
+                            }
+                            &:nth-of-type(3){
+                                width: 20%;
+                                background-color: #d8be3a;
+                            }
+                            &:nth-of-type(4){
+                                width: 25%;
+                                background-color: #d89a00;
+                            }
+                            &:nth-of-type(5){
+                                width: 30%;
+                                background-color: #cf5925;
+                            }
+                            &:nth-of-type(6){
+                                width: 35%;
+                                background-color: #bc3535;
+                            }
+                        }
+                    }
+                }
             }
         }
         .ce-res-bottom{
@@ -263,12 +562,38 @@
     }
 }
 //图表
-.chart-boxs{
+.chart-boxs,.chart-bus{
     width: 100%;
     height:2rem;
     .chart-pics {
         width: 100%;
         height: 100%;
+    }
+}
+.chart-bus{
+    position: relative;
+    height: 1.93rem;
+    margin-top: -.08rem;
+    .chart-pics {
+        height: 89%;
+    }
+    &:before{
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: url(../images/list_bot_line.png) no-repeat center;
+        background-size: cover;
+        display: inline-block;
+    }
+    &:after{
+        content: '舆情热词';
+        font-size: .16rem;
+        color: #85f4fb;
+        text-align: left;
+        display: inline-block;
+        position: absolute;
+        top: .30rem;
+        left: .30rem;
     }
 }
 .cr-bo-nums{
@@ -297,6 +622,7 @@
 }
 .bo-lists,.ri-lists{
     padding: 0 .26rem;
+    display: flex;
    >li{
        float: left;
        margin-left: 10%;

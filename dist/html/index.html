@@ -11,6 +11,8 @@
 <link rel="stylesheet" href="../libs/icheck/skins/flat/_all.css">
 <link rel="stylesheet" href="../css/global.css">
 <link rel="stylesheet" href="../css/icon.css">
+<link rel="stylesheet" href="../libs/jquery-ui-1.12.1/jquery-ui.min.css">
+
 
 <!--[if lt IE 9]>
   <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -38,11 +40,31 @@
                  <div class="cont-box">
                       <div class="cont-box-all">
                           <div class="cont-title">经济运行</div>
+                          <div class="cont-rrt">
+                              <div class="rrt-left">
+                                  <div class="chart-boxs">
+                                      <div id="chartEconomy" class="chart-pics"></div>
+                                  </div>
+                              </div>
+                              <div class="rrt-center"></div>
+                              <div class="rrt-right">
+                                  <div class="chart-boxs">
+                                      <div id="chartEconomy2" class="chart-pics"></div>
+                                  </div>
+                              </div>
+                          </div>
                       </div>
                  </div>
                  <div class="cont-box">
                       <div class="cont-box-all">
                           <div class="cont-title">民生舆情</div>
+                          <div class="cr-bo-nums">
+                              <p class="bo-num bo-num2">78</p>
+                              <p class="bo-index bo-index3">就业指数</p>
+                          </div>
+                          <div class="chart-bus">
+                              <div id="chartBubble" class="chart-pics"></div>
+                          </div>
                       </div>
                  </div>
              </div>
@@ -67,19 +89,102 @@
                      </div>
                      <div class="ce-box-early pull-right">
                          <div class="early-title">数据中心及预警</div>
+                         <div class="ce-rrs">
+                             <div class="rrs-left pull-left">
+                                 <ul>
+                                     <li>
+                                         <p class="rrs-num">16</p>
+                                         <p class="rrs-bor">数据分门别类</p>
+                                     </li>
+                                     <li>
+                                         <p class="rrs-num">12</p>
+                                         <p class="rrs-bor">涵盖范围·部门</p>
+                                     </li>
+                                     <li>
+                                         <p class="rrs-num">3174<i>M</i></p>
+                                         <p class="rrs-bor">今日数据交换</p>
+                                     </li>
+                                 </ul>
+                             </div>
+                             <div class="rrs-right pull-right">
+                                 <ul class="ri-lists clearfix">
+                                     <li><a href="javascript:void(0)">传感器</a><i>5</i> </li>
+                                     <li><a href="javascript:void(0)">监控摄像</a><i>10</i></li>
+                                     <li><a href="javascript:void(0)">硬件设备</a><i>5</i></li>
+                                     <li><a href="javascript:void(0)">系统</a><i>8</i></li>
+                                 </ul>
+                             </div>
+                         </div>
                      </div>
                  </div>
                  <div class="ce-res-bottom clearfix">
                      <div class="ce-box-early pull-left">
-
+                         <div class="early-title">交通拥堵指数</div>
                      </div>
-                     <div class="ce-box-early pull-left"></div>
-                     <div class="ce-box-early pull-left"></div>
+                     <div class="ce-box-early pull-left">
+                         <div class="early-title">环境气象实时监测</div>
+                         <div class="weather-early">
+                             <ul class="clearfix">
+                                 <li class="pull-left">
+                                     <div class="wea-top">
+                                         <i class="wea-icon"></i>
+                                         <p>
+                                             <span class="ts-grade">二级</span>
+                                             <span class="ts-air">空气污染</span>
+                                         </p>
+                                     </div>
+                                     <p class="wea-explain">较有利于空气污染物稀释、扩散和清除</p>
+                                 </li>
+                                 <li class="pull-right">
+                                     <div class="wea-top">
+                                         <i class="wea-icon2"></i>
+                                         <p>
+                                             <span class="ts-grade">二级</span>
+                                             <span class="ts-air">紫外线指数</span>
+                                         </p>
+                                     </div>
+                                     <p class="wea-explain">弱，可以涂擦防晒霜等</p>
+                                 </li>
+                                 <li class="pull-left">
+                                     <div class="wea-top">
+                                         <i class="wea-icon3"></i>
+                                         <p>
+                                             <span class="ts-grade">七级</span>
+                                             <span class="ts-air">人体舒适度</span>
+                                         </p>
+                                     </div>
+                                     <p class="wea-explain">温暖，感觉舒适</p>
+                                 </li>
+                                 <li class="pull-right">
+                                     <div class="wea-top">
+                                         <i class="wea-icon4"></i>
+                                         <p>
+                                             <span class="ts-yellow">黄色</span>
+                                             <span class="ts-air">火灾危险度</span>
+                                         </p>
+                                     </div>
+                                     <p class="wea-explain">表示火灾危险度颇高，请注意防火</p>
+                                 </li>
+                             </ul>
+                         </div>
+                     </div>
+                     <div class="ce-box-early pull-left">
+                         <div class="early-title">空气质量指数</div>
+                         <div class="atmosphere-early">
+                             <div class="atmo-rs">
+                                 <div class="span-slider">
+                                     <p class="sl-all">
+                                         <span></span><span></span><span></span><span></span><span></span><span></span>
+                                     </p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
                  </div>
              </div>
              <div class="cont-list-right">
                 <div class="cont-box">
-                    <div class="cont-box-all">
+                    <div class="cont-box-all clearfix">
                         <div class="cont-title">基础设施</div>
                         <div class="cr-bo-nums">
                             <p class="bo-num">76</p>
@@ -161,6 +266,8 @@
 <script src="../libs/nicescroll/jquery.nicescroll.js"></script>
 <script src="../libs/echarts/echarts.min.js"></script>
 <script src="../js/global.js"></script>
+
+<script src="../libs/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 
 
 <script>
@@ -534,6 +641,7 @@
                                 position: 'center'
                             }
                         },
+                        hoverAnimation: false,
                         data: [
                             {
                                 value: 80,
@@ -580,6 +688,7 @@
                                 }
                             }
                         ]
+
                     },
                     {
                         name: '单位',
@@ -587,6 +696,7 @@
                         radius: radius,
                         center:['50%',t1],
                         color:'#0cbcaf',
+                        hoverAnimation: false,
                         label: {
                             normal: {
                                 position: 'center'
@@ -640,6 +750,7 @@
                         name: '绿化',
                         type: 'pie',
                         radius: radius,
+                        hoverAnimation: false,
                         center:['80%',t1],
                         color:'#d89a00',
                         label: {
@@ -696,16 +807,532 @@
             myChart.setOption(option);
             arrchart.push(myChart);
         }
+        //民生舆情
+        chartBubble();
+        function chartBubble() {
+            var myChart = echarts.init(document.getElementById('chartBubble'));
+            var plantCap = [
+                {
+                    name: '特朗普',
+                    value: '10'
+                },
+                {
+                    name: '特朗普',
+                    value: '10'
+                },
+                {
+                    name: '特朗普',
+                    value: '10'
+                },
+                {
+                    name: '特朗普',
+                    value: '10'
+                },
+                {
+                    name: '特朗普',
+                    value: '10'
+                },
+                {
+                    name: '特朗普',
+                    value: '10'
+                },
+                {
+                    name: '特朗普',
+                    value: '10'
+                },
+                {
+                    name: '特朗普',
+                    value: '10'
+                },
+                {
+                    name: '特朗普',
+                    value: '10'
+                },
+                {
+                    name: '特朗普',
+                    value: '10'
+                },
+            ];
+            var datalist = [
+                {
+                    offset: [10, 60],
+                    symbolSize: 55,
+                    color: '#0077d8',
+                    fonts:14
+                },
+                {
+                    offset: [2, 20],
+                    symbolSize: 40,
+                    color: '#94d800',
+                    fonts:12
+                },
+                {
+                    offset: [32, 70],
+                    symbolSize: 40,
+                    color: '#ce306f',
+                    fonts:12
+                },
+                {
+                    offset: [25, 24],
+                    symbolSize: 45,
+                    color: '#0cbcaf',
+                    fonts:12
+                },
+                {
+                    offset: [48, 74],
+                    symbolSize: 55,
+                    color: '#cccc15',
+                    fonts:14
+                },
+                {
+                    offset: [43, 24],
+                    symbolSize: 55,
+                    color: '#0077d8',
+                    fonts:14
+                },
+                {
+                    offset: [60, 36],
+                    symbolSize: 55,
+                    color: '#d89a00',
+                    fonts:14
+                },
+                {
+                    offset: [75, 70],
+                    symbolSize: 40,
+                    color: '#0cbcaf',
+                    fonts:12
+                },
+                {
+                    offset: [75, 30],
+                    symbolSize: 40,
+                    color: '#009dad',
+                    fonts:12
+                },
+                {
+                    offset: [93, 30],
+                    symbolSize: 55,
+                    color: '#94d800',
+                    fonts:14
+                },
+            ];
+            var datas = [];
+            for (var i = 0; i < plantCap.length; i++) {
+                var item = plantCap[i];
+                var itemToStyle = datalist[i];
+                datas.push({
+                    name: item.name,
+                    value: itemToStyle.offset,
+                    symbolSize: itemToStyle.symbolSize,
+                    label: {
+                        normal: {
+                            textStyle: {
+                                fontSize: itemToStyle.fonts,
+                            }
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: itemToStyle.color,
+                            /*opacity: itemToStyle.opacity*/
+                        }
+                    },
+                })
+            }
+            var option = {
+                    grid: {
+                        show: false,
+                        top: 10,
+                        bottom: 10
+                    },
+                    xAxis: [{
+                        gridIndex: 0,
+                        type: 'value',
+                        show: false,
+                        min: 0,
+                        max: 100,
+                        nameLocation: 'middle',
+                        nameGap: 5
+                    }],
+                    yAxis: [{
+                        gridIndex: 0,
+                        min: 0,
+                        show: false,
+                        max: 100,
+                        nameLocation: 'middle',
+                        nameGap: 30
+                    }],
+                    series: [{
+                        type: 'scatter',
+                        symbol: 'circle',
+                        symbolSize: 120,
+                        label: {
+                            normal: {
+                                show: true,
+                                formatter:'{b}',
+                                color: '#dcfdff',
+                            },
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: '#00acea'
+                            }
+                        },
+                        data: datas
+                    }]
+                };
 
+            myChart.setOption(option);
+            arrchart.push(myChart);
+        }
+        //经济运行
+        chartEconomy();
+        function chartEconomy() {
+            var myChart = echarts.init(document.getElementById('chartEconomy'));
+            var radius = ['55%', '45%'];
+            var t1 = '13%';
+            var t2 = '65%';
+            option = {
+                title: [
+                    {
+                        text: 'GDP',
+                        top: '27%',
+                        itemGap:4,
+                        textAlign:'center',
+                        left: '50%',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 13,
+                            fontWeight:'normal'
+                        },
+                        subtext:'（单位：万亿）',
+                        subtextStyle:{
+                            color: '#709dd5',
+                            fontSize: 13,
+                            fontWeight:'normal'
+                        }
+                    },
+                    {
+                        text: '财政收入',
+                        top: '80%',
+                        left: '50%',
+                        itemGap:4,
+                        textAlign:'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 13,
+                            fontWeight:'normal'
+                        },
+                        subtext:'（单位：万亿）',
+                        subtextStyle:{
+                            color: '#709dd5',
+                            fontSize: 13,
+                            fontWeight:'normal'
+                        }
+                    }
+                ],
+                tooltip : {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                series: [
+                    {
+                        name: 'GDP',
+                        type: 'pie',
+                        radius: radius,
+                        center:['50%',t1],
+                        color:'#0bbbaf',
+                        label: {
+                            normal: {
+                                position: 'center'
+                            }
+                        },
+                        hoverAnimation: false,
+                        data: [
+                            {
+                                value: 1000.6,
+                                name: 'GDP',
+                                label: {
+                                    normal: {
+                                        formatter: '{c}',
+                                        lineHeight:100,
+                                        textStyle: {
+                                            color:'#c1fbff',
+                                            fontFamily: 'digital',
+                                            fontSize:16,
+                                        }
+                                    }
+                                },
+                                tooltip:{
+                                    trigger: 'item'
+                                }
+                            },
+                            {
+                                value: 200,
+                                name: '',
+                                label: {
+                                    show:true,
+                                    normal: {
+                                        position: 'outside'
+                                    }
+                                },
+                                labelLine:{
+                                    show:false,
+                                    emphasis:{
+                                        show:false
+                                    }
+                                },
+                                itemStyle: {
+                                    show:false,
+                                    normal: {
+                                        color: '#2063a7'
+                                    }
+                                },
+                                tooltip:{
+                                    show:false,
+                                    trigger: 'item'
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        name: '财政收入',
+                        type: 'pie',
+                        radius: radius,
+                        center:['50%',t2],
+                        color:'#d29704',
+                        label: {
+                            normal: {
+                                position: 'center'
+                            }
+                        },
+                        data: [
+                            {
+                                value:67.9,
+                                name: '财政收入',
+                                label: {
+                                    normal: {
+                                        formatter: '{c}',
+                                        textStyle: {
+                                            color:'#c1fbff',
+                                            fontFamily: 'digital',
+                                            fontSize:16
+                                        }
+                                    }
+                                },
+                                tooltip:{
+                                    trigger: 'item',
+                                }
+                            }, {
+                                value: 200,
+                                name: '',
+                                label: {
+                                    show:false,
+                                    normal: {
+                                        position: 'outside'
+                                    }
+                                },
+                                labelLine:{
+                                    show:false,
+                                    emphasis:{
+                                        show:false,
+                                    }
+                                },
+                                itemStyle: {
+                                    show:false,
+                                    normal: {
+                                        color: 'rgba(210,151,4,0.3)'
+                                    }
+                                },
+                                tooltip:{
+                                    show:false,
+                                    trigger: 'item',
+                                }
+                            }]
+                    },
+                ]
+            };
+            myChart.setOption(option);
+            arrchart.push(myChart);
+        }
+        chartEconomy2();
+        function chartEconomy2() {
+            var myChart = echarts.init(document.getElementById('chartEconomy2'));
+            var radius = ['55%', '45%'];
+            var t1 = '13%';
+            var t2 = '65%';
+            option = {
+                title: [
+                    {
+                        text: '第三产业\n' + '增加值占比',
+                        top: '27%',
+                        textAlign:'center',
+                        left: '50%',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 13,
+                            fontWeight:'normal',
+                            lineHeight: 16,
+                            rich: {
+                                text: {
+                                    lineHeight: 16
+                                }
+                            }
+                        }
+                    },
+                    {
+                        text: '人均GDP',
+                        top: '80%',
+                        left: '50%',
+                        itemGap:4,
+                        textAlign:'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 13,
+                            fontWeight:'normal'
+                        },
+                        subtext:'（单位：万亿）',
+                        subtextStyle:{
+                            color: '#709dd5',
+                            fontSize: 13,
+                            fontWeight:'normal'
+                        }
+                    }
+                ],
+                tooltip : {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                series: [
+                    {
+                        name: '第三产业\n' +
+                        '增加值占比',
+                        type: 'pie',
+                        radius: radius,
+                        center:['50%',t1],
+                        color:'#b8c100',
+                        label: {
+                            normal: {
+                                position: 'center'
+                            }
+                        },
+                        hoverAnimation: false,
+                        data: [
+                            {
+                                value: 24.6,
+                                name: '第三产业\n' +
+                                '增加值占比',
+                                label: {
+                                    normal: {
+                                        formatter: '{c}',
+                                        lineHeight:100,
+                                        textStyle: {
+                                            color:'#c1fbff',
+                                            fontFamily: 'digital',
+                                            fontSize:16,
+                                        }
+                                    }
+                                },
+                                tooltip:{
+                                    trigger: 'item'
+                                }
+                            },
+                            {
+                                value: 200,
+                                name: '',
+                                label: {
+                                    show:true,
+                                    normal: {
+                                        position: 'outside'
+                                    }
+                                },
+                                labelLine:{
+                                    show:false,
+                                    emphasis:{
+                                        show:false
+                                    }
+                                },
+                                itemStyle: {
+                                    show:false,
+                                    normal: {
+                                        color: '#4d6345'
+                                    }
+                                },
+                                tooltip:{
+                                    show:false,
+                                    trigger: 'item'
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        name: '人均GDP',
+                        type: 'pie',
+                        radius: radius,
+                        center:['50%',t2],
+                        color:'#46bff5',
+                        label: {
+                            normal: {
+                                position: 'center'
+                            }
+                        },
+                        data: [
+                            {
+                                value:1.83,
+                                name: '人均GDP',
+                                label: {
+                                    normal: {
+                                        formatter: '{c}',
+                                        textStyle: {
+                                            color:'#c1fbff',
+                                            fontFamily: 'digital',
+                                            fontSize:16
+                                        }
+                                    }
+                                },
+                                tooltip:{
+                                    trigger: 'item',
+                                }
+                            }, {
+                                value: 10,
+                                name: '',
+                                label: {
+                                    show:false,
+                                    normal: {
+                                        position: 'outside'
+                                    }
+                                },
+                                labelLine:{
+                                    show:false,
+                                    emphasis:{
+                                        show:false,
+                                    }
+                                },
+                                itemStyle: {
+                                    show:false,
+                                    normal: {
+                                        color: '#2063ab'
+                                    }
+                                },
+                                tooltip:{
+                                    show:false,
+                                    trigger: 'item',
+                                }
+                            }]
+                    },
+                ]
+            };
+            myChart.setOption(option);
+            arrchart.push(myChart);
+        }
         // 图表自适应
         window.onresize = function(){
             for(var i = 0; i < arrchart.length; i++){
                 arrchart[i].resize();
             }
         };
-
+        //空气质量指数
+        $( ".span-slider" ).slider();
     })
 </script>
-
 </body>
 </html>

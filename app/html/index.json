@@ -1,5 +1,9 @@
 {
   "title": "首页",
-  "styles": [],
-  "scripts":[]
+  "styles": [
+    "../libs/jquery-ui-1.12.1/jquery-ui.min.css"
+  ],
+  "scripts":[
+    "../libs/jquery-ui-1.12.1/jquery-ui.min.js"
+  ]
 }

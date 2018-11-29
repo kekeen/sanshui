@@ -175,6 +175,12 @@ gulp.task('copy', function(){
         './app/font/**'
     ])
         .pipe(gulp.dest('./dist/font'));
+    gulp.src([
+
+        './app/libs/jquery-ui-1.12.1/**'
+    ])
+        .pipe(gulp.dest('./dist/libs/jquery-ui-1.12.1'));
+
 
 });
 // ----------------静态页面开发流程----------------end
