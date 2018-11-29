@@ -4,7 +4,8 @@
   "fname": "经济运行",
   "styles": [
     "../css/common.css",
-    "../css/ecotope.css"
+    "../css/ecotope.css",
+    "../css/zlm.css"
   ],
   "scripts":[
   	"../js/footnav.js"

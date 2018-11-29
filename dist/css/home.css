@@ -407,6 +407,12 @@ a:focus {
   width: 19%;
   float: right;
 }
+.cont-list .cont-list-right .cr-bo-nums .bo-num {
+  margin-top: .15rem;
+}
+.cont-list .cont-list-right .cr-bo-nums .bo-num.bo-num2 {
+  margin-top: .25rem;
+}
 .cont-bots {
   width: 100%;
   padding: 0 0.1rem;
@@ -434,6 +440,93 @@ a:focus {
 .chart-boxs .chart-pics {
   width: 100%;
   height: 100%;
+}
+.cr-bo-nums > p {
+  text-align: center;
+}
+.cr-bo-nums .bo-num {
+  font-size: .68rem;
+  color: #5cc163;
+  font-family: 'digital';
+}
+.cr-bo-nums .bo-index {
+  font-size: .16rem;
+  color: #ffffff;
+  padding: .01rem .1rem;
+  background-color: #1f93c7;
+  max-width: 1.2rem;
+  margin: -0.17rem auto 0.08rem;
+}
+.cr-bo-nums .bo-index.bo-index2 {
+  margin: -0.12rem auto 0.15rem;
+}
+.cr-bo-nums .bo-index.bo-index3 {
+  margin: -0.1rem auto 0.22rem;
+}
+.bo-lists,
+.ri-lists {
+  padding: 0 .26rem;
+}
+.bo-lists > li,
+.ri-lists > li {
+  float: left;
+  margin-left: 10%;
+}
+.bo-lists > li a,
+.ri-lists > li a {
+  background-image: url(../images/sprite-icon.png);
+  background-size: 11.7rem 3.7rem;
+  color: #c1fbff;
+  font-size: 0.16rem;
+  text-align: center;
+  line-height: 1.62rem;
+  width: .66rem;
+  height: .66rem;
+  display: inline-block;
+}
+.bo-lists > li:nth-of-type(1),
+.ri-lists > li:nth-of-type(1) {
+  margin-left: 0;
+}
+.bo-lists > li:nth-of-type(1) a,
+.ri-lists > li:nth-of-type(1) a {
+  background-position: -6.5rem -3.02rem;
+}
+.bo-lists > li:nth-of-type(2) a,
+.ri-lists > li:nth-of-type(2) a {
+  background-position: -7.22rem -3.02rem;
+}
+.bo-lists > li:nth-of-type(3) a,
+.ri-lists > li:nth-of-type(3) a {
+  background-position: -7.94rem -3.02rem;
+}
+.bo-lists > li:nth-of-type(4) a,
+.ri-lists > li:nth-of-type(4) a {
+  background-position: -8.66rem -3.02rem;
+}
+.ri-lists {
+  padding: 0 .35rem;
+  margin-top: .46rem;
+}
+.ri-lists > li {
+  margin-left: 16%;
+}
+.ri-lists > li a {
+  width: .78rem;
+  height: .78rem;
+  line-height: 1.85rem;
+}
+.ri-lists > li:nth-of-type(1) {
+  margin-left: 0;
+}
+.ri-lists > li:nth-of-type(1) a {
+  background-position: -9.05rem -2.15rem;
+}
+.ri-lists > li:nth-of-type(2) a {
+  background-position: -9.97rem -2.15rem;
+}
+.ri-lists > li:nth-of-type(3) a {
+  background-position: -10.87rem -2.15rem;
 }
 
 /*# sourceMappingURL=home.css.map */
