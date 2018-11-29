@@ -147,6 +147,24 @@
         background:url(../images/list_jiao3.png) no-repeat -1px bottom, url(../images/list_jiao.png) no-repeat right bottom;
     }
 }
+.jiao_small{
+  position: relative;
+  &:before,&:after{
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top:0;
+      left: 0;
+      z-index: 1;
+      background:url(../images/list_jiao1_small.png) no-repeat -1px -1px, url(../images/list_jiao2_small.png) no-repeat right -1px;
+  }
+  &:after{
+      bottom:0;
+      background:url(../images/list_jiao3_small.png) no-repeat -1px bottom, url(../images/list_jiao_small.png) no-repeat right bottom;
+  }
+}
 .cont-box{
     border: 1px solid #59aceb;
     background-color: rgba(5,35,110,0.9215686274509803);
