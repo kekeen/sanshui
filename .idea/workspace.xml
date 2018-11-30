@@ -2,16 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="743cd344-ede5-4600-935c-1bfbee9dea4b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/global.css.map" afterPath="$PROJECT_DIR$/dist/css/global.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/html/index.html" afterPath="$PROJECT_DIR$/app/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/less/home.less" afterPath="$PROJECT_DIR$/app/less/home.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/global.css" afterPath="$PROJECT_DIR$/dist/css/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/global.min.css" afterPath="$PROJECT_DIR$/dist/css/global.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/home.css" afterPath="$PROJECT_DIR$/dist/css/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/home.css.map" afterPath="$PROJECT_DIR$/dist/css/home.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/home.min.css" afterPath="$PROJECT_DIR$/dist/css/home.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/html/index.html" afterPath="$PROJECT_DIR$/dist/html/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/build_list_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/build_list_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/矩形 7 拷贝 2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/ecotope_jiao.png" afterPath="$PROJECT_DIR$/app/images/ecotope_jiao.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/images/ecotope_jiao.png" afterPath="$PROJECT_DIR$/dist/images/ecotope_jiao.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/html/icon.html" afterPath="$PROJECT_DIR$/app/html/icon.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/html/基础设施.html" afterPath="$PROJECT_DIR$/app/html/基础设施.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/html/生态环境.html" afterPath="$PROJECT_DIR$/app/html/生态环境.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/hangzhou-tracks.json" afterPath="$PROJECT_DIR$/app/js/hangzhou-tracks.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/less/common.less" afterPath="$PROJECT_DIR$/app/less/common.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/less/ecotope.less" afterPath="$PROJECT_DIR$/app/less/ecotope.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/less/infrastructure.less" afterPath="$PROJECT_DIR$/app/less/infrastructure.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/footnav.ejs" afterPath="$PROJECT_DIR$/app/templates/footnav.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/common.css" afterPath="$PROJECT_DIR$/dist/css/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/common.css.map" afterPath="$PROJECT_DIR$/dist/css/common.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/common.min.css" afterPath="$PROJECT_DIR$/dist/css/common.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/ecotope.css" afterPath="$PROJECT_DIR$/dist/css/ecotope.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/ecotope.css.map" afterPath="$PROJECT_DIR$/dist/css/ecotope.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/ecotope.min.css" afterPath="$PROJECT_DIR$/dist/css/ecotope.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/infrastructure.css" afterPath="$PROJECT_DIR$/dist/css/infrastructure.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/infrastructure.css.map" afterPath="$PROJECT_DIR$/dist/css/infrastructure.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/infrastructure.min.css" afterPath="$PROJECT_DIR$/dist/css/infrastructure.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/html/icon.html" afterPath="$PROJECT_DIR$/dist/html/icon.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/html/基础设施.html" afterPath="$PROJECT_DIR$/dist/html/基础设施.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/html/生态环境.html" afterPath="$PROJECT_DIR$/dist/html/生态环境.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/html/经济运行.html" afterPath="$PROJECT_DIR$/dist/html/经济运行.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -790,12 +806,12 @@
       <workItem from="1543368959142" duration="13323000" />
       <workItem from="1543391402562" duration="9111000" />
       <workItem from="1543456250592" duration="25078000" />
-      <workItem from="1543541809715" duration="22207000" />
+      <workItem from="1543541809715" duration="22260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90475000" />
+    <option name="totallyTimeSpent" value="90528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1037" extended-state="7" />
@@ -2780,52 +2796,6 @@
           <folding>
             <element signature="e#82#111#0" expanded="false" />
             <element signature="e#121#201#0" expanded="false" />
-            <element signature="e#207#639#0" expanded="false" />
-            <element signature="e#403#429#0" expanded="false" />
-            <element signature="e#436#524#0" expanded="false" />
-            <element signature="e#535#637#0" expanded="false" />
-            <element signature="e#545#633#0" expanded="false" />
-            <element signature="e#648#1669#0" expanded="false" />
-            <element signature="e#906#1667#0" expanded="false" />
-            <element signature="e#976#1661#0" expanded="false" />
-            <element signature="e#1108#1187#0" expanded="false" />
-            <element signature="e#1201#1504#0" expanded="false" />
-            <element signature="e#1438#1490#0" expanded="false" />
-            <element signature="e#1533#1651#0" expanded="false" />
-            <element signature="e#1681#2891#0" expanded="false" />
-            <element signature="e#1863#1931#0" expanded="false" />
-            <element signature="e#1945#2015#0" expanded="false" />
-            <element signature="e#2036#2113#0" expanded="false" />
-            <element signature="e#2142#2173#0" expanded="false" />
-            <element signature="e#2188#2663#0" expanded="false" />
-            <element signature="e#2316#2657#0" expanded="false" />
-            <element signature="e#2340#2467#0" expanded="false" />
-            <element signature="e#2489#2647#0" expanded="false" />
-            <element signature="e#2681#2889#0" expanded="false" />
-            <element signature="e#2693#2826#0" expanded="false" />
-            <element signature="e#2836#2883#0" expanded="false" />
-            <element signature="e#2897#3394#0" expanded="false" />
-            <element signature="e#2943#3230#0" expanded="false" />
-            <element signature="e#3242#3392#0" expanded="false" />
-            <element signature="e#3404#4429#0" expanded="false" />
-            <element signature="e#3541#3570#0" expanded="false" />
-            <element signature="e#3588#3689#0" expanded="false" />
-            <element signature="e#3700#3961#0" expanded="false" />
-            <element signature="e#3979#4400#0" expanded="false" />
-            <element signature="e#4069#4394#0" expanded="false" />
-            <element signature="e#4442#6168#0" expanded="false" />
-            <element signature="e#4482#4734#0" expanded="false" />
-            <element signature="e#4543#4728#0" expanded="false" />
-            <element signature="e#4749#6166#0" expanded="false" />
-            <element signature="e#4789#6160#0" expanded="false" />
-            <element signature="e#4871#6150#0" expanded="false" />
-            <element signature="e#5078#5134#0" expanded="false" />
-            <element signature="e#5155#5285#0" expanded="false" />
-            <element signature="e#5303#5653#0" expanded="false" />
-            <element signature="e#5684#5814#0" expanded="false" />
-            <element signature="e#5845#5975#0" expanded="false" />
-            <element signature="e#6006#6136#0" expanded="false" />
-            <element signature="e#6177#6367#0" expanded="false" />
           </folding>
         </state>
       </provider>

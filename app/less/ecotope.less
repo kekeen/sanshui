@@ -108,6 +108,7 @@
       }
       .tit{
         margin: .1rem 0;
+        text-align: left;
         span{
           color: #709dd5;
           font-size: .14rem;
@@ -210,15 +211,6 @@
           right: 0;
         }
       }
-      .echarts-change2{
-        a{
-          &.active{
-            span{
-              background: linear-gradient(rgba(62,155,221,.7) 40%, rgba(255,255,255,0));
-            }
-          }
-        }
-      }
     }
     .environmental{
       .compare{
@@ -230,17 +222,10 @@
         i{
           vertical-align: middle;
         }
-        span{
-          &.txtcol-green{
-            color:#42a651;
-          }
-          &.txtcol-red{
-            color:#f02020;
-          }
-        }
       }
       .echarts{
         margin-top: -4vh;
+        height: 20vh;
       }
     }
   }
@@ -252,6 +237,12 @@
           width: 2.2rem;
           height: 1.3rem;
           color: #4df1bd;
+          span{
+            font{
+              font-size: .22rem;
+              margin-left: .05rem;
+            }
+          }
           &:last-child{
             color: #ffc90d
           }
