@@ -21,6 +21,7 @@
 <![endif]-->
 </head>
 
+
 <body>
   
 	<header class="newheader infrastructure clearfix">
@@ -44,10 +45,84 @@
 </header>
   <div class="contain infrastructure clearfix">
     <div class="cont-left">
-      <div class="cont-box jiao sanitation">
+      <div class="cont-box jiao building">
         <div class="title">施工报建</div>
         <div class="cont-box-kid">
-
+          <div class="top">
+            <div class="echarts-change2 clearfix">
+              <a href="javascript:void(0);" class="ec_a active"><span>新报建工程基本情况</span></a>
+              <a href="javascript:void(0);" class="ec_a"><span>新报建工程资金情况</span></a>
+            </div>
+            <div class="echarts" id="build"></div>
+          </div>
+          <p class="tit">2018同比2017</p>
+          <ul class="buildlist clearfix">
+            
+            <li class="jiao">
+              <span class="unit">（单位：
+                个）</span>
+              <span class="num digital">
+                226</span>
+              <span class="cls">
+                <i class="ic construction"></i>
+                新工程
+              </span>
+              <span class="compare">
+                同比
+                <i class="ic-small decline"></i>
+                <font class="txtcol-green">21.34%</font>
+              </span>
+            </li>
+            
+            <li class="jiao">
+              <span class="unit">（单位：
+                万平方米）</span>
+              <span class="num digital">
+                798.65</span>
+              <span class="cls">
+                <i class="ic construction2"></i>
+                新工程面积
+              </span>
+              <span class="compare">
+                同比
+                <i class="ic-small decline"></i>
+                <font class="txtcol-green">21.34%</font>
+              </span>
+            </li>
+            
+            <li class="jiao">
+              <span class="unit">（单位：
+                万元）</span>
+              <span class="num digital">
+                1251627</span>
+              <span class="cls">
+                <i class="ic calculator"></i>
+                总造价
+              </span>
+              <span class="compare">
+                同比
+                <i class="ic-small decline"></i>
+                <font class="txtcol-green">21.34%</font>
+              </span>
+            </li>
+            
+            <li class="jiao">
+              <span class="unit">（单位：
+                万元）</span>
+              <span class="num digital">
+                44033</span>
+              <span class="cls">
+                <i class="ic protect"></i>
+                保证金
+              </span>
+              <span class="compare">
+                同比
+                <i class="ic-small rise"></i>
+                <font class="txtcol-red">21.34%</font>
+              </span>
+            </li>
+            
+          </ul>
         </div>
       </div>
     </div>
@@ -71,26 +146,53 @@
           </li>
         </ul>
       </div>
-      <div class="cont-box jiao">
+      <div class="cont-box park jiao">
         <div class="title">城市绿化</div>
         <div class="cont-box-kid">
-          <a href="javascript:void(0);" class="ec_a active"><span>建成区绿化情况</span></a>
-          <a href="javascript:void(0);" class="ec_a"><span>公园绿化情况</span></a>
+          <div class="echarts-change2 clearfix">
+            <a href="javascript:void(0);" class="ec_a active"><span>建成区绿化情况</span></a>
+            <a href="javascript:void(0);" class="ec_a"><span>公园绿化情况</span></a>
+          </div>
+          <div class="echarts" id="park"></div>
         </div>
       </div>
     </div>
     <div class="cont-right">
-      <div class="cont-box jiao">
+      <div class="cont-box land jiao">
         <div class="title">地产开发</div>
         <div class="cont-box-kid">
-          <a href="javascript:void(0);" class="ec_a active"><span>房地产开发投资</span></a>
-          <a href="javascript:void(0);" class="ec_a"><span>商品房施工情况</span></a>
+          <div class="echarts-change2 clearfix">
+            <a href="javascript:void(0);" class="ec_a active"><span>房地产开发投资</span></a>
+            <a href="javascript:void(0);" class="ec_a"><span>商品房施工情况</span></a>
+          </div>
+          <div class="echarts" id="land"></div>
+          <table class="land-tables">
+            <thead>
+              <tr>
+                <th>标题</th>
+                <th>面积（单位：万平方米）</th>
+                <th>增长率</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>商品房施工</td>
+                <td class="txtcol-green digital">864.96</td>
+                <td class="txtcol-red digital">28.2% <i class="c-small rise2"></i></td>
+              </tr>
+              <tr>
+                <td>商品住宅施工</td>
+                <td class="txtcol-green digital">864.96</td>
+                <td class="txtcol-red digital">28.2% <i class="c-small rise2"></i></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div class="cont-box jiao">
+      <div class="cont-box road jiao">
         <div class="title">路网密度</div>
         <div class="cont-box-kid">
-
+          <div class="echarts" id="road"></div>
         </div>
       </div>
     </div>
@@ -108,50 +210,57 @@
       
       <li class="">
 	      <a href="经济运行.html">
-	        <i class="ic infr"></i>
+	        <i class="ic money"></i>
 	        经济运行
         </a>
       </li>
       
       <li class="active">
 	      <a href="基础设施.html">
-	        <i class="ic ecotope-y"></i>
+	        <i class="ic infr-y"></i>
 	        基础设施
         </a>
       </li>
       
       <li class="">
 	      <a href="生态环境.html">
-	        <i class="ic livelihood"></i>
+	        <i class="ic ecotope"></i>
 	        生态环境
         </a>
       </li>
       
       <li class="">
 	      <a href="民生舆情.html">
-	        <i class="ic gover"></i>
+	        <i class="ic livelihood"></i>
 	        民生舆情
         </a>
       </li>
       
       <li class="">
 	      <a href="政务效能.html">
-	        <i class="ic culture"></i>
+	        <i class="ic gover"></i>
 	        政务效能
         </a>
       </li>
       
       <li class="">
 	      <a href="文化建设.html">
-	        <i class="ic transportation"></i>
+	        <i class="ic culture"></i>
 	        文化建设
         </a>
       </li>
       
       <li class="">
 	      <a href="交通运输.html">
-	        <i class="ic water"></i>
+	        <i class="ic transportation"></i>
 	        交通运输
+        </a>
+      </li>
+      
+      <li class="">
+	      <a href="敬请期待.html">
+	        <i class="ic water"></i>
+	        敬请期待
         </a>
       </li>
       
@@ -176,5 +285,592 @@
 
 <script src="../js/footnav.js"></script>
 
+<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+
 
 </body>
+<script>
+  var build_echart = echarts.init(document.getElementById('build')),
+    park_echart = echarts.init(document.getElementById('park')),
+    land_echart = echarts.init(document.getElementById('land')),
+    road_echart = echarts.init(document.getElementById('road'));
+  option = {
+    legend: {
+      data: ['新建个数工程', '新建个数面积'],
+      bottom: "0",
+      textStyle: {
+        color: "#a9e0ed"
+      },
+    },
+    grid: {
+      left: '1%',
+      right: '4%',
+      bottom: '10%',
+      top: "10%",
+      containLabel: true
+    },
+    xAxis: {
+      type: 'category',
+      data: ['2016', '2017', '2018'],
+      axisLine: {
+        lineStyle: {
+          color: '#3794d4',
+        }
+      },
+      axisLabel: {
+        color: "#a9e0ed",
+      },
+    },
+    yAxis: [{
+      type: 'value',
+      name: '（单位：个）',
+      nameTextStyle: {
+        color: "#c7cdcd"
+      },
+      splitLine: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#3794d4',
+        }
+      },
+      axisLabel: {
+        color: "#a9e0ed",
+      }
+    }, {
+      type: 'value',
+      name: '（单位：万平方米）',
+      min: 0,
+      max: 500,
+      nameTextStyle: {
+        color: "#c7cdcd"
+      },
+      splitLine: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#3794d4',
+        }
+      },
+      axisLabel: {
+        color: "#a9e0ed",
+      },
+    }],
+    series: [{
+        name: '新建工程个数',
+        type: 'bar',
+        data: [120, 120, 120],
+        barWidth: "20%",
+        itemStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: '#44bdf4'
+            }, {
+              offset: 1,
+              color: '#1f76cd'
+            }]),
+          }
+        },
+        label: {
+          show: true,
+          position: "top",
+          color: "#a9e0ed"
+        }
+      },
+      {
+        name: '新建面积个数',
+        type: 'bar',
+        data: [500, 500, 500],
+        barWidth: "20%",
+        itemStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: '#5ac062'
+            }, {
+              offset: 1,
+              color: '#279230'
+            }]),
+          }
+        },
+        label: {
+          show: true,
+          position: "top",
+          color: "#a9e0ed"
+        }
+      }
+    ]
+  };
+  option2 = {
+    title: {
+      text: "单位：万元",
+      left: "center",
+      top: "-1%",
+      textStyle: {
+        color: "#c1fbff",
+        fontSize: "12",
+        fontWeight: "0"
+      }
+    },
+    legend: {
+      data: ['总造价', '保证金'],
+      bottom: "0",
+      textStyle: {
+        color: "#a9e0ed"
+      },
+    },
+    grid: {
+      left: '1%',
+      right: '4%',
+      bottom: '10%',
+      top: "10%",
+      containLabel: true
+    },
+    xAxis: {
+      type: 'category',
+      data: ['2016', '2017', '2018'],
+      axisLine: {
+        lineStyle: {
+          color: '#3794d4',
+        }
+      },
+      axisLabel: {
+        color: "#a9e0ed",
+      },
+    },
+    yAxis: [{
+      type: 'value',
+      name: '（总造价）',
+      nameTextStyle: {
+        color: "#c7cdcd"
+      },
+      splitLine: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#3794d4',
+        }
+      },
+      axisLabel: {
+        color: "#a9e0ed",
+        formatter: "{value}w"
+      }
+    }, {
+      type: 'value',
+      name: '（保证金）',
+      min: 0,
+      max: 7.5,
+      interval: 1.5,
+      nameTextStyle: {
+        color: "#c7cdcd"
+      },
+      splitLine: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#3794d4',
+        }
+      },
+      axisLabel: {
+        color: "#a9e0ed",
+      },
+    }],
+    series: [{
+        name: '总造价',
+        type: 'bar',
+        data: [120, 120, 120],
+        barWidth: "20%",
+        itemStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: '#44bdf4'
+            }, {
+              offset: 1,
+              color: '#1f76cd'
+            }]),
+          }
+        },
+      },
+      {
+        name: '保证金',
+        type: 'bar',
+        data: [500, 500, 500],
+        barWidth: "20%",
+        itemStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: '#5ac062'
+            }, {
+              offset: 1,
+              color: '#279230'
+            }]),
+          }
+        },
+      }
+    ]
+  };
+  option3 = {
+    legend: {
+      data: ['建成区绿化率', '建成区面积（公顷）'],
+      bottom: "0",
+      textStyle: {
+        color: "#a9e0ed"
+      },
+    },
+    grid: {
+      left: '1%',
+      right: '4%',
+      bottom: '10%',
+      top: "12%",
+      containLabel: true
+    },
+    xAxis: {
+      type: 'category',
+      data: ['2016', '2017', '2018'],
+      axisLine: {
+        lineStyle: {
+          color: '#3794d4',
+        }
+      },
+      axisLabel: {
+        color: "#a9e0ed",
+      },
+    },
+    yAxis: [{
+      type: 'value',
+      name: '（%）',
+      nameTextStyle: {
+        color: "#c7cdcd"
+      },
+      splitLine: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#3794d4',
+        }
+      },
+      axisLabel: {
+        color: "#a9e0ed",
+      }
+    }, {
+      type: 'value',
+      name: '（保证金：公顷）',
+      min: 0,
+      max: 5000,
+      interval: 1000,
+      nameTextStyle: {
+        color: "#c7cdcd"
+      },
+      splitLine: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#3794d4',
+        }
+      },
+      axisLabel: {
+        color: "#a9e0ed",
+      },
+    }],
+    series: [{
+        name: '建成区绿化率',
+        type: 'bar',
+        data: [45, 45, 45],
+        barWidth: "20%",
+        itemStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: '#fe5757'
+            }, {
+              offset: 1,
+              color: '#bc2a2a'
+            }]),
+          }
+        },
+        label: {
+          show: true,
+          formatter: "{c}%",
+          color: "#85f4fb",
+          fontWeight: "bold",
+          position: "top"
+        }
+      },
+      {
+        name: '建成区面积（公顷）',
+        type: 'bar',
+        data: [211.6, 211.6, 211.6],
+        barWidth: "20%",
+        itemStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: '#d8bd39'
+            }, {
+              offset: 1,
+              color: '#b68417'
+            }]),
+          }
+        },
+        label: {
+          show: true,
+          color: "#85f4fb",
+          fontWeight: "bold",
+          position: "top"
+        }
+      }
+    ]
+  };
+  option4 = {
+    legend: {
+      data: ['公园绿地面积', '人均公园绿地面积'],
+      bottom: "0",
+      textStyle: {
+        color: "#a9e0ed"
+      },
+    },
+    grid: {
+      left: '1%',
+      right: '4%',
+      bottom: '10%',
+      top: "12%",
+      containLabel: true
+    },
+    xAxis: {
+      type: 'category',
+      data: ['2016', '2017', '2018'],
+      axisLine: {
+        lineStyle: {
+          color: '#3794d4',
+        }
+      },
+      axisLabel: {
+        color: "#a9e0ed",
+      },
+    },
+    yAxis: [{
+      type: 'value',
+      name: '（单位：公顷）',
+      nameTextStyle: {
+        color: "#c7cdcd"
+      },
+      splitLine: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#3794d4',
+        }
+      },
+      axisLabel: {
+        color: "#a9e0ed",
+      }
+    }, {
+      type: 'value',
+      name: '（单位：平方米）',
+      min: 0,
+      max: 65,
+      interval: 15,
+      nameTextStyle: {
+        color: "#c7cdcd"
+      },
+      splitLine: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#3794d4',
+        }
+      },
+      axisLabel: {
+        color: "#a9e0ed",
+      },
+    }],
+    series: [{
+        name: '公园绿地面积',
+        type: 'bar',
+        data: [120, 120, 120],
+        barWidth: "20%",
+        itemStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: '#44bdf4'
+            }, {
+              offset: 1,
+              color: '#1f76cd'
+            }]),
+          }
+        },
+      },
+      {
+        name: '人均公园绿地面积',
+        type: 'bar',
+        data: [500, 500, 500],
+        barWidth: "20%",
+        itemStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: '#5ac062'
+            }, {
+              offset: 1,
+              color: '#279230'
+            }]),
+          }
+        },
+      }
+    ]
+  };
+  var richs = {
+    nor: {
+      color: "#c1fbff",
+      fontSize: "12"
+    },
+    colup: {
+      color: "#ff4064",
+      fontSize: "12"
+    },
+    coldown: {
+      color: "#94d800",
+      fontSize: "12",
+    },
+    up: {
+      backgroundColor: {
+        image: "../images/up.png"
+      },
+      height: 13,
+      width: 12,
+    },
+    down: {
+      backgroundColor: {
+        image: "../images/down.png"
+      },
+      height: 13,
+      width: 12,
+    }
+  }
+
+  option5 = {
+    title: {
+      text: '统计时间为：2017年',
+      bottom: "0",
+      left: "center",
+      textStyle: {
+        color: "#85f4fb",
+        fontSize: "20"
+      },
+    },
+    series: [{
+      type: 'pie',
+      radius: '55%',
+      center: ['50%', '40%'],
+      label: {
+        normal: {
+          rich: richs
+        }
+      },
+      // hoverAnimation:false,
+      itemStyle: {
+        // borderColor:"rgba(255,255,255,.1)",
+        // borderWidth:10,
+        shadowBlur: 10,
+        shadowColor: "rgba(255,255,255)"
+      },
+      data: [{
+          value: 14.3,
+          name: '商业用房投资',
+          itemStyle: {
+            color: "#94d800"
+          },
+          label: {
+            normal: {
+              formatter: [
+                '{nor|{b}}',
+                '{coldown|29.9%} {down|}'
+              ].join('\n\n'),
+            }
+          },
+        },
+        {
+          value: 85.7,
+          name: '住宅投资',
+          itemStyle: {
+            color: "#0077d8"
+          },
+          label: {
+            normal: {
+              formatter: [
+                '{nor|{b}}',
+                '{colup|29.9%} {up|}'
+              ].join('\n\n'),
+            }
+          },
+        },
+      ]
+
+    }]
+  };
+
+  build_echart.setOption(option);
+  park_echart.setOption(option3);
+  land_echart.setOption(option5);
+  var arr = [build_echart, park_echart, land_echart, road_echart];
+  $(window).resize(function() {
+    for (var i in arr) {
+      arr[i].resize();
+    }
+  });
+  $(".building .ec_a").each(function(index, el) {
+    $(this).click(function(event) {
+      $(".building .ec_a").removeClass('active');
+      $(this).addClass('active');
+      build_echart.clear();
+      if ($(this).index() == 0) {
+        /* 点击新报建工程基本情况  */
+        build_echart.setOption(option);
+      } else {
+        /* 点击新报建工程资金情况  */
+        build_echart.setOption(option2);
+      }
+    });
+  });
+  $(".park .ec_a").each(function(index, el) {
+    $(this).click(function(event) {
+      $(".park .ec_a").removeClass('active');
+      $(this).addClass('active');
+      park_echart.clear();
+      if ($(this).index() == 0) {
+        /* 点击建成区绿化情况  */
+        park_echart.setOption(option3);
+      } else {
+        /* 点击公园绿化情况  */
+        park_echart.setOption(option4);
+      }
+    });
+  });
+  $(".land .ec_a").each(function(index, el) {
+    $(this).click(function(event) {
+      $(".land .ec_a").removeClass('active');
+      $(this).addClass('active');
+      if ($(this).index() == 0) {
+        /* 点击房地产开发投资  */
+        $("#land").show();
+        $(".land-tables").hide();
+      } else {
+        /* 点击产品房施工情况  */
+        $("#land").hide();
+        $(".land-tables").show();
+      }
+    });
+  });
+</script>

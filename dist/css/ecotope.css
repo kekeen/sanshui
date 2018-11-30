@@ -112,6 +112,7 @@
 }
 .ecotope.contain .cont-left .city .tit {
   margin: .1rem 0;
+  text-align: left;
 }
 .ecotope.contain .cont-left .city .tit span {
   color: #709dd5;
@@ -211,10 +212,6 @@
 .ecotope.contain .cont-right .water .echarts-change.chain-ratio {
   right: 0;
 }
-.ecotope.contain .cont-right .water .echarts-change2 a.active span {
-  background: -webkit-linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
-  background: linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
-}
 .ecotope.contain .cont-right .environmental .compare {
   margin: .1rem 0;
   font-size: .15rem;
@@ -225,14 +222,9 @@
 .ecotope.contain .cont-right .environmental .compare i {
   vertical-align: middle;
 }
-.ecotope.contain .cont-right .environmental .compare span.txtcol-green {
-  color: #42a651;
-}
-.ecotope.contain .cont-right .environmental .compare span.txtcol-red {
-  color: #f02020;
-}
 .ecotope.contain .cont-right .environmental .echarts {
   margin-top: -4vh;
+  height: 20vh;
 }
 .ecotope.contain .cont-center {
   -webkit-box-flex: 6;
@@ -243,6 +235,10 @@
   width: 2.2rem;
   height: 1.3rem;
   color: #4df1bd;
+}
+.ecotope.contain .cont-center .cont-list ul li span font {
+  font-size: .22rem;
+  margin-left: .05rem;
 }
 .ecotope.contain .cont-center .cont-list ul li:last-child {
   color: #ffc90d;

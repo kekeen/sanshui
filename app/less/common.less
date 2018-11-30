@@ -7,6 +7,12 @@
 .gradient{
   background: linear-gradient(rgba(62,155,221,.7) 40%, rgba(255,255,255,0));
 }
+.txtcol-green{
+  color:#42a651!important;
+}
+.txtcol-red{
+  color:#f02020!important;
+}
 .ec_a{
   display: inline-block;
   margin-right: 1vw;
@@ -82,12 +88,15 @@
     z-index: 9;
     &.money{
         background: url(../images/head_money.png) no-repeat;
+        background-size: 100% 100%;
     }
     &.ecotope{
         background: url(../images/head_ecotope.png) no-repeat;
+        background-size: 100% 100%;
     }
     &.infrastructure{
         background: url(../images/head_Infrastructure.png) no-repeat;
+        background-size: 100% 100%;
     }
     .head-time,.head-weather{
       line-height: 7vh;
@@ -132,6 +141,7 @@
         height: 100%;
         position: absolute;
         top:0;
+        left: 0;
         z-index: 1;
         background:url(../images/list_jiao1.png) no-repeat -1px -1px, url(../images/list_jiao2.png) no-repeat right -1px;
     }
@@ -139,6 +149,24 @@
         bottom:0;
         background:url(../images/list_jiao3.png) no-repeat -1px bottom, url(../images/list_jiao.png) no-repeat right bottom;
     }
+}
+.jiao_small{
+  position: relative;
+  &:before,&:after{
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top:0;
+      left: 0;
+      z-index: 1;
+      background:url(../images/list_jiao1_small.png) no-repeat -1px -1px, url(../images/list_jiao2_small.png) no-repeat right -1px;
+  }
+  &:after{
+      bottom:0;
+      background:url(../images/list_jiao3_small.png) no-repeat -1px bottom, url(../images/list_jiao_small.png) no-repeat right bottom;
+  }
 }
 .cont-box{
     border: 1px solid #59aceb;

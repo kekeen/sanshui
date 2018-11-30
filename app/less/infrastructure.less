@@ -1,5 +1,14 @@
 .infrastructure.contain{
   display: flex;
+  .echarts{
+    margin-top: .2rem;
+  }
+  .tit{
+    text-align: left;
+    margin: .15rem 0;
+    font-size: .16rem;
+    font-weight: bold;
+  }
   .cont-left,.cont-right,.cont-center{
     flex: 4;
   }
@@ -13,6 +22,7 @@
         margin-bottom: .1rem;
         background: url(../images/infrastructure_list2.png) no-repeat;
         background-size: 100% 100%;
+        margin-right: 8px;
         span{
           font-size: .4rem;
         }
@@ -40,7 +50,8 @@
             font-size: .8rem;
           }
         }
-        &:last-child{
+        &:nth-child(3){
+          margin-right: 0;
           p{
             color: #ffc90d;
           }
@@ -50,15 +61,110 @@
     .cont-box{
       height: 4.19rem;
     }
+    .echarts{
+      height: 27vh;
+    }
   }
   .cont-left{
     .cont-box{
       height: 8.71rem;
+      .cont-box-kid{
+        padding: 0 .3rem;
+      }
+    }
+    .echarts{
+      height: 30vh;
+    }
+    .buildlist{
+      li{
+        position: relative;
+        float: left;
+        width: 49%;
+        height: 1.7rem;
+        background: url(../images/build_list_bg.png);
+        background-size: 100% 100%;
+        padding: .3rem .15rem 0 .15rem;
+        box-sizing: border-box;
+        text-align: center;
+        margin-right: 10px;
+        margin-top: 10px;
+        &:nth-child(1),&:nth-child(2){
+          margin-top: 0;
+        }
+        &:nth-child(even){
+          margin-right: 0;
+        }
+        span{
+          display: block;
+          i{
+            vertical-align: middle;
+          }
+          &.unit{
+            font-size: .12rem;
+            color: #c7cdcd;
+            position: absolute;
+            top: .1rem;
+            left: .1rem;
+          }
+          &.num{
+            font-size: .28rem;
+          }
+          &.cls{
+            font-size: .16rem;
+            i{
+              margin-right: .1rem;
+            }
+          }
+          &.compare{
+            margin-top: 1.6vh;
+          }
+        }
+      }
     }
   }
   .cont-right{
     .cont-box{
       height: 4.3rem;
+    }
+    .land{
+      .echarts{
+        height: 28vh;
+      }
+      .land-tables{
+        display: none;
+        width: 100%;
+        background: #0a2468;
+        margin-top: .2rem;
+        th,td{
+          text-align: center;
+        }
+        thead{
+          tr{
+            height: 4vh;
+            line-height: 4vh;
+            background: url(../images/lang_tables_thead_bg.png) no-repeat;
+            background-size: 100% 100%;
+          }
+        }
+        tbody{
+          background: url(../images/lang_tables_tdody_bg.png);
+          tr{
+            height: 10vh;
+            font-size: .18rem;
+            td{
+              color: #fff;
+              &.digital{
+                font-size: .28rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .road{
+      .echarts{
+        height: 32vh;
+      }
     }
   }
 }
