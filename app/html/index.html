@@ -13,7 +13,12 @@
                                       <div id="chartEconomy" class="chart-pics"></div>
                                   </div>
                               </div>
-                              <div class="rrt-center"></div>
+                              <div class="rrt-center">
+                                  <div class="chart-boxs">
+                                      <div id="chartSpeed" class="chart-pics"></div>
+                                  </div>
+                                  <p class="chart-titles">经济发展指数</p>
+                              </div>
                               <div class="rrt-right">
                                   <div class="chart-boxs">
                                       <div id="chartEconomy2" class="chart-pics"></div>
@@ -75,10 +80,10 @@
                              </div>
                              <div class="rrs-right pull-right">
                                  <ul class="ri-lists clearfix">
-                                     <li><a href="javascript:void(0)">传感器</a><i>5</i> </li>
-                                     <li><a href="javascript:void(0)">监控摄像</a><i>10</i></li>
-                                     <li><a href="javascript:void(0)">硬件设备</a><i>5</i></li>
-                                     <li><a href="javascript:void(0)">系统</a><i>8</i></li>
+                                     <li class="pull-left"><a href="javascript:void(0)">传感器</a><i>5</i> </li>
+                                     <li class="pull-right"><a href="javascript:void(0)">监控摄像</a><i>10</i></li>
+                                     <li class="pull-left"><a href="javascript:void(0)">硬件设备</a><i>5</i></li>
+                                     <li class="pull-right"><a href="javascript:void(0)">系统</a><i>8</i></li>
                                  </ul>
                              </div>
                          </div>
@@ -87,6 +92,7 @@
                  <div class="ce-res-bottom clearfix">
                      <div class="ce-box-early pull-left">
                          <div class="early-title">交通拥堵指数</div>
+                         <div class="ear-tis">当前拥堵指数<p>较上周同期上升1.4%</p></div>
                      </div>
                      <div class="ce-box-early pull-left">
                          <div class="early-title">环境气象实时监测</div>
@@ -138,6 +144,11 @@
                      <div class="ce-box-early pull-left">
                          <div class="early-title">空气质量指数</div>
                          <div class="atmosphere-early">
+                             <div class="atmo-top">
+                                 <p class="bo-num">52</p>
+                                 <p class="atmo-sign">空气 不健康</p>
+                             </div>
+
                              <div class="atmo-rs">
                                  <div class="span-slider">
                                      <p class="sl-all">
@@ -1280,6 +1291,129 @@
             myChart.setOption(option);
             arrchart.push(myChart);
         }
+        //经济发展指数
+        chartSpeed();
+        function chartSpeed() {
+            var myChart = echarts.init(document.getElementById('chartSpeed'));
+            option = {
+                color: ['#ce3170', '#d89a00', '#d89a00', '#d8be3a', '#d8be3a', '#94d800'],
+                grid: { left: '-19%',width: "98%", containLabel: true },
+                title: [
+                    {
+                        text: '80',
+                        top: '58%',
+                        left: '60%',
+                        textStyle: {
+                            color: '#5cc163',
+                            fontSize: 48,
+                            fontFamily: 'digital',
+                            fontWeight:'normal'
+                        }
+                    }
+                ],
+                xAxis:  {
+                    type: 'category',
+                    data: [],
+                    show:false
+                },
+                yAxis: {
+                    type: 'value',
+                    max: 100,
+                    show:false,
+                    splitNumber:10
+                },
+                series: [
+                    {
+                        name: '1',
+                         type: 'bar',
+                         stack: 1,
+                         barWidth:'50%',
+                         barMinHeight: 10,
+                         itemStyle: {
+                            normal: {
+                                show: true,
+                                barBorderRadius: 88,
+                                barBorderWidth: 8,
+                                barBorderColor: 'rgba(12,91,211,0)'
+                            }
+                        },
+                        data: [10]
+                    },
+                    {
+                        name: '2',
+                        type: 'bar',
+                        stack: 1,
+                        itemStyle: {
+                            normal: {
+                                show: true,
+                                barBorderRadius: 88,
+                                barBorderWidth: 8,
+                                barBorderColor: 'rgba(12,91,211,0)'
+                            }
+                        },
+                        data: [10]
+                    },
+                    {
+                        name: '3',
+                        type: 'bar',
+                        stack: 1,
+                        itemStyle: {
+                            normal: {
+                                show: true,
+                                barBorderRadius: 88,
+                                barBorderWidth: 8,
+                                barBorderColor: 'rgba(12,91,211,0)'
+                            }
+                        },
+                        data: [10]
+                    },
+                    {
+                        name: '4',
+                        type: 'bar',
+                        stack: 1,
+                        itemStyle: {
+                            normal: {
+                                show: true,
+                                barBorderRadius: 88,
+                                barBorderWidth: 8,
+                                barBorderColor: 'rgba(12,91,211,0)'
+                            }
+                        },
+                        data: [10]
+                    },
+                    {
+                        name: '5',
+                        type: 'bar',
+                        stack: 1,
+                        itemStyle: {
+                            normal: {
+                                show: true,
+                                barBorderRadius: 88,
+                                barBorderWidth: 8,
+                                barBorderColor: 'rgba(12,91,211,0)'
+                            }
+                        },
+                        data: [10]
+                    },
+                    {
+                        name: '6',
+                        type: 'bar',
+                        stack: 1,
+                        itemStyle: {
+                            normal: {
+                                show: true,
+                                barBorderRadius: 88,
+                                barBorderWidth: 8,
+                                barBorderColor: 'rgba(12,91,211,0)'
+                            }
+                        },
+                        data: [10]
+                    }
+                ]
+            };
+            myChart.setOption(option);
+            arrchart.push(myChart);
+        }
         // 图表自适应
         window.onresize = function(){
             for(var i = 0; i < arrchart.length; i++){
@@ -1287,7 +1421,16 @@
             }
         };
         //空气质量指数
-        $( ".span-slider" ).slider();
+        $( ".span-slider" ).slider({
+            value:50,
+            min: 0,
+            max: 100,
+            slide: function(event, ui) {
+                if(ui.value > 0 && ui.value <= 100){
+                    return false;
+                }
+            }
+        });
     })
 </script>
 </body>
