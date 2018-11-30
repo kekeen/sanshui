@@ -3,6 +3,9 @@
   display: -ms-flexbox;
   display: flex;
 }
+.infrastructure.contain .echarts {
+  margin-top: .2rem;
+}
 .infrastructure.contain .tit {
   text-align: left;
   margin: .15rem 0;
@@ -66,6 +69,9 @@
 .infrastructure.contain .cont-center .cont-box {
   height: 4.19rem;
 }
+.infrastructure.contain .cont-center .echarts {
+  height: 27vh;
+}
 .infrastructure.contain .cont-left .cont-box {
   height: 8.71rem;
 }
@@ -74,7 +80,6 @@
 }
 .infrastructure.contain .cont-left .echarts {
   height: 30vh;
-  margin-top: .2rem;
 }
 .infrastructure.contain .cont-left .buildlist li {
   position: relative;

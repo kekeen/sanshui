@@ -191,12 +191,15 @@ a:focus {
 }
 .newheader.money {
   background: url(../images/head_money.png) no-repeat;
+  background-size: 100% 100%;
 }
 .newheader.ecotope {
   background: url(../images/head_ecotope.png) no-repeat;
+  background-size: 100% 100%;
 }
 .newheader.infrastructure {
   background: url(../images/head_Infrastructure.png) no-repeat;
+  background-size: 100% 100%;
 }
 .newheader .head-time,
 .newheader .head-weather {

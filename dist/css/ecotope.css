@@ -236,6 +236,10 @@
   height: 1.3rem;
   color: #4df1bd;
 }
+.ecotope.contain .cont-center .cont-list ul li span font {
+  font-size: .22rem;
+  margin-left: .05rem;
+}
 .ecotope.contain .cont-center .cont-list ul li:last-child {
   color: #ffc90d;
 }
