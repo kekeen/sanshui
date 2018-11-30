@@ -3,17 +3,28 @@
 </style>
 <body>
 		<%- include('../templates/newheader') %>
-	<div class="contain clearfix JjOpera">
+	<div class="contain clearfix JjOpera" style="padding: .9rem 0rem;">
 
 		<div class="cont-left pull-left">
 			<div class="cont-box jiao" style="width: 596px;height: 870px;margin:8px 0 0 10px;">
-				<div class="JjOpera-l-top"></div>
+				<div class="JjOpera-l-top">
+					<div class="title">生产总值</div>
+					<div class="JjOpera-l-top-md clearfix">
+							<div class="pull-left JjOpera-l-top-md-l">生产总值<span>（单位:亿元）</span></div>
+							<div class="pull-left JjOpera-l-top-md-r">统计时间：2017年</span></div>
+					</div>
+					<div class="JjOpera-l-top-bt" id="columnLine5">
+
+					</div>
+					<div class="JjOpera-center"><i class="ic-small trend"></i>人均GDP：169331元</div>
+					<div class="JjOpera-line"></div>
+				</div>
 				<div class="JjOpera-l-bt" id="columnLine1">
 
 				</div>
 			</div>
 		</div>
-		<div class="cont-center pull-left" style="width:1304px;
+		<div class="cont-center pull-left" style="width:1204px;
     margin-left: 10px;padding-left:5px;">
 		  <div class="JjOpera-r-top clearfix">
 				<div class="JjOpera-r-top-l pull-left">
@@ -25,32 +36,35 @@
 							<ul class="clearfix">
 								<li>
 									<span>2016</span>
-									<p></p>
+									<p class="digital">78.6</p>
 								</li>
 								<li>
 									<span>2017</span>
-									<p></p>
+									<p class="digital">80.3</p>
 								</li>
 								<li>
 									<span>2018</span>
-									<p></p>
+									<p class="digital">99.9</p>
 								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="JjOpera-r-top-l-b cont-box jiao">
 						<div class="JjOpera-title">
-
+								<div class="title">财政收入</div>
 						</div>
+						<div class="JjOpera-l-top-md-r">统计时间：2017年</span></div>
 						<div class="clearfix">
 							<div class="pull-left JjOpera-r-top-l-b-l" id="columnLine2"></div>
-							<div class="pull-left JjOpera-r-top-l-b-r"></div>
+							<div class="pull-left JjOpera-r-top-l-b-r" id="columnLine6"></div>
 						</div>
 					</div>
 				</div>
 				<div class="JjOpera-r-top-r cont-box jiao pull-left" style="height:534px;">
-					<div class="JjOpera-title">
-
+				<div class="title">产业投资</div>
+				 <div class="JjOpera-l-top-md clearfix">
+						 <div class="pull-left JjOpera-l-top-md-l">固定资产投资总额<span>（单位:亿元）</span></div>
+						 <div class="pull-left JjOpera-l-top-md-r">统计时间：2017年</span></div>
 				 </div>
 					 <div class="JjOpera-r-top-r-t"></div>
 					 <div class="JjOpera-r-top-r-b" id="columnLine4"></div>
@@ -58,12 +72,24 @@
 		  </div>
 			<div class="JjOpera-r-bt cont-box jiao">
 				<div class="JjOpera-title">
-
+						<div class="title">人口概况</div>
 				</div>
+				<div class="JjOpera-l-top-md-r">统计时间：2017年</span></div>
 				<div class="clearfix">
-					<div class="pull-left JjOpera-r-bt-l"></div>
-					<div class="pull-left JjOpera-r-bt-m"></div>
-					<div class="pull-left JjOpera-r-bt-r" id="columnLine3"></div>
+					<div class="pull-left JjOpera-r-bt-l" id="columnLine7"></div>
+					<div class="pull-left JjOpera-r-bt-m" id="columnLine8"></div>
+					<div class="pull-left JjOpera-r-bt-r" id="columnLine3">
+				</div>
+				<div class="JjOpera-info">
+					 <div class="JjOpera-info-tp">
+					 	  <i class="ic-small house"></i><span>常住人口&nbsp93.73万</span>
+					 </div>
+					 <div class="JjOpera-info-bt">
+						 <i class="ic-small card"></i><span>户籍人口&nbsp41.73万</span>
+					</div>
+				</div>
+				<div class="JjOpera-line2"></div>
+				<div class="JjOpera-line3"></div>
 				</div>
 			</div>
 		</div>
@@ -173,7 +199,18 @@
 														}
 												},
 								        legend: {
-								            data: ['生产总值（亿元）', '增长率（%）'],
+								            data: [
+															{
+																name:'生产总值（亿元）',
+																icon:"rect"
+															},{
+																name:'增长率（%）',
+																icon:"image://../images/pic_yellow_line.png"
+															}
+															,{
+															name:"2018年预测",
+															icon:"image://../images/pic_blue.png"
+														}],
 														textStyle: {
                                   fontSize: '14',
                                   color:'#C1FBFF',
@@ -182,7 +219,7 @@
 								        },
 								        grid: {
 								            top: '100',
-								            left: '3%',
+								            left: '5%',
 								            right: '4%',
 								            bottom: '60',
 								            containLabel: true
@@ -224,6 +261,7 @@
 								                    fontSize: '14'
 								                }
 								            },
+														offset:10,
 														nameTextStyle:{
 															color:'#709DD5',
 															fontSize: '14',
@@ -278,7 +316,7 @@
 								            'type': 'bar',
 								            barWidth: 40,
 														barGap:'120%',
-								            'data': [700, 800, 900, 1000, 1100],
+								            data: [700, 800, 900, 1000],
 								            itemStyle: {
 								                normal: {
 								                    //barBorderRadius: 15,
@@ -304,21 +342,7 @@
 																		}
 								                },
 																emphasis: {
-								                    color: new echarts.graphic.LinearGradient(
-								                        0, 0, 0, 1,
-								                        [
-								                            {offset: 0, color: '#0E3E8F'},
-								                            {offset: 1, color: '#185199'}
-								                        ]
-								                    ),
-																		borderWidth: 2,
-																		borderColor: '#4DF1BD',
-																		borderType: 'dashed',
-																		label: {
-																				textStyle: {
-																						color: '#4DF1BD',
-																				},
-																		}
+
 								                },
 								            }
 
@@ -343,7 +367,33 @@
 																    }
 								                }
 								            },
-								        }]
+								        },{
+														name:"2018年预测",
+														type:"bar",
+														// barGap:"120%",
+														barWidth:40,
+														data:[0,0,0,1100],
+														itemStyle:{
+															color: new echarts.graphic.LinearGradient(
+																	0, 0, 0, 1,
+																	[
+																			{offset: 0, color: '#0E3E8F'},
+																			{offset: 1, color: '#185199'}
+																	]
+															),
+															borderWidth: 2,
+															borderColor: '#4DF1BD',
+															borderType: 'dashed',
+															label: {
+																  show: true,
+																  position: 'top',
+																	textStyle: {
+																		fontSize: '14',
+																		fontWeight:600
+																	},
+															}
+														}
+												}]
 								    }]
 								};
 
@@ -972,6 +1022,9 @@
 
 						 // 指定图表的配置项和数据
 						 option = {
+							 color: ['#C4C61C', '#0C6EC4', '#0CBCAF', '#5d9afc', '#00cfff', '#a982ff',
+                            '#ffbe73'
+                        ],
 						     title: {
 						         text: '固定资产投资额增长率',
 										 textStyle:{
@@ -979,6 +1032,7 @@
 												fontSize:17,
 										 },
 						     },
+
 								 textStyle:{
 										color:'#85F4FB',
 										fontSize:17,
@@ -1035,16 +1089,27 @@
 						         {
 						             type : 'category',
 						             boundaryGap : false,
-						             data : ['2012','2013','2014','2015','2016']
+						             data : ['2012','2013','2014','2015','2016'],
+
+												 axisLine: {
+ 														show:true,
+ 														lineStyle:{
+ 															color: '#C1FBFF',
+ 														}
+ 												},
+ 												axisTick: {
+ 														show: false
+ 												},
 						         }
 						     ],
 						     yAxis : [
 						         {
-											 // name: '（%）',
-											 // type: 'value',
-											 // "min": 0,//刻度线
-											 // "max": 30,
-											 // "interval": 5,
+											 name: '（%）',
+											  type: 'value',
+
+											  "min": 0,//刻度线
+											  "max": 80,
+											  //"interval": 5,
                        //
 											 // nameTextStyle:{
 												//  color:'#709DD5',
@@ -1082,7 +1147,7 @@
 												areaStyle: {
 													color: '#143F7E',
 												},
-						             data:[120, 132, 101, 134, 90, 230, 210]
+						             data:[12, 12, 10, 13, 9, 23, 21]
 						         },
 						         {
 						             name:'第二产业',
@@ -1091,14 +1156,14 @@
 												//  // itemStyle : {
 												// 	// normal : {
 												// 	// 	lineStyle:{
-												// 	// 		color:'#0C6EC4'
+												// 	// 		color:'#0C6EC40CBCAF'
 												// 	// 	}
 												// 	// }
 												// },
 						             areaStyle: {
 													 color: '#255C9A',
 												 },
-						             data:[220, 182, 191, 234, 290, 330, 310]
+						             data:[22, 18, 19, 23, 29, 30, 24]
 						         },
 						         {
 						             name:'第三产业',
@@ -1114,13 +1179,413 @@
 												areaStyle: {
 												 color: '#1B4A82',
 											 },
-						             data:[150, 232, 201, 154, 190, 330, 410]
+						             data:[15, 23, 20, 14, 19, 30, 10]
 						         }
 						     ]
 						 };
 						 // 使用刚指定的配置项和数据显示图表。
  						myChart.setOption(option);
 					}
+
+					//生产总值饼图
+					columnLine5();
+				 function columnLine5() {
+					 // 基于准备好的dom，初始化echarts实例
+						var myChart = echarts.init(document.getElementById('columnLine5'));
+
+						// 指定图表的配置项和数据
+						option = {
+									color: ['#0CBCAF', '#0C6EC4', '#C4C61C', '#5d9afc', '#00cfff', '#a982ff',
+													 '#ffbe73'
+											 ],
+							    tooltip : {
+							        trigger: 'item',
+							        formatter: "{a} <br/>{b} : {c} ({d}%)",
+											axisPointer: {
+													type: 'shadow',
+													label: {
+															backgroundColor: 'rgba(255,255,255,0.8)',
+															extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+															textStyle: {
+																	color: '#666',
+															},
+													},
+											},
+
+											backgroundColor: 'rgba(255,255,255,0.8)',
+											extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+											textStyle: {
+													color: '#000000',
+											},
+							    },
+							    series : [
+							        {
+							            name: '生产总值',
+							            type: 'pie',
+							            radius : '55%',
+							            center: ['50%', '50%'],
+							            data:[
+							                {value:300, name:'第三产业'},
+							                {value:410, name:'第二产业'},
+							                {value:234, name:'第一产业'},
+							            ],
+							            itemStyle: {
+							                emphasis: {
+							                    shadowBlur: 10,
+							                    shadowOffsetX: 0,
+							                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+							                }
+							            },
+													label: {
+												     normal: {
+												          textStyle: {
+												                color: '#ACDFE3', // 改变标示文字的颜色
+																				align:"left",
+												          },
+																	formatter: '{b}\n{c}\n',
+												     }
+													}
+							        }
+							    ]
+							};
+
+						// 使用刚指定的配置项和数据显示图表。
+					 myChart.setOption(option);
+				 }
+
+				 //财政收入饼图
+				 columnLine6();
+				function columnLine6() {
+					// 基于准备好的dom，初始化echarts实例
+					 var myChart = echarts.init(document.getElementById('columnLine6'));
+
+					 // 指定图表的配置项和数据
+					 option = {
+								 color: ['#0CBCAF', '#0C6EC4', '#C4C61C', '#94D800', '#D29704', '#CE2E6B',
+													'#ffbe73'
+											],
+									title : {
+									      text: '地方公共财政预算支出',
+									      x:'center',
+												y:'88%',
+												textStyle:{
+	 												color:'#85F4FB',
+	 												fontSize:17,
+	 										 },
+									},
+							    legend: {
+											textStyle: {
+														fontSize: '14',
+														color:'#C1FBFF',
+											},
+							        orient: 'vertical',
+							        left: 'left',
+											top:70,
+							        data: [
+												{
+													"name": "一般公共服务",
+													"icon": "circle",
+												},
+												{
+													"name": "公共安全",
+													"icon": "circle",
+												},
+												{
+													"name": "教育",
+													"icon": "circle",
+												},
+												{
+													"name": "科学技术",
+													"icon": "circle",
+												},
+												{
+													"name": "文化",
+													"icon": "circle",
+												},
+												{
+													"name": "社会保障",
+													"icon": "circle",
+												},
+											]
+							    },
+								 tooltip : {
+										 trigger: 'item',
+										 formatter: "{a} <br/>{b} : {c}万元",
+										 axisPointer: {
+												 type: 'shadow',
+												 label: {
+														 backgroundColor: 'rgba(255,255,255,0.8)',
+														 extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+														 textStyle: {
+																 color: '#666',
+														 },
+												 },
+										 },
+
+										 backgroundColor: 'rgba(255,255,255,0.8)',
+										 extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+										 textStyle: {
+												 color: '#000000',
+										 },
+								 },
+								 series : [
+										 {
+												 name: '地方公共财政预算支出',
+												 type: 'pie',
+												 radius : '55%',
+												 center: ['65%', '50%'],
+												 data:[
+														 {value:300, name:'一般公共服务'},
+														 {value:410, name:'公共安全'},
+														 {value:234, name:'教育'},
+														 {value:218, name:'科学技术'},
+														 {value:550, name:'文化'},
+														 {value:100, name:'社会保障'},
+												 ],
+												 itemStyle: {
+														 emphasis: {
+																 shadowBlur: 10,
+																 shadowOffsetX: 0,
+																 shadowColor: 'rgba(0, 0, 0, 0.5)'
+														 }
+												 },
+												 label: {
+
+														normal: {
+															   show:false,
+																 textStyle: {
+																			 color: '#ACDFE3', // 改变标示文字的颜色
+																			 align:"left",
+																 },
+																 formatter: '{b}\n{c}\n',
+														}
+												 },
+												 labelLine: {
+														 normal: {
+																 show: false
+														 }
+												 },
+										 }
+								 ]
+						 };
+
+					 // 使用刚指定的配置项和数据显示图表。
+					myChart.setOption(option);
+				}
+
+				//人口概况饼图左
+				columnLine7();
+			 function columnLine7() {
+				 // 基于准备好的dom，初始化echarts实例
+					var myChart = echarts.init(document.getElementById('columnLine7'));
+
+					// 指定图表的配置项和数据
+					option = {
+								color: ['#0CBCAF', '#D29704', '#C4C61C', '#94D800', '#D29704', '#CE2E6B',
+												 '#ffbe73'
+										 ],
+								 legend: {
+										 textStyle: {
+													 fontSize: '14',
+													 color:'#C1FBFF',
+										 },
+										 bottom:80,
+										 data: [
+											 {
+												 "name": "户籍人口",
+												 "icon": "circle",
+											 },
+											 {
+												 "name": "非户籍常住人口",
+												 "icon": "circle",
+											 }
+										 ]
+								 },
+								tooltip : {
+										trigger: 'item',
+										formatter: "{a} <br/>{b} : {c}万元",
+										axisPointer: {
+												type: 'shadow',
+												label: {
+														backgroundColor: 'rgba(255,255,255,0.8)',
+														extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+														textStyle: {
+																color: '#666',
+														},
+												},
+										},
+
+										backgroundColor: 'rgba(255,255,255,0.8)',
+										extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+										textStyle: {
+												color: '#000000',
+										},
+								},
+								series : [
+										{
+												name: '地方公共财政预算支出',
+												type: 'pie',
+												radius : '50%',
+												center: ['45%', '30%'],
+												data:[
+														{value:300, name:'户籍人口'},
+														{value:410, name:'非户籍常住人口'},
+												],
+												itemStyle: {
+														emphasis: {
+																shadowBlur: 10,
+																shadowOffsetX: 0,
+																shadowColor: 'rgba(0, 0, 0, 0.5)'
+														}
+												},
+												label: {
+
+													 normal: {
+																show:false,
+																textStyle: {
+																			color: '#ACDFE3', // 改变标示文字的颜色
+																			align:"left",
+																},
+																formatter: '{b}\n{c}\n',
+													 }
+												},
+												labelLine: {
+														normal: {
+																show: false
+														}
+												},
+										}
+								]
+						};
+
+					// 使用刚指定的配置项和数据显示图表。
+				 myChart.setOption(option);
+
+
+
+
+
+				}
 			 });
+
+			 //人口概况饼图中
+			 columnLine8();
+			function columnLine8() {
+				// 基于准备好的dom，初始化echarts实例
+				 var myChart = echarts.init(document.getElementById('columnLine8'));
+
+				 // 指定图表的配置项和数据
+				 option = {
+							 color: ['#0CBCAF', '#0C6EC4', '#C4C61C', '#94D800', '#D29704', '#CE2E6B',
+												'#ffbe73'
+										],
+								title : {
+											text: '地方公共财政预算支出',
+											x:'center',
+											y:'88%',
+											textStyle:{
+												color:'#85F4FB',
+												fontSize:17,
+										 },
+								},
+								legend: {
+										textStyle: {
+													fontSize: '14',
+													color:'#C1FBFF',
+										},
+										orient: 'vertical',
+										left: 'right',
+										top:42,
+										data: [
+											{
+												"name": "一般公共服务",
+												"icon": "circle",
+											},
+											{
+												"name": "公共安全",
+												"icon": "circle",
+											},
+											{
+												"name": "教育",
+												"icon": "circle",
+											},
+											{
+												"name": "科学技术",
+												"icon": "circle",
+											},
+											{
+												"name": "文化",
+												"icon": "circle",
+											},
+											{
+												"name": "社会保障",
+												"icon": "circle",
+											},
+										]
+								},
+							 tooltip : {
+									 trigger: 'item',
+									 formatter: "{a} <br/>{b} : {c}万元",
+									 axisPointer: {
+											 type: 'shadow',
+											 label: {
+													 backgroundColor: 'rgba(255,255,255,0.8)',
+													 extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+													 textStyle: {
+															 color: '#666',
+													 },
+											 },
+									 },
+
+									 backgroundColor: 'rgba(255,255,255,0.8)',
+									 extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+									 textStyle: {
+											 color: '#000000',
+									 },
+							 },
+							 series : [
+									 {
+											 name: '地方公共财政预算支出',
+											 type: 'pie',
+											 radius : '65%',
+											 center: ['40%', '45%'],
+											 data:[
+													 {value:300, name:'一般公共服务'},
+													 {value:410, name:'公共安全'},
+													 {value:234, name:'教育'},
+													 {value:218, name:'科学技术'},
+													 {value:550, name:'文化'},
+													 {value:100, name:'社会保障'},
+											 ],
+											 itemStyle: {
+													 emphasis: {
+															 shadowBlur: 10,
+															 shadowOffsetX: 0,
+															 shadowColor: 'rgba(0, 0, 0, 0.5)'
+													 }
+											 },
+											 label: {
+
+													normal: {
+															 show:false,
+															 textStyle: {
+																		 color: '#ACDFE3', // 改变标示文字的颜色
+																		 align:"left",
+															 },
+															 formatter: '{b}\n{c}\n',
+													}
+											 },
+											 labelLine: {
+													 normal: {
+															 show: false
+													 }
+											 },
+									 }
+							 ]
+					 };
+
+				 // 使用刚指定的配置项和数据显示图表。
+				myChart.setOption(option);
+			}
 </script>
 </html>
