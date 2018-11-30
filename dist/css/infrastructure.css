@@ -31,7 +31,7 @@
   margin-bottom: .1rem;
   background: url(../images/infrastructure_list2.png) no-repeat;
   background-size: 100% 100%;
-  margin-right: .12rem;
+  margin-right: 8px;
 }
 .infrastructure.contain .cont-center ul li span {
   font-size: .4rem;
@@ -128,6 +128,41 @@
 }
 .infrastructure.contain .cont-right .cont-box {
   height: 4.3rem;
+}
+.infrastructure.contain .cont-right .land .echarts {
+  height: 28vh;
+}
+.infrastructure.contain .cont-right .land .land-tables {
+  display: none;
+  width: 100%;
+  background: #0a2468;
+  margin-top: .2rem;
+}
+.infrastructure.contain .cont-right .land .land-tables th,
+.infrastructure.contain .cont-right .land .land-tables td {
+  text-align: center;
+}
+.infrastructure.contain .cont-right .land .land-tables thead tr {
+  height: 4vh;
+  line-height: 4vh;
+  background: url(../images/lang_tables_thead_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.infrastructure.contain .cont-right .land .land-tables tbody {
+  background: url(../images/lang_tables_tdody_bg.png);
+}
+.infrastructure.contain .cont-right .land .land-tables tbody tr {
+  height: 10vh;
+  font-size: .18rem;
+}
+.infrastructure.contain .cont-right .land .land-tables tbody tr td {
+  color: #fff;
+}
+.infrastructure.contain .cont-right .land .land-tables tbody tr td.digital {
+  font-size: .28rem;
+}
+.infrastructure.contain .cont-right .road .echarts {
+  height: 32vh;
 }
 
 /*# sourceMappingURL=infrastructure.css.map */
