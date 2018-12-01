@@ -657,10 +657,125 @@
 
     }]
   };
-
+var radius = ['60%', '70%'],
+    richs = {
+        label:{
+            color:"#c1fbff",
+            fontSize:12
+        },
+        num:{
+            color:"#85f4fb",
+            fontSize:12
+        }
+    };
+    option6 = {
+        title: [
+            {
+                text: '统计时间为：2017年',
+                left:"center",
+                bottom:"0",
+                textStyle: {
+                    color: '#85f4fb',
+                    fontSize: 20,
+                    fontWeight:'normal'
+                },
+            }
+        ],
+        tooltip : {
+            trigger: 'item',
+            backgroundColor:"rgba(226,246,255,.9)",
+            formatter:function(params){
+                var color = params.color,
+                    htmlStr ='<div>';
+                    htmlStr += '<span style="color:#6c849c;margin-right:5px;display:inline-block;width:10px;height:10px;border-radius:5px;background-color:'+color+';"></span>';
+                    htmlStr += params.name+"面积： <br /><span style='color:#6c849c;width:15px;display:inline-block;'></span>"+params.value+"平方公里";
+                    htmlStr +='</div>';
+                return htmlStr
+            }
+        },
+        series: [
+            {
+                type: 'pie',
+                radius: radius,
+                center:['50%', '50%'],
+                color:'#46bff5',
+                hoverAnimation: false,
+                data: [
+                    {
+                        value: 983,
+                        name: '通车公路里程',
+                        itemStyle: {
+                            show:false,
+                            normal: {
+                                color: '#0077d8'
+                            }
+                        },
+                        label:{
+                            normal:{
+                                formatter:[
+                                    '{label|{b}}',
+                                    '{num|{c}}'
+                                ].join('\n\n'),
+                                rich:richs
+                            }
+                        }
+                    },
+                    {
+                        value: 215,
+                        name: '城市道路总长度',
+                        itemStyle: {
+                            show:false,
+                            normal: {
+                                color: '#19b5ac'
+                            }
+                        },
+                        tooltip:{
+                            show:false,
+                            trigger: 'item'
+                        },
+                        label:{
+                            normal:{
+                                formatter:[
+                                    '{label|{b}}',
+                                    '{num|{c}}'
+                                ].join('\n\n'),
+                                rich:richs
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                type:'pie',
+                selectedMode: 'single',
+                radius: [0, '50%'],
+                label: {
+                    normal: {
+                        position: 'inner'
+                    }
+                },
+                data:[
+                    {
+                        value:679,
+                        name:'全区',
+                        itemStyle:{
+                            color:"#ce306f"
+                        }
+                    },{
+                        value:355,
+                        name:'建成区',
+                        itemStyle:{
+                            color:"#d29704"
+                        }
+                    },
+                ]
+            }
+        ]
+    };
   build_echart.setOption(option);
   park_echart.setOption(option3);
   land_echart.setOption(option5);
+  road_echart.setOption(option6);
   var arr = [build_echart, park_echart, land_echart, road_echart];
   $(window).resize(function() {
     for (var i in arr) {
