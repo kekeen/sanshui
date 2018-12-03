@@ -6,7 +6,7 @@
 	<div class="contain clearfix JjOpera" style="padding: .9rem 0rem;">
 
 		<div class="cont-left pull-left">
-			<div class="cont-box jiao" style="width: 596px;height: 870px;margin:8px 0 0 10px;">
+			<div class="cont-box jiao" style="position:relative;width: 596px;height: 870px;margin:8px 0 0 10px;">
 				<div class="JjOpera-l-top">
 					<div class="title">生产总值</div>
 					<div class="JjOpera-l-top-md clearfix">
@@ -21,6 +21,9 @@
 				</div>
 				<div class="JjOpera-l-bt" id="columnLine1">
 
+				</div>
+				<div class="JjOpera-yuChe">
+					<i></i><span>2018年预测</span>
 				</div>
 			</div>
 		</div>
@@ -58,6 +61,9 @@
 							<div class="pull-left JjOpera-r-top-l-b-l" id="columnLine2"></div>
 							<div class="pull-left JjOpera-r-top-l-b-r" id="columnLine6"></div>
 						</div>
+						<div class="JjOpera-yuChe" style="bottom: 264px;right: 356px;">
+							<i></i><span style="font-size:12px;">2018年预测</span>
+						</div>
 					</div>
 				</div>
 				<div class="JjOpera-r-top-r cont-box jiao pull-left" style="height:534px;">
@@ -67,6 +73,7 @@
 						 <div class="pull-left JjOpera-l-top-md-r">统计时间：2017年</span></div>
 				 </div>
 					 <div class="JjOpera-r-top-r-t"></div>
+					 <div class="JjOpera-line" style="position: relative;top: -16px;margin:0 auto;"></div>
 					 <div class="JjOpera-r-top-r-b" id="columnLine4"></div>
 				</div>
 		  </div>
@@ -78,20 +85,24 @@
 				<div class="clearfix">
 					<div class="pull-left JjOpera-r-bt-l" id="columnLine7"></div>
 					<div class="pull-left JjOpera-r-bt-m" id="columnLine8"></div>
-					<div class="pull-left JjOpera-r-bt-r" id="columnLine3">
+					<div class="pull-left JjOpera-r-bt-r" id="columnLine3"></div>
+					<div class="JjOpera-yuChe" style="bottom: 40px;right: 49px;">
+						<i></i><i class="i2"></i><span style="font-size:12px;">2018年预测</span>
+					</div>
 				</div>
 				<div class="JjOpera-info">
 					 <div class="JjOpera-info-tp">
-					 	  <i class="ic-small house"></i><span>常住人口&nbsp93.73万</span>
+					 	  <i class="ic-small house"></i><span>常住人口  93.73万</span>
 					 </div>
 					 <div class="JjOpera-info-bt">
-						 <i class="ic-small card"></i><span>户籍人口&nbsp41.73万</span>
+						 <i class="ic-small card"></i><span>户籍人口  41.73万</span>
 					</div>
 				</div>
 				<div class="JjOpera-line2"></div>
 				<div class="JjOpera-line3"></div>
 				</div>
 			</div>
+
 		</div>
 
 	</div>
@@ -210,12 +221,14 @@
 															,{
 															name:"2018年预测",
 															icon:"image://../images/pic_blue.png"
-														}],
+														}
+													],
 														textStyle: {
                                   fontSize: '14',
                                   color:'#C1FBFF',
                             },
-													  bottom: 20
+													  bottom: 20,
+														left:56
 								        },
 								        grid: {
 								            top: '100',
@@ -316,7 +329,30 @@
 								            'type': 'bar',
 								            barWidth: 40,
 														barGap:'120%',
-								            data: [700, 800, 900, 1000],
+								            data: [700, 800, 900, 1000,{
+																name:"2018年预测",
+																value:"1100",
+																itemStyle:{
+																	color: new echarts.graphic.LinearGradient(
+																			0, 0, 0, 1,
+																			[
+																					{offset: 0, color: '#0E3E8F'},
+																					{offset: 1, color: '#185199'}
+																			]
+																	),
+																	borderWidth: 2,
+																	borderColor: '#4DF1BD',
+																	borderType: 'dashed',
+																	label: {
+																		  show: true,
+																		  position: 'top',
+																			textStyle: {
+																				fontSize: '14',
+																				fontWeight:600
+																			},
+																	}
+																}
+														}],
 								            itemStyle: {
 								                normal: {
 								                    //barBorderRadius: 15,
@@ -367,33 +403,7 @@
 																    }
 								                }
 								            },
-								        },{
-														name:"2018年预测",
-														type:"bar",
-														// barGap:"120%",
-														barWidth:40,
-														data:[0,0,0,1100],
-														itemStyle:{
-															color: new echarts.graphic.LinearGradient(
-																	0, 0, 0, 1,
-																	[
-																			{offset: 0, color: '#0E3E8F'},
-																			{offset: 1, color: '#185199'}
-																	]
-															),
-															borderWidth: 2,
-															borderColor: '#4DF1BD',
-															borderType: 'dashed',
-															label: {
-																  show: true,
-																  position: 'top',
-																	textStyle: {
-																		fontSize: '14',
-																		fontWeight:600
-																	},
-															}
-														}
-												}]
+								        }]
 								    }]
 								};
 
@@ -494,22 +504,32 @@
 											 title : {
 													 text: '地方财政总收入',
 													 x:'center',
-													 y:'82%',
+													 y:'85%',
 													 textStyle:{
 															color:'#85F4FB',
 															fontSize:17,
 													 }
 											 },
 											 legend: {
-													 data: ['财政收入（亿元）', '增长率（%）'],
+													 data: [
+														 {
+															 name:'财政收入(亿元)',
+															 icon:"rect"
+														 },{
+															 name:'增长率(%)',
+															 icon:"image://../images/pic_yellow_line.png"
+														 }
+
+												 ],
 													 textStyle: {
-																	fontSize: '14',
+																	fontSize: '12',
 																	color:'#C1FBFF',
 														},
-													 top:40
+													 top:8,
+													 left:1
 											 },
 											 grid: {
-													 top: '100',
+													 top: '70',
 													 left: '3%',
 													 right: '4%',
 													 bottom: '60',
@@ -517,6 +537,7 @@
 											 },
 											 xAxis: [{
 													 type: 'category',
+
 													 data: ['2014', '2015', '2016', '2017', '2018'],
 													 axisLabel: { //坐标轴刻度标签的相关设置。
 															 interval: 0, //设置为 1，表示『隔一个标签显示一个标签』
@@ -544,7 +565,7 @@
 													 name: '（亿元）',
 													 type: 'value',
 													 "min": 0,//刻度线
-													 "max": 45,
+													 "max": 40,
 													 "interval": 10,
 													 axisLabel: {
 															 textStyle: {
@@ -602,11 +623,35 @@
 													 }
 											 }],
 											 series: [{
-													 'name': '财政收入（亿元）',
+													 'name': '财政收入(亿元)',
 													 'type': 'bar',
 													 barWidth: 18,
 													 barGap:'120%',
-													 'data': [17, 28, 29, 33, 38],
+													 // 'data': [17, 28, 29, 33, 38],
+													 data: [17, 28, 29, 33,{
+															 name:"2018年预测",
+															 value:"38",
+															 itemStyle:{
+																 color: new echarts.graphic.LinearGradient(
+																		 0, 0, 0, 1,
+																		 [
+																				 {offset: 0, color: '#0E3E8F'},
+																				 {offset: 1, color: '#185199'}
+																		 ]
+																 ),
+																 borderWidth: 2,
+																 borderColor: '#4DF1BD',
+																 borderType: 'dashed',
+																 label: {
+																		 show: true,
+																		 position: 'top',
+																		 textStyle: {
+																			 fontSize: '14',
+																			 fontWeight:600
+																		 },
+																 }
+															 }
+													 }],
 													 itemStyle: {
 															 normal: {
 																	 //barBorderRadius: 15,
@@ -631,27 +676,27 @@
 																			 position:'top'
 																	 }
 															 },
-															 emphasis: {
-																	 color: new echarts.graphic.LinearGradient(
-																			 0, 0, 0, 1,
-																			 [
-																					 {offset: 0, color: '#0E3E8F'},
-																					 {offset: 1, color: '#185199'}
-																			 ]
-																	 ),
-																	 borderWidth: 2,
-																	 borderColor: '#4DF1BD',
-																	 borderType: 'dashed',
-																	 label: {
-																			 textStyle: {
-																					 color: '#4DF1BD',
-																			 },
-																	 }
-															 },
+															 // emphasis: {
+																// 	 color: new echarts.graphic.LinearGradient(
+																// 			 0, 0, 0, 1,
+																// 			 [
+																// 					 {offset: 0, color: '#0E3E8F'},
+																// 					 {offset: 1, color: '#185199'}
+																// 			 ]
+																// 	 ),
+																// 	 borderWidth: 2,
+																// 	 borderColor: '#4DF1BD',
+																// 	 borderType: 'dashed',
+																// 	 label: {
+																// 			 textStyle: {
+																// 					 color: '#4DF1BD',
+																// 			 },
+																// 	 }
+															 // },
 													 }
 
 											 }, {
-													 name: '增长率（%）',
+													 name: '增长率(%)',
 													 yAxisIndex: 1,
 													 type: 'line',
 													 showAllSymbol: true,
@@ -807,13 +852,14 @@
 																 fontSize: '14',
 																 color:'#C1FBFF',
 													 },
-													bottom:30
+													bottom:40,
+													left:15
 											},
 											grid: {
-													top: '100',
-													left: '3%',
+													top: '40',
+													left: '4%',
 													right: '4%',
-													bottom: '60',
+													bottom: '80',
 													containLabel: true
 											},
 											xAxis: [{
@@ -907,7 +953,31 @@
 													'type': 'bar',
 													barWidth: 18,
 													barGap:'120%',
-													'data': [12, 14, 6, 8, 10],
+													// 'data': [12, 14, 6, 8, 10],
+													data: [12, 14, 6, 8,{
+															name:"2018年预测",
+															value:"10",
+															itemStyle:{
+																color: new echarts.graphic.LinearGradient(
+																		0, 0, 0, 1,
+																		[
+																				{offset: 0, color: '#0E3E8F'},
+																				{offset: 1, color: '#185199'}
+																		]
+																),
+																borderWidth: 2,
+																borderColor: '#4DF1BD',
+																borderType: 'dashed',
+																label: {
+																		show: true,
+																		position: 'top',
+																		textStyle: {
+																			fontSize: '14',
+																			fontWeight:600
+																		},
+																}
+															}
+													}],
 													itemStyle: {
 															normal: {
 																	//barBorderRadius: 15,
@@ -924,23 +994,23 @@
 																	),
 
 															},
-															emphasis: {
-																	color: new echarts.graphic.LinearGradient(
-																			0, 0, 0, 1,
-																			[
-																					{offset: 0, color: '#0E3E8F'},
-																					{offset: 1, color: '#185199'}
-																			]
-																	),
-																	borderWidth: 2,
-																	borderColor: '#4DF1BD',
-																	borderType: 'dashed',
-																	label: {
-																			textStyle: {
-																					color: '#4DF1BD',
-																			},
-																	}
-															},
+															// emphasis: {
+															// 		color: new echarts.graphic.LinearGradient(
+															// 				0, 0, 0, 1,
+															// 				[
+															// 						{offset: 0, color: '#0E3E8F'},
+															// 						{offset: 1, color: '#185199'}
+															// 				]
+															// 		),
+															// 		borderWidth: 2,
+															// 		borderColor: '#4DF1BD',
+															// 		borderType: 'dashed',
+															// 		label: {
+															// 				textStyle: {
+															// 						color: '#4DF1BD',
+															// 				},
+															// 		}
+															// },
 													}
 
 											},{
@@ -948,7 +1018,31 @@
 													'type': 'bar',
 													barWidth: 18,
 													barGap:'25%',
-													'data': [15, 17, 7, 9, 13],
+													// 'data': [15, 17, 7, 9, 13],
+													data: [15, 17, 7, 9,{
+															name:"2018年预测",
+															value:"13",
+															itemStyle:{
+																color: new echarts.graphic.LinearGradient(
+																		0, 0, 0, 1,
+																		[
+																				{offset: 0, color: '#442B75'},
+																				{offset: 1, color: '#503C79'}
+																		]
+																),
+																borderWidth: 2,
+																borderColor: '#FFA391',
+																borderType: 'dashed',
+																label: {
+																		show: true,
+																		position: 'top',
+																		textStyle: {
+																			fontSize: '14',
+																			fontWeight:600
+																		},
+																}
+															}
+													}],
 													itemStyle: {
 															normal: {
 																	//barBorderRadius: 15,
@@ -965,23 +1059,23 @@
 																	),
 
 															},
-															emphasis: {
-																	color: new echarts.graphic.LinearGradient(
-																			0, 0, 0, 1,
-																			[
-																					{offset: 0, color: '#442B75'},
-																					{offset: 1, color: '#503C79 '}
-																			]
-																	),
-																	borderWidth: 2,
-																	borderColor: '#FFA391',
-																	borderType: 'dashed',
-																	label: {
-																			textStyle: {
-																					color: '#4DF1BD',
-																			},
-																	}
-															},
+															// emphasis: {
+															// 		color: new echarts.graphic.LinearGradient(
+															// 				0, 0, 0, 1,
+															// 				[
+															// 						{offset: 0, color: '#442B75'},
+															// 						{offset: 1, color: '#503C79 '}
+															// 				]
+															// 		),
+															// 		borderWidth: 2,
+															// 		borderColor: '#FFA391',
+															// 		borderType: 'dashed',
+															// 		label: {
+															// 				textStyle: {
+															// 						color: '#4DF1BD',
+															// 				},
+															// 		}
+															// },
 													}
 
 											},
@@ -1284,27 +1378,27 @@
 							        data: [
 												{
 													"name": "一般公共服务",
-													"icon": "circle",
+													icon:"image://../images/pic_3.png"
 												},
 												{
 													"name": "公共安全",
-													"icon": "circle",
+													icon:"image://../images/pic_1.png"
 												},
 												{
 													"name": "教育",
-													"icon": "circle",
+													icon:"image://../images/pic_2.png"
 												},
 												{
 													"name": "科学技术",
-													"icon": "circle",
+													icon:"image://../images/pic_4.png"
 												},
 												{
 													"name": "文化",
-													"icon": "circle",
+													icon:"image://../images/pic_5.png"
 												},
 												{
 													"name": "社会保障",
-													"icon": "circle",
+													icon:"image://../images/pic_7.png"
 												},
 											]
 							    },
@@ -1335,7 +1429,7 @@
 												 radius : '55%',
 												 center: ['65%', '50%'],
 												 data:[
-														 {value:300, name:'一般公共服务'},
+														 {value:300, name:'西南'},
 														 {value:410, name:'公共安全'},
 														 {value:234, name:'教育'},
 														 {value:218, name:'科学技术'},
@@ -1489,6 +1583,7 @@
 										 },
 								},
 								legend: {
+
 										textStyle: {
 													fontSize: '14',
 													color:'#C1FBFF',
@@ -1498,29 +1593,33 @@
 										top:42,
 										data: [
 											{
-												"name": "一般公共服务",
-												"icon": "circle",
+												"name": "西南街道办",
+												icon:"image://../images/pic_3.png"
 											},
 											{
-												"name": "公共安全",
-												"icon": "circle",
+												"name": "云东海街道办",
+												icon:"image://../images/pic_1.png"
 											},
 											{
-												"name": "教育",
-												"icon": "circle",
+												"name": "白坭镇",
+												icon:"image://../images/pic_2.png"
 											},
 											{
-												"name": "科学技术",
-												"icon": "circle",
+												"name": "乐平镇",
+												icon:"image://../images/pic_4.png"
 											},
 											{
-												"name": "文化",
-												"icon": "circle",
+												"name": "芦苞镇",
+												icon:"image://../images/pic_5.png"
 											},
 											{
-												"name": "社会保障",
-												"icon": "circle",
+												"name": "大塘镇",
+												icon:'path://M13.5744924,23.0433841 C13.1369685,23.0433841 12.9182065,22.8258804 12.4799326,22.6083768 L6.78787125,16.738529 C6.13158535,16.0867681 6.13158535,15.2167536 6.78787125,14.7822464 C7.44490718,14.1297355 8.32045506,14.1297355 8.75797901,14.7822464 L13.5749925,19.5648261 L26.053925,7.39162319 C26.7102109,6.73911231 27.5860088,6.73911231 28.0240327,7.39162319 C28.6808186,8.04413406 28.6808186,8.91364854 28.0240327,9.3484058 L14.6683023,22.6086268 C14.2312783,22.8261304 14.0120164,23.0436341 13.5744924,23.0436341 L13.5744924,23.0433841 Z M15.1063262,30 C6.78737121,30 0,23.2603877 0,14.99975 C0,6.73886232 6.78737121,0 15.1063262,0 C18.1709938,0 21.0178995,0.869514482 23.4257812,2.39128985 C23.8633052,2.8262971 24.0820671,3.47830795 23.8633052,3.91331523 C23.4257812,4.34832248 22.7694953,4.56582611 22.3312213,4.13081886 C20.1423516,2.82629713 17.7339699,1.95703264 15.1065762,1.95703261 C7.88118105,2.17453623 2.18961975,7.82638044 2.18961975,15.00025 C2.18961975,22.1748696 8.10044304,27.8254638 15.1070763,27.8254638 C22.3319714,27.8254638 28.0247828,21.9561159 28.0247827,14.99975 L28.0247827,13.6952283 C28.0247827,13.0427174 28.4628067,12.6082102 28.8998306,12.6082102 C29.5566165,12.6082102 29.9948905,13.0432174 29.9948905,13.4777246 L29.9948905,14.99975 C30.2129024,23.2603877 23.4257812,30 15.1065762,30 L15.1063262,30 Z'
 											},
+											{
+												"name": "南山镇",
+												icon:'path://M13.5744924,23.0433841 C13.1369685,23.0433841 12.9182065,22.8258804 12.4799326,22.6083768 L6.78787125,16.738529 C6.13158535,16.0867681 6.13158535,15.2167536 6.78787125,14.7822464 C7.44490718,14.1297355 8.32045506,14.1297355 8.75797901,14.7822464 L13.5749925,19.5648261 L26.053925,7.39162319 C26.7102109,6.73911231 27.5860088,6.73911231 28.0240327,7.39162319 C28.6808186,8.04413406 28.6808186,8.91364854 28.0240327,9.3484058 L14.6683023,22.6086268 C14.2312783,22.8261304 14.0120164,23.0436341 13.5744924,23.0436341 L13.5744924,23.0433841 Z M15.1063262,30 C6.78737121,30 0,23.2603877 0,14.99975 C0,6.73886232 6.78737121,0 15.1063262,0 C18.1709938,0 21.0178995,0.869514482 23.4257812,2.39128985 C23.8633052,2.8262971 24.0820671,3.47830795 23.8633052,3.91331523 C23.4257812,4.34832248 22.7694953,4.56582611 22.3312213,4.13081886 C20.1423516,2.82629713 17.7339699,1.95703264 15.1065762,1.95703261 C7.88118105,2.17453623 2.18961975,7.82638044 2.18961975,15.00025 C2.18961975,22.1748696 8.10044304,27.8254638 15.1070763,27.8254638 C22.3319714,27.8254638 28.0247828,21.9561159 28.0247827,14.99975 L28.0247827,13.6952283 C28.0247827,13.0427174 28.4628067,12.6082102 28.8998306,12.6082102 C29.5566165,12.6082102 29.9948905,13.0432174 29.9948905,13.4777246 L29.9948905,14.99975 C30.2129024,23.2603877 23.4257812,30 15.1065762,30 L15.1063262,30 Z'
+											}
 										]
 								},
 							 tooltip : {
@@ -1550,12 +1649,13 @@
 											 radius : '65%',
 											 center: ['40%', '45%'],
 											 data:[
-													 {value:300, name:'一般公共服务'},
-													 {value:410, name:'公共安全'},
-													 {value:234, name:'教育'},
-													 {value:218, name:'科学技术'},
-													 {value:550, name:'文化'},
-													 {value:100, name:'社会保障'},
+													 {value:300, name:'西南街道办'},
+													 {value:410, name:'云东海街道办'},
+													 {value:234, name:'白坭镇'},
+													 {value:218, name:'乐平镇'},
+													 {value:550, name:'芦苞镇'},
+													 {value:100, name:'大塘镇'},
+													 {value:100, name:'南山镇'},
 											 ],
 											 itemStyle: {
 													 emphasis: {
