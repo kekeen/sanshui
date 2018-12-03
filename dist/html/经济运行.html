@@ -445,7 +445,30 @@
 								            'type': 'bar',
 								            barWidth: 40,
 														barGap:'120%',
-								            data: [700, 800, 900, 1000],
+								            data: [700, 800, 900, 1000,{
+																name:"2018年预测",
+																value:"1100",
+																itemStyle:{
+																	color: new echarts.graphic.LinearGradient(
+																			0, 0, 0, 1,
+																			[
+																					{offset: 0, color: '#0E3E8F'},
+																					{offset: 1, color: '#185199'}
+																			]
+																	),
+																	borderWidth: 2,
+																	borderColor: '#4DF1BD',
+																	borderType: 'dashed',
+																	label: {
+																		  show: true,
+																		  position: 'top',
+																			textStyle: {
+																				fontSize: '14',
+																				fontWeight:600
+																			},
+																	}
+																}
+														}],
 								            itemStyle: {
 								                normal: {
 								                    //barBorderRadius: 15,
@@ -496,33 +519,7 @@
 																    }
 								                }
 								            },
-								        },{
-														name:"2018年预测",
-														type:"bar",
-														// barGap:"120%",
-														barWidth:40,
-														data:[0,0,0,1100],
-														itemStyle:{
-															color: new echarts.graphic.LinearGradient(
-																	0, 0, 0, 1,
-																	[
-																			{offset: 0, color: '#0E3E8F'},
-																			{offset: 1, color: '#185199'}
-																	]
-															),
-															borderWidth: 2,
-															borderColor: '#4DF1BD',
-															borderType: 'dashed',
-															label: {
-																  show: true,
-																  position: 'top',
-																	textStyle: {
-																		fontSize: '14',
-																		fontWeight:600
-																	},
-															}
-														}
-												}]
+								        }]
 								    }]
 								};
 
