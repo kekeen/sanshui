@@ -26,7 +26,7 @@ body {
 }
 @font-face {
   font-family: 'digital';
-  src: url('../../font/Digital2.ttf');
+  src: url('../font/Digital2.ttf');
 }
 html,
 body,

@@ -49,7 +49,23 @@
                               </div>
                               <div class="rrt-center">
                                   <div class="chart-boxs">
-                                      <div id="chartSpeed" class="chart-pics"></div>
+                                      <!--<div id="chartSpeed" class="chart-pics"></div>-->
+                                      <div class="speedIndex">
+                                          <div class="spLeft">
+                                              <ul class="sUl">
+                                                  <li class="li-red"></li>
+                                                  <li class="li-orange li-orange1"></li>
+                                                  <li class="li-orange li-orange2"></li>
+                                                  <li class="li-yellow li-yellow1"></li>
+                                                  <li class="li-yellow li-yellow2"></li>
+                                                  <li class="li-green li-green1"></li>
+                                                  <li class="li-green li-green2 greenBorder"></li>
+                                              </ul>
+                                          </div>
+                                          <div class="spRight">
+                                              <p class="sNum">80</p>
+                                          </div>
+                                      </div>
                                   </div>
                                   <p class="chart-titles">经济发展指数</p>
                               </div>
@@ -124,8 +140,11 @@
                      </div>
                  </div>
                  <div class="ce-res-bottom clearfix">
-                     <div class="ce-box-early pull-left">
+                     <div class="ce-box-early pull-left trafficBox">
                          <div class="early-title">交通拥堵指数</div>
+                         <div class="weather-early">
+                             <div id="meterChart1" style="width: 100%; height: 100%;"></div>
+                         </div>
                          <div class="ear-tis">当前拥堵指数<p>较上周同期上升1.4%</p></div>
                      </div>
                      <div class="ce-box-early pull-left">
@@ -225,8 +244,9 @@
         </div>
         <div class="cont-bots">
             <div class="cont-box">
-                <div class="cont-box-all">
+                <div class="cont-box-all" style="width: 100%; height: 100%;">
                     <div class="cont-title">政务效能</div>
+                    <div id="meterChart2" style="width: 100%; height: 100%;"></div>
                 </div>
             </div>
             <div class="cont-box">
@@ -1336,129 +1356,6 @@
             myChart.setOption(option);
             arrchart.push(myChart);
         }
-        //经济发展指数
-        chartSpeed();
-        function chartSpeed() {
-            var myChart = echarts.init(document.getElementById('chartSpeed'));
-            option = {
-                color: ['#ce3170', '#d89a00', '#d89a00', '#d8be3a', '#d8be3a', '#94d800'],
-                grid: { left: '-19%',width: "98%", containLabel: true },
-                title: [
-                    {
-                        text: '80',
-                        top: '58%',
-                        left: '60%',
-                        textStyle: {
-                            color: '#5cc163',
-                            fontSize: 48,
-                            fontFamily: 'digital',
-                            fontWeight:'normal'
-                        }
-                    }
-                ],
-                xAxis:  {
-                    type: 'category',
-                    data: [],
-                    show:false
-                },
-                yAxis: {
-                    type: 'value',
-                    max: 100,
-                    show:false,
-                    splitNumber:10
-                },
-                series: [
-                    {
-                        name: '1',
-                         type: 'bar',
-                         stack: 1,
-                         barWidth:'50%',
-                         barMinHeight: 10,
-                         itemStyle: {
-                            normal: {
-                                show: true,
-                                barBorderRadius: 88,
-                                barBorderWidth: 8,
-                                barBorderColor: 'rgba(12,91,211,0)'
-                            }
-                        },
-                        data: [10]
-                    },
-                    {
-                        name: '2',
-                        type: 'bar',
-                        stack: 1,
-                        itemStyle: {
-                            normal: {
-                                show: true,
-                                barBorderRadius: 88,
-                                barBorderWidth: 8,
-                                barBorderColor: 'rgba(12,91,211,0)'
-                            }
-                        },
-                        data: [10]
-                    },
-                    {
-                        name: '3',
-                        type: 'bar',
-                        stack: 1,
-                        itemStyle: {
-                            normal: {
-                                show: true,
-                                barBorderRadius: 88,
-                                barBorderWidth: 8,
-                                barBorderColor: 'rgba(12,91,211,0)'
-                            }
-                        },
-                        data: [10]
-                    },
-                    {
-                        name: '4',
-                        type: 'bar',
-                        stack: 1,
-                        itemStyle: {
-                            normal: {
-                                show: true,
-                                barBorderRadius: 88,
-                                barBorderWidth: 8,
-                                barBorderColor: 'rgba(12,91,211,0)'
-                            }
-                        },
-                        data: [10]
-                    },
-                    {
-                        name: '5',
-                        type: 'bar',
-                        stack: 1,
-                        itemStyle: {
-                            normal: {
-                                show: true,
-                                barBorderRadius: 88,
-                                barBorderWidth: 8,
-                                barBorderColor: 'rgba(12,91,211,0)'
-                            }
-                        },
-                        data: [10]
-                    },
-                    {
-                        name: '6',
-                        type: 'bar',
-                        stack: 1,
-                        itemStyle: {
-                            normal: {
-                                show: true,
-                                barBorderRadius: 88,
-                                barBorderWidth: 8,
-                                barBorderColor: 'rgba(12,91,211,0)'
-                            }
-                        },
-                        data: [10]
-                    }
-                ]
-            };
-            myChart.setOption(option);
-            arrchart.push(myChart);
-        }
         // 图表自适应
         window.onresize = function(){
             for(var i = 0; i < arrchart.length; i++){
@@ -1476,6 +1373,522 @@
                 }
             }
         });
+        //交通仪表盘
+        meterChart1();
+        function meterChart1() {
+            //var angle = [220, -40],
+            var angle = [180, 0],
+                curVal = 2.35;
+            var myChart = echarts.init(document.getElementById('meterChart1'));
+            var option = {
+                series: [{
+                    name: '最内层环仪表盘',
+                    type: "gauge",
+                    min: 0,
+                    max: 10,
+                    radius: '60%',
+                    startAngle: angle[0],
+                    endAngle: angle[1],
+                    splitNumber: 10,
+                    axisLine: {
+                        lineStyle: {
+                            color: [
+                                [1, "#46bff5"]
+                            ],
+                            width: 1
+                        }
+                    },
+                    axisTick: {
+                        lineStyle: {
+                            color: "#46bff5",
+                            width: 1,
+
+                        },
+                        length: -4,
+                        splitNumber: 1,
+                        interval: 'true',
+                    },
+                    axisLabel: {
+                        distance: 3,
+                        formatter: function(v) {
+                            if (v == 60) {
+                                return '{a|' + v + '}';
+                            } else if (v == 85) {
+                                return '{b|' + v + '}';
+                            } else {
+                                return v;
+                            };
+                        },
+                        textStyle: {
+                            color: "#46bff5"
+                        },
+                        rich: {
+                            a: {
+                                color: '#fbe010'
+                            },
+                            b: {
+                                color: '#3fa7dc'
+                            }
+                        }
+                    },
+                    splitLine: {
+                        show: true,
+                        length: 0,
+                        lineStyle: {
+                            color: '#fff',
+                            width: 2
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: "#818488",
+                            shadowColor: 'rgba(0, 0, 0, 0.5)',
+                            shadowBlur: 10
+                        }
+                    },
+                    detail: {
+                        formatter: "{value}",
+                        offsetCenter: [0, "40%"],
+                        textStyle: {
+                            fontSize: 30,
+                            fontFamily: 'digital',
+                            color: "#d89a00"
+                        }
+                    },
+                    title: {
+                        show: false
+                    },
+                    pointer: {
+                        length: '55%',
+                        width: 2,
+
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#3fa7dc'
+                        }
+                    },
+                    data: [{
+                        value: curVal
+                    }]
+                }, {
+                    name: "外环仪表盘四段颜色",
+                    type: "gauge",
+                    min: 0,
+                    max: 10,
+                    //radius: '49%',
+                    radius: '95%',
+                    startAngle: angle[0],
+                    endAngle: angle[1],
+                    splitNumber: 0,
+                    axisLine: {
+                        lineStyle: {
+                            color: [
+                                [0.3, '#5cc163'],
+                                [0.7, '#d89a00'],
+                                [1, "#3fa7dc"]
+                            ],
+                            width: 20
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: false
+                    },
+                    splitLine: {
+                        show: true,
+                        length: 0,
+                        lineStyle: {
+                            color: '#fff',
+                            width: 2
+                        }
+                    },
+                    pointer: {
+                        length: 0
+                    },
+                    detail: {
+                        show: false
+                    },
+                }]
+            }
+            myChart.setOption(option);
+            arrchart.push(myChart);
+        }
+        //政务效能仪表盘
+        meterChart2();
+        function meterChart2() {
+            var myChart = echarts.init(document.getElementById('meterChart2'));
+            var placeHolderStyle = {
+                normal: {
+                    label: {
+                        show: false
+                    },
+                    labelLine: {
+                        show: false,
+                    },
+                    color: "rgba(0,0,0,0)",
+                    borderWidth: 0
+                },
+                emphasis: {
+                    color: "rgba(0,0,0,0)",
+                    borderWidth: 0
+                }
+            };
+            var bgColor = "rgba(5,37,116,0.99)"; //饼形遮罩层颜色
+                highlight = '#558fd9';
+            dataVal = '80'; //效能指数
+            maxVal = '100'; //最大指数
+            option = {
+                title: [{
+                    text: '效能指数',
+                    left: '49%',
+                    top: '57%',
+                    textAlign: 'center',
+                    textStyle: {
+                        fontWeight: 'normal',
+                        fontSize: '14',
+                        color: '#85f4fb',
+                        textAlign: 'center',
+                    },
+                },{
+                    text: dataVal,
+                    left: '49%',
+                    top: '35%',
+                    textAlign: 'center',
+                    textStyle: {
+                        fontWeight: 'normal',
+                        fontSize: '42',
+                        fontFamily: 'digital',
+                        color: '#77be78',
+                        textAlign: 'center',
+                    },
+                }],
+                series: [
+                    {
+                        type: 'pie',
+                        hoverAnimation: false, //鼠标经过的特效
+                        radius: ['62%', '72%'],
+                        center: ['50%', '50%'],
+                        startAngle: 225,
+                        label: {
+                            normal: {
+                                textStyle: {
+                                    color: 'rgba(255, 255, 255, 0.9)',
+                                    fontSize: 14,
+                                }
+                            }
+                        },
+                        labelLine: {
+                            normal: {
+                                show: true,
+                                lineStyle: {
+                                    color: 'rgba(255, 255, 255, 0.8)'
+                                },
+                            }
+                        },
+                        data: [{
+                            value: 18,
+                            name: '异常统计',
+                            itemStyle: {
+                                normal: {
+                                    color: '#ce306e',
+                                },
+                            },
+                        },{
+                            value: 1,//断开部分
+                            itemStyle: placeHolderStyle,
+                            labelLine: {
+                                normal: {
+                                    show: false,
+                                }
+                            }
+                        },{
+                            value: 18,
+                            name: '办理深度',
+                            itemStyle: {
+                                color: '#d29707',
+                            },
+                        },{
+                            value: 1,//断开部分
+                            itemStyle: placeHolderStyle,
+                            labelLine: {
+                                normal: {
+                                    show: false,
+                                }
+                            }
+                        },{
+                            value: 18,
+                            name: '办理结果',
+                            itemStyle: {
+                                color: '#cccc15',
+                            },
+                        },{
+                            value: 1,//断开部分
+                            itemStyle: placeHolderStyle,
+                            labelLine: {
+                                normal: {
+                                    show: false,
+                                }
+                            }
+                        },{
+                            value: 18,
+                            name: '咨询投诉',
+                            itemStyle: {
+                                color: '#94d800',
+                            },
+                        },{
+                            value: 25,//断开部分
+                            itemStyle: placeHolderStyle,
+                            labelLine: {
+                                normal: {
+                                    show: false,
+                                }
+                            }
+                        },
+
+                        ]
+                    },
+                    {
+                        name: '数值范围',
+                        type: 'gauge',
+                        radius: '70%',
+                        center: ['50%', '50%'], // 默认全局居中
+                        splitNumber: 1, //刻度数量
+                        min: 0,
+                        max: maxVal,
+                        startAngle: 235,
+                        endAngle: -55,
+                        clockwise: true,
+                        axisLine: {
+                            show: false,
+                            lineStyle: {
+                                width: 0,
+                                shadowBlur: 0,
+                                color: [
+                                    [1, highlight]
+                                ]
+                            }
+                        },
+                        axisTick: {
+                            show: false,
+                            lineStyle: {
+                                color: highlight,
+                                width: 0
+                            },
+                            length: 0,
+                            splitNumber: 10
+                        },
+                        splitLine: {
+                            show: false,
+                            length: -7,
+                            lineStyle: {
+                                color: highlight,
+                            }
+                        },
+                        axisLabel: {
+                            distance:0,
+                            textStyle: {
+                                color: 'white',
+                                fontSize: "14",
+                                fontFamily: 'digital',
+
+                            }
+                        },
+                        detail: {
+                            show: false
+                        },
+
+                    },
+                    {
+                        name: '透明刻度时针',
+                        type: 'gauge',
+                        radius: '68%',
+                        center: ['50%', '50%'], // 默认全局居中
+                        splitNumber: 0, //刻度数量
+                        min: 0,
+                        max: maxVal,
+                        startAngle: 225,
+                        endAngle: -45,
+                        clockwise: true,
+                        axisLine: {
+                            show: false,
+                            lineStyle: {
+                                width: 0,
+                                shadowBlur: 0,
+                                color: [
+                                    [1, highlight]
+                                ]
+                            }
+                        },
+                        axisTick: {
+                            show: false,
+                            lineStyle: {
+                                color: highlight,
+                                width: 0
+                            },
+                            length: 0,
+                            splitNumber: 10
+                        },
+                        splitLine: {
+                            show: false,
+                            length: -7,
+                            lineStyle: {
+                                color: highlight,
+                            }
+                        },
+                        axisLabel: {
+                            show: false,
+                            distance:0,
+                            textStyle: {
+                                color: 'white',
+                                fontSize: "14",
+                                fontFamily: 'digital',
+
+                            }
+                        },
+                        pointer: { //仪表盘指针
+                            show: true,
+                            width: '30%',
+                            length: '87%'
+                        },
+                        detail: {
+                            show: true,
+                            textStyle: {
+                                color: highlight,
+                                fontSize: "14",
+
+                            }
+                        },
+                        data: [{value: dataVal, name: '完成率'}]
+                    },
+                    {
+                        name: '蓝色刻度',
+                        type: 'gauge',
+                        radius: '50%',
+                        center: ['50%', '50%'], // 默认全局居中
+                        splitNumber: 0, //刻度数量
+                        min: 0,
+                        max: maxVal,
+                        startAngle: 225,
+                        endAngle: -45,
+                        clockwise: true,
+                        axisLine: {
+                            show: true,
+                            lineStyle: {
+                                width: 2,
+                                shadowBlur: 0,
+                                color: [
+                                    [1, highlight]
+                                ]
+                            }
+                        },
+                        axisTick: {
+                            show: false,
+                            lineStyle: {
+                                color: highlight,
+                                width: 0
+                            },
+                            length: 0,
+                            splitNumber: 10
+                        },
+                        splitLine: {
+                            show: false,
+                            length: -7,
+                            lineStyle: {
+                                color: highlight,
+                            }
+                        },
+                        axisLabel: {
+                            show: false,
+                            distance: -20,
+                            textStyle: {
+                                color: highlight,
+                                fontSize: "14",
+                                fontWeight: "bold"
+                            }
+                        },
+                        pointer: { //仪表盘指针
+                            show: 0,
+                        },
+                        detail: {
+                            show: false,
+                        },
+                        //data: [{value: dataVal, name: '完成率'}]
+
+                    },
+                    {
+                        name: '遮罩',
+                        tooltip:{
+                            show:false
+                        },
+                        type: 'pie',
+                        radius: '48%',
+                        center: ['50%', '50%'], // 默认全局居中
+                        hoverAnimation:false,
+                        itemStyle:{
+                            normal:{
+                                color: bgColor
+                            },
+                            emphasis:{
+                                color: bgColor
+                            }
+                        },
+                        labelLine:{
+                            normal:{
+                                show:false
+                            }
+                        },
+                        label: {
+                            normal: {
+                                position: 'center'
+                            }
+                        },
+                        animation:false,
+                        data: [{
+                            value: 75,
+                        }]
+
+                    }
+                ]
+            };
+            myChart.setOption(option);
+            arrchart.push(myChart);
+        }
+        //经济发展指数
+        economySpeed();
+        function economySpeed() {
+            //0-50为红色，51-60为橙色，61-74黄色，>=75绿色
+            var numTxt = $('.spRight .sNum').text();
+            if(numTxt == 0){
+                $('.speedIndex .li-red').addClass('redBorder');
+                $('.speedIndex .li-orange').addClass('orangeBorder');
+                $('.speedIndex .li-yellow').addClass('yellowBorder');
+                $('.speedIndex .li-green').addClass('greenBorder');
+            }else if(numTxt < 50 || numTxt == 50){
+                $('.speedIndex .li-orange').addClass('orangeBorder');
+                $('.speedIndex .li-yellow').addClass('yellowBorder');
+                $('.speedIndex .li-green').addClass('greenBorder');
+            }else if(numTxt > 50 && numTxt < 55 || numTxt == 55){
+                $('.speedIndex .li-orange2').addClass('orangeBorder');
+                $('.speedIndex .li-yellow').addClass('yellowBorder');
+                $('.speedIndex .li-green').addClass('greenBorder');
+            }else if(numTxt > 55 && numTxt < 60 || numTxt == 60){
+                $('.speedIndex .li-yellow').addClass('yellowBorder');
+                $('.speedIndex .li-green').addClass('greenBorder');
+            }else if(numTxt > 60 && numTxt < 68 || numTxt == 68){
+                $('.speedIndex .li-yellow2').addClass('yellowBorder');
+                $('.speedIndex .li-green').addClass('greenBorder');
+            }else if(numTxt > 68 && numTxt < 74 || numTxt == 74){
+                $('.speedIndex .li-green').addClass('greenBorder');
+            }else if(numTxt > 74 && numTxt < 100){
+                $('.speedIndex .li-green2').addClass('greenBorder');
+            }else if(numTxt == 100){
+                $('.speedIndex .li-green2').removeClass('greenBorder');
+            }
+
+        }
     })
 </script>
 </body>
