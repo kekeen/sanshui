@@ -59,7 +59,7 @@
 .JjOpera-r-bt-l,
 .JjOpera-r-bt-m,
 .JjOpera-r-bt-r {
-  height: 260px;
+  height: 288px;
   z-index: 2;
 }
 .JjOpera-r-bt-l {
@@ -69,14 +69,14 @@
   width: 400px;
 }
 .JjOpera-r-bt-r {
-  width: 564px;
+  width: 585px;
 }
 .JjOpera-r-top-r-b {
-  height: 282px;
+  height: 241px;
   z-index: 2;
 }
 .JjOpera-r-top-r-t {
-  height: 210px;
+  height: 200px;
   z-index: 2;
 }
 .JjOpera-l-top-bt {
@@ -143,11 +143,36 @@
 .JjOpera-info {
   position: absolute;
   left: 46px;
-  top: 220px;
+  top: 232px;
 }
 .JjOpera-info .ic-small {
   position: relative;
   top: 10px;
+}
+.JjOpera-yuChe {
+  position: absolute;
+  bottom: 23px;
+  right: 50px;
+}
+.JjOpera-yuChe i {
+  display: inline-block;
+  background: url(../images/pic_blue.png);
+  width: 18px;
+  height: 14px;
+  margin-right: 6px;
+  position: relative;
+  top: 2px;
+}
+.JjOpera-yuChe .i2 {
+  background: url(../images/pic_pink.png);
+  margin-left: 6px;
+}
+.JjOpera-r-top-r-t-l,
+.JjOpera-r-top-r-t-r {
+  width: 50%;
+  height: 188px;
+  position: relative;
+  z-index: 3;
 }
 
 /*# sourceMappingURL=zlm.css.map */
