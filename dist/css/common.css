@@ -136,6 +136,7 @@ a:focus {
 .ec_a.active span {
   background: -webkit-linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
   background: linear-gradient(rgba(62, 155, 221, 0.7) 40%, rgba(255, 255, 255, 0));
+  font-weight: bold;
 }
 .footnav {
   position: absolute;
@@ -273,6 +274,7 @@ a:focus {
   border: 1px solid #59aceb;
   background-color: rgba(5, 35, 110, 0.92156863);
   overflow: hidden;
+  font-weight: bold;
   color: #85f4fb;
   margin-bottom: 0.1rem;
 }

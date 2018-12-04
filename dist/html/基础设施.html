@@ -203,7 +203,7 @@
     <ul class="clearfix">
    		
       <li class="">
-	      <a href="首页.html">
+	      <a href="index.html">
 	        <i class="ic home"></i>
 	        首页
         </a>
@@ -378,7 +378,8 @@
         label: {
           show: true,
           position: "top",
-          color: "#a9e0ed"
+          color: "#a9e0ed",
+          fontWeight:"bold"
         }
       },
       {
@@ -400,7 +401,8 @@
         label: {
           show: true,
           position: "top",
-          color: "#a9e0ed"
+          color: "#a9e0ed",
+          fontWeight:"bold"
         }
       }
     ]
@@ -563,7 +565,7 @@
       }
     }, {
       type: 'value',
-      name: '（保证金：公顷）',
+      name: '（单位：公顷）',
       min: 0,
       max: 5000,
       interval: 1000,
@@ -877,7 +879,7 @@ var radius = ['60%', '70%'],
                             normal:{
                                 formatter:[
                                     '{label|{b}}',
-                                    '{num|{c}}'
+                                    '{num|{c}公里}'
                                 ].join('\n\n'),
                                 rich:richs
                             }
@@ -900,7 +902,7 @@ var radius = ['60%', '70%'],
                             normal:{
                                 formatter:[
                                     '{label|{b}}',
-                                    '{num|{c}}'
+                                    '{num|{c}公里}'
                                 ].join('\n\n'),
                                 rich:richs
                             }
