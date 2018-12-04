@@ -8,7 +8,7 @@
    			 	for(var j in data[i].icon){
    		%>
       <li class="<%= local.title == data[i].title[j] ? 'active' : '' %>">
-	      <a href="<%= data[i].title[j] %>.html">
+	      <a href="<%= j == 0 ? 'index' : data[i].title[j] %>.html">
 	        <i class="ic <%= data[i].icon[j] %><%= local.title == data[i].title[j] ? '-y' : '' %>"></i>
 	        <%= data[i].title[j] %>
         </a>
