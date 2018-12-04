@@ -32,22 +32,23 @@
 		  <div class="JjOpera-r-top clearfix">
 				<div class="JjOpera-r-top-l pull-left">
 					<div class="JjOpera-r-top-l-t">
-						<div class="cont-title jiao">
+						<div class="cont-title jiao gradient">
 							<span>经济综合指数</span>
 						</div>
 						<div class="cont-list" style="padding-top: 7px;">
 							<ul class="clearfix">
 								<li>
 									<span>2016</span>
-									<p class="digital">78.6</p>
+									<p class="digital" style="color: #4df1bd;">78.6</p>
 								</li>
 								<li>
 									<span>2017</span>
-									<p class="digital">80.3</p>
+									<p class="digital" style="color: #4df1bd;">80.3</p>
 								</li>
 								<li>
-									<span>2018</span>
-									<p class="digital">99.9</p>
+									<span>2018 <i style="font-size:16px;position: relative;
+    top: -2px;">预测</i></span>
+									<p class="digital" style="color: #d89a00;">99.9</p>
 								</li>
 							</ul>
 						</div>
@@ -536,7 +537,7 @@
 											 },
 											 grid: {
 													 top: '70',
-													 left: '3%',
+													 left: '12%',
 													 right: '4%',
 													 bottom: '60',
 													 containLabel: true
@@ -634,6 +635,7 @@
 													 barWidth: 18,
 													 barGap:'120%',
 													 // 'data': [17, 28, 29, 33, 38],
+
 													 data: [17, 28, 29, 33,{
 															 name:"2018年预测",
 															 value:"38",
@@ -673,7 +675,7 @@
 																			 ]
 																	 ),
 																	 label: {
-																			 show: true,
+																			 show: false,
 																			 textStyle: {
 																					 color: '#85F4FB',
 																					 fontSize: '14',
@@ -1137,29 +1139,52 @@
 										color:'#85F4FB',
 										fontSize:17,
 								 },
-						     tooltip : {
-						         trigger: 'axis'
-						     },
+						     // tooltip : {
+						     //     trigger: 'axis'
+						     // },
+								 tooltip: {
+										 trigger: 'axis',
+										 axisPointer: {
+												 type: 'shadow',
+												 label: {
+														 backgroundColor: 'rgba(255,255,255,0.8)',
+														 extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+														 textStyle: {
+																 color: '#666',
+														 },
+												 },
+										 },
+
+										 backgroundColor: 'rgba(255,255,255,0.8)',
+										 extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+										 textStyle: {
+												 color: '#000000',
+										 },
+								 },
 						     legend: {
 						         // data:['第一产业','第二产业','第三产业']
+										 // width:'10',
+										 // height:'10',
 										 data: [
 											 {
 												 "name": "第一产业",
-												 "icon": "rect",
+												 "icon": "path://M0,0h10v10H0V0z",
 												 "textStyle": {
-													 "color": "#C1FBFF"
+													 "color": "#C1FBFF",
 												 }
 											 },
 											 {
 												 "name": "第二产业",
-												 "icon": "rect",
+												 "icon": "path://M0,0h10v10H0V0z",
+
 												 "textStyle": {
 													 "color": "#C1FBFF"
 												 }
 											 },
 											 {
 												 "name": "第三产业",
-												 "icon": "rect",
+												 "icon": "path://M0,0h10v10H0V0z",
+
 												 "textStyle": {
 													 "color": "#C1FBFF"
 												 }
@@ -1233,10 +1258,12 @@
 						     series : [
 
 						         {
+											   // symbol: "none",
 						             name:'第一产业',
 						             type:'line',
 												 // symbol:'none',
 						             stack: '总量',
+												 showSymbol:false,//隐藏点
 												//  itemStyle : {
 												// 	normal : {
 												// 		lineStyle:{
@@ -1250,9 +1277,11 @@
 						             data:[12, 12, 10, 13, 9, 23, 21]
 						         },
 						         {
+											   // symbol: "none",
 						             name:'第二产业',
 						             type:'line',
 						             stack: '总量',
+												 showSymbol:false,
 												//  // itemStyle : {
 												// 	// normal : {
 												// 	// 	lineStyle:{
@@ -1266,6 +1295,8 @@
 						             data:[22, 18, 19, 23, 29, 30, 24]
 						         },
 						         {
+											   // symbol: "none",
+												 showSymbol:false,
 						             name:'第三产业',
 						             type:'line',
 						             stack: '总量',
@@ -1366,7 +1397,7 @@
 													'#ffbe73'
 											],
 									title : {
-									      text: '地方公共财政预算支出',
+									      text: '地方公共财政预算支出(单位：万元)',
 									      x:'center',
 												y:'85%',
 												textStyle:{
@@ -1413,7 +1444,8 @@
 							    },
 								 tooltip : {
 										 trigger: 'item',
-										 formatter: "{a} <br/>{b} : {c}万元",
+
+
 										 axisPointer: {
 												 type: 'shadow',
 												 label: {
@@ -1630,7 +1662,29 @@
 							 fontSize: "12"
 						 },
 					 },
+					 tooltip : {
+							 // show:false,
+							 trigger: 'item',
+							 // formatter: "{a} <br/>{b} : {c}万元",
+							 axisPointer: {
+									 type: 'shadow',
+									 label: {
+											 backgroundColor: 'rgba(255,255,255,0.8)',
+											 extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+											 textStyle: {
+													 color: '#666',
+											 },
+									 },
+							 },
+
+							 backgroundColor: 'rgba(255,255,255,0.8)',
+							 extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+							 textStyle: {
+									 color: '#000000',
+							 },
+					 },
 					 series: [{
+						 name: '房地产开发投资',
 						 type: 'pie',
 						 radius: '55%',
 						 center: ['50%', '40%'],
@@ -1722,6 +1776,14 @@
 								tooltip : {
 									 show:false,
 										trigger: 'item',
+										// formatter: function(params) {
+										//     var result = '';
+										//     params.forEach(function (item) {
+										//         result += '<span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:' + item.color + '"></span>';
+										//     });
+                    //
+										//     return result;
+										// }
 										formatter: "{a} <br/>{b} : {c}万元",
 										axisPointer: {
 												type: 'shadow',
@@ -1851,7 +1913,7 @@
 								},
 							 tooltip : {
 									 trigger: 'item',
-									 formatter: "{a} <br/>{b} : {c}万元",
+									 // formatter: "{a} <br/>{b} : {c}万元",
 									 axisPointer: {
 											 type: 'shadow',
 											 label: {
