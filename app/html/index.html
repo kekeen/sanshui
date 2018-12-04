@@ -1394,13 +1394,6 @@
                             width: 2
                         }
                     },
-                    itemStyle: {
-                        normal: {
-                            color: "#818488",
-                            shadowColor: 'rgba(0, 0, 0, 0.5)',
-                            shadowBlur: 10
-                        }
-                    },
                     detail: {
                         formatter: "{value}",
                         offsetCenter: [0, "40%"],
@@ -1416,11 +1409,14 @@
                     pointer: {
                         length: '55%',
                         width: 2,
+                        color: '#85f4fb',
 
                     },
                     itemStyle: {
                         normal: {
-                            color: '#3fa7dc'
+                            color: "#85f4fb",
+                            //shadowColor: 'rgba(0, 0, 0, 0.5)',
+                            //shadowBlur: 10
                         }
                     },
                     data: [{
@@ -1461,7 +1457,13 @@
                         }
                     },
                     pointer: {
-                        length: 0
+                        length: 0,
+                    },
+                    itemStyle:{
+                        normal:{
+                            color:'#85f4fb',
+                            borderWidth:0
+                        }
                     },
                     detail: {
                         show: false
