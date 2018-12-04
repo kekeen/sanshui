@@ -5,6 +5,7 @@
     "../css/infrastructure.css"
   ],
   "scripts":[
-  	"../js/footnav.js"
+  	"../js/footnav.js",
+    "http://cdn.hcharts.cn/highcharts/highcharts.js"
   ]
 }

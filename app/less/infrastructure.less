@@ -22,7 +22,7 @@
         margin-bottom: .1rem;
         background: url(../images/infrastructure_list2.png) no-repeat;
         background-size: 100% 100%;
-        margin-right: .12rem;
+        margin-right: 8px;
         span{
           font-size: .4rem;
         }
@@ -125,6 +125,55 @@
   .cont-right{
     .cont-box{
       height: 4.3rem;
+    }
+    .land{
+      .echarts{
+        height: 28vh;
+      }
+      .land-tables{
+        display: none;
+        width: 100%;
+        background: #0a2468;
+        margin-top: .2rem;
+        th,td{
+          text-align: center;
+        }
+        thead{
+          tr{
+            height: 4vh;
+            line-height: 4vh;
+            background: url(../images/lang_tables_thead_bg.png) no-repeat;
+            background-size: 100% 100%;
+          }
+        }
+        tbody{
+          background: url(../images/lang_tables_tdody_bg.png);
+          tr{
+            height: 10vh;
+            font-size: .18rem;
+            td{
+              color: #fff;
+              &.digital{
+                font-size: .28rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .road{
+      .echarts{
+        height: 32vh;
+      }
+      .shadowBox{
+        position: absolute;
+        background: #103184;
+        width: 2.65rem;
+        height: 2.65rem;
+        top: 3.65vh;
+        left: 9.35vw;
+        border-radius: 50%;
+      }
     }
   }
 }

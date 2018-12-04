@@ -181,7 +181,10 @@ gulp.task('copy', function(){
     ])
         .pipe(gulp.dest('./dist/libs/jquery-ui-1.12.1'));
 
+    gulp.src([
+        './app/libs/highcharts/**'
+    ])
+    .pipe(gulp.dest('./dist/libs/highcharts'));
 
 });
 // ----------------静态页面开发流程----------------end
-
