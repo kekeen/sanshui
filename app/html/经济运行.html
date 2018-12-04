@@ -72,7 +72,10 @@
 						 <div class="pull-left JjOpera-l-top-md-l">固定资产投资总额<span>（单位:亿元）</span></div>
 						 <div class="pull-left JjOpera-l-top-md-r">统计时间：2017年</span></div>
 				 </div>
-					 <div class="JjOpera-r-top-r-t"></div>
+					 <div class="JjOpera-r-top-r-t clearfix">
+					 		<div class="pull-left JjOpera-r-top-r-t-l" id="columnLine9"></div>
+							<div class="pull-left JjOpera-r-top-r-t-r" id="columnLine10"></div>
+					 </div>
 					 <div class="JjOpera-line" style="position: relative;top: -16px;margin:0 auto;"></div>
 					 <div class="JjOpera-r-top-r-b" id="columnLine4"></div>
 				</div>
@@ -86,7 +89,7 @@
 					<div class="pull-left JjOpera-r-bt-l" id="columnLine7"></div>
 					<div class="pull-left JjOpera-r-bt-m" id="columnLine8"></div>
 					<div class="pull-left JjOpera-r-bt-r" id="columnLine3"></div>
-					<div class="JjOpera-yuChe" style="bottom: 40px;right: 49px;">
+					<div class="JjOpera-yuChe" style="bottom: 52px;right: 49px;">
 						<i></i><i class="i2"></i><span style="font-size:12px;">2018年预测</span>
 					</div>
 				</div>
@@ -94,7 +97,8 @@
 					 <div class="JjOpera-info-tp">
 					 	  <i class="ic-small house"></i><span>常住人口  93.73万</span>
 					 </div>
-					 <div class="JjOpera-info-bt">
+					 <div class="JjOpera-info-bt" style="position: relative;
+    top: -6px;">
 						 <i class="ic-small card"></i><span>户籍人口  41.73万</span>
 					</div>
 				</div>
@@ -165,6 +169,7 @@
 								          height:80,
 								        },
 								        tooltip: {
+													  show:false,
 								            trigger: 'axis',
 								            axisPointer: {
 								                type: 'cross',
@@ -216,7 +221,8 @@
 																icon:"rect"
 															},{
 																name:'增长率（%）',
-																icon:"image://../images/pic_yellow_line.png"
+																icon:'path://M0,16v-2h30v2H0z,M15,11c2.2,0,4,1.8,4,4c0,2.2-1.8,4-4,4c-2.2,0-4-1.8-4-4C11,12.8,12.8,11,15,11z'
+
 															}
 															,{
 															name:"2018年预测",
@@ -517,7 +523,7 @@
 															 icon:"rect"
 														 },{
 															 name:'增长率(%)',
-															 icon:"image://../images/pic_yellow_line.png"
+															 icon:'path://M0,16v-2h30v2H0z,M15,11c2.2,0,4,1.8,4,4c0,2.2-1.8,4-4,4c-2.2,0-4-1.8-4-4C11,12.8,12.8,11,15,11z'
 														 }
 
 												 ],
@@ -817,7 +823,7 @@
 											title : {
 													text: '户籍人口增长情况',
 													x:'center',
-													y:'88%',
+													y:'83%',
 													textStyle:{
 														 color:'#85F4FB',
 														 fontSize:17,
@@ -852,7 +858,7 @@
 																 fontSize: '14',
 																 color:'#C1FBFF',
 													 },
-													bottom:40,
+													bottom:50,
 													left:15
 											},
 											grid: {
@@ -1293,6 +1299,7 @@
 													 '#ffbe73'
 											 ],
 							    tooltip : {
+										  show:false,
 							        trigger: 'item',
 							        formatter: "{a} <br/>{b} : {c} ({d}%)",
 											axisPointer: {
@@ -1361,7 +1368,7 @@
 									title : {
 									      text: '地方公共财政预算支出',
 									      x:'center',
-												y:'88%',
+												y:'85%',
 												textStyle:{
 	 												color:'#85F4FB',
 	 												fontSize:17,
@@ -1375,32 +1382,34 @@
 							        orient: 'vertical',
 							        left: 'left',
 											top:70,
+											left:26,
 							        data: [
 												{
 													"name": "一般公共服务",
-													icon:"image://../images/pic_3.png"
+													// icon:"path://M8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.4,0,8-3.6,8-8C16,3.6,12.4,0,8,0z M8,13c-2.8,0-5-2.2-5-5c0-2.8,2.2-5,5-5c2.8,0,5,2.2,5,5C13,10.8,10.8,13,8,13z"
 												},
 												{
 													"name": "公共安全",
-													icon:"image://../images/pic_1.png"
+
 												},
 												{
 													"name": "教育",
-													icon:"image://../images/pic_2.png"
+
 												},
 												{
 													"name": "科学技术",
-													icon:"image://../images/pic_4.png"
+
 												},
 												{
 													"name": "文化",
-													icon:"image://../images/pic_5.png"
+
 												},
 												{
 													"name": "社会保障",
-													icon:"image://../images/pic_7.png"
+
 												},
-											]
+											],
+											icon:"path://M8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.4,0,8-3.6,8-8C16,3.6,12.4,0,8,0z M8,13c-2.8,0-5-2.2-5-5c0-2.8,2.2-5,5-5c2.8,0,5,2.2,5,5C13,10.8,10.8,13,8,13z"
 							    },
 								 tooltip : {
 										 trigger: 'item',
@@ -1426,10 +1435,10 @@
 										 {
 												 name: '地方公共财政预算支出',
 												 type: 'pie',
-												 radius : '55%',
-												 center: ['65%', '50%'],
+												 radius : '45%',
+												 center: ['67%', '48%'],
 												 data:[
-														 {value:300, name:'西南'},
+														 {value:300, name:'一般公共服务'},
 														 {value:410, name:'公共安全'},
 														 {value:234, name:'教育'},
 														 {value:218, name:'科学技术'},
@@ -1467,6 +1476,219 @@
 					myChart.setOption(option);
 				}
 
+				//固定资产投资饼图左
+				columnLine9();
+			 function columnLine9() {
+				 // 基于准备好的dom，初始化echarts实例
+					var myChart = echarts.init(document.getElementById('columnLine9'));
+
+					// 指定图表的配置项和数据
+					option = {
+								color: ['#0CBCAF', '#0C6EC4', '#C4C61C', '#94D800', '#D29704', '#CE2E6B',
+												 '#ffbe73'
+										 ],
+								 legend: {
+										 textStyle: {
+													 fontSize: '14',
+													 color:'#C1FBFF',
+										 },
+										 orient: 'vertical',
+										 left: 'left',
+										 top:30,
+										 left:20,
+										 data: [
+											 {
+												 "name": "工业投资",
+
+											 },
+											 {
+												 "name": "工业技改投资",
+
+											 },
+											 {
+												 "name": "基础设施投资",
+
+											 },
+											 {
+												 "name": "房地产开发投资",
+
+											 }
+										 ],
+										 icon:"path://M8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.4,0,8-3.6,8-8C16,3.6,12.4,0,8,0z M8,13c-2.8,0-5-2.2-5-5c0-2.8,2.2-5,5-5c2.8,0,5,2.2,5,5C13,10.8,10.8,13,8,13z"
+
+								 },
+								tooltip : {
+									  show:false,
+										trigger: 'item',
+										formatter: "{a} <br/>{b} : {c}万元",
+										axisPointer: {
+												type: 'shadow',
+												label: {
+														backgroundColor: 'rgba(255,255,255,0.8)',
+														extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+														textStyle: {
+																color: '#666',
+														},
+												},
+										},
+
+										backgroundColor: 'rgba(255,255,255,0.8)',
+										extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+										textStyle: {
+												color: '#000000',
+										},
+								},
+								series : [
+										{
+												name: '地方公共财政预算支出',
+												type: 'pie',
+												radius : '55%',
+												center: ['75%', '40%'],
+												data:[
+														{value:300, name:'工业投资'},
+														{value:410, name:'工业技改投资'},
+														{value:234, name:'基础设施投资'},
+														{value:218, name:'房地产开发投资'},
+												],
+												itemStyle: {
+														emphasis: {
+																shadowBlur: 10,
+																shadowOffsetX: 0,
+																shadowColor: 'rgba(0, 0, 0, 0.5)',
+														}
+												},
+												label: {
+
+													 normal: {
+
+																position: 'inner',
+																textStyle: {
+																			color: '#fff', // 改变标示文字的颜色
+																			align:"center",
+																},
+																formatter: '{c}\n',
+													 }
+												},
+												labelLine: {
+														normal: {
+																show: false
+														}
+												},
+										}
+								]
+						};
+
+					// 使用刚指定的配置项和数据显示图表。
+				 myChart.setOption(option);
+			 }
+
+			 //固定资产投资饼图右
+			 columnLine10();
+			function columnLine10() {
+				// 基于准备好的dom，初始化echarts实例
+				 var myChart = echarts.init(document.getElementById('columnLine10'));
+
+				 // 指定图表的配置项和数据
+				 var richs = {
+					 nor: {
+						 color: "#c1fbff",
+						 fontSize: "12"
+					 },
+					 colup: {
+						 color: "#ff4064",
+						 fontSize: "12"
+					 },
+					 coldown: {
+						 color: "#94d800",
+						 fontSize: "12",
+					 },
+					 up: {
+						 backgroundColor: {
+							 image: "../images/up.png"
+						 },
+						 height: 13,
+						 width: 12,
+					 },
+					 down: {
+						 backgroundColor: {
+							 image: "../images/down.png"
+						 },
+						 height: 13,
+						 width: 12,
+					 }
+				 },
+				 option= {
+					 color: ['#0CBCAF', '#0C6EC4', '#C4C61C', '#94D800', '#D29704', '#CE2E6B',
+										'#ffbe73'
+								],
+					 title: {
+						 text: '房地产开发投资（单位：亿元）',
+						 bottom: "20",
+						 left: "center",
+						 textStyle: {
+							 color: "#85F4FB",
+							 fontSize: "12"
+						 },
+					 },
+					 series: [{
+						 type: 'pie',
+						 radius: '55%',
+						 center: ['50%', '40%'],
+						 label: {
+							 normal: {
+								 rich: richs,
+								 // position: 'inner',
+								 textStyle: {
+											 color: '#fff', // 改变标示文字的颜色
+											 align:"center",
+								 },
+								 formatter: '{c}\n',
+							 }
+						 },
+						 itemStyle: {
+							 // borderColor:"rgba(255,255,255,.1)",
+							 // borderWidth:10,
+							 shadowBlur: 10,
+							 shadowColor: "rgba(255,255,255)"
+						 },
+						 data: [{
+								 value: 30.3,
+								 name: '商业用房投资',
+								 itemStyle: {
+									 color: "#CF9300"
+								 },
+								 label: {
+									 normal: {
+										 formatter: [
+											 '{nor|{b}}',
+											 '{coldown|29.9%} {down|}'
+										 ].join('\n\n'),
+									 }
+								 },
+							 },
+							 {
+								 value: 69.7,
+								 name: '住宅投资',
+								 itemStyle: {
+									 color: "#CE2E6B"
+								 },
+								 label: {
+									 normal: {
+										 formatter: [
+											 '{nor|{b}}',
+											 '{colup|29.9%} {up|}'
+										 ].join('\n\n'),
+									 }
+								 },
+							 },
+						 ]
+
+					 }]
+				 };
+
+				 // 使用刚指定的配置项和数据显示图表。
+				myChart.setOption(option);
+			}
 				//人口概况饼图左
 				columnLine7();
 			 function columnLine7() {
@@ -1475,7 +1697,7 @@
 
 					// 指定图表的配置项和数据
 					option = {
-								color: ['#0CBCAF', '#D29704', '#C4C61C', '#94D800', '#D29704', '#CE2E6B',
+								color: ['#D29704', '#0077D8', '#C4C61C', '#94D800', '#D29704', '#CE2E6B',
 												 '#ffbe73'
 										 ],
 								 legend: {
@@ -1483,19 +1705,22 @@
 													 fontSize: '14',
 													 color:'#C1FBFF',
 										 },
-										 bottom:80,
+										 bottom:90,
 										 data: [
 											 {
 												 "name": "户籍人口",
-												 "icon": "circle",
+
 											 },
 											 {
 												 "name": "非户籍常住人口",
-												 "icon": "circle",
+
 											 }
-										 ]
+										 ],
+										 icon:"path://M8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.4,0,8-3.6,8-8C16,3.6,12.4,0,8,0z M8,13c-2.8,0-5-2.2-5-5c0-2.8,2.2-5,5-5c2.8,0,5,2.2,5,5C13,10.8,10.8,13,8,13z"
+
 								 },
 								tooltip : {
+									 show:false,
 										trigger: 'item',
 										formatter: "{a} <br/>{b} : {c}万元",
 										axisPointer: {
@@ -1520,7 +1745,7 @@
 												name: '地方公共财政预算支出',
 												type: 'pie',
 												radius : '50%',
-												center: ['45%', '30%'],
+												center: ['40%', '30%'],
 												data:[
 														{value:300, name:'户籍人口'},
 														{value:410, name:'非户籍常住人口'},
@@ -1574,9 +1799,9 @@
 												'#ffbe73'
 										],
 								title : {
-											text: '地方公共财政预算支出',
+											text: '街道人口分布情况',
 											x:'center',
-											y:'88%',
+											y:'83%',
 											textStyle:{
 												color:'#85F4FB',
 												fontSize:17,
@@ -1589,38 +1814,40 @@
 													color:'#C1FBFF',
 										},
 										orient: 'vertical',
-										left: 'right',
-										top:42,
+										right: '40',
+										top:28,
 										data: [
 											{
 												"name": "西南街道办",
-												icon:"image://../images/pic_3.png"
+
 											},
 											{
 												"name": "云东海街道办",
-												icon:"image://../images/pic_1.png"
+
 											},
 											{
 												"name": "白坭镇",
-												icon:"image://../images/pic_2.png"
+
 											},
 											{
 												"name": "乐平镇",
-												icon:"image://../images/pic_4.png"
+
 											},
 											{
 												"name": "芦苞镇",
-												icon:"image://../images/pic_5.png"
+
 											},
 											{
 												"name": "大塘镇",
-												icon:'path://M13.5744924,23.0433841 C13.1369685,23.0433841 12.9182065,22.8258804 12.4799326,22.6083768 L6.78787125,16.738529 C6.13158535,16.0867681 6.13158535,15.2167536 6.78787125,14.7822464 C7.44490718,14.1297355 8.32045506,14.1297355 8.75797901,14.7822464 L13.5749925,19.5648261 L26.053925,7.39162319 C26.7102109,6.73911231 27.5860088,6.73911231 28.0240327,7.39162319 C28.6808186,8.04413406 28.6808186,8.91364854 28.0240327,9.3484058 L14.6683023,22.6086268 C14.2312783,22.8261304 14.0120164,23.0436341 13.5744924,23.0436341 L13.5744924,23.0433841 Z M15.1063262,30 C6.78737121,30 0,23.2603877 0,14.99975 C0,6.73886232 6.78737121,0 15.1063262,0 C18.1709938,0 21.0178995,0.869514482 23.4257812,2.39128985 C23.8633052,2.8262971 24.0820671,3.47830795 23.8633052,3.91331523 C23.4257812,4.34832248 22.7694953,4.56582611 22.3312213,4.13081886 C20.1423516,2.82629713 17.7339699,1.95703264 15.1065762,1.95703261 C7.88118105,2.17453623 2.18961975,7.82638044 2.18961975,15.00025 C2.18961975,22.1748696 8.10044304,27.8254638 15.1070763,27.8254638 C22.3319714,27.8254638 28.0247828,21.9561159 28.0247827,14.99975 L28.0247827,13.6952283 C28.0247827,13.0427174 28.4628067,12.6082102 28.8998306,12.6082102 C29.5566165,12.6082102 29.9948905,13.0432174 29.9948905,13.4777246 L29.9948905,14.99975 C30.2129024,23.2603877 23.4257812,30 15.1065762,30 L15.1063262,30 Z'
+
 											},
 											{
 												"name": "南山镇",
-												icon:'path://M13.5744924,23.0433841 C13.1369685,23.0433841 12.9182065,22.8258804 12.4799326,22.6083768 L6.78787125,16.738529 C6.13158535,16.0867681 6.13158535,15.2167536 6.78787125,14.7822464 C7.44490718,14.1297355 8.32045506,14.1297355 8.75797901,14.7822464 L13.5749925,19.5648261 L26.053925,7.39162319 C26.7102109,6.73911231 27.5860088,6.73911231 28.0240327,7.39162319 C28.6808186,8.04413406 28.6808186,8.91364854 28.0240327,9.3484058 L14.6683023,22.6086268 C14.2312783,22.8261304 14.0120164,23.0436341 13.5744924,23.0436341 L13.5744924,23.0433841 Z M15.1063262,30 C6.78737121,30 0,23.2603877 0,14.99975 C0,6.73886232 6.78737121,0 15.1063262,0 C18.1709938,0 21.0178995,0.869514482 23.4257812,2.39128985 C23.8633052,2.8262971 24.0820671,3.47830795 23.8633052,3.91331523 C23.4257812,4.34832248 22.7694953,4.56582611 22.3312213,4.13081886 C20.1423516,2.82629713 17.7339699,1.95703264 15.1065762,1.95703261 C7.88118105,2.17453623 2.18961975,7.82638044 2.18961975,15.00025 C2.18961975,22.1748696 8.10044304,27.8254638 15.1070763,27.8254638 C22.3319714,27.8254638 28.0247828,21.9561159 28.0247827,14.99975 L28.0247827,13.6952283 C28.0247827,13.0427174 28.4628067,12.6082102 28.8998306,12.6082102 C29.5566165,12.6082102 29.9948905,13.0432174 29.9948905,13.4777246 L29.9948905,14.99975 C30.2129024,23.2603877 23.4257812,30 15.1065762,30 L15.1063262,30 Z'
+
 											}
-										]
+										],
+										icon:"path://M8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.4,0,8-3.6,8-8C16,3.6,12.4,0,8,0z M8,13c-2.8,0-5-2.2-5-5c0-2.8,2.2-5,5-5c2.8,0,5,2.2,5,5C13,10.8,10.8,13,8,13z"
+
 								},
 							 tooltip : {
 									 trigger: 'item',
@@ -1644,10 +1871,10 @@
 							 },
 							 series : [
 									 {
-											 name: '地方公共财政预算支出',
+											 name: '街道人口分布情况',
 											 type: 'pie',
 											 radius : '65%',
-											 center: ['40%', '45%'],
+											 center: ['29%', '38%'],
 											 data:[
 													 {value:300, name:'西南街道办'},
 													 {value:410, name:'云东海街道办'},

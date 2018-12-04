@@ -180,7 +180,7 @@ a:focus {
   z-index: 2;
 }
 .JjOpera-r-top-r-t {
-  height: 210px;
+  height: 200px;
   z-index: 2;
 }
 .JjOpera-l-top-bt {
@@ -247,7 +247,7 @@ a:focus {
 .JjOpera-info {
   position: absolute;
   left: 46px;
-  top: 220px;
+  top: 232px;
 }
 .JjOpera-info .ic-small {
   position: relative;
@@ -270,6 +270,13 @@ a:focus {
 .JjOpera-yuChe .i2 {
   background: url(../images/pic_pink.png);
   margin-left: 6px;
+}
+.JjOpera-r-top-r-t-l,
+.JjOpera-r-top-r-t-r {
+  width: 50%;
+  height: 188px;
+  position: relative;
+  z-index: 3;
 }
 .blue {
   color: #2286d3;
