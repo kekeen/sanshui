@@ -607,6 +607,7 @@ a:focus {
   font-size: .28rem;
   color: #85f4fb;
   font-family: "digital";
+  text-align: center;
 }
 .cont-list .cont-list-center .ce-box-early .ce-rrs .rrs-left ul > li p.rrs-num i {
   font-size: .14rem;
