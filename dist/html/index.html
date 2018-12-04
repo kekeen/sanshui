@@ -234,16 +234,16 @@
                 </div>
                 <div class="cont-box">
                     <div class="cont-box-all">
-                        <a href="生态环境.html">
+                        <span href="生态环境.html">
                             <div class="cont-title">生态坏境</div>
                             <div class="cr-bo-nums">
                                 <p class="bo-num bo-num2">82</p>
                                 <p class="bo-index bo-index3">环境综合指数</p>
                             </div>
                             <ul class="ri-lists clearfix">
-                                <li><a href="javascript:void(0)">环卫</a> </li>
-                                <li><a href="javascript:void(0)">环评</a> </li>
-                                <li><a href="javascript:void(0)">水质</a> </li>
+                                <li><span>环卫</span></li>
+                                <li><span>环评</span></li>
+                                <li><span>水质</span></li>
                             </ul>
                         </a>
                     </div>
@@ -276,10 +276,10 @@
                             <p class="bo-index bo-index2">文化建设指数</p>
                         </div>
                         <ul class="bo-lists clearfix">
-                            <li><a href="javascript:void(0)">科学</a> </li>
-                            <li><a href="javascript:void(0)">教育</a> </li>
-                            <li><a href="javascript:void(0)">卫生</a> </li>
-                            <li><a href="javascript:void(0)">文化</a> </li>
+                            <li><span>科学</span></li>
+                            <li><span>教育</span></li>
+                            <li><span>卫生</span></li>
+                            <li><span>文化</span></li>
                         </ul>
                     </a>
                 </div>
@@ -326,11 +326,11 @@
         //交通运输
         chartTrans();
         function chartTrans() {
-            var myChart = echarts.init(document.getElementById('chartTrans'));
+            var myChart4 = echarts.init(document.getElementById('chartTrans'));
             var radius = ['28%', '35%'];
             var t1 = '22%';
             var t2 = '68%';
-            option = {
+            option4 = {
                 title: [
                     {
                         text: '交通运输',
@@ -377,10 +377,6 @@
                         }
                     }
                 ],
-                tooltip : {
-                    trigger: 'item',
-                    formatter: "{a} <br/>{b} : {c} ({d}%)"
-                },
                 series: [
                     {
                         name: '交通运输',
@@ -607,17 +603,21 @@
                     }
                 ]
             };
-            myChart.setOption(option);
-            arrchart.push(myChart);
+            myChart4.setOption(option4);
+            arrchart.push(myChart4);
+            setInterval(function () {
+                myChart4.clear();
+                myChart4.setOption(option4);
+            },5000);
         }
         //基础设施
         chartBasic();
         function chartBasic() {
-            var myChart = echarts.init(document.getElementById('chartBasic'));
+            var myChart3 = echarts.init(document.getElementById('chartBasic'));
             var radius = ['38%', '45%'];
             var t1 = '22%';
             var t2 = '68%';
-            option = {
+            option3 = {
                 title: [
                     {
                         text: '住房',
@@ -675,10 +675,6 @@
                         }
                     }
                 ],
-                tooltip : {
-                    trigger: 'item',
-                    formatter: "{a} <br/>{b} : {c} ({d}%)"
-                },
                 series: [
                     {
                         name: '住房',
@@ -854,8 +850,12 @@
                     }
                 ]
             };
-            myChart.setOption(option);
-            arrchart.push(myChart);
+            myChart3.setOption(option3);
+            arrchart.push(myChart3);
+            setInterval(function () {
+                myChart3.clear();
+                myChart3.setOption(option3);
+            },5000);
         }
         //民生舆情
         chartBubble();
@@ -1037,11 +1037,11 @@
         //经济运行
         chartEconomy();
         function chartEconomy() {
-            var myChart = echarts.init(document.getElementById('chartEconomy'));
+            var myChart1 = echarts.init(document.getElementById('chartEconomy'));
             var radius = ['55%', '45%'];
             var t1 = '13%';
             var t2 = '65%';
-            option = {
+            option1 = {
                 title: [
                     {
                         text: 'GDP',
@@ -1080,10 +1080,6 @@
                         }
                     }
                 ],
-                tooltip : {
-                    trigger: 'item',
-                    formatter: "{a} <br/>{b} : {c} ({d}%)"
-                },
                 series: [
                     {
                         name: 'GDP',
@@ -1201,16 +1197,20 @@
                     },
                 ]
             };
-            myChart.setOption(option);
-            arrchart.push(myChart);
+            myChart1.setOption(option1);
+            arrchart.push(myChart1);
+            setInterval(function () {
+                myChart1.clear();
+                myChart1.setOption(option1);
+            },5000);
         }
         chartEconomy2();
         function chartEconomy2() {
-            var myChart = echarts.init(document.getElementById('chartEconomy2'));
+            var myChart2 = echarts.init(document.getElementById('chartEconomy2'));
             var radius = ['55%', '45%'];
             var t1 = '13%';
             var t2 = '65%';
-            option = {
+            option2 = {
                 title: [
                     {
                         text: '第三产业\n' + '增加值占比',
@@ -1248,10 +1248,6 @@
                         }
                     }
                 ],
-                tooltip : {
-                    trigger: 'item',
-                    formatter: "{a} <br/>{b} : {c} ({d}%)"
-                },
                 series: [
                     {
                         name: '第三产业\n' +
@@ -1371,8 +1367,12 @@
                     },
                 ]
             };
-            myChart.setOption(option);
-            arrchart.push(myChart);
+            myChart2.setOption(option2);
+            arrchart.push(myChart2);
+            setInterval(function () {
+                myChart2.clear();
+                myChart2.setOption(option2);
+            },5000);
         }
         // 图表自适应
         window.onresize = function(){

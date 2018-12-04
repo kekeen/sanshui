@@ -656,8 +656,10 @@ a:focus {
   text-align: center;
   background-color: #d8be3a;
   right: 0;
+  display: inline-block;
 }
 .cont-list .cont-list-center .ce-box-early .ce-rrs .rrs-right .ri-lists > li a {
+  display: inline-block;
   width: .78rem;
   height: .78rem;
   line-height: 1.85rem;
@@ -990,6 +992,53 @@ a:focus {
   float: left;
   /*margin-left: 10%;*/
 }
+.bo-lists > li span,
+.ri-lists > li span {
+  background-image: url(../images/sprite-icon.png);
+  background-size: 11.7rem 3.7rem;
+  color: #c1fbff;
+  font-size: 0.16rem;
+  text-align: center;
+  line-height: 1.62rem;
+  width: .66rem;
+  height: .66rem;
+  display: inline-block;
+}
+.bo-lists > li:nth-of-type(1),
+.ri-lists > li:nth-of-type(1) {
+  margin-left: 0;
+}
+.bo-lists > li:nth-of-type(1) span,
+.ri-lists > li:nth-of-type(1) span {
+  background-position: -6.5rem -3.02rem;
+}
+.bo-lists > li:nth-of-type(2) span,
+.ri-lists > li:nth-of-type(2) span {
+  background-position: -7.22rem -3.02rem;
+}
+.bo-lists > li:nth-of-type(3) span,
+.ri-lists > li:nth-of-type(3) span {
+  background-position: -7.94rem -3.02rem;
+}
+.bo-lists > li:nth-of-type(4) span,
+.ri-lists > li:nth-of-type(4) span {
+  background-position: -8.66rem -3.02rem;
+}
+.bo-lists,
+.ri-lists {
+  /* padding: 0 .26rem;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.bo-lists > li,
+.ri-lists > li {
+  float: left;
+  /*margin-left: 10%;*/
+}
 .bo-lists > li a,
 .ri-lists > li a {
   background-image: url(../images/sprite-icon.png);
@@ -1021,6 +1070,33 @@ a:focus {
 .bo-lists > li:nth-of-type(4) a,
 .ri-lists > li:nth-of-type(4) a {
   background-position: -8.66rem -3.02rem;
+}
+.ri-lists {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  margin-top: .46rem;
+}
+.ri-lists > li {
+  margin-left: 7%;
+}
+.ri-lists > li span {
+  width: .78rem;
+  height: .78rem;
+  line-height: 1.85rem;
+}
+.ri-lists > li:nth-of-type(1) {
+  margin-left: 0;
+}
+.ri-lists > li:nth-of-type(1) span {
+  background-position: -9.05rem -2.15rem;
+}
+.ri-lists > li:nth-of-type(2) span {
+  background-position: -9.97rem -2.15rem;
+}
+.ri-lists > li:nth-of-type(3) span {
+  background-position: -10.87rem -2.15rem;
 }
 .ri-lists {
   -webkit-box-pack: justify;
