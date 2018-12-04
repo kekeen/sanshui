@@ -58,7 +58,7 @@
           <p class="tit">2018同比2017</p>
           <ul class="buildlist clearfix">
             
-            <li class="jiao">
+            <li>
               <span class="unit">（单位：
                 个）</span>
               <span class="num digital">
@@ -74,7 +74,7 @@
               </span>
             </li>
             
-            <li class="jiao">
+            <li>
               <span class="unit">（单位：
                 万平方米）</span>
               <span class="num digital">
@@ -90,7 +90,7 @@
               </span>
             </li>
             
-            <li class="jiao">
+            <li>
               <span class="unit">（单位：
                 万元）</span>
               <span class="num digital">
@@ -106,7 +106,7 @@
               </span>
             </li>
             
-            <li class="jiao">
+            <li>
               <span class="unit">（单位：
                 万元）</span>
               <span class="num digital">
@@ -166,27 +166,30 @@
             <a href="javascript:void(0);" class="ec_a"><span>商品房施工情况</span></a>
           </div>
           <div class="echarts" id="land"></div>
-          <table class="land-tables">
-            <thead>
-              <tr>
-                <th>标题</th>
-                <th>面积（单位：万平方米）</th>
-                <th>增长率</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>商品房施工</td>
-                <td class="txtcol-green digital">864.96</td>
-                <td class="txtcol-red digital">28.2% <i class="c-small rise2"></i></td>
-              </tr>
-              <tr>
-                <td>商品住宅施工</td>
-                <td class="txtcol-green digital">864.96</td>
-                <td class="txtcol-red digital">28.2% <i class="c-small rise2"></i></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="land-tables-box">
+            <table class="land-tables">
+              <thead>
+                <tr>
+                  <th>标题</th>
+                  <th>面积（单位：万平方米）</th>
+                  <th>增长率</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>施工面积</td>
+                  <td class="txtcol-green digital">864.96</td>
+                  <td class="txtcol-red digital">28.2% <i class="c-small rise2"></i></td>
+                </tr>
+                <tr>
+                  <td>竣工面积</td>
+                  <td class="txtcol-green digital">864.96</td>
+                  <td class="txtcol-red digital">28.2% <i class="c-small rise2"></i></td>
+                </tr>
+              </tbody>
+            </table>
+            <span class="title-txt">统计时间：2017年</span>
+          </div>
         </div>
       </div>
       <div class="cont-box road jiao">
@@ -739,6 +742,11 @@
       color: "#c1fbff",
       fontSize: "12"
     },
+    big:{
+      color: "#c1fbff",
+      fontSize: "14",
+      fontWeight:"bold"
+    },
     colup: {
       color: "#ff4064",
       fontSize: "12"
@@ -765,7 +773,7 @@
 
   option5 = {
     title: {
-      text: '统计时间为：2017年',
+      text: '统计时间：2017年',
       bottom: "0",
       left: "center",
       textStyle: {
@@ -797,7 +805,7 @@
           label: {
             normal: {
               formatter: [
-                '{nor|{b}}',
+                '{nor|{b}}：{big|{c}}',
                 '{coldown|29.9%} {down|}'
               ].join('\n\n'),
             }
@@ -812,7 +820,7 @@
           label: {
             normal: {
               formatter: [
-                '{nor|{b}}',
+                '{nor|{b}}：{big|{c}}',
                 '{colup|29.9%} {up|}'
               ].join('\n\n'),
             }
@@ -836,7 +844,7 @@ var radius = ['60%', '70%'],
     option6 = {
         title: [
             {
-                text: '统计时间为：2017年',
+                text: '统计时间：2017年',
                 left:"center",
                 bottom:"0",
                 textStyle: {
@@ -982,11 +990,11 @@ var radius = ['60%', '70%'],
       if ($(this).index() == 0) {
         /* 点击房地产开发投资  */
         $("#land").show();
-        $(".land-tables").hide();
+        $(".land-tables-box").hide();
       } else {
         /* 点击产品房施工情况  */
         $("#land").hide();
-        $(".land-tables").show();
+        $(".land-tables-box").show();
       }
     });
   });

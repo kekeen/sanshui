@@ -120,6 +120,7 @@
 }
 .ecotope.contain .cont-left .city ul li {
   float: left;
+  border: 1px solid #58acea;
   margin: 5px 5px 0;
   width: 11vw;
   height: 11vh;
