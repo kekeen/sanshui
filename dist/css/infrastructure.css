@@ -94,6 +94,7 @@
 .infrastructure.contain .cont-left .buildlist li {
   position: relative;
   float: left;
+  border: 1px solid #58acea;
   width: 49%;
   height: 1.7rem;
   background: url(../images/build_list_bg.png);
@@ -142,33 +143,41 @@
 .infrastructure.contain .cont-right .land .echarts {
   height: 28vh;
 }
-.infrastructure.contain .cont-right .land .land-tables {
+.infrastructure.contain .cont-right .land .land-tables-box {
   display: none;
+}
+.infrastructure.contain .cont-right .land .land-tables-box .title-txt {
+  font-size: .2rem;
+  color: #85f4fb;
+  margin-top: .1rem;
+  display: block;
+}
+.infrastructure.contain .cont-right .land .land-tables-box .land-tables {
   width: 100%;
   background: #0a2468;
   margin-top: .2rem;
 }
-.infrastructure.contain .cont-right .land .land-tables th,
-.infrastructure.contain .cont-right .land .land-tables td {
+.infrastructure.contain .cont-right .land .land-tables-box .land-tables th,
+.infrastructure.contain .cont-right .land .land-tables-box .land-tables td {
   text-align: center;
 }
-.infrastructure.contain .cont-right .land .land-tables thead tr {
+.infrastructure.contain .cont-right .land .land-tables-box .land-tables thead tr {
   height: 4vh;
   line-height: 4vh;
   background: url(../images/lang_tables_thead_bg.png) no-repeat;
   background-size: 100% 100%;
 }
-.infrastructure.contain .cont-right .land .land-tables tbody {
+.infrastructure.contain .cont-right .land .land-tables-box .land-tables tbody {
   background: url(../images/lang_tables_tdody_bg.png);
 }
-.infrastructure.contain .cont-right .land .land-tables tbody tr {
+.infrastructure.contain .cont-right .land .land-tables-box .land-tables tbody tr {
   height: 10vh;
   font-size: .18rem;
 }
-.infrastructure.contain .cont-right .land .land-tables tbody tr td {
+.infrastructure.contain .cont-right .land .land-tables-box .land-tables tbody tr td {
   color: #fff;
 }
-.infrastructure.contain .cont-right .land .land-tables tbody tr td.digital {
+.infrastructure.contain .cont-right .land .land-tables-box .land-tables tbody tr td.digital {
   font-size: .28rem;
 }
 .infrastructure.contain .cont-right .road .echarts {
