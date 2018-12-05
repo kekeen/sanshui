@@ -608,20 +608,21 @@
             setInterval(function () {
                 myChart4.clear();
                 myChart4.setOption(option4);
-            },5000);
+            },10000);
         }
         //基础设施
         chartBasic();
         function chartBasic() {
             var myChart3 = echarts.init(document.getElementById('chartBasic'));
             var radius = ['38%', '45%'];
-            var t1 = '22%';
+            //var t1 = '22%';
+            var t1 = '26%';
             var t2 = '68%';
             option3 = {
                 title: [
                     {
                         text: '住房',
-                        top: '47%',
+                        top: '49%',
                         textAlign:'center',
                         left: '18%',
                         textStyle: {
@@ -629,7 +630,7 @@
                             fontSize: 14,
                             fontWeight:'normal'
                         },
-                        subtext:'（单位：万亿）',
+                        //subtext:'（单位：万亿）',
                         subtextStyle:{
                             color: '#709dd5',
                             fontSize: 14,
@@ -638,7 +639,7 @@
                     },
                     {
                         text: '单位',
-                        top: '47%',
+                        top: '49%',
                         textAlign:'center',
                         left: '50%',
                         textStyle: {
@@ -647,7 +648,7 @@
                             fontSize: 14,
                             fontWeight:'normal'
                         },
-                        subtext:'（单位：万亿）',
+                        //subtext:'（单位：万亿）',
                         subtextStyle:{
                             color: '#709dd5',
                             left:'center',
@@ -657,7 +658,7 @@
                     },
                     {
                         text: '绿化',
-                        top: '47%',
+                        top: '49%',
                         textAlign:'center',
                         left: '80%',
                         textStyle: {
@@ -666,7 +667,7 @@
                             fontSize: 14,
                             fontWeight:'normal'
                         },
-                        subtext:'（单位：万亿）',
+                        //subtext:'（单位：万亿）',
                         subtextStyle:{
                             color: '#709dd5',
                             left:'center',
@@ -855,7 +856,7 @@
             setInterval(function () {
                 myChart3.clear();
                 myChart3.setOption(option3);
-            },5000);
+            },10000);
         }
         //民生舆情
         chartBubble();
@@ -1202,7 +1203,7 @@
             setInterval(function () {
                 myChart1.clear();
                 myChart1.setOption(option1);
-            },5000);
+            },10000);
         }
         chartEconomy2();
         function chartEconomy2() {
@@ -1240,7 +1241,7 @@
                             fontSize: 13,
                             fontWeight:'normal'
                         },
-                        subtext:'（单位：万亿）',
+                        subtext:'（单位：万元）',
                         subtextStyle:{
                             color: '#709dd5',
                             fontSize: 13,
@@ -1372,7 +1373,7 @@
             setInterval(function () {
                 myChart2.clear();
                 myChart2.setOption(option2);
-            },5000);
+            },10000);
         }
         // 图表自适应
         window.onresize = function(){
@@ -1596,7 +1597,7 @@
                             normal: {
                                 textStyle: {
                                     color: 'rgba(255, 255, 255, 0.9)',
-                                    fontSize: 14,
+                                    fontSize: 16,
                                 }
                             }
                         },
