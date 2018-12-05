@@ -171,6 +171,12 @@
       -ms-flex: 3;
           flex: 3;
 }
+.infrastructure.contain .cont-right .land .land-tables-box .header span i,
+.infrastructure.contain .cont-right .land .land-tables-box li span i {
+  position: relative;
+  top: .1rem;
+  left: -0.15rem;
+}
 .infrastructure.contain .cont-right .land .land-tables-box .title-txt {
   font-size: .2rem;
   color: #85f4fb;
