@@ -128,7 +128,7 @@
     </div>
     <div class="cont-center">
       <div class="cont-title jiao gradient">
-        <span>经济综合指数</span>
+        <span>基础设施指数</span>
       </div>
       <div class="cont-list">
         <ul class="clearfix">
@@ -290,7 +290,7 @@
       </li>
       
       <li class="">
-	      <a href="首页.html">
+	      <a href="index.html">
 	        <i class="ic home"></i>
 	        首页
         </a>
@@ -353,7 +353,8 @@
   var build_echart = echarts.init(document.getElementById('build')),
     park_echart = echarts.init(document.getElementById('park')),
     land_echart = echarts.init(document.getElementById('land')),
-    road_echart = echarts.init(document.getElementById('road'));
+    road_echart = echarts.init(document.getElementById('road')),
+    timer;
   option = {
     legend: {
       data: ['新建工程个数', '新建工程面积'],
@@ -366,7 +367,7 @@
       left: '1%',
       right: '4%',
       bottom: '10%',
-      top: "10%",
+      top: "14%",
       containLabel: true
     },
     xAxis: {
@@ -379,13 +380,16 @@
       },
       axisLabel: {
         color: "#a9e0ed",
+        fontSize:16
       },
     },
     yAxis: [{
       type: 'value',
       name: '（单位：个）',
       nameTextStyle: {
-        color: "#c7cdcd"
+        color: "#c7cdcd",
+        fontSize:14,
+        padding:[0,0,14,0]
       },
       splitLine: {
         show: false
@@ -397,6 +401,7 @@
       },
       axisLabel: {
         color: "#a9e0ed",
+        fontSize:16
       }
     }, {
       type: 'value',
@@ -404,7 +409,9 @@
       min: 0,
       max: 500,
       nameTextStyle: {
-        color: "#c7cdcd"
+        color: "#c7cdcd",
+        fontSize:14,
+        padding:[0,0,14,0]
       },
       splitLine: {
         show: false
@@ -416,6 +423,7 @@
       },
       axisLabel: {
         color: "#a9e0ed",
+        fontSize:16
       },
     }],
     series: [{
@@ -438,7 +446,8 @@
           show: true,
           position: "top",
           color: "#a9e0ed",
-          fontWeight:"bold"
+          fontWeight:"bold",
+          fontSize:16
         }
       },
       {
@@ -461,7 +470,8 @@
           show: true,
           position: "top",
           color: "#a9e0ed",
-          fontWeight:"bold"
+          fontWeight:"bold",
+          fontSize:16
         }
       }
     ]
@@ -473,7 +483,7 @@
       top: "-1%",
       textStyle: {
         color: "#c1fbff",
-        fontSize: "12",
+        fontSize:16,
         fontWeight: "0"
       }
     },
@@ -488,7 +498,7 @@
       left: '1%',
       right: '4%',
       bottom: '10%',
-      top: "10%",
+      top: "14%",
       containLabel: true
     },
     xAxis: {
@@ -501,13 +511,16 @@
       },
       axisLabel: {
         color: "#a9e0ed",
+        fontSize:16
       },
     },
     yAxis: [{
       type: 'value',
       name: '（总造价）',
       nameTextStyle: {
-        color: "#c7cdcd"
+        color: "#c7cdcd",
+        fontSize:14,
+        padding:[0,0,14,0]
       },
       splitLine: {
         show: false
@@ -528,7 +541,9 @@
       max: 7.5,
       interval: 1.5,
       nameTextStyle: {
-        color: "#c7cdcd"
+        color: "#c7cdcd",
+        fontSize:14,
+        padding:[0,0,14,0]
       },
       splitLine: {
         show: false
@@ -540,6 +555,7 @@
       },
       axisLabel: {
         color: "#a9e0ed",
+        fontSize:16
       },
     }],
     series: [{
@@ -558,6 +574,13 @@
             }]),
           }
         },
+        label: {
+          show: true,
+          position: "top",
+          color: "#a9e0ed",
+          fontWeight:"bold",
+          fontSize:16
+        }
       },
       {
         name: '保证金',
@@ -575,6 +598,13 @@
             }]),
           }
         },
+        label: {
+          show: true,
+          position: "top",
+          color: "#a9e0ed",
+          fontWeight:"bold",
+          fontSize:16
+        }
       }
     ]
   };
@@ -590,7 +620,7 @@
       left: '1%',
       right: '4%',
       bottom: '10%',
-      top: "12%",
+      top: "14%",
       containLabel: true
     },
     xAxis: {
@@ -609,7 +639,9 @@
       type: 'value',
       name: '（%）',
       nameTextStyle: {
-        color: "#c7cdcd"
+        color: "#c7cdcd",
+        fontSize:14,
+        padding:[0,0,14,0]
       },
       splitLine: {
         show: false
@@ -621,6 +653,7 @@
       },
       axisLabel: {
         color: "#a9e0ed",
+        fontSize:16
       }
     }, {
       type: 'value',
@@ -629,7 +662,9 @@
       max: 5000,
       interval: 1000,
       nameTextStyle: {
-        color: "#c7cdcd"
+        color: "#c7cdcd",
+        fontSize:14,
+        padding:[0,0,14,0]
       },
       splitLine: {
         show: false
@@ -641,6 +676,7 @@
       },
       axisLabel: {
         color: "#a9e0ed",
+        fontSize:16
       },
     }],
     series: [{
@@ -664,7 +700,8 @@
           formatter: "{c}%",
           color: "#85f4fb",
           fontWeight: "bold",
-          position: "top"
+          position: "top",
+          fontSize:16
         }
       },
       {
@@ -687,7 +724,8 @@
           show: true,
           color: "#85f4fb",
           fontWeight: "bold",
-          position: "top"
+          position: "top",
+          fontSize:16
         }
       }
     ]
@@ -704,7 +742,7 @@
       left: '1%',
       right: '4%',
       bottom: '10%',
-      top: "12%",
+      top: "14%",
       containLabel: true
     },
     xAxis: {
@@ -717,13 +755,16 @@
       },
       axisLabel: {
         color: "#a9e0ed",
+        fontSize:16
       },
     },
     yAxis: [{
       type: 'value',
       name: '（单位：公顷）',
       nameTextStyle: {
-        color: "#c7cdcd"
+        color: "#c7cdcd",
+        fontSize:14,
+        padding:[0,0,14,0]
       },
       splitLine: {
         show: false
@@ -735,6 +776,7 @@
       },
       axisLabel: {
         color: "#a9e0ed",
+        fontSize:16
       }
     }, {
       type: 'value',
@@ -743,7 +785,9 @@
       max: 75,
       interval: 15,
       nameTextStyle: {
-        color: "#c7cdcd"
+        color: "#c7cdcd",
+        fontSize:14,
+        padding:[0,0,14,0]
       },
       splitLine: {
         show: false
@@ -755,6 +799,7 @@
       },
       axisLabel: {
         color: "#a9e0ed",
+        fontSize:16
       },
     }],
     series: [{
@@ -777,7 +822,8 @@
           show: true,
           position: "top",
           color: "#a9e0ed",
-          fontWeight:"bold"
+          fontWeight:"bold",
+          fontSize:16
         }
       },
       {
@@ -808,20 +854,20 @@
   var richs = {
     nor: {
       color: "#c1fbff",
-      fontSize: "12"
+      fontSize:16
     },
     big:{
       color: "#c1fbff",
-      fontSize: "14",
+      fontSize:18,
       fontWeight:"bold"
     },
     colup: {
       color: "#ff4064",
-      fontSize: "12"
+      fontSize:16
     },
     coldown: {
       color: "#94d800",
-      fontSize: "12",
+      fontSize:16
     },
     up: {
       backgroundColor: {
@@ -902,11 +948,11 @@ var radius = ['60%', '70%'],
     richs = {
         label:{
             color:"#c1fbff",
-            fontSize:12
+            fontSize:16
         },
         num:{
             color:"#85f4fb",
-            fontSize:12
+            fontSize:16
         }
     };
     option6 = {
@@ -958,7 +1004,7 @@ var radius = ['60%', '70%'],
                                     '{num|{c}公里}'
                                 ].join('\n\n'),
                                 rich:richs
-                            }
+                            },
                         }
                     },
                     {
@@ -992,7 +1038,8 @@ var radius = ['60%', '70%'],
                 radius: [0, '50%'],
                 label: {
                     normal: {
-                        position: 'inner'
+                        position: 'inner',
+                        fontSize:"16"
                     }
                 },
                 data:[
@@ -1059,15 +1106,17 @@ var radius = ['60%', '70%'],
         /* 点击房地产开发投资  */
         $("#land").show();
         $(".land-tables-box").hide();
+        land_echart.resize();
+        window.clearInterval(timer);
       } else {
         /* 点击产品房施工情况  */
         $("#land").hide();
         $(".land-tables-box").show();
+        land_scroll()
       }
     });
   });
   land_scroll();
-  var timer;
   function land_scroll(){
     timer = window.setInterval(function(){
       var $str = $(".land-list").eq(0),
