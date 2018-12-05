@@ -236,13 +236,6 @@
     <ul class="clearfix">
    		
       <li class="">
-	      <a href="index.html">
-	        <i class="ic home"></i>
-	        首页
-        </a>
-      </li>
-      
-      <li class="">
 	      <a href="经济运行.html">
 	        <i class="ic money"></i>
 	        经济运行
@@ -267,6 +260,13 @@
 	      <a href="民生舆情.html">
 	        <i class="ic livelihood"></i>
 	        民生舆情
+        </a>
+      </li>
+      
+      <li class="">
+	      <a href="首页.html">
+	        <i class="ic home"></i>
+	        首页
         </a>
       </li>
       
@@ -635,7 +635,8 @@
 			}
 		]
 	};
-	var option2 = {
+	var op2_data = [40, 80, 75],
+ 	option2 = {
 		grid: {
 			left: '2%',
 			right: '2%',
@@ -676,7 +677,7 @@
 		series: [{
 			type: 'bar',
 			barWidth: '30%',
-			data: [40, 80, 75],
+			data: op2_data,
 			itemStyle: {
 				normal: {
 					color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -691,12 +692,26 @@
 			label: {
 				show: true,
 				position: "top",
-				formatter: "{c}%",
+				formatter: function(params){
+					var i = params.dataIndex,
+							num;
+					if(i>0){
+						num = parseInt(op2_data[i]) - parseInt(op2_data[i-1]);
+						if(num > 0){
+							return "+" + num + "%";
+						}else{
+							return num + "%";
+						}
+					}else{
+						return "+" + params.data + "%";
+					}
+				},
 				color: "#a9e0ed"
 			}
 		}]
 	};
-	var option2_2 = {
+	var op2_data2 = [80, 40, 75],
+	option2_2 = {
 		grid: {
 			left: '2%',
 			right: '2%',
@@ -716,8 +731,7 @@
 				}
 			},
 			axisLabel: {
-				color: "#a9e0ed",
-				formatter: '{value}%'
+				color: "#a9e0ed"
 			},
 		}],
 		yAxis: [{
@@ -737,7 +751,7 @@
 		series: [{
 			type: 'bar',
 			barWidth: '30%',
-			data: [80, 40, 75],
+			data: op2_data2,
 			itemStyle: {
 				normal: {
 					color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -752,7 +766,20 @@
 			label: {
 				show: true,
 				position: "top",
-				formatter: "{c}%",
+				formatter: function(params){
+					var i = params.dataIndex,
+							num;
+					if(i>0){
+						num = parseInt(op2_data2[i]) - parseInt(op2_data2[i-1]);
+						if(num > 0){
+							return "+" + num + "%";
+						}else{
+							return num + "%";
+						}
+					}else{
+						return "+" + params.data + "%";
+					}
+				},
 				color: "#a9e0ed"
 			}
 		}]

@@ -157,13 +157,6 @@
 		<div class="footnav">
     <ul class="clearfix">
    		
-      <li class="">
-	      <a href="index.html">
-	        <i class="ic home"></i>
-	        首页
-        </a>
-      </li>
-      
       <li class="active">
 	      <a href="经济运行.html">
 	        <i class="ic money-y"></i>
@@ -189,6 +182,13 @@
 	      <a href="民生舆情.html">
 	        <i class="ic livelihood"></i>
 	        民生舆情
+        </a>
+      </li>
+      
+      <li class="">
+	      <a href="首页.html">
+	        <i class="ic home"></i>
+	        首页
         </a>
       </li>
       
@@ -979,7 +979,7 @@
 										        },
 										        {
 										          "name": "户籍人口自然增长率（%）",
-										          "icon": "circle",
+										          	icon:'path://M0,16v-2h30v2H0z,M15,11c2.2,0,4,1.8,4,4c0,2.2-1.8,4-4,4c-2.2,0-4-1.8-4-4C11,12.8,12.8,11,15,11z',
 										          "textStyle": {
 										            "color": "#C1FBFF"
 										          }
@@ -1274,9 +1274,9 @@
 								 tooltip: {
 										 trigger: 'axis',
 										 axisPointer: {
-												 type: 'shadow',
+												 type: 'line',//3条线的点的竖线（指示器）可以去掉背景块
 												 label: {
-														 backgroundColor: 'rgba(255,255,255,0.8)',
+														backgroundColor: 'rgba(255,255,255,0.8)',
 														 extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
 														 textStyle: {
 																 color: '#666',

@@ -142,38 +142,59 @@
         height: 28vh;
       }
       .land-tables-box{
-        display: none;
+        .list-box{
+          height: 2.2rem;
+          overflow: hidden;
+          position: relative;
+          .scroll{
+            position: relative;
+            top: 0;
+          }
+        }
+        .header{
+          height: 4vh;
+          line-height: 4vh;
+          background: url(../images/lang_tables_thead_bg.png) no-repeat;
+          background-size: 100% 100%;
+          margin-top: .2rem;
+        }
+        .header,li{
+          display: flex;
+          span{
+            flex: 3;
+            i{
+              position: relative;
+              top: .1rem;
+              left: -.15rem;
+            }
+          }
+        }
         .title-txt{
           font-size: .2rem;
           color: #85f4fb;
           margin-top: .1rem;
           display: block;
         }
-        .land-tables{
+        .land-list{
           width: 100%;
           background: #0a2468;
-          margin-top: .2rem;
-          th,td{
-            text-align: center;
-          }
-          thead{
-            tr{
-              height: 4vh;
-              line-height: 4vh;
-              background: url(../images/lang_tables_thead_bg.png) no-repeat;
-              background-size: 100% 100%;
+          background: url(../images/lang_tables_tdody_bg.png);
+          overflow: hidden;
+          li{
+            height: 7vh;
+            line-height: 7vh;
+            font-size: .18rem;
+            span{
+              color: #fff;
+              &.digital{
+                font-size: .28rem;
+              }
             }
-          }
-          tbody{
-            background: url(../images/lang_tables_tdody_bg.png);
-            tr{
-              height: 10vh;
-              font-size: .18rem;
-              td{
-                color: #fff;
-                &.digital{
-                  font-size: .28rem;
-                }
+            &.active{
+              font-size: .20rem;
+              font-weight: bold;
+              span{
+                color: #85f4fb;
               }
             }
           }
