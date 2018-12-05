@@ -87,32 +87,43 @@
         <div class="title">地产开发</div>
         <div class="cont-box-kid">
           <div class="echarts-change2 clearfix">
-            <a href="javascript:void(0);" class="ec_a active"><span>房地产开发投资</span></a>
-            <a href="javascript:void(0);" class="ec_a"><span>商品房施工情况</span></a>
+            <a href="javascript:void(0);" class="ec_a"><span>房地产开发投资</span></a>
+            <a href="javascript:void(0);" class="ec_a active"><span>商品房施工情况</span></a>
           </div>
-          <div class="echarts" id="land"></div>
+          <div class="echarts" id="land" style="display:none;"></div>
           <div class="land-tables-box">
-            <table class="land-tables">
-              <thead>
-                <tr>
-                  <th>标题</th>
-                  <th>面积（单位：万平方米）</th>
-                  <th>增长率</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>施工面积</td>
-                  <td class="txtcol-green digital">864.96</td>
-                  <td class="txtcol-red digital">28.2% <i class="c-small rise2"></i></td>
-                </tr>
-                <tr>
-                  <td>竣工面积</td>
-                  <td class="txtcol-green digital">864.96</td>
-                  <td class="txtcol-red digital">28.2% <i class="c-small rise2"></i></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="header">
+              <span>标题</span>
+              <span>面积（单位：万平方米）</span>
+              <span>增长率</span>
+            </div>
+            <div class="list-box">
+              <div class="scroll">
+                <%
+                    for(var k=0;k<4;k++){
+                %>
+                <ul class="land-list">
+                  <li class="active">
+                    <span>施工面积<%= k+1 %></span>
+                    <span class="txtcol-green digital">864.96</span>
+                    <span class="txtcol-red digital">28.2% <i class="c-small rise2"></i></span>
+                  </li>
+                  <li>
+                    <span>竣工面积</span>
+                    <span class="txtcol-green digital">864.96</span>
+                    <span class="txtcol-red digital">28.2% <i class="c-small rise2"></i></span>
+                  </li>
+                  <li>
+                    <span>商业用房</span>
+                    <span class="txtcol-green digital">57.90</span>
+                    <span class="txtcol-red digital">61.7% <i class="c-small rise2"></i></span>
+                  </li>
+                </ul>
+                <%
+                    }
+                %>
+              </div>
+            </div>
             <span class="title-txt">统计时间：2017年</span>
           </div>
         </div>
@@ -847,4 +858,24 @@ var radius = ['60%', '70%'],
       }
     });
   });
+  land_scroll();
+  var timer;
+  function land_scroll(){
+    timer = window.setInterval(function(){
+      var $str = $(".land-list").eq(0),
+          $main = $(".scroll");
+      $main.animate({
+        "top" : - $str.height()
+      },function(){
+        $(".land-list").eq(0).remove();
+        $main.css("top",0);
+        $main.append($str);
+      });
+    },1000);
+  };
+  $(".land-tables-box").hover(function(){
+    window.clearInterval(timer);
+  },function(){
+    land_scroll();
+  })
 </script>
