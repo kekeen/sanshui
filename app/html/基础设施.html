@@ -53,7 +53,7 @@
     </div>
     <div class="cont-center">
       <div class="cont-title jiao gradient">
-        <span>经济综合指数</span>
+        <span>基础设施指数</span>
       </div>
       <div class="cont-list">
         <ul class="clearfix">
@@ -190,7 +190,8 @@
   var build_echart = echarts.init(document.getElementById('build')),
     park_echart = echarts.init(document.getElementById('park')),
     land_echart = echarts.init(document.getElementById('land')),
-    road_echart = echarts.init(document.getElementById('road'));
+    road_echart = echarts.init(document.getElementById('road')),
+    timer;
   option = {
     legend: {
       data: ['新建工程个数', '新建工程面积'],
@@ -325,7 +326,7 @@
       left: '1%',
       right: '4%',
       bottom: '10%',
-      top: "10%",
+      top: "12%",
       containLabel: true
     },
     xAxis: {
@@ -395,6 +396,12 @@
             }]),
           }
         },
+        label: {
+          show: true,
+          position: "top",
+          color: "#a9e0ed",
+          fontWeight:"bold"
+        }
       },
       {
         name: '保证金',
@@ -412,6 +419,12 @@
             }]),
           }
         },
+        label: {
+          show: true,
+          position: "top",
+          color: "#a9e0ed",
+          fontWeight:"bold"
+        }
       }
     ]
   };
@@ -896,15 +909,17 @@ var radius = ['60%', '70%'],
         /* 点击房地产开发投资  */
         $("#land").show();
         $(".land-tables-box").hide();
+        land_echart.resize();
+        window.clearInterval(timer);
       } else {
         /* 点击产品房施工情况  */
         $("#land").hide();
         $(".land-tables-box").show();
+        land_scroll()
       }
     });
   });
   land_scroll();
-  var timer;
   function land_scroll(){
     timer = window.setInterval(function(){
       var $str = $(".land-list").eq(0),
