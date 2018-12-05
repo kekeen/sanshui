@@ -137,7 +137,7 @@
     road_echart = echarts.init(document.getElementById('road'));
   option = {
     legend: {
-      data: ['新建个数工程', '新建个数面积'],
+      data: ['新建工程个数', '新建工程面积'],
       bottom: "0",
       textStyle: {
         color: "#a9e0ed"
@@ -223,7 +223,7 @@
         }
       },
       {
-        name: '新建面积个数',
+        name: '新建工程面积',
         type: 'bar',
         data: [500, 500, 500],
         barWidth: "20%",
@@ -521,7 +521,7 @@
       type: 'value',
       name: '（单位：平方米）',
       min: 0,
-      max: 65,
+      max: 75,
       interval: 15,
       nameTextStyle: {
         color: "#c7cdcd"
@@ -554,6 +554,12 @@
             }]),
           }
         },
+        label: {
+          show: true,
+          position: "top",
+          color: "#a9e0ed",
+          fontWeight:"bold"
+        }
       },
       {
         name: '人均公园绿地面积',
@@ -571,6 +577,12 @@
             }]),
           }
         },
+        label: {
+          show: true,
+          position: "top",
+          color: "#a9e0ed",
+          fontWeight:"bold"
+        }
       }
     ]
   };
