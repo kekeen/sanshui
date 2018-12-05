@@ -169,9 +169,9 @@
 		water_ec1_data4 = [30, 80, 75, 50],
 		option = {
 			grid: {
-				left: '2%',
-				right: '2%',
-				top: '8%',
+				left: '4%',
+				right: '4%',
+				top: '10%',
 				bottom: "2%",
 				containLabel: true
 			},
@@ -184,7 +184,8 @@
 					}
 				},
 				axisLabel: {
-					color: "#a9e0ed"
+					color: "#a9e0ed",
+					fontSize:16
 				}
 			}],
 			yAxis: [{
@@ -195,7 +196,8 @@
 					}
 				},
 				axisLabel: {
-					color: "#a9e0ed"
+					color: "#a9e0ed",
+					fontSize:16
 				},
 				splitLine: {
 					show: false
@@ -210,7 +212,8 @@
 					normal: {
 						show: true,
 						position: 'top',
-						color: "#a9e0ed"
+						color: "#a9e0ed",
+						fontSize:16
 					}
 				},
 				itemStyle: {
@@ -252,7 +255,8 @@
 				}
 			},
 			axisLabel: {
-				color: "#a9e0ed"
+				color: "#a9e0ed",
+				fontSize:16
 			},
 		},
 		yAxis: {
@@ -267,7 +271,8 @@
 			},
 			axisLabel: {
 				color: "#a9e0ed",
-				formatter: '{value}%'
+				formatter: '{value}%',
+				fontSize:16
 			},
 		},
 		series: [{
@@ -303,7 +308,8 @@
 					show: true,
 					position: "top",
 					color: "#a9e0ed",
-					offset: [15, 0]
+					offset: [15, 0],
+					fontSize:16
 				}
 			},
 			{
@@ -339,7 +345,8 @@
 					show: true,
 					position: "top",
 					color: "#a9e0ed",
-					offset: [-15, 0]
+					offset: [-15, 0],
+					fontSize:16
 				}
 			}
 		]
@@ -370,7 +377,8 @@
 				}
 			},
 			axisLabel: {
-				color: "#a9e0ed"
+				color: "#a9e0ed",
+				fontSize:16
 			},
 		},
 		yAxis: {
@@ -385,7 +393,8 @@
 			},
 			axisLabel: {
 				color: "#a9e0ed",
-				formatter: '{value}%'
+				formatter: '{value}%',
+				fontSize:16
 			},
 		},
 		series: [{
@@ -421,7 +430,8 @@
 					show: true,
 					position: "top",
 					color: "#a9e0ed",
-					offset: [15, 0]
+					offset: [15, 0],
+					fontSize:16
 				}
 			},
 			{
@@ -457,7 +467,8 @@
 					show: true,
 					position: "top",
 					color: "#a9e0ed",
-					offset: [-15, 0]
+					offset: [-15, 0],
+					fontSize:16
 				}
 			}
 		]
@@ -483,7 +494,8 @@
 				}
 			},
 			axisLabel: {
-				color: "#a9e0ed"
+				color: "#a9e0ed",
+				fontSize:16
 			},
 		}],
 		yAxis: [{
@@ -498,7 +510,8 @@
 			},
 			axisLabel: {
 				color: "#a9e0ed",
-				formatter: '{value}%'
+				formatter: '{value}%',
+				fontSize:16
 			},
 		}],
 		series: [{
@@ -533,7 +546,8 @@
 						return "+" + params.data + "%";
 					}
 				},
-				color: "#a9e0ed"
+				color: "#a9e0ed",
+				fontSize:16
 			}
 		}]
 	};
@@ -558,7 +572,8 @@
 				}
 			},
 			axisLabel: {
-				color: "#a9e0ed"
+				color: "#a9e0ed",
+				fontSize:16
 			},
 		}],
 		yAxis: [{
@@ -572,7 +587,8 @@
 				}
 			},
 			axisLabel: {
-				color: "#a9e0ed"
+				color: "#a9e0ed",
+				fontSize:16
 			},
 		}],
 		series: [{
@@ -607,7 +623,8 @@
 						return "+" + params.data + "%";
 					}
 				},
-				color: "#a9e0ed"
+				color: "#a9e0ed",
+				fontSize:16
 			}
 		}]
 	};
@@ -638,11 +655,15 @@
 			},
 			axisLabel: {
 				color: "#a9e0ed",
+				fontSize:16
 			},
 		},
 		yAxis: {
 			type: 'value',
 			name: "单位：个",
+			nameTextStyle:{
+				fontSize:14
+			},
 			splitLine: {
 				show: false
 			},
@@ -653,6 +674,7 @@
 			},
 			axisLabel: {
 				color: "#a9e0ed",
+				fontSize:16
 			},
 		},
 		series: [{
@@ -674,7 +696,8 @@
 				label: {
 					show: true,
 					position: "top",
-					color: "#a9e0ed"
+					color: "#a9e0ed",
+					fontSize:16
 				}
 			},
 			{
@@ -696,7 +719,8 @@
 				label: {
 					show: true,
 					position: "top",
-					color: "#a9e0ed"
+					color: "#a9e0ed",
+					fontSize:16
 				}
 			}
 		]
@@ -728,6 +752,7 @@
 			},
 			axisLabel: {
 				color: "#a9e0ed",
+				fontSize:16
 			},
 		},
 		yAxis: {
@@ -743,6 +768,7 @@
 			},
 			axisLabel: {
 				color: "#a9e0ed",
+				fontSize:16
 			},
 		},
 		series: [{
@@ -764,7 +790,8 @@
 				label: {
 					show: true,
 					position: "top",
-					color: "#a9e0ed"
+					color: "#a9e0ed",
+					fontSize:16
 				}
 			},
 			{
@@ -786,7 +813,8 @@
 				label: {
 					show: true,
 					position: "top",
-					color: "#a9e0ed"
+					color: "#a9e0ed",
+					fontSize:16
 				}
 			}
 		]
