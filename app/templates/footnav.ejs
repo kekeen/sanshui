@@ -2,13 +2,13 @@
     <ul class="clearfix">
    		<%
    			 data = [
-   			 	{icon:['home','money','infr','ecotope','livelihood','gover','culture','transportation','water','expect'],title:['首页','经济运行','基础设施','生态环境','民生舆情','政务效能','文化建设','交通运输','敬请期待','敬请期待']}
+   			 	{icon:['money','infr','ecotope','livelihood','home','gover','culture','transportation','water','expect'],title:['经济运行','基础设施','生态环境','民生舆情','首页','政务效能','文化建设','交通运输','敬请期待','敬请期待']}
    			 ];
    			 for(var i in data){
    			 	for(var j in data[i].icon){
    		%>
       <li class="<%= local.title == data[i].title[j] ? 'active' : '' %>">
-	      <a href="<%= j == 0 ? 'index' : data[i].title[j] %>.html">
+	      <a href="<%= data[i].title[j] == '首页' ? 'index' : data[i].title[j] %>.html">
 	        <i class="ic <%= data[i].icon[j] %><%= local.title == data[i].title[j] ? '-y' : '' %>"></i>
 	        <%= data[i].title[j] %>
         </a>

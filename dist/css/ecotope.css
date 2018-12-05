@@ -213,6 +213,11 @@
 .ecotope.contain .cont-right .water .echarts-change.chain-ratio {
   right: 0;
 }
+.ecotope.contain .cont-right .water .echarts-change:hover,
+.ecotope.contain .cont-right .water .echarts-change.active {
+  background: url(../images/echelon_at.png);
+  background-size: cover;
+}
 .ecotope.contain .cont-right .environmental .compare {
   margin: .1rem 0;
   font-size: .15rem;

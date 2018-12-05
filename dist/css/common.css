@@ -221,7 +221,6 @@ a:focus {
   font-size: .22rem;
   letter-spacing: 2px;
   font-weight: bold;
-  font-style: italic;
 }
 .newheader .head-weather > a {
   font-size: 0.18rem;
@@ -329,6 +328,7 @@ a:focus {
   color: #fff;
   font-size: .2rem;
   border: 1px solid #59aceb;
+  font-weight: bold;
 }
 .cont-center .cont-list {
   text-align: center;
