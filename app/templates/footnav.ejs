@@ -7,10 +7,10 @@
    			 for(var i in data){
    			 	for(var j in data[i].icon){
    		%>
-      <li class="<%= local.title == data[i].title[j] ? 'active' : '' %>">
-	      <a href="<%= data[i].title[j] == '首页' ? 'index' : data[i].title[j] %>.html">
+      <li class="<%= data[i].title[j] == '首页' ? 'noshadow' : '' %> <%= local.title == data[i].title[j] ? 'active' : '' %>">
+	      <a href="<%= data[i].title[j] == '首页' ? 'index' : data[i].title[j] %>.html" class="<%= data[i].title[j] == '首页' ? 'indexa' : '' %>">
 	        <i class="ic <%= data[i].icon[j] %><%= local.title == data[i].title[j] ? '-y' : '' %>"></i>
-	        <%= data[i].title[j] %>
+	        <%= data[i].title[j] == '首页' ? '' : data[i].title[j] %>
         </a>
       </li>
       <%

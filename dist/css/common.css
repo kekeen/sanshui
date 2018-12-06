@@ -172,6 +172,10 @@ a:focus {
   box-sizing: border-box;
   color: #fff;
 }
+.footnav ul li a.indexa {
+  position: relative;
+  top: -0.05rem;
+}
 .footnav ul li:hover,
 .footnav ul li.active {
   background: rgba(0, 0, 0, 0.3);
@@ -180,6 +184,10 @@ a:focus {
 .footnav ul li:hover a,
 .footnav ul li.active a {
   color: #c4e3ff;
+}
+.footnav ul li.noshadow {
+  box-shadow: none!important;
+  background: none!important;
 }
 .newheader {
   width: 100%;
