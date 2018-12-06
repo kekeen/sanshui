@@ -172,14 +172,14 @@ a:focus {
   box-sizing: border-box;
   color: #fff;
 }
-.footnav ul li a:hover,
-.footnav ul li a:active {
-  color: #fff;
-}
 .footnav ul li:hover,
 .footnav ul li.active {
   background: rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.3) inset;
+}
+.footnav ul li:hover a,
+.footnav ul li.active a {
+  color: #c4e3ff;
 }
 .newheader {
   width: 100%;

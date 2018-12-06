@@ -162,8 +162,8 @@
         <div class="title">地产开发</div>
         <div class="cont-box-kid">
           <div class="echarts-change2 clearfix">
-            <a href="javascript:void(0);" class="ec_a"><span>房地产开发投资</span></a>
             <a href="javascript:void(0);" class="ec_a active"><span>商品房施工情况</span></a>
+            <a href="javascript:void(0);" class="ec_a"><span>房地产开发投资</span></a>
           </div>
           <div class="echarts" id="land" style="display:none;"></div>
           <div class="land-tables-box">
@@ -360,7 +360,8 @@
       data: ['新建工程个数', '新建工程面积'],
       bottom: "0",
       textStyle: {
-        color: "#a9e0ed"
+        color: "#a9e0ed",
+        fontSize:16
       },
     },
     grid: {
@@ -491,7 +492,8 @@
       data: ['总造价', '保证金'],
       bottom: "0",
       textStyle: {
-        color: "#a9e0ed"
+        color: "#a9e0ed",
+        fontSize:16
       },
     },
     grid: {
@@ -610,10 +612,11 @@
   };
   option3 = {
     legend: {
-      data: ['建成区绿化率', '建成区面积（公顷）'],
+      data: ['建成区绿化率', '绿地面积'],
       bottom: "0",
       textStyle: {
-        color: "#a9e0ed"
+        color: "#a9e0ed",
+        fontSize:16
       },
     },
     grid: {
@@ -705,7 +708,7 @@
         }
       },
       {
-        name: '建成区面积（公顷）',
+        name: '绿地面积',
         type: 'bar',
         data: [211.6, 211.6, 211.6],
         barWidth: "20%",
@@ -735,7 +738,8 @@
       data: ['公园绿地面积', '人均公园绿地面积'],
       bottom: "0",
       textStyle: {
-        color: "#a9e0ed"
+        color: "#a9e0ed",
+        fontSize:16
       },
     },
     grid: {
@@ -919,7 +923,7 @@
           label: {
             normal: {
               formatter: [
-                '{nor|{b}}：{big|{c}}',
+                '{nor|{b}}：{big|{c}亿元}',
                 '{coldown|29.9%} {down|}'
               ].join('\n\n'),
             }
@@ -934,7 +938,7 @@
           label: {
             normal: {
               formatter: [
-                '{nor|{b}}：{big|{c}}',
+                '{nor|{b}}：{big|{c}亿元}',
                 '{colup|29.9%} {up|}'
               ].join('\n\n'),
             }
