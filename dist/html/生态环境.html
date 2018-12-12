@@ -60,28 +60,28 @@
 						<li class=""><a href="javascript:void(0);">
 								<i class="ic-large car1"></i>
 								<span class="num-mark">
-									40</span>
+									98</span>
 								作业中
 							</a></li>
 						
 						<li class=""><a href="javascript:void(0);">
 								<i class="ic-large car3"></i>
 								<span class="num-mark">
-									20</span>
+									10</span>
 								休息中
 							</a></li>
 						
 						<li class="active"><a href="javascript:void(0);">
 								<i class="ic-large car2"></i>
 								<span class="num-mark">
-									80</span>
+									108</span>
 								作业中
 							</a></li>
 						
 						<li class=""><a href="javascript:void(0);">
 								<i class="ic-large car4"></i>
 								<span class="num-mark">
-									20</span>
+									16</span>
 								休息中
 							</a></li>
 						
@@ -167,15 +167,15 @@
 				<ul class="clearfix">
 					<li>
 						<span>2016</span>
-						<p class="digital">78.6</p>
+						<p class="digital">79.2</p>
 					</li>
 					<li>
 						<span>2017</span>
-						<p class="digital">78.6</p>
+						<p class="digital">82.1</p>
 					</li>
 					<li>
 						<span>2018<font>预测</font></span>
-						<p class="digital">90.3</p>
+						<p class="digital">83.5</p>
 					</li>
 				</ul>
 			</div>
@@ -223,8 +223,10 @@
 					</div>
 					<div class="compare">
 						同比
-						<i class="ic-small rise"></i>
-						<span class="txtcol-red">21.34%</span>
+						<!--<i class="ic-small rise"></i>
+						<span class="txtcol-red">26.82%</span>-->
+						<i class="ic-small decline"></i>
+						<span class="txtcol-green">26.82%</span>
 					</div>
 					<div class="echarts" id="environmental_ec1" style="display:block;"></div>
 				</div>
@@ -336,10 +338,10 @@
 		environmental_ec1 = echarts.init(document.getElementById('environmental_ec1')),
 		map = echarts.init(document.getElementById('map')),
 		app = {},
-		water_ec1_data1 = [20, 80, 55, 50],
-		water_ec1_data2 = [30, 69, 75, 80],
-		water_ec1_data3 = [30, 69, 75, 80],
-		water_ec1_data4 = [30, 80, 75, 50],
+		water_ec1_data1 = [100, 75, 50, 100],
+		water_ec1_data2 = [100, 50, 100, 100],
+		water_ec1_data3 = [100, 100, 100, 100],
+		water_ec1_data4 = [100, 100, 100, 100],
 		option = {
 			grid: {
 				left: '4%',
@@ -380,7 +382,7 @@
 				name: '直接访问',
 				type: 'bar',
 				barWidth: '60%',
-				data: [8000, 6000, 5400, 4500, 3800, 3000, 3000],
+				data: [8493, 2190, 2149, 2900, 756, 1456, 360],
 				label: {
 					normal: {
 						show: true,
@@ -648,7 +650,7 @@
 			}
 		]
 	};
-	var op2_data = [40, 80, 75],
+	var op2_data = [100, 100, 100],
  	option2 = {
 		grid: {
 			left: '2%',
@@ -659,7 +661,7 @@
 		},
 		xAxis: [{
 			type: 'category',
-			data: ['2018-1', '2018-2', '2018-3'],
+			data: ['2018-7', '2018-9', '2018-11'],
 			axisTick: {
 				alignWithLabel: true
 			},
@@ -726,7 +728,7 @@
 			}
 		}]
 	};
-	var op2_data2 = [80, 40, 75],
+	var op2_data2 = [100, 100, 100],
 	option2_2 = {
 		grid: {
 			left: '2%',
@@ -737,7 +739,7 @@
 		},
 		xAxis: [{
 			type: 'category',
-			data: ['2018-1', '2018-2', '2018-3'],
+			data: ['2018-9', '2018-10', '2018-11'],
 			axisTick: {
 				alignWithLabel: true
 			},
@@ -858,7 +860,7 @@
 				name: '2016',
 				type: 'bar',
 				barWidth: "20",
-				data: [40, 60, 50, 55],
+				data: [47, 44, 46, 42],
 				itemStyle: {
 					normal: {
 						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -881,7 +883,7 @@
 				name: '2017',
 				type: 'bar',
 				barWidth: "20",
-				data: [45, 40, 60, 80],
+				data: [68, 53, 8, 2],
 				itemStyle: {
 					normal: {
 						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -957,7 +959,7 @@
 				name: '2016',
 				type: 'bar',
 				barWidth: "20",
-				data: [45, 40, 60, 80],
+				data: [146.46, 98.6, 187.85, 223.52],
 				itemStyle: {
 					normal: {
 						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -980,7 +982,7 @@
 				name: '2017',
 				type: 'bar',
 				barWidth: "20",
-				data: [40, 60, 50, 55],
+				data: [404.01, 160.13, 40.41, 2.5],
 				itemStyle: {
 					normal: {
 						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -1061,10 +1063,14 @@
 				options = option4;
 				$(".environmental").find(".compare i").addClass('decline').removeClass('rise');
 				$(".environmental").find(".compare span").addClass('txtcol-green').removeClass('txtcol-red');
+                $(".environmental").find(".compare span").addClass('txtcol-green').text('7.52%');
 			} else {
 				options = option3;
-				$(".environmental").find(".compare i").removeClass('decline').addClass('rise');
-				$(".environmental").find(".compare span").removeClass('txtcol-green').addClass('txtcol-red');
+//				$(".environmental").find(".compare i").removeClass('decline').addClass('rise');
+//				$(".environmental").find(".compare span").removeClass('txtcol-green').addClass('txtcol-red');
+                $(".environmental").find(".compare i").addClass('decline').removeClass('rise');
+                $(".environmental").find(".compare span").addClass('txtcol-green').removeClass('txtcol-red');
+                $(".environmental").find(".compare span").addClass('txtcol-green').text('26.82%');
 			}
 			environmental_ec1.clear();
 			environmental_ec1.setOption(options);
