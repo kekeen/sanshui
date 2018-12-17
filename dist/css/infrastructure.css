@@ -186,6 +186,7 @@
 }
 .infrastructure.contain .cont-right .land .land-tables-box .land-list {
   width: 100%;
+  height: 2.2rem;
   background: #0a2468;
   background: url(../images/lang_tables_tdody_bg.png);
   overflow: hidden;

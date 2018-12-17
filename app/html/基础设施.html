@@ -840,6 +840,10 @@ var radius = ['60%', '70%'],
                                 color: '#0077d8'
                             }
                         },
+                        tooltip:{
+                            show:false,
+                            trigger: 'item'
+                        },
                         label:{
                             normal:{
                                 formatter:[
@@ -959,19 +963,35 @@ var radius = ['60%', '70%'],
       }
     });
   });
+  var animateNum = 0;
   land_scroll();
+//  function land_scroll(){
+//    timer = window.setInterval(function(){
+//      var $str = $(".land-list").eq(0),
+//          $main = $(".scroll");
+//      //console.log($str.height());
+//      $main.animate({
+//        "top" : - $str.height()
+//      },function(){
+//        $(".land-list").eq(0).remove();
+//        $main.css("top",0);
+//        $main.append($str);
+//      });
+//    },5000);
+//
+//  };
   function land_scroll(){
-    timer = window.setInterval(function(){
-      var $str = $(".land-list").eq(0),
-          $main = $(".scroll");
-      $main.animate({
-        "top" : - $str.height()
-      },function(){
-        $(".land-list").eq(0).remove();
-        $main.css("top",0);
-        $main.append($str);
-      });
-    },5000);
+      window.clearInterval(timer);
+      var listLength = $('.scroll .land-list').length;
+      timer = window.setInterval(function(){
+          animateNum ++;
+          if(animateNum == listLength){
+              animateNum = 0;
+          }
+          //alert(animateNum);
+          $('.scroll .land-list:eq('+animateNum+')').show();
+          $('.scroll .land-list:eq('+animateNum+')').siblings().hide();
+      },5000);
   };
   $(".land-tables-box").hover(function(){
     window.clearInterval(timer);
@@ -979,3 +999,4 @@ var radius = ['60%', '70%'],
     land_scroll();
   })
 </script>
+

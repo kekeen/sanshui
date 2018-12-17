@@ -538,10 +538,15 @@ a:focus {
 .cont-list .cont-list-center .ce-res-bottom .ce-box-cdi .cdi-number > li:nth-of-type(3) .nums {
   padding-top: .62rem;
 }
+.cont-list .cont-list-center .ce-res-all .ce-box-cdi .cdi-number > li:nth-of-type(2) .nums,
+.cont-list .cont-list-center .ce-res-bottom .ce-box-cdi .cdi-number > li:nth-of-type(2) .nums {
+  padding-top: .42rem;
+}
 .cont-list .cont-list-center .ce-res-all .ce-box-cdi .cdi-number > li .nums,
 .cont-list .cont-list-center .ce-res-bottom .ce-box-cdi .cdi-number > li .nums {
   font-family: 'digital';
-  font-size: .75rem;
+  /*font-size: .75rem;*/
+  font-size: .55rem;
   color: #4df1bd;
   text-align: center;
   height: 1.65rem;
@@ -565,7 +570,8 @@ a:focus {
 }
 .cont-list .cont-list-center .ce-res-all .ce-box-cdi .cdi-number > li:nth-of-type(2) .nums,
 .cont-list .cont-list-center .ce-res-bottom .ce-box-cdi .cdi-number > li:nth-of-type(2) .nums {
-  font-size: 1.27rem;
+  /*font-size: 1.27rem;*/
+  font-size: .75rem;
 }
 .cont-list .cont-list-center .ce-res-all .ce-box-cdi .cdi-number > li:nth-of-type(3) .nums,
 .cont-list .cont-list-center .ce-res-bottom .ce-box-cdi .cdi-number > li:nth-of-type(3) .nums {
@@ -932,7 +938,8 @@ a:focus {
 }
 .chart-bus {
   position: relative;
-  height: 1.93rem;
+  /*height: 1.93rem;*/
+  height: 3rem;
   margin-top: -0.08rem;
 }
 .chart-bus .chart-pics {
@@ -942,7 +949,7 @@ a:focus {
   content: '';
   width: 100%;
   height: 1px;
-  background: url(../images/list_bot_line.png) no-repeat center;
+  /*background: url(../images/list_bot_line.png) no-repeat center;*/
   background-size: cover;
   display: inline-block;
 }

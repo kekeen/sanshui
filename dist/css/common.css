@@ -140,7 +140,7 @@ a:focus {
 }
 .footnav {
   position: absolute;
-  bottom: 0;
+  bottom: 0 !important;
   width: 100%;
   z-index: 2;
   height: 1rem;
