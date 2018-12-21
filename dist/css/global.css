@@ -536,11 +536,11 @@ a:focus {
 .cont-list .cont-list-center .ce-res-bottom .ce-box-cdi .cdi-number > li:nth-of-type(1) .nums,
 .cont-list .cont-list-center .ce-res-all .ce-box-cdi .cdi-number > li:nth-of-type(3) .nums,
 .cont-list .cont-list-center .ce-res-bottom .ce-box-cdi .cdi-number > li:nth-of-type(3) .nums {
-  padding-top: .62rem;
+  padding-top: .42rem;
 }
 .cont-list .cont-list-center .ce-res-all .ce-box-cdi .cdi-number > li:nth-of-type(2) .nums,
 .cont-list .cont-list-center .ce-res-bottom .ce-box-cdi .cdi-number > li:nth-of-type(2) .nums {
-  padding-top: .42rem;
+  padding-top: .25rem;
 }
 .cont-list .cont-list-center .ce-res-all .ce-box-cdi .cdi-number > li .nums,
 .cont-list .cont-list-center .ce-res-bottom .ce-box-cdi .cdi-number > li .nums {
@@ -549,7 +549,7 @@ a:focus {
   font-size: .55rem;
   color: #4df1bd;
   text-align: center;
-  height: 1.65rem;
+  height: 1.3rem;
 }
 .cont-list .cont-list-center .ce-res-all .ce-box-cdi .cdi-number > li p,
 .cont-list .cont-list-center .ce-res-bottom .ce-box-cdi .cdi-number > li p {
@@ -566,7 +566,7 @@ a:focus {
 .cont-list .cont-list-center .ce-res-all .ce-box-cdi .cdi-number > li:nth-of-type(2),
 .cont-list .cont-list-center .ce-res-bottom .ce-box-cdi .cdi-number > li:nth-of-type(2) {
   width: 48%;
-  padding-top: .09rem;
+  padding-top: .05rem;
 }
 .cont-list .cont-list-center .ce-res-all .ce-box-cdi .cdi-number > li:nth-of-type(2) .nums,
 .cont-list .cont-list-center .ce-res-bottom .ce-box-cdi .cdi-number > li:nth-of-type(2) .nums {
@@ -575,7 +575,7 @@ a:focus {
 }
 .cont-list .cont-list-center .ce-res-all .ce-box-cdi .cdi-number > li:nth-of-type(3) .nums,
 .cont-list .cont-list-center .ce-res-bottom .ce-box-cdi .cdi-number > li:nth-of-type(3) .nums {
-  color: #d89a00;
+  color: #4df1bd;
 }
 .cont-list .cont-list-center .ce-res-all .ce-box-cdi .cdi-number > li:last-child,
 .cont-list .cont-list-center .ce-res-bottom .ce-box-cdi .cdi-number > li:last-child {
@@ -861,7 +861,7 @@ a:focus {
   background-color: #d8be3a;
 }
 .cont-list .cont-list-center .ce-box-early .atmosphere-early .atmo-rs .sl-all span:nth-of-type(3):before {
-  content: '中度污染';
+  content: '轻度污染';
   bottom: -0.3rem;
 }
 .cont-list .cont-list-center .ce-box-early .atmosphere-early .atmo-rs .sl-all span:nth-of-type(4) {
@@ -869,7 +869,7 @@ a:focus {
   background-color: #d89a00;
 }
 .cont-list .cont-list-center .ce-box-early .atmosphere-early .atmo-rs .sl-all span:nth-of-type(4):before {
-  content: '轻度污染';
+  content: '中度污染';
   bottom: .30rem;
 }
 .cont-list .cont-list-center .ce-box-early .atmosphere-early .atmo-rs .sl-all span:nth-of-type(5) {
@@ -1233,6 +1233,65 @@ a:focus {
   font-size: .62rem;
   color: #5cc163;
   font-family: 'digital';
+}
+.positionBox {
+  position: relative;
+}
+.positionBox .nationwide {
+  position: absolute;
+  right: .5rem;
+  /*right: .2rem;*/
+  top: .2rem;
+  width: 1rem;
+}
+.positionBox .nationwide .pic {
+  width: .5rem;
+  height: .4rem;
+  margin: 0 auto;
+  background-image: url(../images/sprite-icon.png);
+  background-position: -3.9rem -1.01rem;
+  background-size: 11.7rem 3.7rem;
+}
+.positionBox .nationwide .name {
+  font-size: .16rem;
+  color: white;
+}
+.rankingBox {
+  width: 100%;
+  text-align: center;
+  background: url("../images/short-line.png") center bottom no-repeat;
+  padding-bottom: .02rem;
+}
+.rankingBox .img {
+  display: inline-block;
+  vertical-align: middle;
+  width: .4rem;
+  height: .4rem;
+  margin: 0 auto;
+  background-image: url(../images/sprite-icon.png);
+  background-position: -4.4rem -1.01rem;
+  background-size: 11.7rem 3.7rem;
+}
+.rankingBox .num {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: .24rem;
+  color: #4df1bd;
+  font-weight: bold;
+}
+.r-margintop {
+  margin-top: .05rem;
+}
+.long-line {
+  background: url("../images/long-line.png") center bottom no-repeat;
+}
+@media screen and (min-width: 1920px) {
+  .positionBox .nationwide {
+    position: absolute;
+    right: .2rem;
+    top: .2rem;
+    width: 1rem;
+  }
 }
 
 /*# sourceMappingURL=global.css.map */

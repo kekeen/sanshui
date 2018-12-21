@@ -249,10 +249,10 @@
                         height: 2.25rem;
                         background-image: linear-gradient(0deg, rgba(0,124,202,0.4) 0%, rgba(17,8,192,0.4) 100%);
                         &:nth-of-type(1),&:nth-of-type(3){
-                            .nums{ padding-top: .62rem;  }
+                            .nums{ padding-top: .42rem;  }
                         }
                         &:nth-of-type(2){
-                            .nums{ padding-top: .42rem;  }
+                            .nums{ padding-top: .25rem;  }
                         }
                         .nums{
                             font-family: 'digital';
@@ -260,7 +260,7 @@
                             font-size: .55rem;
                             color: #4df1bd;
                             text-align: center;
-                            height: 1.65rem;
+                            height: 1.3rem;
                         }
                         p{
                             font-size: .26rem;
@@ -274,7 +274,7 @@
                         }
                         &:nth-of-type(2){
                             width: 48%;
-                            padding-top: .09rem;
+                            padding-top: .05rem;
                             .nums{
                                 /*font-size: 1.27rem;*/
                                 font-size: .75rem;
@@ -282,7 +282,7 @@
                         }
                         &:nth-of-type(3){
                              .nums{
-                                 color: #d89a00;
+                                 color: #4df1bd;
                              }
                         }
                         margin-right: 1%;
@@ -574,7 +574,7 @@
                                 width: 18%;
                                 background-color: #d8be3a;
                                 &:before{
-                                    content: '中度污染';
+                                    content: '轻度污染';
                                     bottom: -.30rem;
                                 }
                             }
@@ -582,7 +582,7 @@
                                 width: 18%;
                                 background-color: #d89a00;
                                 &:before{
-                                    content: '轻度污染';
+                                    content: '中度污染';
                                     bottom: .30rem;
                                 }
                             }
@@ -949,6 +949,67 @@
             font-size: .62rem;
             color: #5cc163;
             font-family: 'digital';
+        }
+    }
+}
+.positionBox{
+    position: relative;
+    .nationwide{
+        position: absolute;
+        right: .5rem;
+        /*right: .2rem;*/
+        top: .2rem;
+        width: 1rem;
+        .pic{
+            width: .5rem;
+            height: .4rem;
+            margin:0 auto;
+            background-image: url(../images/sprite-icon.png);
+            background-position: -3.9rem -1.01rem;
+            background-size: 11.7rem 3.7rem;
+        }
+        .name{
+            font-size: .16rem;
+            color: white;
+        }
+    }
+}
+.rankingBox{
+    width: 100%;
+    text-align: center;
+    background: url("../images/short-line.png") center bottom no-repeat;
+    padding-bottom: .02rem;
+    .img{
+        display: inline-block;
+        vertical-align: middle;
+        width: .4rem;
+        height: .4rem;
+        margin:0 auto;
+        background-image: url(../images/sprite-icon.png);
+        background-position: -4.4rem -1.01rem;
+        background-size: 11.7rem 3.7rem;
+    }
+    .num{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: .24rem;
+        color: #4df1bd;
+        font-weight: bold;
+    }
+}
+.r-margintop{
+    margin-top: .05rem;
+}
+.long-line{
+    background: url("../images/long-line.png") center bottom no-repeat;
+}
+@media screen and (min-width: 1920px) {
+    .positionBox{
+        .nationwide {
+            position: absolute;
+            right: .2rem;
+            top: .2rem;
+            width: 1rem;
         }
     }
 }

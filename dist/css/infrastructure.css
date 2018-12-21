@@ -74,7 +74,8 @@
   margin-right: 0;
 }
 .infrastructure.contain .cont-center ul li:nth-child(3) p {
-  color: #ffc90d;
+  /*color: #ffc90d;*/
+  color: #4df1bd;
 }
 .infrastructure.contain .cont-center .cont-box {
   height: 4.19rem;
