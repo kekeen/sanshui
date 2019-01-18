@@ -142,7 +142,8 @@
 }
 .JjOpera-info {
   position: absolute;
-  left: 46px;
+  /*left: 46px;*/
+  left: 58px;
   top: 232px;
 }
 .JjOpera-info .ic-small {

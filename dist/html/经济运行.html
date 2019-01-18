@@ -143,7 +143,7 @@
 					 </div>
 					 <div class="JjOpera-info-bt" style="position: relative;
     top: -6px;">
-						 <i class="ic-small card"></i><span>户籍人口  21.25万</span>
+						 <i class="ic-small card"></i><span>户籍人口  41.25万</span>
 					</div>
 				</div>
 				<div class="JjOpera-line2"></div>
@@ -1905,11 +1905,13 @@
 										 bottom:90,
 										 data: [
 											 {
-												 "name": "户籍人口",
+												 //"name": "户籍人口",
+                                                 "name": "常住人口",
 
 											 },
 											 {
-												 "name": "非户籍常住人口",
+												 //"name": "非户籍常住人口",
+                                                 "name": "户籍人口",
 
 											 }
 										 ],
@@ -1950,10 +1952,13 @@
 												name: '地方公共财政预算支出',
 												type: 'pie',
 												radius : '50%',
-												center: ['40%', '30%'],
+												//center: ['40%', '30%'],
+                                            	center: ['50%', '30%'],
 												data:[
+//														{value:41.25, name:'户籍人口'},
+//														{value:22.84, name:'非户籍常住人口'},
+                                                        {value:64.09, name:'常住人口'},
 														{value:41.25, name:'户籍人口'},
-														{value:22.84, name:'非户籍常住人口'},
 												],
 												itemStyle: {
 														emphasis: {
