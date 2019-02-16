@@ -76,7 +76,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="cont-center">
+		<div class="cont-center envi-center">
 			<div class="cont-title jiao gradient">
 				<span>生态环境指数</span>
 			</div>
@@ -96,6 +96,34 @@
 					</li>
 				</ul>
 			</div>
+			<!--环保任务开始-->
+			<div class="cont-box jiao environment" style="height: 6.5rem;">
+				<div class="title">环保政务</div>
+				<div class="enviWrap1" style="height: 2.9rem;">
+					<div class="enviLeft">
+						<p class="echartTit">环保处罚案件</p>
+						<div class="echarts" id="environmental_ec1" style="display:block; height: 90%"></div>
+					</div>
+					<div class="enviRight">
+						<span class="pic-down"></span>
+						<div class="echarts" id="environmental_pie1_down" style="display:block; height: 90%"></div>
+
+						<span class="pic-up" style="display: none"></span>
+						<div class="echarts" id="environmental_pie1_up" style="display:none; height: 90%"></div>
+					</div>
+				</div>
+				<div class="enviWrap2" style="height: 3.1rem;">
+					<div class="enviLeft">
+						<p class="echartTit drinkTop">罚没总收入</p>
+						<div class="echarts" id="environmental_ec2" style="display:block; height: 84%"></div>
+					</div>
+					<div class="enviRight">
+						<span class="pic-down signTop"></span>
+						<div class="echarts" id="environmental_pie2_down" style="display:block; height: 84%"></div>
+					</div>
+				</div>
+			</div>
+			<!--环保任务结束-->
 		</div>
 		<div class="cont-right">
 			<div class="cont-box warning jiao" style="height: 2.2rem;">
@@ -115,42 +143,26 @@
 					</ul>
 				</div>
 			</div>
-			<div class="cont-box water jiao more-ec-box" style="height: 3.18rem;">
+			<!--水质达标率开始-->
+			<div class="cont-box water jiao more-ec-box" style="height: 6.51rem;">
 				<a href="javascript:void(0);" class="y-on-y echarts-change active">同比</a>
 				<div class="title">水质达标率</div>
 				<a href="javascript:void(0);" class="chain-ratio echarts-change">环比</a>
-				<div class="cont-box-kid">
-					<div class="echarts-change2 clearfix">
-						<a href="javascript:void(0);" class="active ec_a">
-							<span>江河水质</span>
-						</a>
-						<a href="javascript:void(0);" class="ec_a"><span>饮用水源水质</span></a>
+				<div class="cont-box-kid padding-left0">
+					<div class="waterWrap1" style="height: 2.9rem;">
+						<p class="echartTit">江河水质</p>
+						<div class="echarts" id="water_ec1" style="display:block; height: 90%"></div>
 					</div>
-					<div class="echarts" id="water_ec1" style="display:block;"></div>
+					<div class="waterWrap2" style="height: 3.1rem;">
+						<p class="echartTit drinkTop">饮用水源水质</p>
+						<div class="echarts" id="water_ec2" style="display:block; height: 84%"></div>
+					</div>
 				</div>
 			</div>
-			<div class="cont-box jiao environmental more-ec-box" style="height: 3.26rem;">
-				<div class="title">环保政务</div>
-				<div class="cont-box-kid">
-					<div class="echarts-change2 clearfix">
-						<a href="javascript:void(0);" class="ec_a active">
-							<span>环保处罚案件</span>
-						</a>
-						<a href="javascript:void(0);" class="ec_a"><span>罚没总收入</span></a>
-					</div>
-					<div class="compare">
-						同比
-						<!--<i class="ic-small rise"></i>
-						<span class="txtcol-red">26.82%</span>-->
-						<i class="ic-small decline"></i>
-						<span class="txtcol-green">26.82%</span>
-					</div>
-					<div class="echarts" id="environmental_ec1" style="display:block;"></div>
-				</div>
-			</div>
+			<!--水质达标率结束-->
 		</div>
 	</div>
-	</div>
+	<!--</div>-->
 	<%- include('../templates/footnav') %>
 	<%- include('../templates/foot') %>
 </body>
@@ -162,7 +174,12 @@
 	});
 	var city_echart = echarts.init(document.getElementById('city_echart')),
 		water_ec1 = echarts.init(document.getElementById('water_ec1')),
+        water_ec2 = echarts.init(document.getElementById('water_ec2')),
 		environmental_ec1 = echarts.init(document.getElementById('environmental_ec1')),
+        environmental_ec2 = echarts.init(document.getElementById('environmental_ec2')),
+        environmental_pie1_down = echarts.init(document.getElementById('environmental_pie1_down')),
+        environmental_pie2_down = echarts.init(document.getElementById('environmental_pie2_down')),
+        environmental_pie1_up = echarts.init(document.getElementById('environmental_pie1_up')),
 		map = echarts.init(document.getElementById('map')),
 		app = {},
 		water_ec1_data1 = [100, 75, 50, 100],
@@ -238,15 +255,15 @@
 				color: "#a9e0ed",
 				fontSize:16
 			},
-			bottom: "0",
+            bottom: "2%",
 			itemWidth: 10,
 			itemHeight: 10
 		},
 		grid: {
-			left: '2%',
-			right: '2%',
-			top: '10%',
-			bottom: "16%",
+			left: '4%',
+			right: '4%',
+            top: '12%',
+            bottom: "18%",
 			containLabel: true
 		},
 		xAxis: {
@@ -361,15 +378,15 @@
 				color: "#a9e0ed",
 				fontSize:16
 			},
-			bottom: "0",
+			bottom: "2%",
 			itemWidth: 10,
 			itemHeight: 10
 		},
 		grid: {
-			left: '2%',
-			right: '2%',
-			top: '10%',
-			bottom: "16%",
+			left: '4%',
+			right: '4%',
+			top: '12%',
+			bottom: "18%",
 			containLabel: true
 		},
 		xAxis: {
@@ -480,10 +497,10 @@
 	var op2_data = [100, 100, 100],
  	option2 = {
 		grid: {
-			left: '2%',
-			right: '2%',
-			top: '24%',
-			bottom: "2%",
+			left: '4%',
+			right: '4%',
+            top: '12%',
+            bottom: "7%",
 			containLabel: true
 		},
 		xAxis: [{
@@ -558,10 +575,10 @@
 	var op2_data2 = [100, 100, 100],
 	option2_2 = {
 		grid: {
-			left: '2%',
-			right: '2%',
-			top: '24%',
-			bottom: "2%",
+			left: '4%',
+			right: '4%',
+            top: '12%',
+            bottom: "7%",
 			containLabel: true
 		},
 		xAxis: [{
@@ -639,15 +656,15 @@
 				color: "#a9e0ed",
 				fontSize:16
 			},
-			bottom: "0",
+			bottom: "2%",
 			itemWidth: 10,
 			itemHeight: 10
 		},
 		grid: {
-			left: '2%',
-			right: '2%',
+			left: '8%',
+			right: '0',
 			top: '20%',
-			bottom: "14%",
+			bottom: "18%",
 			containLabel: true
 		},
 		xAxis: {
@@ -667,8 +684,8 @@
 			type: 'value',
 			name: "单位：个",
 			nameTextStyle:{
-				fontSize:16,
-				padding:[0,0,14,0]
+                fontSize:14,
+                padding:[0,0,4,0]
 			},
 			splitLine: {
 				show: false
@@ -686,7 +703,7 @@
 		series: [{
 				name: '2016',
 				type: 'bar',
-				barWidth: "20",
+				barWidth: "30",
 				data: [47, 44, 46, 42],
 				itemStyle: {
 					normal: {
@@ -709,7 +726,7 @@
 			{
 				name: '2017',
 				type: 'bar',
-				barWidth: "20",
+				barWidth: "30",
 				data: [68, 53, 8, 2],
 				itemStyle: {
 					normal: {
@@ -738,15 +755,15 @@
 				color: "#a9e0ed",
 				fontSize:16
 			},
-			bottom: "0",
+			bottom: "2%",
 			itemWidth: 10,
 			itemHeight: 10
 		},
 		grid: {
-			left: '4%',
-			right: '4%',
-			top: '20%',
-			bottom: "12%",
+            left: '8%',
+            right: '0',
+            top: '20%',
+            bottom: "18%",
 			containLabel: true
 		},
 		xAxis: {
@@ -766,8 +783,8 @@
 			type: 'value',
 			name: "单位：万元",
 			nameTextStyle:{
-				fontSize:16,
-				padding:[0,0,14,0]
+                fontSize:14,
+                padding:[0,0,4,0]
 			},
 			splitLine: {
 				show: false
@@ -785,7 +802,7 @@
 		series: [{
 				name: '2016',
 				type: 'bar',
-				barWidth: "20",
+				barWidth: "30",
 				data: [146.46, 98.6, 187.85, 223.52],
 				itemStyle: {
 					normal: {
@@ -808,7 +825,7 @@
 			{
 				name: '2017',
 				type: 'bar',
-				barWidth: "20",
+				barWidth: "30",
 				data: [404.01, 160.13, 40.41, 2.5],
 				itemStyle: {
 					normal: {
@@ -830,6 +847,254 @@
 			}
 		]
 	};
+	//环保处罚案件-下降圆数据
+    var option5 = {
+        title: [
+            {
+                text: '年度同比下降',
+                top: '85%',
+                textAlign:'center',
+                left: '49%',
+                textStyle: {
+                    color: '#85f4fb',
+                    fontSize: 16,
+                    fontWeight:'normal'
+                },
+            }
+
+        ],
+        series: [
+            {
+                name: '环保处罚案件',
+                type: 'pie',
+                radius: ['55%', '65%'],
+                center:['50%','50%'],
+                color:'rgba(12,188,175)',
+                label: {
+                    normal: {
+                        position: 'center',
+                        padding: [8, 0, 0, 0]
+                    }
+                },
+
+                hoverAnimation: false,
+                data: [
+                    {
+                        value: '26.82',
+                        name: '',
+                        label: {
+                            normal: {
+                                //formatter: '{c}',
+                                formatter : function (params){
+                                    return params.value + '%'
+                                },
+                                textStyle: {
+                                    color:'#c1fbff',
+                                    fontFamily: 'digital',
+                                    fontSize:24,
+                                }
+                            }
+                        },
+                        tooltip:{
+                            trigger: 'item'
+                        }
+                    },
+                    {
+                        value: '73.18',
+                        name: '',
+                        label: {
+                            show:true,
+                            normal: {
+                                position: 'outside'
+                            }
+                        },
+                        labelLine:{
+                            show:false,
+                            emphasis:{
+                                show:false
+                            }
+                        },
+                        itemStyle: {
+                            show:false,
+                            normal: {
+                                color: 'rgba(12,188,175,0.3)'
+                            }
+                        },
+                        tooltip:{
+                            show:false,
+                            trigger: 'item'
+                        }
+                    }
+                ]
+
+            }
+        ]
+    };
+    //环保处罚案件-上升圆数据
+    var option5_1 = {
+        title: [
+            {
+                text: '年度同比上升',
+                top: '85%',
+                textAlign:'center',
+                left: '49%',
+                textStyle: {
+                    color: '#85f4fb',
+                    fontSize: 16,
+                    fontWeight:'normal'
+                },
+            }
+
+        ],
+        series: [
+            {
+                name: '环保处罚案件',
+                type: 'pie',
+                radius: ['55%', '65%'],
+                center:['50%','50%'],
+                color:'rgba(210,151,4)',
+                label: {
+                    normal: {
+                        position: 'center',
+                        padding: [8, 0, 0, 0]
+                    }
+                },
+
+                hoverAnimation: false,
+                data: [
+                    {
+                        value: '26.82',
+                        name: '',
+                        label: {
+                            normal: {
+                                //formatter: '{c}',
+                                formatter : function (params){
+                                    return params.value + '%'
+                                },
+                                textStyle: {
+                                    color:'#c1fbff',
+                                    fontFamily: 'digital',
+                                    fontSize:24,
+                                }
+                            }
+                        },
+                        tooltip:{
+                            trigger: 'item'
+                        }
+                    },
+                    {
+                        value: '73.18',
+                        name: '',
+                        label: {
+                            show:true,
+                            normal: {
+                                position: 'outside'
+                            }
+                        },
+                        labelLine:{
+                            show:false,
+                            emphasis:{
+                                show:false
+                            }
+                        },
+                        itemStyle: {
+                            show:false,
+                            normal: {
+                                color: 'rgba(210,151,4,0.3)'
+                            }
+                        },
+                        tooltip:{
+                            show:false,
+                            trigger: 'item'
+                        }
+                    }
+                ]
+
+            }
+        ]
+    };
+    //罚没总收入-下降圆数据
+    var option6 = {
+        title: [
+            {
+                text: '年度同比下降',
+                top: '85%',
+                textAlign:'center',
+                left: '49%',
+                textStyle: {
+                    color: '#85f4fb',
+                    fontSize: 16,
+                    fontWeight:'normal'
+                },
+            }
+
+        ],
+        series: [
+            {
+                name: '罚没总收入',
+                type: 'pie',
+                radius: ['55%', '65%'],
+                center:['50%','50%'],
+                color:'rgba(12,188,175)',
+                label: {
+                    normal: {
+                        position: 'center',
+                        padding: [8, 0, 0, 0]
+                    }
+                },
+
+                hoverAnimation: false,
+                data: [
+                    {
+                        value: '7.52',
+                        name: '',
+                        label: {
+                            normal: {
+                                formatter : function (params){
+                                    return params.value + '%'
+                                },
+                                textStyle: {
+                                    color:'#c1fbff',
+                                    fontFamily: 'digital',
+                                    fontSize:24,
+                                }
+                            }
+                        },
+                        tooltip:{
+                            trigger: 'item'
+                        }
+                    },
+                    {
+                        value: '92.48',
+                        name: '',
+                        label: {
+                            show:true,
+                            normal: {
+                                position: 'outside'
+                            }
+                        },
+                        labelLine:{
+                            show:false,
+                            emphasis:{
+                                show:false
+                            }
+                        },
+                        itemStyle: {
+                            show:false,
+                            normal: {
+                                color: 'rgba(12,188,175,0.3)'
+                            }
+                        },
+                        tooltip:{
+                            show:false,
+                            trigger: 'item'
+                        }
+                    }
+                ]
+
+            }
+        ]
+    };
 
 	$.get('../js/hangzhou-tracks.json', function(data) {
 
@@ -873,8 +1138,13 @@
 
 	city_echart.setOption(option);
 	water_ec1.setOption(option1);
+    water_ec2.setOption(option1_2);
 	environmental_ec1.setOption(option3);
-	var arr = [city_echart, water_ec1, environmental_ec1];
+    environmental_ec2.setOption(option4);
+    environmental_pie1_down.setOption(option5);
+    environmental_pie2_down.setOption(option6);
+    environmental_pie1_up.setOption(option5_1);
+	var arr = [city_echart, water_ec1, water_ec2, environmental_ec1, environmental_pie1_down, environmental_ec2, environmental_pie2_down,environmental_pie1_up];
 	$(window).resize(function() {
 		for (var i in arr) {
 			arr[i].resize();
@@ -908,62 +1178,33 @@
 	water();
 
 	function water() {
-		var $ec_a = $(".water .ec_a"),
-			$river = $(".ec_a").eq(0), //江河水质按钮
-			$drink_water = $(".ec_a").eq(1), //饮用水源水质按钮
-			$y_on_y = $(".y-on-y"), //同比按钮
+		var $y_on_y = $(".y-on-y"), //同比按钮
 			$c_r = $(".chain-ratio"), //环比按钮
-			options;
+			options,
+            drinkOptions;
 		/*
 	       option1 => 江河水质同比图  option1_2 => 饮用水源水质同比图
 	       option2 => 江河水质环比图  option2_2 =>  饮用水源水质环比图
 			*/
-		$(".water .echarts-change").each(function() {
-			$(this).click(function() {
-				$(".water .echarts-change").removeClass('active');
-				$(this).addClass('active');
-				if ($(this).index() == 0) {
-					/* 点击同比 */
-					if ($river.hasClass('active')) {
-						options = option1;
-					} else {
-						options = option1_2;
-					}
-				} else {
-					/* 点击环比 */
-					if ($river.hasClass('active')) {
-						options = option2;
-					} else {
-						options = option2_2;
-					}
-				}
-				water_ec1.clear();
-				water_ec1.setOption(options);
-			})
-		});
-		$ec_a.each(function() {
-			$(this).click(function() {
-				$ec_a.removeClass('active');
-				$(this).addClass('active');
-				if ($(this).index() == 0) {
-					/* 点击江河水质 */
-					if ($y_on_y.hasClass('active')) {
-						options = option1;
-					} else {
-						options = option2;
-					}
-				} else {
-					/* 点击饮用水源水质 */
-					if ($y_on_y.hasClass('active')) {
-						options = option1_2;
-					} else {
-						options = option2_2;
-					}
-				}
-				water_ec1.clear();
-				water_ec1.setOption(options);
-			})
-		});
+        $(".water .echarts-change").each(function() {
+            $(this).click(function() {
+                $(".water .echarts-change").removeClass('active');
+                $(this).addClass('active');
+                if ($(this).index() == 0) {
+                    /* 同比 */
+                    options = option1;
+                    drinkOptions = option1_2;
+                } else {
+                    /* 环比 */
+                    options = option2;
+                    drinkOptions = option2_2;
+                }
+                water_ec1.clear();
+                water_ec2.clear();
+                water_ec1.setOption(options);
+                water_ec2.setOption(drinkOptions);
+            })
+        });
 	}
 </script>
 
