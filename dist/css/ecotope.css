@@ -249,7 +249,7 @@
 .ecotope.contain .cont-center .cont-list ul li:last-child {
   color: #ffc90d;
 }
-/*new*/
+/*生态环境修改开始*/
 .echartTit {
   text-align: left;
   font-size: .18rem;
@@ -307,5 +307,6 @@
   left: 48%;
   top: 31%;
 }
+/*生态环境修改结束*/
 
 /*# sourceMappingURL=ecotope.css.map */
