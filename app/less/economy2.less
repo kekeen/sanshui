@@ -1,0 +1,156 @@
+/*经济运行开始*/
+.cont-left{
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+.cont-right{
+  width: 68%;
+  height: 100%;
+  float: right;
+  position: relative;
+}
+.con-bottom{
+  width: 100%;
+  height: calc(~'100% - .4rem');
+}
+.bo-top{
+  width: 100%;
+  height: 50%;
+  .chart{
+    height: calc(~'100% - 1.2rem');
+  }
+}
+.chartTit-wrap{
+  height: .7rem;
+  text-align: center;
+  background: url(../images/v2.0/heng-line.png) no-repeat center bottom;
+  background-size: 100%;
+}
+.bo-bottom{
+  width: 100%;
+  height: 50%;
+  padding-top: .1rem;
+  .chart{
+    position: relative;
+    height: calc(~'100% - .5rem');
+  }
+}
+.cr-top{
+  width: 100%;
+  height: 67%;
+}
+.ctLeft{
+  width: 55%;
+  height: 100%;
+  float: left;
+}
+.index-wrap{
+  height: 1rem;
+}
+.economyBox{
+  height: calc(~'100% - 2rem');
+  .con-tit{
+    height: .4rem;
+  }
+  .co-box{
+    height: calc(~'100% - .4rem');
+  }
+  .leftChart{
+    position: relative;
+    width: 59%;
+    height: 100%;
+    float: left;
+    background: url("../images/v2.0/su-line.png") no-repeat right bottom;
+  }
+  .rightChart{
+    width: 39%;
+    height: 100%;
+    float: right;
+  }
+}
+
+.ctRight{
+  width: 43%;
+  height: 100%;
+  float: right;
+  .co-box{
+    height: calc(~'100% - .4rem');
+  }
+  .estateTop{
+    width: 100%;
+    height: 44%;
+    background: url("../images/v2.0/heng-line.png") no-repeat center bottom;
+    .pieLeft,.pieRight{
+      float: left;
+      width: 50%;
+      height: 100%;
+      .chart-tit{
+        font-size: .16rem;
+        text-align: center;
+      }
+      .chart{
+        width: 100%;
+        height: calc(~'100% - .5rem');
+      }
+    }
+  }
+  .estateBottom{
+    width: 100%;
+    height: 56%;
+  }
+}
+
+.cr-bottom{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 29.5%;
+  .con-tit{
+    padding: .1rem 0 0 .12rem;
+  }
+  .three-Chart{
+    width: 100%;
+    height: calc(~'100% - .4rem');
+    .left{
+      float: left;
+      width: 23%;
+      height: 100%;
+      position: relative;
+      background: url("../images/v2.0/su-line.png") no-repeat right center;
+      .peopleNum{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        p{
+          text-align: center;
+          color: #0cbcaf;
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 5px;
+          i{
+            margin-right: 4px;
+          }
+          &.huji{
+            color: #0077d8;
+          }
+        }
+      }
+    }
+    .middle{
+      float: left;
+      width: 33%;
+      height: 100%;
+      background:url("../images/v2.0/su-line.png") no-repeat right center;
+    }
+    .right{
+      position: relative;
+      float: left;
+      width: 44%;
+      height: 100%;
+    }
+  }
+}
+/*经济运行结束*/
