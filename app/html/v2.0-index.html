@@ -1,0 +1,646 @@
+<%- include('../templates/head') %>
+<style>
+</style>
+<body>
+    <%- include('../templates/header2') %>
+	<div class="v2-content index-content clearfix">
+        <div class="city-left">
+            <div class="cl-singleBox">
+                <div class="con-tit">
+                    <i class="shineFont">经济指数</i>
+                </div>
+                <div class="co-box">
+                    <div>
+                        <i class="jiao1"></i>
+                        <i class="jiao2"></i>
+                        <i class="jiao3"></i>
+                        <i class="jiao4"></i>
+                    </div>
+                    <div id="JJZS" class="chart"></div>
+                    <div class="jjzs-mid">
+                        <em class="jjzs-unit">亿元</em>
+                        <em class="jjzs-value">1000.9</em>
+                        <em class="jjzs-num orange">6.8%<i class="ic-bigUp"></i></em>
+                    </div>
+                </div>
+            </div>
+            <div class="cl-singleBox">
+                <div class="con-tit">
+                    <i class="shineFont">社保安防</i>
+                </div>
+                <div class="co-box">
+                    <div>
+                        <i class="jiao1"></i>
+                        <i class="jiao2"></i>
+                        <i class="jiao3"></i>
+                        <i class="jiao4"></i>
+                    </div>
+                    <ul class="sbaf-list">
+                        <li class="sbaf-count">
+                            <div class="sbaf-count-left">
+                                <p class="count-name">每千人口医生</p>
+                                <span>去年环比</span>
+                                <em class="digital">28.2%</em>
+                                <i class="ic-greenDown"></i>
+                            </div>
+                            <div class="sbaf-count-right">
+                                <em class="digital blue">8</em>
+                                <span class="sbaf-unit">人</span>
+                            </div>
+                        </li>
+                        <li class="sbaf-count">
+                            <div class="sbaf-count-left">
+                                <p class="count-name">基本社会医疗保险覆盖率 </p>
+                                <span>去年环比</span>
+                                <em class="digital orange">28.2%</em>
+                                <i class="ic-bigUp"></i>
+                            </div>
+                            <div class="sbaf-count-right">
+                                <em class="digital blue">76.8</em>
+                                <span class="sbaf-unit">%</span>
+                            </div>
+                        </li>
+                        <li class="sbaf-count">
+                            <div class="sbaf-count-left">
+                                <p class="count-name">每万人配备警力</p>
+                                <span>去年环比</span>
+                                <em class="digital">28.2%</em>
+                                <i class="ic-greenDown"></i>
+                            </div>
+                            <div class="sbaf-count-right">
+                                <em class="digital blue">54</em>
+                                <span class="sbaf-unit">人</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cl-singleBox">
+                <div class="con-tit">
+                    <i class="shineFont">环境指数</i>
+                </div>
+                <div class="co-box">
+                    <div>
+                        <i class="jiao1"></i>
+                        <i class="jiao2"></i>
+                        <i class="jiao3"></i>
+                        <i class="jiao4"></i>
+                    </div>
+                    <div id="HJZS1" class="hjzs1"></div>
+                    <div id="HJZS2" class="hjzs2"></div>
+                    <div id="HJZS3" class="hjzs2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="city-middle">
+            <div class="bigTit-wrap">
+                <div class="big-title">城市综合发展指数</div>
+            </div>
+            <div class="index-wrap">
+                <ul class="indexBox">
+                    <li>
+                        <p class="digital blue">78.6</p>
+                        <p>2017年度</p>
+                    </li>
+                    <li class="orangeLi">
+                        <p class="digital orange">82.6</p>
+                        <p>2018年度</p>
+                    </li>
+                    <li>
+                        <p class="digital blue">78.6</p>
+                        <p>2019年度预测</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="city-right">
+            <div class="cl-singleBox">
+                <div class="con-tit">
+                    <i class="shineFont">交通运行</i>
+                </div>
+                <div class="co-box">
+                    <div>
+                        <i class="jiao1"></i>
+                        <i class="jiao2"></i>
+                        <i class="jiao3"></i>
+                        <i class="jiao4"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cl-singleBox">
+                <div class="con-tit">
+                    <i class="shineFont">人口概况</i>
+                </div>
+                <div class="co-box">
+                    <div>
+                        <i class="jiao1"></i>
+                        <i class="jiao2"></i>
+                        <i class="jiao3"></i>
+                        <i class="jiao4"></i>
+                    </div>
+                    <div class="rkgk-top">
+                        <div class="rkgk-top-box">
+                            <h5>户籍人口</h5>
+                            <div class="rkgk-bgbox">
+                                <div class="rkgk-value">
+                                    <span class="digital blue">63.97</span>
+                                    <em class="rkgk-unit">万</em>
+                                </div>
+                                <div class="rkgk-num">
+                                    <em class="digital">28.2%</em>
+                                    <i class="ic-greenDown"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rkgk-top-box">
+                            <h5>常住人口</h5>
+                            <div class="rkgk-bgbox">
+                                <div class="rkgk-value">
+                                    <span class="digital blue">63.97</span>
+                                    <em class="rkgk-unit">万</em>
+                                </div>
+                                <div class="rkgk-num">
+                                    <em class="digital orange">28.2%</em>
+                                    <i class="ic-bigUp"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="RKGK" class="rkgk-chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <%- include('../templates/foot') %>
+</body>
+<script type="text/javascript">
+    $(function () {
+        var arrchart=[];
+
+        jjzs();
+        function jjzs(){
+            var myChart1 = echarts.init(document.getElementById('JJZS'));
+            option = {
+                color:['#14c1c1','#71debf','#0077d8'],
+                tooltip: {
+                    trigger: 'item',
+                    // formatter: "{a} <br/>{b}: {c} ({d}%)"
+                },
+                series: [
+                    {
+                        name:'经济指数',
+                        type:'pie',
+                        radius: ['50%', '70%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: true,
+                                formatter:'{num|{c}}\n{type|{b}}',
+                                fontSize:18,
+                                rich:{
+                                    num:{
+                                        color:'#0cfffb',
+                                        fontSize:18,
+                                    },
+                                    type:{
+                                        color:'#fff',
+                                        fontSize:18,
+                                        lineHeight:30
+                                    }
+                                }
+                            },
+                        },
+                        labelLine: {
+                            normal: {
+                                show: true
+                            }
+                        },
+                        data:[
+                            {value:34.07, name:'第一产业'},
+                            {value:134.07, name:'第二产业'},
+                            {value:314.07, name:'第三产业'},
+                        ]
+                    }
+                ]
+            };
+            myChart1.setOption(option);
+            arrchart.push(myChart1);
+        }
+
+        hjzs();
+        function hjzs(){
+            var myChart2 = echarts.init(document.getElementById('HJZS1'));
+            var myChart3 = echarts.init(document.getElementById('HJZS2'));
+            var myChart4 = echarts.init(document.getElementById('HJZS3'));
+            option2 = {
+                title:{
+                    text:'空气质量指数AQI',
+                    bottom:'bottom',
+                    left:'center',
+                    textStyle:{
+                        fontSize:20,
+                        color:'#0cfffb'
+                    },
+                },
+                series: [
+                    {
+                        name: 'pie1',
+                        type: 'pie',
+                        clockWise: true,
+                        startAngle:235,
+                        radius: ['70px', '75px'],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false
+                                },
+                                labelLine: {
+                                    show: false
+                                }
+                            }
+                        },
+                        hoverAnimation: false,
+                        data: [{
+                            value: 50,  //具体数值
+                            name: '优',  //评价
+                            itemStyle: {
+                                normal: {
+                                    borderWidth: 5,
+                                    borderColor: { 
+                                        colorStops: [{
+                                            offset: 1,
+                                            color: '#03b5fe' // 0% 处的颜色
+                                        }, {
+                                            offset: 0,
+                                            color: '#0cfffb' // 100% 处的颜色
+                                        }]
+                                    },
+                                    color: { // 完成的圆环的颜色
+                                        colorStops: [{
+                                            offset: 1,
+                                            color: '#03b5fe' // 0% 处的颜色
+                                        }, {
+                                            offset: 0,
+                                            color: '#0cfffb' // 100% 处的颜色
+                                        }]
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    }
+                                }
+                            },
+                            label: {
+                                show: true,
+                                position:'center',
+                                formatter:'{num|{c}}\n{text|{b}}',
+                                rich:{
+                                    num:{
+                                        fontSize:48,
+                                        fontFamily:'digital',
+                                        color:'#efb78c',
+                                    },
+                                    text:{
+                                        color: '#0cfffb',
+                                        fontSize:18,
+                                    }
+                                }
+                            },
+                        }, {
+                            name: 'gap',
+                            value: 100 - 50,
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: false
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    color: 'rgba(0, 0, 0, 0)',
+                                    borderColor: 'rgba(0, 0, 0, 0)',
+                                    borderWidth: 0
+                                }
+                            }
+                        }]
+                    },
+                    {
+                        name: 'pie2',
+                        type: 'pie',
+                        clockWise: true,
+                        startAngle:235,
+                        radius: ['70px', '75px'],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false
+                                },
+                                labelLine: {
+                                    show: false
+                                }
+                            }
+                        },
+                        hoverAnimation: false,
+                        data: [{
+                            value: 82,  //最大值不变
+                            name: 'completed',
+                            itemStyle: {
+                                normal: {
+                                    borderWidth: 5,
+                                    borderColor: 'rgba(235,241,245,0.15)',
+                                    color:'rgba(235,241,245,0.15)',
+                                    label: {
+                                        show: false
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    }
+                                }
+                            }
+                        }, {
+                            name: 'gap',
+                            value: 100 - 82,
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: false
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    color: 'rgba(0, 0, 0, 0)',
+                                    borderColor: 'rgba(0, 0, 0, 0)',
+                                    borderWidth: 0
+                                }
+                            }
+                        }]
+                    }
+                ]
+            };
+            option3 = {
+                title:{
+                    text:'PM10',
+                    top:'8',
+                    left:'center',
+                    textStyle:{
+                        fontSize:20,
+                        color:'#0cfffb'
+                    },
+                },
+                series: [
+                    {
+                        name: 'pie1',
+                        type: 'pie',
+                        clockWise: true,
+                        startAngle:180,
+                        radius: ['60px', '65px'],
+                        center:['50%','90%'],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false
+                                },
+                                labelLine: {
+                                    show: false
+                                }
+                            }
+                        },
+                        hoverAnimation: false,
+                        data: [{
+                            value: 20,  //具体数值
+                            name: '优',  //评价
+                            itemStyle: {
+                                normal: {
+                                    borderWidth: 5,
+                                    borderColor:'#03b5fe',
+                                    color: '#03b5fe',
+                                    labelLine: {
+                                        show: false
+                                    }
+                                }
+                            },
+                            label: {
+                                show: true,
+                                position:'center',
+                                formatter:'{num|{c}}',
+                                rich:{
+                                    num:{
+                                        fontSize:40,
+                                        fontFamily:'digital',
+                                        color:'#efb78c',
+                                        padding:[0,0,60,0]
+                                    },
+                                }
+                            },
+                        }, {
+                            name: 'gap',
+                            value: 100 - 20,
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: false
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    color: 'rgba(0, 0, 0, 0)',
+                                    borderColor: 'rgba(0, 0, 0, 0)',
+                                    borderWidth: 0
+                                }
+                            }
+                        }]
+                    },
+                    {
+                        name: 'pie2',
+                        type: 'pie',
+                        clockWise: true,
+                        startAngle:180,
+                        radius: ['60px', '65px'],
+                        center:['50%','90%'],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false
+                                },
+                                labelLine: {
+                                    show: false
+                                }
+                            }
+                        },
+                        hoverAnimation: false,
+                        data: [{
+                            value: 50,  //最大值不变
+                            itemStyle: {
+                                normal: {
+                                    borderWidth: 5,
+                                    borderColor: 'rgba(235,241,245,0.15)',
+                                    color:'rgba(235,241,245,0.15)',
+                                    label: {
+                                        show: false
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    }
+                                }
+                            }
+                        }, {
+                            name: 'gap',
+                            value: 100 - 50,
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: false
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    color: 'rgba(0, 0, 0, 0)',
+                                    borderColor: 'rgba(0, 0, 0, 0)',
+                                    borderWidth: 0
+                                }
+                            }
+                        }]
+                    }
+                ]
+            };
+            option4 = {
+                title:{
+                    text:'PM2.5',
+                    bottom:'bottom',
+                    left:'center',
+                    textStyle:{
+                        fontSize:20,
+                        color:'#0cfffb'
+                    },
+                },
+                series: [
+                    {
+                        name: 'pie1',
+                        type: 'pie',
+                        clockWise: false,
+                        startAngle:180,
+                        radius: ['60px', '65px'],
+                        center:['50%','15%'],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false
+                                },
+                                labelLine: {
+                                    show: false
+                                }
+                            }
+                        },
+                        hoverAnimation: false,
+                        data: [{
+                            value: 36,  //具体数值
+                            name: '优',  //评价
+                            itemStyle: {
+                                normal: {
+                                    borderWidth: 5,
+                                    borderColor:'#0cfffb',
+                                    color: '#0cfffb',
+                                    labelLine: {
+                                        show: false
+                                    }
+                                }
+                            },
+                            label: {
+                                show: true,
+                                position:'center',
+                                formatter:'{num|{c}}',
+                                rich:{
+                                    num:{
+                                        fontSize:40,
+                                        fontFamily:'digital',
+                                        color:'#efb78c',
+                                    },
+                                }
+                            },
+                        }, {
+                            name: 'gap',
+                            value: 100 - 36,
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: false
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    color: 'rgba(0, 0, 0, 0)',
+                                    borderColor: 'rgba(0, 0, 0, 0)',
+                                    borderWidth: 0
+                                }
+                            }
+                        }]
+                    },
+                    {
+                        name: 'pie2',
+                        type: 'pie',
+                        clockWise: false,
+                        startAngle:180,
+                        radius: ['60px', '65px'],
+                        center:['50%','15%'],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false
+                                },
+                                labelLine: {
+                                    show: false
+                                }
+                            }
+                        },
+                        hoverAnimation: false,
+                        data: [{
+                            value: 50,  //最大值不变
+                            itemStyle: {
+                                normal: {
+                                    borderWidth: 5,
+                                    borderColor: 'rgba(235,241,245,0.15)',
+                                    color:'rgba(235,241,245,0.15)',
+                                    label: {
+                                        show: false
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    }
+                                }
+                            }
+                        }, {
+                            name: 'gap',
+                            value: 100 - 50,
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: false
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    color: 'rgba(0, 0, 0, 0)',
+                                    borderColor: 'rgba(0, 0, 0, 0)',
+                                    borderWidth: 0
+                                }
+                            }
+                        }]
+                    }
+                ]
+            }
+            myChart2.setOption(option2);
+            myChart3.setOption(option3);
+            myChart4.setOption(option4);
+            arrchart.push(myChart2);
+            arrchart.push(myChart3);
+            arrchart.push(myChart4);
+        }
+
+        // 图表自适应
+        window.onresize = function(){
+            for(var i = 0; i < arrchart.length; i++){
+                arrchart[i].resize();
+            }
+        };
+    })
+</script>
+</html>
