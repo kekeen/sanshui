@@ -1,0 +1,326 @@
+<%- include('../templates/head') %>
+<style>
+</style>
+<body>
+    <%- include('../templates/header2') %>
+	<div class="v2-content clearfix">
+        <div class="city-left">
+            <div class="left-ecoBox1">
+                <div class="con-tit">
+                    <i class="shineFont">气象环境</i>
+                </div>
+                <div class="co-box">
+                    <div>
+                        <i class="jiao1"></i>
+                        <i class="jiao2"></i>
+                        <i class="jiao3"></i>
+                        <i class="jiao4"></i>
+                    </div>
+                    <div class="weather-list">
+                        <ul class="clearfix">
+                            <li>
+                                <span class="span1 ic-wind"></span>
+                                <span class="span2">
+                                    <p class="p1 digital orange">3级</p>
+                                    <p class="p2">风力</p>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="span1 ic-temperature"></span>
+                                <span class="span2">
+                                    <p class="p1 digital orange">30℃</p>
+                                    <p class="p2">温度</p>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="span1 ic-rain"></span>
+                                <span class="span2">
+                                    <p class="p1 digital orange">200mm</p>
+                                    <p class="p2">24h降水量</p>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="left-ecoBox2">
+                <div class="con-tit" style="margin-top:.18rem">
+                    <i class="shineFont">污染源情况</i>
+                </div>
+                <div class="co-box">
+                    <div>
+                        <i class="jiao1"></i>
+                        <i class="jiao2"></i>
+                        <i class="jiao3"></i>
+                        <i class="jiao4"></i>
+                    </div>
+                    <div class="polluteChart">
+                        <div class="chart" id="line1"></div>
+                    </div>
+                    <div class="polluteNum">
+                        <ul>
+                            <li>
+                                <p class="p1 digital blue">16</p>
+                                <p class="p2">工业园</p>
+                            </li>
+                            <li>
+                                <p class="p1 digital blue">23</p>
+                                <p class="p2">城镇生活源</p>
+                            </li>
+                            <li>
+                                <p class="p1 digital blue">9</p>
+                                <p class="p2">农业园</p>
+                            </li>
+                            <li>
+                                <p class="p1 digital blue">11</p>
+                                <p class="p2">治污设施</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="left-ecoBox2">
+                <div class="con-tit" style="margin-top:.18rem">
+                    <i class="shineFont">绿色节能</i>
+                </div>
+                <div class="co-box">
+                    <div>
+                        <i class="jiao1"></i>
+                        <i class="jiao2"></i>
+                        <i class="jiao3"></i>
+                        <i class="jiao4"></i>
+                    </div>
+                    <div class="energyList">
+                        <ul>
+                            <li>
+                                <span class="span1">万元产值能耗</span>
+                                <span class="span2"><i class="digital blue">1050</i> tce/万元</span>
+                            </li>
+                            <li>
+                                <span class="span1">万元产值能耗</span>
+                                <span class="span2"><i class="digital blue">1050</i> tce/万元</span>
+                            </li>
+                            <li>
+                                <span class="span1">万元产值能耗</span>
+                                <span class="span2"><i class="digital blue">1050</i> tce/万元</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="city-middle">
+            <div class="bigTit-wrap">
+                <div class="big-title">经济综合指数</div>
+            </div>
+            <div class="index-wrap">
+                <ul class="indexBox">
+                    <li>
+                        <p class="digital blue">75.7</p>
+                        <p>2017年度</p>
+                    </li>
+                    <li class="orangeLi">
+                        <p class="digital orange">80.0</p>
+                        <p>2018年度</p>
+                    </li>
+                    <li>
+                        <p class="digital blue">81.1</p>
+                        <p>2019年度预测</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="city-right">
+            <div class="con-tit">
+                <i class="shineFont">交通运行</i>
+            </div>
+            <div class="co-box">
+                <div>
+                    <i class="jiao1"></i>
+                    <i class="jiao2"></i>
+                    <i class="jiao3"></i>
+                    <i class="jiao4"></i>
+                </div>
+                <div class="city-right-top">
+                    <div class="meterWrap">2</div>
+                    <div class="numWrap">
+                        <ul>
+                            <li>
+                                <p class="tit">高峰期主干路平均速度</p>
+                                <div class="num">
+                                    <p class="p1">
+                                        <i class="digital blue">31.10</i>
+                                        <i class="i2">km/h</i>
+                                    </p>
+                                    <p class="p2">
+                                        上周同比
+                                        <i class="digital green">28.2%</i>
+                                        <i class="ic-greenDown"></i>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="tit">高峰期主干路平均速度</p>
+                                <div class="num">
+                                    <p class="p1">
+                                        <i class="digital blue">64.33</i>
+                                        <i class="i2">km/h</i>
+                                    </p>
+                                    <p class="p2">
+                                        上周同比
+                                        <i class="digital green">28.2%</i>
+                                        <i class="ic-greenDown"></i>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="city-right-bottom">
+                    <div class="chart" id="line4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <%- include('../templates/foot') %>
+</body>
+<script type="text/javascript">
+    $(function () {
+        var arrchart = [];
+        //交通违法查出率
+        line1();
+        function line1() {
+            // 基于准备好的dom，初始化echarts实例
+            var myChart1 = echarts.init(document.getElementById('line1'));
+            // 指定图表的配置项和数据
+            option = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow',
+                        label: {
+                            backgroundColor: 'rgba(255,255,255,0.8)',
+                            extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+                            textStyle: {
+                                color: '#666',
+                            },
+                        },
+                    },
+
+                    backgroundColor: 'rgba(0,0,0,0.9)',
+                    extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+                    textStyle: {
+                        color: '#0ae1e0',
+                    },
+                },
+                legend: {
+                    data: ['实际排放总量', '限制排放总量'],
+                    textStyle: {
+                        color: "#c1fbff",
+                        fontSize:18
+                    },
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'value',
+                    axisLine: {
+                        show: false,
+                        lineStyle: {
+                            color: '#59aceb',
+                        }
+                    },
+                    axisLabel: {
+                        show: false,
+                        color: "#c1fbff",
+                        fontSize:18
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {
+                        show: false
+                    }
+                },
+                yAxis: {
+                    type: 'category',
+                    data: ['固体废弃物排放','废气排放','废水排放'],
+                    splitLine: {
+                        show: false
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#59aceb',
+                        }
+                    },
+                    axisLabel: {
+                        color: "#c1fbff",
+                        fontSize:14
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                },
+                series: [
+                    {
+                        name: '实际排放总量',
+                        type: 'bar',
+                        data: [30, 50, 20],
+                        itemStyle: {
+                            normal: {
+                                color: new echarts.graphic.LinearGradient(
+                                    0, 0, 0, 1, [{
+                                        offset: 0,
+                                        color: '#44baf3'
+                                    },
+                                        {
+                                            offset: 1,
+                                            color: '#227cd1'
+                                        }
+                                    ]
+                                ),
+
+                            },
+                        }
+                    },
+                    {
+                        name: '限制排放总量',
+                        type: 'bar',
+                        data: [100, 80, 90],
+                        itemStyle: {
+                            normal: {
+                                color: new echarts.graphic.LinearGradient(
+                                    0, 0, 0, 1, [{
+                                        offset: 0,
+                                        color: '#0bf4fc'
+                                    },
+                                        {
+                                            offset: 1,
+                                            color: '#02b1fe'
+                                        }
+                                    ]
+                                ),
+
+                            },
+                        }
+                    }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart1.setOption(option);
+            arrchart.push(myChart1);
+        }
+
+        // 图表自适应
+        window.onresize = function(){
+            for(var i = 0; i < arrchart.length; i++){
+                arrchart[i].resize();
+            }
+        };
+    })
+</script>
+</html>

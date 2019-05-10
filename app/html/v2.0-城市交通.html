@@ -126,7 +126,7 @@
         </div>
         <div class="city-middle">
             <div class="bigTit-wrap">
-                <div class="big-title">经济综合指数</div>
+                <div class="big-title">交通综合指数</div>
             </div>
             <div class="index-wrap">
                 <ul class="indexBox">
@@ -150,11 +150,50 @@
                 <i class="shineFont">交通运行</i>
             </div>
             <div class="co-box">
-                <i class="jiao1"></i>
-                <i class="jiao2"></i>
-                <i class="jiao3"></i>
-                <i class="jiao4"></i>
-                123
+                <div>
+                    <i class="jiao1"></i>
+                    <i class="jiao2"></i>
+                    <i class="jiao3"></i>
+                    <i class="jiao4"></i>
+                </div>
+                <div class="city-right-top">
+                    <div class="meterWrap">2</div>
+                    <div class="numWrap">
+                        <ul>
+                            <li>
+                                <p class="tit">高峰期主干路平均速度</p>
+                                <div class="num">
+                                    <p class="p1">
+                                        <i class="digital blue">31.10</i>
+                                        <i class="i2">km/h</i>
+                                    </p>
+                                    <p class="p2">
+                                        上周同比
+                                        <i class="digital green">28.2%</i>
+                                        <i class="ic-greenDown"></i>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="tit">高峰期主干路平均速度</p>
+                                <div class="num">
+                                    <p class="p1">
+                                        <i class="digital blue">64.33</i>
+                                        <i class="i2">km/h</i>
+                                    </p>
+                                    <p class="p2">
+                                        上周同比
+                                        <i class="digital green">28.2%</i>
+                                        <i class="ic-greenDown"></i>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="city-right-bottom">
+                    <div class="chart" id="line4"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -333,6 +372,179 @@
             myChart2.setOption(option);
             arrchart.push(myChart2);
         }
+        //人口概况柱状图右
+        line4();
+        function line4() {
+            // 基于准备好的dom，初始化echarts实例
+            var myChart4 = echarts.init(document.getElementById('line4'));
+
+            // 指定图表的配置项和数据
+            option = {
+                title : {
+                    text: '实时拥堵里程统计',
+                    x:'center',
+                    y:'10',
+                    textStyle:{
+                        color:'#0cfffb',
+                        fontSize:20,
+                        fontWeight:100
+                    }
+                },
+                legend: {
+                    itemGap: 30,
+                    data: [
+                        {
+                            "name": "当前值",
+                            "icon": "rect",
+                            "textStyle": {
+                                "color": "#C1FBFF"
+                            },
+                            icon:'image://../images/v2.0/ic-legend1.png'
+                        },
+                        {
+                            "name": "通勤日平均值",
+                            "icon": "rect",
+                            "textStyle": {
+                                "color": "#C1FBFF"
+                            }
+                        },
+                    ],
+                    top: "50",
+                    textStyle: {
+                        color: "#a9e0ed",
+                        fontSize:16
+                    },
+                },
+                grid: {
+                    left: '4%',
+                    right: '4%',
+                    bottom: '4%',
+                    top: "120",
+                    containLabel: true
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow',
+                        label: {
+                            backgroundColor: 'rgba(255,255,255,0.8)',
+                            extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+                            textStyle: {
+                                color: '#666',
+                            },
+                        },
+                    },
+
+                    backgroundColor: 'rgba(0,0,0,0.9)',
+                    extraCssText: 'box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);',
+                    textStyle: {
+                        color: '#0ae1e0',
+                    },
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['严重拥堵', '拥堵', '缓行'],
+                    axisLine: {
+                        lineStyle: {
+                            color: '#59aceb',
+                        }
+                    },
+                    axisLabel: {
+                        color: "#c1fbff",
+                        fontSize:18
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                },
+                yAxis: [{
+                    type: 'value',
+                    name: '（KM）',
+                    nameTextStyle: {
+                        color: "#c7cdcd",
+                        fontSize:18,
+                    },
+                    splitLine: {
+                        show: false
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#59aceb',
+                        }
+                    },
+                    axisLabel: {
+                        color: "#c1fbff",
+                        fontSize:18
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                }],
+                series: [{
+                    name: '当前值',
+                    type: 'bar',
+                    data: [
+                        {
+                            name:"当前值",
+                            value:"70",
+                            itemStyle:{
+                                color: '#f41100',
+                            }
+                        },
+                        {
+                            name:"当前值",
+                            value:"80",
+                            itemStyle:{
+                                color: '#fc8b2d',
+                            }
+                        },
+                        {
+                            name:"当前值",
+                            value:"20",
+                            itemStyle:{
+                                color: '#a8ae07',
+                            }
+                        },
+                    ],
+                    barWidth: "20%",
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: '#44bdf4'
+                            }, {
+                                offset: 1,
+                                color: '#1f76cd'
+                            }]),
+                        }
+                    },
+
+                },
+                    {
+                        name: '通勤日平均值',
+                        type: 'bar',
+                        data: [90, 20, 95],
+                        barWidth: "20%",
+                        itemStyle: {
+                            normal: {
+                                color: '#04b9fd'
+                            }
+                        },
+                    }
+                ]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart4.setOption(option);
+            arrchart.push(myChart4);
+        }
+
+        // 图表自适应
+        window.onresize = function(){
+            for(var i = 0; i < arrchart.length; i++){
+                arrchart[i].resize();
+            }
+        };
     })
 </script>
 </html>

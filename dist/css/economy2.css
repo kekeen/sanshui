@@ -193,7 +193,7 @@
   min-width: 2.35rem;
   height: .8rem;
   padding: .15rem .1rem;
-  background: rgba(14, 82, 124, 0.25);
+  background: rgba(14, 82, 124, 0.35);
   text-align: center;
 }
 .sl-numBox .digital {
@@ -268,7 +268,7 @@
   width: 100%;
   height: .5rem;
   line-height: .5rem;
-  background: rgba(14, 82, 124, 0.25);
+  background: rgba(14, 82, 124, 0.35);
   text-align: center;
   font-size: .18rem;
 }
@@ -333,6 +333,154 @@
   width: 100%;
   height: 9rem;
 }
+.city-right-top {
+  height: 62%;
+  width: 100%;
+  background: url("../images/v2.0/heng-line.png") no-repeat center bottom;
+}
+.meterWrap {
+  width: 100%;
+  height: 62%;
+  background: rgba(255, 255, 255, 0.2);
+}
+.numWrap {
+  width: 100%;
+  height: 38%;
+}
+.numWrap ul {
+  font-size: 0;
+  padding-right: 2%;
+}
+.numWrap ul li {
+  width: 45%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4%;
+}
+.numWrap ul li .tit {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  color: #0cfffb;
+}
+.numWrap ul li .num {
+  margin-top: .15rem;
+  width: 100%;
+  height: 1.2rem;
+  background: rgba(14, 82, 124, 0.35);
+  text-align: center;
+  padding-top: .18rem;
+}
+.numWrap ul li .num .blue {
+  font-size: .4rem;
+}
+.numWrap ul li .num .i2 {
+  margin-left: .06rem;
+  font-size: .24rem;
+  color: #0cfefb;
+}
+.numWrap ul li .num .green {
+  margin: 0 .03rem 0 .06rem;
+}
+.numWrap ul li .num .p2 {
+  margin-top: .05rem;
+  font-size: .18rem;
+  color: #85f4fb;
+}
+.city-right-bottom {
+  height: 38%;
+  width: 100%;
+}
 /*城市交通结束*/
+/*生态环境开始*/
+.left-ecoBox1 .co-box {
+  width: 100%;
+  height: 1.4rem;
+  padding: 0.2rem .2rem 0;
+}
+.left-ecoBox2 .co-box {
+  width: 100%;
+  height: 3.22rem;
+}
+.weather-list ul li {
+  float: left;
+  height: 1rem;
+  line-height: 1rem;
+  width: 31%;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  margin-left: 3%;
+}
+.weather-list ul li:first-child {
+  margin-left: 0;
+}
+.weather-list ul li span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+.weather-list ul li .span2 {
+  margin-left: .08rem;
+}
+.weather-list ul li p {
+  line-height: normal;
+}
+.weather-list ul li .p1 {
+  font-size: .24rem;
+}
+.weather-list ul li .p2 {
+  font-size: .16rem;
+  color: white;
+}
+.polluteChart {
+  width: 100%;
+  height: 2.25rem;
+}
+.polluteNum li {
+  float: left;
+  width: 22%;
+  height: .8rem;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  margin-left: 2%;
+}
+.polluteNum li .p1 {
+  font-size: .44rem;
+}
+.polluteNum li .p2 {
+  margin-top: -0.1rem;
+  font-size: .16rem;
+  color: #0cfffb;
+}
+.energyList ul li {
+  width: 100%;
+  height: .55rem;
+  line-height: .55rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0 .15rem;
+  font-size: 0;
+}
+.energyList ul li span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.energyList ul li .span1 {
+  float: left;
+  width: 70%;
+  font-size: .18rem;
+  color: #efb78c;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.energyList ul li .span2 {
+  float: right;
+  font-size: .18rem;
+  color: #0cfffb;
+}
+.energyList ul li .span2 .blue {
+  font-size: .24rem;
+}
+/*生态环境结束*/
 
 /*# sourceMappingURL=economy2.css.map */
