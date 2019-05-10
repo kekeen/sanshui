@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>城市交通 - 山水</title>
+<meta name="renderer" content="webkit">
+
+<link rel="stylesheet" href="../css/custom-bootstrap.css">
+<link rel="stylesheet" href="../libs/icheck/skins/flat/_all.css">
+<link rel="stylesheet" href="../css/icon.css">
+<link rel="stylesheet" href="../css/common2.css">
+
+<link rel="stylesheet" href="../css/economy2.css">
+
+
+<!--[if lt IE 9]>
+  <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<style>
+</style>
+<body>
+    <header class="header clearfix">
+
+    <div class="title chengshi"></div>
+
+
+</header>
+	<div class="v2-content clearfix">
+        <div class="city-left">
+            <div class="cl-singleBox">
+                <div class="con-tit">
+                    <i class="shineFont">公共交通</i>
+                    <i class="bgFont">统计时间：2018年</i>
+                </div>
+                <div class="co-box">
+                    <div>
+                        <i class="jiao1"></i>
+                        <i class="jiao2"></i>
+                        <i class="jiao3"></i>
+                        <i class="jiao4"></i>
+                    </div>
+                    <div class="linkWrap clearfix">
+                        <div class="singleLink">
+                            <div class="sl-numBox">
+                                <i class="ic-car"></i>
+                                <i class="digital blue">37</i>
+                                <i class="liang">辆</i>
+                            </div>
+                            <p class="tit1">去年环比</p>
+                            <p class="tit2">公共汽电车万人拥有辆</p>
+                        </div>
+                        <div class="singleLink">
+                            <div class="sl-numBox">
+                                <i class="ic-fugailv"></i>
+                                <i class="digital blue">85.73</i>
+                                <i class="liang">%</i>
+                            </div>
+                            <p class="tit1">去年环比</p>
+                            <p class="tit2">建成区公共交通覆盖率</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cl-singleBox">
+                <div class="con-tit" style="margin-top:.18rem">
+                    <i class="shineFont">文明交通</i>
+                    <i class="bgFont">统计时间：2018年</i>
+                </div>
+                <div class="co-box">
+                    <div>
+                        <i class="jiao1"></i>
+                        <i class="jiao2"></i>
+                        <i class="jiao3"></i>
+                        <i class="jiao4"></i>
+                    </div>
+                    <p class="culture-tit">严重交通违法行为查处率</p>
+                    <div class="culture-wrap clearfix">
+                        <div class="ce-left">
+                            <div class="sl-numBox">
+                                <div class="wenzi">
+                                    <p class="ic-bigUp"></p>
+                                    <p class="wen">季度环比</p>
+                                </div>
+                                <div class="baifen digital orange2">28.2%</div>
+                            </div>
+                            <div class="sl-numBox">
+                                <div class="wenzi">
+                                    <p class="ic-bigDown"></p>
+                                    <p class="wen">季度环比</p>
+                                </div>
+                                <div class="baifen digital blue">28.2%</div>
+                            </div>
+                        </div>
+                        <div class="ce-right">
+                            <div class="chart" id="pie1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cl-singleBox" style="margin-top:.18rem">
+                <div class="con-tit">
+                    <i class="shineFont">交通基础设施</i>
+                    <i class="bgFont">统计时间：2018年</i>
+                </div>
+                <div class="co-box">
+                    <div>
+                        <i class="jiao1"></i>
+                        <i class="jiao2"></i>
+                        <i class="jiao3"></i>
+                        <i class="jiao4"></i>
+                    </div>
+                    <div class="baseLeft">
+                        <div class="chart" id="pie2"></div>
+                        <div class="tongbi-wrap">
+                            <div class="tongbi">
+                                去年同比
+                                <i class="digital">28.2%</i>
+                                <i class="ic-greenDown"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="baseRight">
+                        <ul>
+                            <li>
+                                <span class="span1">人均道路面积</span>
+                                <span class="span2">
+                                    <i class="digital blue">25</i>
+                                    <i class="lu">m2/人</i>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="span1">路网级配比例</span>
+                                <span class="span2">
+                                    <i class="digital blue">1&nbsp;:&nbsp;2.5</i>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="span1">公共停车泊位数</span>
+                                <span class="span2">
+                                    <i class="digital blue">160</i>
+                                    <i class="lu">个/百辆</i>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="city-middle">
+            <div class="bigTit-wrap">
+                <div class="big-title">经济综合指数</div>
+            </div>
+            <div class="index-wrap">
+                <ul class="indexBox">
+                    <li>
+                        <p class="digital blue">75.7</p>
+                        <p>2017年度</p>
+                    </li>
+                    <li class="orangeLi">
+                        <p class="digital orange">80.0</p>
+                        <p>2018年度</p>
+                    </li>
+                    <li>
+                        <p class="digital blue">81.1</p>
+                        <p>2019年度预测</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="city-right">
+            <div class="con-tit">
+                <i class="shineFont">交通运行</i>
+            </div>
+            <div class="co-box">
+                <i class="jiao1"></i>
+                <i class="jiao2"></i>
+                <i class="jiao3"></i>
+                <i class="jiao4"></i>
+                123
+            </div>
+        </div>
+    </div>
+  
+<script src="../libs/jquery/jquery.min.js"></script>
+<script src="../js/resize.js"></script>
+<script src="../libs/bootstrap/dist/bootstrap.min.js"></script>
+<script src="../libs/icheck/icheck.min.js"></script>
+<script src="../libs/nicescroll/jquery.nicescroll.js"></script>
+<script src="../libs/echarts/echarts.min.js"></script>
+<script src="../js/global.js"></script>
+
+
+</body>
+<script type="text/javascript">
+    $(function () {
+        var arrchart = [];
+        //交通违法查出率
+        pie1();
+        function pie1() {
+            // 基于准备好的dom，初始化echarts实例
+            var myChart1 = echarts.init(document.getElementById('pie1'));
+            // 指定图表的配置项和数据
+            option = {
+                series: [
+                    {
+                        name: '环保处罚案件',
+                        type: 'pie',
+                        radius: ['72%', '85%'],
+                        center:['50%','50%'],
+                        color:'rgba(7,219,252)',
+                        label: {
+                            normal: {
+                                position: 'center',
+                                padding: [8, 0, 0, 0]
+                            }
+                        },
+
+                        hoverAnimation: false,
+                        data: [
+                            {
+                                value: '75',
+                                name: '',
+                                label: {
+                                    normal: {
+                                        //formatter: '{c}',
+                                        formatter : function (params){
+                                            return params.value + '%'
+                                        },
+                                        textStyle: {
+                                            color:'#efb788',
+                                            //fontFamily: 'digital',
+                                            fontSize:48,
+                                        }
+                                    }
+                                },
+                                tooltip:{
+                                    trigger: 'item'
+                                }
+                            },
+                            {
+                                value: '25',
+                                name: '',
+                                label: {
+                                    show:true,
+                                    normal: {
+                                        position: 'outside'
+                                    }
+                                },
+                                labelLine:{
+                                    show:false,
+                                    emphasis:{
+                                        show:false
+                                    }
+                                },
+                                itemStyle: {
+                                    show:false,
+                                    normal: {
+                                        color: 'rgba(255,255,255,.2)'
+                                    }
+                                },
+                                tooltip:{
+                                    show:false,
+                                    trigger: 'item'
+                                }
+                            }
+                        ]
+
+                    }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart1.setOption(option);
+            arrchart.push(myChart1);
+        }
+        //交通违法查出率
+        pie2();
+        function pie2() {
+            // 基于准备好的dom，初始化echarts实例
+            var myChart2 = echarts.init(document.getElementById('pie2'));
+            // 指定图表的配置项和数据
+            option = {
+                title: [
+                    {
+                        text: '路口绿化率',
+                        top: '10',
+                        textAlign:'center',
+                        left: '49%',
+                        textStyle: {
+                            color: '#85f4fb',
+                            fontSize: 18,
+                            fontWeight:'normal'
+                        },
+                    }
+
+                ],
+                series: [
+                    {
+                        name: '路口绿化率',
+                        type: 'pie',
+                        radius: ['50%', '60%'],
+                        center:['50%','50%'],
+                        color:'rgba(7,219,252)',
+                        label: {
+                            normal: {
+                                position: 'center',
+                                padding: [8, 0, 0, 0]
+                            }
+                        },
+
+                        hoverAnimation: false,
+                        data: [
+                            {
+                                value: '75',
+                                name: '',
+                                label: {
+                                    normal: {
+                                        //formatter: '{c}',
+                                        formatter : function (params){
+                                            return params.value + '%'
+                                        },
+                                        textStyle: {
+                                            color:'#efb788',
+                                            //fontFamily: 'digital',
+                                            fontSize:40,
+                                        }
+                                    }
+                                },
+                                tooltip:{
+                                    trigger: 'item'
+                                }
+                            },
+                            {
+                                value: '25',
+                                name: '',
+                                label: {
+                                    show:true,
+                                    normal: {
+                                        position: 'outside'
+                                    }
+                                },
+                                labelLine:{
+                                    show:false,
+                                    emphasis:{
+                                        show:false
+                                    }
+                                },
+                                itemStyle: {
+                                    show:false,
+                                    normal: {
+                                        color: 'rgba(255,255,255,.2)'
+                                    }
+                                },
+                                tooltip:{
+                                    show:false,
+                                    trigger: 'item'
+                                }
+                            }
+                        ]
+
+                    }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart2.setOption(option);
+            arrchart.push(myChart2);
+        }
+    })
+</script>
+</html>

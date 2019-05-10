@@ -155,5 +155,184 @@
   height: 100%;
 }
 /*经济运行结束*/
+/*城市交通开始*/
+.city-left {
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+.cl-singleBox .co-box {
+  height: 2.6rem;
+}
+.linkWrap {
+  text-align: center;
+  padding-top: .55rem;
+}
+.singleLink {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: .25rem;
+}
+.singleLink:first-child {
+  margin-left: 0;
+}
+.singleLink p {
+  margin-top: .15rem;
+  text-align: center;
+}
+.singleLink .tit1 {
+  font-size: .18rem;
+}
+.singleLink .tit2 {
+  font-size: .2rem;
+  color: #feffff;
+}
+.sl-numBox {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 2.35rem;
+  height: .8rem;
+  padding: .15rem .1rem;
+  background: rgba(14, 82, 124, 0.25);
+  text-align: center;
+}
+.sl-numBox .digital {
+  font-size: .46rem;
+  margin: 0 .06rem;
+}
+.sl-numBox .liang {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: .24rem;
+  color: #0cfefb;
+  margin-bottom: .05rem;
+}
+.sl-numBox .ic-car {
+  margin-top: -0.15rem;
+}
+.sl-numBox .ic-fugailv {
+  margin-top: -0.2rem;
+}
+.culture-tit {
+  text-align: center;
+  height: .5rem;
+  padding-top: .2rem;
+  font-size: .2rem;
+  color: #feffff;
+}
+.culture-wrap {
+  width: 100%;
+}
+.culture-wrap .ce-left {
+  width: 50%;
+  float: left;
+  text-align: center;
+  padding: 0 .2rem;
+}
+.culture-wrap .ce-left .sl-numBox {
+  margin-top: .12rem;
+  width: 100%;
+}
+.culture-wrap .ce-left .wenzi,
+.culture-wrap .ce-left .baifen {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: .18rem;
+}
+.culture-wrap .ce-left .wenzi .wen,
+.culture-wrap .ce-left .baifen .wen {
+  margin-top: .05rem;
+}
+.culture-wrap .ce-left .baifen {
+  font-size: .4rem;
+}
+.culture-wrap .ce-right {
+  width: 50%;
+  float: left;
+  height: 2rem;
+}
+.baseLeft {
+  width: 37%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.baseLeft .tongbi-wrap {
+  width: 100%;
+  padding: 0 .2rem;
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+}
+.baseLeft .tongbi {
+  width: 100%;
+  height: .5rem;
+  line-height: .5rem;
+  background: rgba(14, 82, 124, 0.25);
+  text-align: center;
+  font-size: .18rem;
+}
+.baseLeft .tongbi i {
+  color: #64e56e;
+}
+.baseLeft .tongbi .digital {
+  /*margin: 0 .05rem 0 .07rem;*/
+}
+.baseRight {
+  width: 63%;
+  height: 100%;
+  float: right;
+  padding-top: .3rem;
+  padding-left: .1rem;
+}
+.baseRight li {
+  width: 100%;
+  margin-top: .15rem;
+  padding: 0 .15rem;
+  font-size: 0;
+}
+.baseRight li span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.baseRight li .span1 {
+  font-size: .18rem;
+  color: white;
+  width: 1.2rem;
+}
+.baseRight li .span2 {
+  display: inline-block;
+  vertical-align: middle;
+  height: .55rem;
+  line-height: .55rem;
+  width: calc(100% - 1.2rem);
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+.baseRight li .span2 .blue {
+  margin-left: .1rem;
+  font-size: .36rem;
+}
+.baseRight li .span2 .lu {
+  margin-left: .1rem;
+  font-size: .18rem;
+}
+.city-middle {
+  float: left;
+  margin-left: 1.5%;
+  width: 37%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+}
+.city-right {
+  float: right;
+  width: 30%;
+  height: 100%;
+}
+.city-right .co-box {
+  width: 100%;
+  height: 9rem;
+}
+/*城市交通结束*/
 
 /*# sourceMappingURL=economy2.css.map */
