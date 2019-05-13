@@ -4,172 +4,275 @@
 <body>
     <%- include('../templates/header2') %>
 	<div class="v2-content index-content clearfix">
-        <div class="city-left">
-            <div class="cl-singleBox">
-                <div class="con-tit">
-                    <i class="shineFont">经济指数</i>
-                </div>
-                <div class="co-box">
-                    <div>
-                        <i class="jiao1"></i>
-                        <i class="jiao2"></i>
-                        <i class="jiao3"></i>
-                        <i class="jiao4"></i>
+        <div class="map-box clearfix">
+            <iframe src=""></iframe>
+            <div class="city-left">
+                <div class="cl-singleBox">
+                    <div class="con-tit">
+                        <i class="shineFont">经济指数</i>
                     </div>
-                    <div id="JJZS" class="chart"></div>
-                    <div class="jjzs-mid">
-                        <em class="jjzs-unit">亿元</em>
-                        <em class="jjzs-value">1000.9</em>
-                        <em class="jjzs-num orange">6.8%<i class="ic-bigUp"></i></em>
+                    <div class="co-box">
+                        <div>
+                            <i class="jiao1"></i>
+                            <i class="jiao2"></i>
+                            <i class="jiao3"></i>
+                            <i class="jiao4"></i>
+                        </div>
+                        <div id="JJZS" class="chart"></div>
+                        <div class="jjzs-mid">
+                            <em class="jjzs-unit">亿元</em>
+                            <em class="jjzs-value">1000.9</em>
+                            <em class="jjzs-num orange">6.8%<i class="ic-bigUp"></i></em>
+                        </div>
+                    </div>
+                </div>
+                <div class="cl-singleBox">
+                    <div class="con-tit">
+                        <i class="shineFont">社保安防</i>
+                    </div>
+                    <div class="co-box">
+                        <div>
+                            <i class="jiao1"></i>
+                            <i class="jiao2"></i>
+                            <i class="jiao3"></i>
+                            <i class="jiao4"></i>
+                        </div>
+                        <ul class="sbaf-list">
+                            <li class="sbaf-count">
+                                <div class="sbaf-count-left">
+                                    <p class="count-name">每千人口医生</p>
+                                    <span>去年环比</span>
+                                    <em class="digital">28.2%</em>
+                                    <i class="ic-greenDown"></i>
+                                </div>
+                                <div class="sbaf-count-right">
+                                    <em class="digital blue">8</em>
+                                    <span class="sbaf-unit">人</span>
+                                </div>
+                            </li>
+                            <li class="sbaf-count">
+                                <div class="sbaf-count-left">
+                                    <p class="count-name">基本社会医疗保险覆盖率 </p>
+                                    <span>去年环比</span>
+                                    <em class="digital orange">28.2%</em>
+                                    <i class="ic-yellowUp"></i>
+                                </div>
+                                <div class="sbaf-count-right">
+                                    <em class="digital blue">76.8</em>
+                                    <span class="sbaf-unit">%</span>
+                                </div>
+                            </li>
+                            <li class="sbaf-count">
+                                <div class="sbaf-count-left">
+                                    <p class="count-name">每万人配备警力</p>
+                                    <span>去年环比</span>
+                                    <em class="digital">28.2%</em>
+                                    <i class="ic-greenDown"></i>
+                                </div>
+                                <div class="sbaf-count-right">
+                                    <em class="digital blue">54</em>
+                                    <span class="sbaf-unit">人</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cl-singleBox">
+                    <div class="con-tit">
+                        <i class="shineFont">环境指数</i>
+                    </div>
+                    <div class="co-box">
+                        <div>
+                            <i class="jiao1"></i>
+                            <i class="jiao2"></i>
+                            <i class="jiao3"></i>
+                            <i class="jiao4"></i>
+                        </div>
+                        <div id="HJZS1" class="hjzs1"></div>
+                        <div id="HJZS2" class="hjzs2"></div>
+                        <div id="HJZS3" class="hjzs2"></div>
                     </div>
                 </div>
             </div>
-            <div class="cl-singleBox">
-                <div class="con-tit">
-                    <i class="shineFont">社保安防</i>
+            <div class="city-middle">
+                <div class="bigTit-wrap">
+                    <div class="big-title">城市综合发展指数</div>
                 </div>
-                <div class="co-box">
-                    <div>
-                        <i class="jiao1"></i>
-                        <i class="jiao2"></i>
-                        <i class="jiao3"></i>
-                        <i class="jiao4"></i>
-                    </div>
-                    <ul class="sbaf-list">
-                        <li class="sbaf-count">
-                            <div class="sbaf-count-left">
-                                <p class="count-name">每千人口医生</p>
-                                <span>去年环比</span>
-                                <em class="digital">28.2%</em>
-                                <i class="ic-greenDown"></i>
-                            </div>
-                            <div class="sbaf-count-right">
-                                <em class="digital blue">8</em>
-                                <span class="sbaf-unit">人</span>
-                            </div>
+                <div class="index-wrap">
+                    <ul class="indexBox">
+                        <li>
+                            <p class="digital blue">78.6</p>
+                            <p>2017年度</p>
                         </li>
-                        <li class="sbaf-count">
-                            <div class="sbaf-count-left">
-                                <p class="count-name">基本社会医疗保险覆盖率 </p>
-                                <span>去年环比</span>
-                                <em class="digital orange">28.2%</em>
-                                <i class="ic-bigUp"></i>
-                            </div>
-                            <div class="sbaf-count-right">
-                                <em class="digital blue">76.8</em>
-                                <span class="sbaf-unit">%</span>
-                            </div>
+                        <li class="orangeLi">
+                            <p class="digital orange">82.6</p>
+                            <p>2018年度</p>
                         </li>
-                        <li class="sbaf-count">
-                            <div class="sbaf-count-left">
-                                <p class="count-name">每万人配备警力</p>
-                                <span>去年环比</span>
-                                <em class="digital">28.2%</em>
-                                <i class="ic-greenDown"></i>
-                            </div>
-                            <div class="sbaf-count-right">
-                                <em class="digital blue">54</em>
-                                <span class="sbaf-unit">人</span>
-                            </div>
+                        <li>
+                            <p class="digital blue">78.6</p>
+                            <p>2019年度预测</p>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="cl-singleBox">
-                <div class="con-tit">
-                    <i class="shineFont">环境指数</i>
-                </div>
-                <div class="co-box">
-                    <div>
-                        <i class="jiao1"></i>
-                        <i class="jiao2"></i>
-                        <i class="jiao3"></i>
-                        <i class="jiao4"></i>
+            <div class="city-right">
+                <div class="cl-singleBox">
+                    <div class="con-tit">
+                        <i class="shineFont">交通运行</i>
                     </div>
-                    <div id="HJZS1" class="hjzs1"></div>
-                    <div id="HJZS2" class="hjzs2"></div>
-                    <div id="HJZS3" class="hjzs2"></div>
+                    <div class="co-box">
+                        <div>
+                            <i class="jiao1"></i>
+                            <i class="jiao2"></i>
+                            <i class="jiao3"></i>
+                            <i class="jiao4"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="cl-singleBox">
+                    <div class="con-tit">
+                        <i class="shineFont">人口概况</i>
+                    </div>
+                    <div class="co-box">
+                        <div>
+                            <i class="jiao1"></i>
+                            <i class="jiao2"></i>
+                            <i class="jiao3"></i>
+                            <i class="jiao4"></i>
+                        </div>
+                        <div class="rkgk-top clearfix">
+                            <div class="rkgk-top-box">
+                                <h5>常住人口</h5>
+                                <div class="rkgk-bgbox">
+                                    <div class="rkgk-value">
+                                        <span class="digital blue">63.97</span>
+                                        <em class="rkgk-unit">万</em>
+                                    </div>
+                                    <div class="rkgk-num">
+                                        <em class="digital">28.2%</em>
+                                        <i class="ic-greenDown"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rkgk-top-box">
+                                <h5>户籍人口</h5>
+                                <div class="rkgk-bgbox">
+                                    <div class="rkgk-value">
+                                        <span class="digital blue">63.97</span>
+                                        <em class="rkgk-unit">万</em>
+                                    </div>
+                                    <div class="rkgk-num">
+                                        <em class="digital orange">28.2%</em>
+                                        <i class="ic-yellowUp"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="RKGK" class="rkgk-chart"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="city-middle">
-            <div class="bigTit-wrap">
-                <div class="big-title">城市综合发展指数</div>
-            </div>
-            <div class="index-wrap">
-                <ul class="indexBox">
-                    <li>
-                        <p class="digital blue">78.6</p>
-                        <p>2017年度</p>
-                    </li>
-                    <li class="orangeLi">
-                        <p class="digital orange">82.6</p>
-                        <p>2018年度</p>
-                    </li>
-                    <li>
-                        <p class="digital blue">78.6</p>
-                        <p>2019年度预测</p>
-                    </li>
+            <a class="map-btn-h" href="javascript:;"></a>
+            <a class="map-btn-s" href="javascript:;"></a>
+            <div class="layer co-box">
+                <div>
+                    <i class="jiao1"></i>
+                    <i class="jiao2"></i>
+                    <i class="jiao3"></i>
+                    <i class="jiao4"></i>
+                </div>
+                <h4 class="shineFont">图层设置</h4>
+                <ul class="layer-list">
+                    <li><label><input type="checkbox">实时路况</label></li>
+                    <li><label><input type="checkbox">大气监测点</label></li>
+                    <li><label><input type="checkbox">实时路况</label></li>
+                    <li><label><input type="checkbox">大气监测点</label></li>
                 </ul>
             </div>
         </div>
-        <div class="city-right">
-            <div class="cl-singleBox">
-                <div class="con-tit">
-                    <i class="shineFont">交通运行</i>
-                </div>
-                <div class="co-box">
-                    <div>
-                        <i class="jiao1"></i>
-                        <i class="jiao2"></i>
-                        <i class="jiao3"></i>
-                        <i class="jiao4"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="cl-singleBox">
-                <div class="con-tit">
-                    <i class="shineFont">人口概况</i>
-                </div>
-                <div class="co-box">
-                    <div>
-                        <i class="jiao1"></i>
-                        <i class="jiao2"></i>
-                        <i class="jiao3"></i>
-                        <i class="jiao4"></i>
-                    </div>
-                    <div class="rkgk-top">
-                        <div class="rkgk-top-box">
-                            <h5>户籍人口</h5>
-                            <div class="rkgk-bgbox">
-                                <div class="rkgk-value">
-                                    <span class="digital blue">63.97</span>
-                                    <em class="rkgk-unit">万</em>
-                                </div>
-                                <div class="rkgk-num">
-                                    <em class="digital">28.2%</em>
-                                    <i class="ic-greenDown"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rkgk-top-box">
-                            <h5>常住人口</h5>
-                            <div class="rkgk-bgbox">
-                                <div class="rkgk-value">
-                                    <span class="digital blue">63.97</span>
-                                    <em class="rkgk-unit">万</em>
-                                </div>
-                                <div class="rkgk-num">
-                                    <em class="digital orange">28.2%</em>
-                                    <i class="ic-bigUp"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="RKGK" class="rkgk-chart"></div>
-                </div>
-            </div>
-        </div>
+    </div>
+    <div class="nav">
+        <ul class="nav-list clearfix">
+            <li>
+                <a href="javascript:;">
+                    <i class="nav-icon nav-icon1"></i>
+                    <span>经济运行</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="nav-icon nav-icon2"></i>
+                    <span>基础设施</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="nav-icon nav-icon3"></i>
+                    <span>生态环境</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="nav-icon nav-icon4"></i>
+                    <span>城市交通</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="nav-icon nav-icon5"></i>
+                    <span>公共安全</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="nav-icon nav-icon6"></i>
+                    <span>文化建设</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="nav-icon nav-icon7"></i>
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="nav-icon nav-icon8"></i>
+                    <span>政务效能</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="nav-icon nav-icon9"></i>
+                    <span>智慧城市</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="nav-icon nav-icon10"></i>
+                    <span>宜居城市</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="nav-icon nav-icon11"></i>
+                    <span>绿色城市</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="nav-icon nav-icon12"></i>
+                    <span>环保城市</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="nav-icon nav-icon13"></i>
+                    <span>低碳城市</span>
+                </a>
+            </li>
+        </ul>
+        <a href="javascript:;" class="nav-btn">MENU</a>
     </div>
   <%- include('../templates/foot') %>
 </body>
@@ -635,12 +738,116 @@
             arrchart.push(myChart4);
         }
 
+        rkgk();
+        function rkgk(){
+            var myChart5 = echarts.init(document.getElementById('RKGK'));
+            option5 = {
+                title:{
+                    text:'街镇常住人口分布（单位：万人）',
+                    top:'top',
+                    left:'center',
+                    textStyle:{
+                        color:'#0cfffb',
+                        fontSize:16
+                    }
+                },
+                tooltip : {
+                    trigger: 'axis',
+                    axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                        type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis : [
+                    {
+                        type : 'category',
+                        data : ['南山', '大塘', '芦苞', '乐平', '云东海', '西南', '白坭'],
+                        axisLine:{
+                            lineStyle:{
+                                color:'rgba(255,255,255,0.3)'
+                            }
+                        },
+                        axisLabel:{
+                            color:'#fff',
+                            fontSize:15,
+                            interval:0
+                        },
+                        axisTick:{
+                            show:false
+                        }
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value',
+                        axisLabel:{
+                            color:'#fff',
+                            fontSize:15
+                        },
+                        axisLine:{
+                            show:false
+                        },
+                        splitLine:{
+                            lineStyle:{
+                                color:'rgba(255,255,255,0.3)'
+                            }
+                        }
+                    }
+                ],
+                series : [
+                    {
+                        name:'街镇常住人口',
+                        type:'bar',
+                        barWidth: '21',
+                        itemStyle:{
+                            normal:{
+                                color:new echarts.graphic.LinearGradient(
+                                    0, 0, 0, 1,
+                                    [
+                                        {offset: 1, color: '#01a5ff'},
+                                        {offset: 0, color: '#0bfffb'}
+                                    ]
+                                ),
+                                barBorderRadius:[2,2,0,0]
+                            }
+                        },
+                        data:[160, 152, 200, 334, 390, 330, 220]
+                    }
+                ]
+            };
+            myChart5.setOption(option5);
+            arrchart.push(myChart5);
+        }
+
         // 图表自适应
         window.onresize = function(){
             for(var i = 0; i < arrchart.length; i++){
                 arrchart[i].resize();
             }
         };
+
+        // 地图按钮
+        mapchange();
+        function mapchange(){
+            $('.map-btn-h').on('click',function(){
+                $('.city-left,.city-middle,.city-right').hide();
+                $('.v2-content').css('padding',0);
+                $(this).hide();
+                $('.map-btn-s,.layer').show();
+            })
+            $('.map-btn-s').on('click',function(){
+                $('.city-left,.city-middle,.city-right').show();
+                $('.v2-content').css('padding','.78rem .5rem .58rem .58rem');
+                $(this).hide();
+                $('.layer').hide();
+                $('.map-btn-h').show();
+            })
+        }
     })
 </script>
 </html>
