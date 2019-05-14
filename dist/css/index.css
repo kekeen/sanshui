@@ -126,6 +126,7 @@ a:focus {
 .index-content .big-title {
   width: 3.28rem;
   background: url(../images/v2.0/title-bg-index.png) no-repeat;
+  background-size: 100% 100%;
 }
 .index-content .co-box,
 .index-content .indexBox li {
@@ -266,7 +267,8 @@ a:focus {
   display: inline-block;
   width: .48rem;
   height: .48rem;
-  background: url('../images/v2.0/sprite.png') no-repeat;
+  background-image: url(../images/v2.0/sprite.png);
+  background-size: 8.25rem 5.15rem;
   background-position: -1.07rem -1.2rem;
   position: absolute;
   bottom: 0;
@@ -276,7 +278,8 @@ a:focus {
   display: none;
   width: .48rem;
   height: .48rem;
-  background: url('../images/v2.0/sprite.png') no-repeat;
+  background-image: url(../images/v2.0/sprite.png);
+  background-size: 8.25rem 5.15rem;
   background-position: -1.64rem -1.2rem;
   position: absolute;
   top: .1rem;
@@ -305,6 +308,103 @@ a:focus {
 }
 .layer .layer-list label div {
   margin: 0 .22rem 0 .15rem;
+}
+.index-right .meterWrap {
+  position: relative;
+  width: 100%;
+  height: 62%;
+}
+.index-right .meterWrap .gaugeTit {
+  margin-top: .2rem;
+  text-align: center;
+  font-size: .2rem;
+  color: #0cfffb;
+}
+.index-right .meterWrap .gaugeWrap {
+  position: absolute;
+  top: .5rem;
+  width: 100%;
+  height: 3rem;
+}
+.index-right .meterWrap .gaugeWrap .gaugeVal {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: 100%;
+}
+.index-right .meterWrap .gaugeWrap .gaugeVal p {
+  width: 100%;
+  text-align: center;
+}
+.index-right .meterWrap .gaugeWrap .gaugeVal .p1 {
+  font-size: .13rem;
+  color: white;
+}
+.index-right .meterWrap .gaugeWrap .gaugeVal .p2 {
+  font-size: .22rem;
+}
+.index-right .meterWrap .gaugeWrap .gaugeVal .p2 i {
+  display: inline-block;
+  vertical-align: middle;
+  height: .28rem;
+  padding: 0 .16rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+.index-right .meterWrap .gaugeWrap .gaugeVal .p3 {
+  font-size: .18rem;
+  margin-top: .12rem;
+}
+.index-right .meterWrap .gaugeWrap .gaugeVal .p3 .span2 {
+  margin-left: .25rem;
+}
+.index-right .meterWrap .gaugeWrap .gaugeVal .p3 i {
+  margin-left: .05rem;
+}
+.index-right .numWrap {
+  width: 100%;
+  height: 38%;
+  padding-top: .1rem;
+}
+.index-right .numWrap ul {
+  font-size: 0;
+  padding-right: 2%;
+}
+.index-right .numWrap ul li {
+  width: 45%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4%;
+}
+.index-right .numWrap ul li .tit {
+  width: 100%;
+  text-align: center;
+  font-size: .16rem;
+  color: #0cfffb;
+}
+.index-right .numWrap ul li .num {
+  margin-top: .08rem;
+  width: 100%;
+  height: .92rem;
+  background: rgba(14, 82, 124, 0.35);
+  text-align: center;
+  padding-top: .12rem;
+}
+.index-right .numWrap ul li .num .blue {
+  font-size: .32rem;
+}
+.index-right .numWrap ul li .num .i2 {
+  margin-left: .06rem;
+  font-size: .18rem;
+  color: #0cfefb;
+}
+.index-right .numWrap ul li .num .green {
+  margin: 0 .03rem 0 .06rem;
+}
+.index-right .numWrap ul li .num .p2 {
+  margin-top: .05rem;
+  font-size: .16rem;
+  color: #85f4fb;
 }
 /* 首页 end*/
 

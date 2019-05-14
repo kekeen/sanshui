@@ -26,6 +26,7 @@
     .big-title{
         width: 3.28rem;
         background: url(../images/v2.0/title-bg-index.png) no-repeat;
+		background-size: 100% 100%;
     }
     .co-box,.indexBox li{
         background: rgba(0,0,0,0.8);
@@ -161,7 +162,8 @@
 	display:inline-block;
 	width:.48rem;
 	height:.48rem;
-	background:url('../images/v2.0/sprite.png') no-repeat;
+	background-image: url(../images/v2.0/sprite.png);
+	background-size: 8.25rem 5.15rem;
 	background-position:-1.07rem -1.2rem;
 	position: absolute;
     bottom: 0;
@@ -171,7 +173,8 @@
 	display:none;
 	width:.48rem;
 	height:.48rem;
-	background:url('../images/v2.0/sprite.png') no-repeat;
+	background-image: url(../images/v2.0/sprite.png);
+	background-size: 8.25rem 5.15rem;
 	background-position:-1.64rem -1.2rem;
 	position: absolute;
     top:.1rem;
@@ -199,6 +202,106 @@
 				margin:0 .22rem 0 .15rem;
 			}
 		}
+	}
+}
+.index-right{
+	.meterWrap{
+		position: relative;
+		width: 100%;
+		height: 62%;
+		.gaugeTit{
+			margin-top: .2rem;
+			text-align: center;
+			font-size: .2rem;
+			color: #0cfffb;
+		}
+		.gaugeWrap{
+			position: absolute;
+			top: .5rem;
+			width: 100%;
+			height: 3rem;
+			.gaugeVal{
+				position: absolute;
+				left: 0;
+				top: 1rem;
+				width: 100%;
+				p{
+					width: 100%;
+					text-align: center;
+				}
+				.p1{
+					font-size: .13rem;
+					color: white;
+				}
+				.p2{
+					font-size: .22rem;
+					i{
+						display: inline-block;
+						vertical-align: middle;
+						height: .28rem;
+						padding: 0 .16rem;
+						background: rgba(255,255,255,.1);
+						border-radius: 4px;
+					}
+				}
+				.p3{
+					font-size: .18rem;
+					margin-top: .12rem;
+					.span2{
+						margin-left: .25rem;
+					}
+					i{
+						margin-left: .05rem;
+					}
+				}
+			}
+		}
+	}
+	.numWrap{
+		width: 100%;
+		height: 38%;
+		padding-top: .1rem;
+		ul{
+			font-size: 0;
+			padding-right: 2%;
+			li{
+				width: 45%;
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 4%;
+				.tit{
+					width: 100%;
+					text-align: center;
+					font-size: .16rem;
+					color: #0cfffb;
+				}
+				.num{
+					margin-top: .08rem;
+					width: 100%;
+					height: .92rem;
+					background: rgba(14, 82, 124, 0.35);
+					text-align: center;
+					padding-top: .12rem;
+					.blue{
+						font-size: .32rem;
+					}
+					.i2{
+						margin-left: .06rem;
+						font-size: .18rem;
+						color: #0cfefb;
+					}
+					.green{
+						margin: 0 .03rem 0 .06rem;
+					}
+					.p2{
+						margin-top: .05rem;
+						font-size: .16rem;
+						color: #85f4fb;
+					}
+				}
+			}
+		}
+
 	}
 }
 /* 首页 end*/

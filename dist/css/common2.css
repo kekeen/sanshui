@@ -495,11 +495,24 @@ a:focus {
   padding: .03rem 10% 0;
 }
 /*底部导航 start*/
+.nav-wrap {
+  position: fixed;
+  width: 100%;
+  height: .55rem;
+  left: 0;
+  bottom: 0;
+  background: none;
+}
 .nav {
   position: fixed;
-  bottom: 0;
+  bottom: .4rem;
   width: 100%;
+  height: 1.45rem;
+  background: url("../images/v2.0/nav-bg.png") no-repeat center center;
+  background-size: 100% 100%;
   text-align: center;
+  padding-top: .7rem;
+  display: none;
 }
 .nav a {
   color: #fff;
@@ -507,11 +520,13 @@ a:focus {
   line-height: .24rem;
 }
 .nav .nav-btn {
-  position: absolute;
-  left: 50%;
+  position: fixed;
+  left: 0;
   bottom: 0;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  width: 100%;
+  height: .8rem;
+  background: pink;
+  cursor: default;
 }
 .nav .nav-list {
   display: inline-block;
@@ -522,21 +537,68 @@ a:focus {
   width: .9rem;
   height: .7rem;
 }
+.nav .nav-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .nav .nav-list li:hover {
-  background: url('../images/v2.0/sprite.png') no-repeat;
+  background-image: url(../images/v2.0/sprite.png);
+  background-size: 8.25rem 5.15rem;
   background-position: -0.06rem -1rem;
 }
 .nav .nav-list li:hover a {
-  color: #fff;
+  color: #dad200;
+}
+.nav .nav-list li:hover .nav-icon1 {
+  background-position: -0.05rem -0.48rem;
+}
+.nav .nav-list li:hover .nav-icon2 {
+  background-position: -0.5rem -0.48rem;
+}
+.nav .nav-list li:hover .nav-icon3 {
+  background-position: -0.95rem -0.48rem;
+}
+.nav .nav-list li:hover .nav-icon4 {
+  background-position: -1.4rem -0.48rem;
+}
+.nav .nav-list li:hover .nav-icon5 {
+  background-position: -1.85rem -0.48rem;
+}
+.nav .nav-list li:hover .nav-icon6 {
+  background-position: -2.3rem -0.48rem;
+}
+.nav .nav-list li:hover .nav-icon7 {
+  background-position: -2.75rem -0.48rem;
+}
+.nav .nav-list li:hover .nav-icon8 {
+  background-position: -3.2rem -0.48rem;
+}
+.nav .nav-list li:hover .nav-icon9 {
+  background-position: -3.65rem -0.48rem;
+}
+.nav .nav-list li:hover .nav-icon10 {
+  background-position: -4.1rem -0.48rem;
+}
+.nav .nav-list li:hover .nav-icon11 {
+  background-position: -4.55rem -0.48rem;
+}
+.nav .nav-list li:hover .nav-icon12 {
+  background-position: -5rem -0.48rem;
+}
+.nav .nav-list li:hover .nav-icon13 {
+  background-position: -5.43rem -0.48rem;
 }
 .nav .nav-list li span {
   display: block;
 }
 .nav-icon {
   display: inline-block;
+  vertical-align: middle;
   width: .36rem;
   height: .36rem;
-  background: url('../images/v2.0/sprite.png') no-repeat;
+  background-image: url(../images/v2.0/sprite.png);
+  background-size: 8.25rem 5.15rem;
 }
 .nav-icon1 {
   background-position: -0.05rem -0.04rem;

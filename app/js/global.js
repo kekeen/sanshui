@@ -12,7 +12,7 @@ commonJs.fn = {
         _this.dropdown();
         _this.icheck();
         _this.nicescroll();
-
+        _this.showNav();
     },
 
     // 下拉菜单
@@ -39,6 +39,13 @@ commonJs.fn = {
             radioClass: 'iradio_minimal-green',
             increaseArea: '20%'
         });
+    },
+
+    //v2.0版鼠标经过底部显示导航
+    showNav : function () {
+        $('.nav-wrap').hover(function () {
+            $(this).children('.nav').toggle();
+        })
     }
 
 };

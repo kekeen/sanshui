@@ -113,7 +113,7 @@
         </div>
         <div class="city-middle ecology-middle">
             <div class="bigTit-wrap">
-                <div class="big-title">经济综合指数</div>
+                <div class="big-title">生态环境指数</div>
             </div>
             <div class="index-wrap">
                 <ul class="indexBox">
@@ -215,7 +215,9 @@
                                 </div>
                                 <p>声环境质量</p>
                             </li>
-                            <li class="chartLi">123</li>
+                            <li class="chartLi" style="width: 200px;">
+                                <div class="chart" id="pie2"></div>
+                            </li>
                             <li>
                                 <div class="roundWrap">
                                     <span class="ic-roundLeft orange lianghao">良好</span>
@@ -264,6 +266,7 @@
             </div>
         </div>
     </div>
+    <%- include('../templates/footnav2') %>
   <%- include('../templates/foot') %>
 </body>
 <script type="text/javascript">
@@ -422,6 +425,163 @@
             // 使用刚指定的配置项和数据显示图表。
             myChart1.setOption(option);
             arrchart.push(myChart1);
+        }
+        //空气质量指数仪表盘
+        pie2();
+        function pie2() {
+            // 基于准备好的dom，初始化echarts实例
+            var myChart2 = echarts.init(document.getElementById('pie2'));
+            // 指定图表的配置项和数据
+            option = {
+                title:{
+                    text:'空气质量指数AQI',
+                    bottom:'55',
+                    left:'center',
+                    textStyle:{
+                        fontSize:20,
+                        color:'#0cfffb',
+                        fontWeight: '100'
+                    },
+                },
+                series: [
+                    {
+                        name: 'pie1',
+                        type: 'pie',
+                        clockWise: true,
+                        startAngle:235,
+                        center: ['50%', '41%'],
+                        radius: ['70px', '75px'],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false
+                                },
+                                labelLine: {
+                                    show: false
+                                }
+                            }
+                        },
+                        hoverAnimation: false,
+                        data: [{
+                            value: 50,  //具体数值
+                            name: '优',  //评价
+                            itemStyle: {
+                                normal: {
+                                    borderWidth: 5,
+                                    borderColor: {
+                                        colorStops: [{
+                                            offset: 1,
+                                            color: '#03b5fe' // 0% 处的颜色
+                                        }, {
+                                            offset: 0,
+                                            color: '#0cfffb' // 100% 处的颜色
+                                        }]
+                                    },
+                                    color: { // 完成的圆环的颜色
+                                        colorStops: [{
+                                            offset: 1,
+                                            color: '#03b5fe' // 0% 处的颜色
+                                        }, {
+                                            offset: 0,
+                                            color: '#0cfffb' // 100% 处的颜色
+                                        }]
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    }
+                                }
+                            },
+                            label: {
+                                show: true,
+                                position:'center',
+                                formatter:'{num|{c}}\n{text|{b}}',
+                                rich:{
+                                    num:{
+                                        fontSize:48,
+                                        fontFamily:'digital',
+                                        color:'#efb78c',
+                                    },
+                                    text:{
+                                        color: '#0cfffb',
+                                        fontSize:18,
+                                    }
+                                }
+                            },
+                        }, {
+                            name: 'gap',
+                            value: 100 - 50,
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: false
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    color: 'rgba(0, 0, 0, 0)',
+                                    borderColor: 'rgba(0, 0, 0, 0)',
+                                    borderWidth: 0
+                                }
+                            }
+                        }]
+                    },
+                    {
+                        name: 'pie2',
+                        type: 'pie',
+                        clockWise: true,
+                        startAngle:235,
+                        center: ['50%', '41%'],
+                        radius: ['70px', '75px'],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false
+                                },
+                                labelLine: {
+                                    show: false
+                                }
+                            }
+                        },
+                        hoverAnimation: false,
+                        data: [{
+                            value: 82,  //最大值不变
+                            name: 'completed',
+                            itemStyle: {
+                                normal: {
+                                    borderWidth: 5,
+                                    borderColor: 'rgba(235,241,245,0.15)',
+                                    color:'rgba(235,241,245,0.15)',
+                                    label: {
+                                        show: false
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    }
+                                }
+                            }
+                        }, {
+                            name: 'gap',
+                            value: 100 - 82,
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: false
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    color: 'rgba(0, 0, 0, 0)',
+                                    borderColor: 'rgba(0, 0, 0, 0)',
+                                    borderWidth: 0
+                                }
+                            }
+                        }]
+                    }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart2.setOption(option);
+            arrchart.push(myChart2);
         }
         //污染防治-雷达图
         radar3();

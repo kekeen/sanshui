@@ -144,7 +144,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="city-right">
+            <div class="city-right index-right">
                 <div class="cl-singleBox">
                     <div class="con-tit">
                         <i class="shineFont">交通运行</i>
@@ -155,6 +155,60 @@
                             <i class="jiao2"></i>
                             <i class="jiao3"></i>
                             <i class="jiao4"></i>
+                        </div>
+                        <div class="meterWrap clearfix">
+                            <p class="gaugeTit">拥堵指数</p>
+                            <div class="gaugeWrap">
+                                <div class="chart" id="gauge3"></div>
+                                <div class="gaugeVal">
+                                    <p class="p1">指数值</p>
+                                    <p class="p2"><i class="digital orange">1.23</i></p>
+                                    <p class="p3">
+                                    <span class="span1">
+                                        上周同比
+                                        <i class="digital green">28.2%</i>
+                                        <i class="ic-greenDown"></i>
+                                    </span>
+                                        <span class="span2">
+                                        上周同比
+                                        <i class="digital orange2">28.2%</i>
+                                        <i class="ic-yellowUp"></i>
+                                    </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="numWrap">
+                            <ul>
+                                <li>
+                                    <p class="tit">高峰期主干路平均速度</p>
+                                    <div class="num">
+                                        <p class="p1">
+                                            <i class="digital blue">31.10</i>
+                                            <i class="i2">km/h</i>
+                                        </p>
+                                        <p class="p2">
+                                            上周同比
+                                            <i class="digital green">28.2%</i>
+                                            <i class="ic-greenDown"></i>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="tit">高峰期主干路平均速度</p>
+                                    <div class="num">
+                                        <p class="p1">
+                                            <i class="digital blue">64.33</i>
+                                            <i class="i2">km/h</i>
+                                        </p>
+                                        <p class="p2">
+                                            上周同比
+                                            <i class="digital green">28.2%</i>
+                                            <i class="ic-greenDown"></i>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -220,10 +274,11 @@
             </div>
         </div>
     </div>
+    <div class="nav-wrap">
     <div class="nav">
         <ul class="nav-list clearfix">
             <li>
-                <a href="javascript:;">
+                <a href="v2.0-经济运行.html">
                     <i class="nav-icon nav-icon1"></i>
                     <span>经济运行</span>
                 </a>
@@ -235,13 +290,13 @@
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="v2.0-生态环境.html">
                     <i class="nav-icon nav-icon3"></i>
                     <span>生态环境</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="v2.0-城市交通.html">
                     <i class="nav-icon nav-icon4"></i>
                     <span>城市交通</span>
                 </a>
@@ -255,11 +310,11 @@
             <li>
                 <a href="javascript:;">
                     <i class="nav-icon nav-icon6"></i>
-                    <span>文化建设</span>
+                    <span>社会服务</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="v2.0-index.html">
                     <i class="nav-icon nav-icon7"></i>
                     <span>首页</span>
                 </a>
@@ -301,8 +356,10 @@
                 </a>
             </li>
         </ul>
-        <a href="javascript:;" class="nav-btn">MENU</a>
     </div>
+    <a href="javascript:;" class="nav-btn"></a>
+</div>
+
   
 <script src="../libs/jquery/jquery.min.js"></script>
 <script src="../js/resize.js"></script>
@@ -862,6 +919,153 @@
             arrchart.push(myChart5);
         }
 
+        //交通运行仪表盘
+        gauge3();
+        function gauge3() {
+            // 基于准备好的dom，初始化echarts实例
+            var myChart3 = echarts.init(document.getElementById('gauge3'));
+            var val = 1.23, //指数值
+                all = 2, //指数总值
+                other = all - val, //除了值剩下的部分
+                // 指定图表的配置项和数据
+                option = {
+                    //backgroundColor: "#031845",
+                    color: ['#0cfffb', '#155cc6', '#fcfa3c', '#f44061'],
+                    series: [
+                        {
+                            name: "",
+                            type: "gauge",
+                            radius: "95%",
+                            startAngle: 0,
+                            //endAngle: 359.9,
+                            endAngle: 179.9,
+                            splitNumber: 13,
+                            axisTick: {
+                                show: false
+                            },
+                            splitLine: {
+                                length: 50,
+                                lineStyle: {
+                                    width: 5,
+                                    color:"#000a18"
+                                }
+                            },
+                            axisLabel: {
+                                show: false
+                            },
+                            pointer: {
+                                show: false
+                            },
+                            axisLine: {
+                                lineStyle: {
+                                    opacity: 0
+                                }
+                            },
+                            detail: {
+                                show: false
+                            },
+                            data: [{
+                                value: 0,
+                                name: ""
+                            }]
+                        },{
+                            name: '',
+                            type: 'pie',
+                            center: ['50%', '50%'],
+                            radius: ['70%', '95%'],
+                            silent: true,
+                            z: 0,
+                            startAngle: 180,
+                            label: {
+                                show:false
+                            },
+                            data: [{
+                                value: val,
+                                name: '数据1'
+                            },
+                                {
+                                    value: other,
+                                    name: '数据2'
+                                },
+                                {
+                                    value: all,
+                                    name: '半圆',
+                                    itemStyle: {
+                                        color: 'transparent'
+                                    }
+                                }
+
+                            ]
+                        }, {
+                            name: "",
+                            type: "gauge",
+                            radius: "55%",
+                            startAngle: 0,
+                            endAngle: 179.9,
+                            splitNumber: 32,
+                            axisTick: {
+                                show: false
+                            },
+                            splitLine: {
+                                length: 40,
+                                lineStyle: {
+                                    width: 6,
+                                    color:"#000a1a"
+                                }
+                            },
+                            axisLabel: {
+                                show: false
+                            },
+                            pointer: {
+                                show: false
+                            },
+                            axisLine: {
+                                lineStyle: {
+                                    opacity: 0
+                                }
+                            },
+                            detail: {
+                                show: false
+                            },
+                            data: [{
+                                value: 0,
+                                name: ""
+                            }]
+                        },{
+                            name: '',
+                            type: 'pie',
+                            center: ['50%', '50%'],
+                            radius: ['45%', '55%'],
+                            silent: true,
+                            z: 0,
+                            startAngle: 180,
+                            label: {
+                                show:false
+                            },
+                            data: [{
+                                value: val,
+                                name: '数据1'
+                            },
+                                {
+                                    value: other,
+                                    name: '数据2'
+                                },
+                                {
+                                    value: all,
+                                    name: '半圆',
+                                    itemStyle: {
+                                        color: 'transparent'
+                                    }
+                                }
+
+                            ]
+                        }
+                    ]
+                };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart3.setOption(option);
+            arrchart.push(myChart3);
+        }
         // 图表自适应
         window.onresize = function(){
             for(var i = 0; i < arrchart.length; i++){
