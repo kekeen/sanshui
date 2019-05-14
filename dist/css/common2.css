@@ -228,6 +228,13 @@ a:focus {
   height: .29rem;
   background: url("../images/v2.0/big-down.png") no-repeat center center;
 }
+.ic-yellowUp {
+  display: inline-block;
+  vertical-align: sub;
+  width: .18rem;
+  height: .19rem;
+  background: url("../images/v2.0/ic-yellowUp.png") no-repeat center center;
+}
 .ic-greenDown {
   display: inline-block;
   vertical-align: middle;
@@ -487,6 +494,90 @@ a:focus {
 .indexBox li.orangeLi {
   padding: .03rem 10% 0;
 }
+/*底部导航 start*/
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.nav a {
+  color: #fff;
+  display: inline-block;
+  line-height: .24rem;
+}
+.nav .nav-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.nav .nav-list {
+  display: inline-block;
+  margin-bottom: .4rem;
+}
+.nav .nav-list li {
+  float: left;
+  width: .9rem;
+  height: .7rem;
+}
+.nav .nav-list li:hover {
+  background: url('../images/v2.0/sprite.png') no-repeat;
+  background-position: -0.06rem -1rem;
+}
+.nav .nav-list li:hover a {
+  color: #fff;
+}
+.nav .nav-list li span {
+  display: block;
+}
+.nav-icon {
+  display: inline-block;
+  width: .36rem;
+  height: .36rem;
+  background: url('../images/v2.0/sprite.png') no-repeat;
+}
+.nav-icon1 {
+  background-position: -0.05rem -0.04rem;
+}
+.nav-icon2 {
+  background-position: -0.5rem -0.04rem;
+}
+.nav-icon3 {
+  background-position: -0.95rem -0.04rem;
+}
+.nav-icon4 {
+  background-position: -1.4rem -0.04rem;
+}
+.nav-icon5 {
+  background-position: -1.85rem -0.04rem;
+}
+.nav-icon6 {
+  background-position: -2.3rem -0.04rem;
+}
+.nav-icon7 {
+  background-position: -2.75rem -0.04rem;
+}
+.nav-icon8 {
+  background-position: -3.2rem -0.04rem;
+}
+.nav-icon9 {
+  background-position: -3.65rem -0.04rem;
+}
+.nav-icon10 {
+  background-position: -4.1rem -0.04rem;
+}
+.nav-icon11 {
+  background-position: -4.55rem -0.04rem;
+}
+.nav-icon12 {
+  background-position: -5rem -0.04rem;
+}
+.nav-icon13 {
+  background-position: -5.43rem -0.04rem;
+}
+/*底部导航 end*/
 /*公共部分结束*/
 
 /*# sourceMappingURL=common2.css.map */

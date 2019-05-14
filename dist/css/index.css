@@ -103,11 +103,29 @@ a:focus {
   margin: 0 auto;
 }
 /* 首页 start*/
+.index-content .map-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.index-content .map-box iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: url('../images/v2.0/index-map.jpg') no-repeat center;
+}
+.index-content .city-left,
+.index-content .city-middle,
+.index-content .city-right {
+  position: relative;
+}
 .index-content .city-middle {
   background: transparent;
 }
 .index-content .big-title {
-  width: 3.07rem;
+  width: 3.28rem;
+  background: url(../images/v2.0/title-bg-index.png) no-repeat;
 }
 .index-content .co-box,
 .index-content .indexBox li {
@@ -152,6 +170,7 @@ a:focus {
   width: 0.22rem;
   height: 0.22rem;
   background-size: cover;
+  vertical-align: unset;
 }
 .sbaf-list {
   padding: 0.15rem .15rem 0.1rem .3rem;
@@ -181,8 +200,7 @@ a:focus {
   font-size: .18rem;
   margin-left: .15rem;
 }
-.sbaf-count .sbaf-count-left .ic-greenDown,
-.sbaf-count .sbaf-count-left .ic-bigUp {
+.sbaf-count .sbaf-count-left .ic-greenDown {
   width: .18rem;
   height: .18rem;
   background-size: cover;
@@ -220,18 +238,73 @@ a:focus {
   float: left;
   text-align: center;
   width: 50%;
-  padding: .22rem .08rem;
+  padding: .1rem .08rem .2rem;
 }
 .rkgk-top-box h5 {
   font-size: .16rem;
-  color: #0cfffb;
+  line-height: .4rem;
 }
 .rkgk-top-box .rkgk-bgbox {
   background-color: rgba(3, 185, 253, 0.15);
+  height: .93rem;
+  font-size: .18rem;
+}
+.rkgk-top-box .rkgk-bgbox .rkgk-value {
+  line-height: .7rem;
+}
+.rkgk-top-box .rkgk-bgbox .rkgk-value .digital {
+  font-size: .32rem;
+}
+.rkgk-top-box .rkgk-bgbox .rkgk-num {
+  margin-top: -0.1rem;
 }
 .rkgk-chart {
   width: 100%;
   height: calc(100% - 1.6rem);
+}
+.map-btn-h {
+  display: inline-block;
+  width: .48rem;
+  height: .48rem;
+  background: url('../images/v2.0/sprite.png') no-repeat;
+  background-position: -1.07rem -1.2rem;
+  position: absolute;
+  bottom: 0;
+  right: 4.4rem;
+}
+.map-btn-s {
+  display: none;
+  width: .48rem;
+  height: .48rem;
+  background: url('../images/v2.0/sprite.png') no-repeat;
+  background-position: -1.64rem -1.2rem;
+  position: absolute;
+  top: .1rem;
+  right: .1rem;
+}
+.layer {
+  display: none;
+  width: 2.07rem;
+  height: 2.19rem;
+  position: absolute;
+  top: .7rem;
+  right: .1rem;
+}
+.layer .shineFont {
+  line-height: .5rem;
+  text-align: center;
+  width: 100%;
+}
+.layer .layer-list {
+  color: #fff;
+  font-size: .18rem;
+}
+.layer .layer-list label {
+  font-weight: normal;
+  line-height: .35rem;
+}
+.layer .layer-list label div {
+  margin: 0 .22rem 0 .15rem;
 }
 /* 首页 end*/
 

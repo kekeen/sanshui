@@ -2,7 +2,7 @@
     "site": "山水",
     "styles": [
         "../css/custom-bootstrap.css",
-        "../libs/icheck/skins/flat/_all.css",
+        "../libs/icheck/skins/minimal/_all.css",
         "../css/icon.css"
     ],
     "scripts": [

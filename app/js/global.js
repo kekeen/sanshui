@@ -35,8 +35,8 @@ commonJs.fn = {
     // 复选框
     icheck : function () {
         $('input').iCheck({
-            checkboxClass: 'icheckbox_flat-blue',
-            radioClass: 'iradio_flat-blue',
+            checkboxClass: 'icheckbox_minimal-green',
+            radioClass: 'iradio_minimal-green',
             increaseArea: '20%'
         });
     }

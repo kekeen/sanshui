@@ -4,17 +4,28 @@
 
 
 /* 首页 start*/
-// body{
-//     background: url('../images/v2.0/index-map.png') no-repeat;
-//     background-size: cover;
-// }
 .index-content{
-    // background: transparent;
+    .map-box{
+    	position:relative;
+    	width:100%;
+    	height:100%;
+    	iframe{
+    		position:absolute;
+    		width:100%;
+    		height:100%;
+    		border: none;
+    		background: url('../images/v2.0/index-map.jpg') no-repeat center;
+    	}
+    }
+    .city-left,.city-middle,.city-right{
+    	position:relative;
+    }
     .city-middle{
         background: transparent;
     }
     .big-title{
-        width: 3.07rem;
+        width: 3.28rem;
+        background: url(../images/v2.0/title-bg-index.png) no-repeat;
     }
     .co-box,.indexBox li{
         background: rgba(0,0,0,0.8);
@@ -58,6 +69,7 @@
     		width:0.22rem;
     		height:0.22rem;
     		background-size:cover;
+    		vertical-align: unset;
     	}
     }
 }
@@ -81,7 +93,7 @@
 			font-size:.18rem;
 			margin-left:.15rem;
 		}
-		.ic-greenDown,.ic-bigUp{
+		.ic-greenDown{
 			width:.18rem;
 			height:.18rem;
 			background-size:cover;
@@ -121,17 +133,72 @@
 	float:left;
 	text-align:center;
 	width:50%;
-	padding:.22rem .08rem;
+	padding:.1rem .08rem .2rem;
 	h5{
 		font-size: .16rem;
-		color: #0cfffb;
+		line-height: .4rem;
 	}
 	.rkgk-bgbox{
 		background-color:rgba(3,185,253,0.15);
+		height: .93rem;
+    	font-size: .18rem;
+    	.rkgk-value{
+    		line-height: .7rem;
+    		.digital{
+    		    font-size: .32rem;
+    		}
+    	}
+    	.rkgk-num{
+    	    margin-top: -.1rem;
+    	}
 	}
 }
 .rkgk-chart{
 	width:100%;
 	height:calc(~'100% - 1.6rem');
+}
+.map-btn-h{
+	display:inline-block;
+	width:.48rem;
+	height:.48rem;
+	background:url('../images/v2.0/sprite.png') no-repeat;
+	background-position:-1.07rem -1.2rem;
+	position: absolute;
+    bottom: 0;
+    right: 4.4rem;
+}
+.map-btn-s{
+	display:none;
+	width:.48rem;
+	height:.48rem;
+	background:url('../images/v2.0/sprite.png') no-repeat;
+	background-position:-1.64rem -1.2rem;
+	position: absolute;
+    top:.1rem;
+    right: .1rem;
+}
+.layer{
+	display:none;
+	width:2.07rem;
+	height:2.19rem;
+	position:absolute;
+	top:.7rem;
+	right:.1rem;
+	.shineFont{
+	    line-height: .5rem;
+	    text-align: center;
+	    width: 100%;
+	}
+	.layer-list{
+		color:#fff;
+		font-size:.18rem;
+		label{
+			font-weight:normal;
+			line-height:.35rem;
+			div{
+				margin:0 .22rem 0 .15rem;
+			}
+		}
+	}
 }
 /* 首页 end*/
