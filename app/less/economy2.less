@@ -325,7 +325,6 @@
   margin-left: 1.5%;
   width: 37%;
   height: 100%;
-  background: rgba(255,255,255,.2);
 }
 
 
@@ -344,9 +343,56 @@
   background: url("../images/v2.0/heng-line.png") no-repeat center bottom;
 }
 .meterWrap{
+  position: relative;
   width: 100%;
   height: 62%;
-  background: rgba(255,255,255,0.2);
+  .gaugeTit{
+    margin-top: .3rem;
+    text-align: center;
+    font-size: .2rem;
+    color: #0cfffb;
+  }
+  .gaugeWrap{
+    position: absolute;
+    top: .7rem;
+    width: 100%;
+    height: 3.3rem;
+    /*background: pink;*/
+    .gaugeVal{
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      width: 100%;
+      p{
+        width: 100%;
+        text-align: center;
+      }
+      .p1{
+        font-size: .17rem;
+        color: white;
+      }
+      .p2{
+        font-size: .28rem;
+        i{
+          display: inline-block;
+          vertical-align: middle;
+          height: .32rem;
+          padding: 0 .2rem;
+          background: rgba(255,255,255,.1);
+          border-radius: 4px;
+        }
+      }
+      .p3{
+        margin-top: .2rem;
+        .span2{
+          margin-left: .15rem;
+        }
+        i{
+          margin-left: .05rem;
+        }
+      }
+    }
+  }
 }
 .numWrap{
   width: 100%;
@@ -447,8 +493,20 @@
   }
 }
 .polluteChart{
+  position: relative;
   width: 100%;
   height: 2.25rem;
+  .chart-detail{
+    position: absolute;
+    right: 18px;
+    top: 55px;
+    width: 220px;
+    height: 1.3rem;
+    background: rgba(255,255,255,0.15);
+    padding: 10px;
+    font-size: .12rem;
+    color: #0cfffb;
+  }
 }
 .polluteNum{
   li{
@@ -470,13 +528,22 @@
 }
 .energyList{
   ul{
+    padding: .18rem .18rem 0;
     li{
       width: 100%;
       height: .55rem;
+      margin-top: .06rem;
       line-height: .55rem;
-      background: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.1);
       padding: 0 .15rem;
       font-size: 0;
+      &.care{
+        height: auto;
+        line-height: normal;
+        padding: .1rem .15rem;
+        font-size: .16rem;
+        color: #0cfffb;
+      }
       span{
         display: inline-block;
         vertical-align: middle;
@@ -492,6 +559,8 @@
       }
       .span2{
         float: right;
+        width: 29%;
+        text-align: center;
         font-size: .18rem;
         color: #0cfffb;
         .blue{
@@ -501,4 +570,236 @@
     }
   }
 }
+.right-ecoBox1{
+  .co-box{
+    width: 100%;
+    height: 3.05rem;
+  }
+  .qualityList{
+    ul{
+      li{
+        float: left;
+        width: 31%;
+        padding-top: .7rem;
+        text-align: center;
+        &.chartLi{
+          width: 38%;
+        }
+        .roundWrap{
+          display: inline-block;
+          vertical-align: middle;
+          width: 1.33rem;
+          height: 1.33rem;
+          border-radius: 50%;
+          overflow: hidden;
+          span{
+            text-align: center;
+            line-height: 1.33rem;
+            font-size: .44rem;
+            &.lianghao{
+              font-size: .3rem;
+            }
+          }
+        }
+        p{
+          margin-top: .15rem;
+          font-size: .2rem;
+          color: #0cfffb;
+        }
+      }
+    }
+  }
+}
+.right-ecoBox2{
+  .co-box{
+    width: 100%;
+    height: 5.37rem;
+  }
+}
+.urgency-btn{
+  padding-top: .2rem;
+  text-align: center;
+  .chart-hornTit{
+    height: .46rem;
+    color: #0cfffb;
+    font-size: .2rem;
+    font-weight: normal;
+    cursor: pointer;
+    .ch-in{
+      min-width: 2.1rem;
+      text-align: center;
+    }
+    &:first-child{
+      margin-right: .35rem;
+    }
+    &.current{
+      color: #04b9fd;
+    }
+  }
+}
+.urgency-chart{
+  width: 100%;
+  height: 4.7rem;
+  .chart-wrap1,.chart-wrap2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .chartDetail{
+    position: absolute;
+    bottom: 10px;
+    left: 2%;
+    width: 96%;
+    background: rgba(255,255,255,.15);
+    padding: .12rem;
+    font-size: .16rem;
+    color: #0cfffb;
+  }
+}
+.ecology-middle{
+  .index-wrap{
+    height: .8rem;
+  }
+}
+.mapPart-box{
+  width: 100%;
+  height: 7.5rem;
+  text-align: center;
+}
+.mapPartImg{
+  position: relative;
+  display: inline-block;
+  img{
+    display: block;
+    width: 3.8rem;
+    margin: 0 auto;
+    margin-top: -.1rem;
+  }
+}
+.blackPop-wrap{
+  position: absolute;
+  bottom: 2.5rem;
+  left: .45rem;
+  width: .92rem;
+  height: .92rem;
+  .bigRound{
+    display: inline-block;
+    vertical-align: middle;
+    width: .92rem;
+    height: .92rem;
+    background: url("../images/v2.0/bigLine.png") no-repeat;
+    background-size: 100% 100%;
+  }
+  .blackPop{
+    position: absolute;
+    left: -2rem;
+    top: -2.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    width: 5.1rem;
+    height: 2.5rem;
+    padding: 3px;
+    display: none;
+    &:before,&:after{
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top:0;
+      left: 0;
+      z-index: 1;
+      background:url(../images/v2.0/small-jiao1.png) no-repeat left top, url(../images/v2.0/small-jiao2.png) no-repeat right top;
+    }
+    &:after{
+      bottom:0;
+      background:url(../images/v2.0/small-jiao4.png) no-repeat left bottom, url(../images/v2.0/small-jiao3.png) no-repeat right bottom;
+    }
+    .blackPop-in{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.8);
+      .inTop{
+        .ul1{
+          border-bottom: .04rem solid #394d5f;
+          padding: .08rem 0 .15rem 0;
+        }
+        .ul2{
+          padding-top: .08rem;
+          .leftSpan{
+            .white{
+              width: 60% !important;
+            }
+            .yellow{
+              width: 40% !important;
+            }
+          }
+        }
+        li{
+          margin-top: .14rem;
+          overflow: hidden;
+          padding: 0 .15rem;
+          font-size: 0;
+          .span1{
+            float: left;
+            font-size: .18rem;
+            color: #0cfffb;
+          }
+          .span2{
+            float: right;
+            font-size: .18rem;
+            color: #efb788;
+          }
+          .leftSpan{
+            display: inline-block;
+            vertical-align: middle;
+            width: 45%;
+            font-size: 0;
+          }
+          .rightSpan{
+            display: inline-block;
+            vertical-align: middle;
+            width: 55%;
+            font-size: 0;
+          }
+          .white{
+            display: inline-block;
+            vertical-align: middle;
+            text-align: right;
+            width: 50%;
+            color: white;
+            font-size: .16rem;
+          }
+          .yellow{
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+            padding-left: .08rem;
+            width: 50%;
+            color: #efb788;
+            font-size: .16rem;
+          }
+        }
+      }
+      &:after{
+        position: absolute;
+        left: 1.95rem;
+        bottom: -.6rem;
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: .3rem solid transparent;
+        border-right: .05rem solid transparent;
+        border-top: .8rem solid rgba(0,0,0,.8);
+        transform:rotate(-30deg);
+        -ms-transform:rotate(-30deg); 	/* IE 9 */
+        -moz-transform:rotate(-30deg); 	/* Firefox */
+        -webkit-transform:rotate(-30deg); /* Safari 和 Chrome */
+        -o-transform:rotate(-30deg);
+      }
+    }
+  }
+}
+
 /*生态环境结束*/

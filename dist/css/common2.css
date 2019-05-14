@@ -235,6 +235,13 @@ a:focus {
   height: .2rem;
   background: url("../images/v2.0/ic-greenDown.png") no-repeat center center;
 }
+.ic-yellowUp {
+  display: inline-block;
+  vertical-align: middle;
+  width: .18rem;
+  height: .19rem;
+  background: url("../images/v2.0/ic-yellowUp.png") no-repeat center center;
+}
 .ic-wind {
   display: inline-block;
   vertical-align: middle;
@@ -261,6 +268,13 @@ a:focus {
   background-image: url(../images/v2.0/sprite.png);
   background-size: 8.25rem 5.15rem;
   background-position: -1.4rem -1.88rem;
+}
+.ic-roundLeft {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.33rem;
+  height: 1.33rem;
+  background: url("../images/v2.0/round-left.png") no-repeat center center;
 }
 /*标题 */
 .con-tit {

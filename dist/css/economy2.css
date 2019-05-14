@@ -322,7 +322,6 @@
   margin-left: 1.5%;
   width: 37%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.2);
 }
 .city-right {
   float: right;
@@ -339,9 +338,56 @@
   background: url("../images/v2.0/heng-line.png") no-repeat center bottom;
 }
 .meterWrap {
+  position: relative;
   width: 100%;
   height: 62%;
-  background: rgba(255, 255, 255, 0.2);
+}
+.meterWrap .gaugeTit {
+  margin-top: .3rem;
+  text-align: center;
+  font-size: .2rem;
+  color: #0cfffb;
+}
+.meterWrap .gaugeWrap {
+  position: absolute;
+  top: .7rem;
+  width: 100%;
+  height: 3.3rem;
+  /*background: pink;*/
+}
+.meterWrap .gaugeWrap .gaugeVal {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: 100%;
+}
+.meterWrap .gaugeWrap .gaugeVal p {
+  width: 100%;
+  text-align: center;
+}
+.meterWrap .gaugeWrap .gaugeVal .p1 {
+  font-size: .17rem;
+  color: white;
+}
+.meterWrap .gaugeWrap .gaugeVal .p2 {
+  font-size: .28rem;
+}
+.meterWrap .gaugeWrap .gaugeVal .p2 i {
+  display: inline-block;
+  vertical-align: middle;
+  height: .32rem;
+  padding: 0 .2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+.meterWrap .gaugeWrap .gaugeVal .p3 {
+  margin-top: .2rem;
+}
+.meterWrap .gaugeWrap .gaugeVal .p3 .span2 {
+  margin-left: .15rem;
+}
+.meterWrap .gaugeWrap .gaugeVal .p3 i {
+  margin-left: .05rem;
 }
 .numWrap {
   width: 100%;
@@ -433,8 +479,20 @@
   color: white;
 }
 .polluteChart {
+  position: relative;
   width: 100%;
   height: 2.25rem;
+}
+.polluteChart .chart-detail {
+  position: absolute;
+  right: 18px;
+  top: 55px;
+  width: 220px;
+  height: 1.3rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  font-size: .12rem;
+  color: #0cfffb;
 }
 .polluteNum li {
   float: left;
@@ -452,13 +510,24 @@
   font-size: .16rem;
   color: #0cfffb;
 }
+.energyList ul {
+  padding: .18rem .18rem 0;
+}
 .energyList ul li {
   width: 100%;
   height: .55rem;
+  margin-top: .06rem;
   line-height: .55rem;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   padding: 0 .15rem;
   font-size: 0;
+}
+.energyList ul li.care {
+  height: auto;
+  line-height: normal;
+  padding: .1rem .15rem;
+  font-size: .16rem;
+  color: #0cfffb;
 }
 .energyList ul li span {
   display: inline-block;
@@ -475,11 +544,235 @@
 }
 .energyList ul li .span2 {
   float: right;
+  width: 29%;
+  text-align: center;
   font-size: .18rem;
   color: #0cfffb;
 }
 .energyList ul li .span2 .blue {
   font-size: .24rem;
+}
+.right-ecoBox1 .co-box {
+  width: 100%;
+  height: 3.05rem;
+}
+.right-ecoBox1 .qualityList ul li {
+  float: left;
+  width: 31%;
+  padding-top: .7rem;
+  text-align: center;
+}
+.right-ecoBox1 .qualityList ul li.chartLi {
+  width: 38%;
+}
+.right-ecoBox1 .qualityList ul li .roundWrap {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.33rem;
+  height: 1.33rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.right-ecoBox1 .qualityList ul li .roundWrap span {
+  text-align: center;
+  line-height: 1.33rem;
+  font-size: .44rem;
+}
+.right-ecoBox1 .qualityList ul li .roundWrap span.lianghao {
+  font-size: .3rem;
+}
+.right-ecoBox1 .qualityList ul li p {
+  margin-top: .15rem;
+  font-size: .2rem;
+  color: #0cfffb;
+}
+.right-ecoBox2 .co-box {
+  width: 100%;
+  height: 5.37rem;
+}
+.urgency-btn {
+  padding-top: .2rem;
+  text-align: center;
+}
+.urgency-btn .chart-hornTit {
+  height: .46rem;
+  color: #0cfffb;
+  font-size: .2rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+.urgency-btn .chart-hornTit .ch-in {
+  min-width: 2.1rem;
+  text-align: center;
+}
+.urgency-btn .chart-hornTit:first-child {
+  margin-right: .35rem;
+}
+.urgency-btn .chart-hornTit.current {
+  color: #04b9fd;
+}
+.urgency-chart {
+  width: 100%;
+  height: 4.7rem;
+}
+.urgency-chart .chart-wrap1,
+.urgency-chart .chart-wrap2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.urgency-chart .chartDetail {
+  position: absolute;
+  bottom: 10px;
+  left: 2%;
+  width: 96%;
+  background: rgba(255, 255, 255, 0.15);
+  padding: .12rem;
+  font-size: .16rem;
+  color: #0cfffb;
+}
+.ecology-middle .index-wrap {
+  height: .8rem;
+}
+.mapPart-box {
+  width: 100%;
+  height: 7.5rem;
+  text-align: center;
+}
+.mapPartImg {
+  position: relative;
+  display: inline-block;
+}
+.mapPartImg img {
+  display: block;
+  width: 3.8rem;
+  margin: 0 auto;
+  margin-top: -0.1rem;
+}
+.blackPop-wrap {
+  position: absolute;
+  bottom: 2.5rem;
+  left: .45rem;
+  width: .92rem;
+  height: .92rem;
+}
+.blackPop-wrap .bigRound {
+  display: inline-block;
+  vertical-align: middle;
+  width: .92rem;
+  height: .92rem;
+  background: url("../images/v2.0/bigLine.png") no-repeat;
+  background-size: 100% 100%;
+}
+.blackPop-wrap .blackPop {
+  position: absolute;
+  left: -2rem;
+  top: -2.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  width: 5.1rem;
+  height: 2.5rem;
+  padding: 3px;
+  display: none;
+}
+.blackPop-wrap .blackPop:before,
+.blackPop-wrap .blackPop:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: url(../images/v2.0/small-jiao1.png) no-repeat left top, url(../images/v2.0/small-jiao2.png) no-repeat right top;
+}
+.blackPop-wrap .blackPop:after {
+  bottom: 0;
+  background: url(../images/v2.0/small-jiao4.png) no-repeat left bottom, url(../images/v2.0/small-jiao3.png) no-repeat right bottom;
+}
+.blackPop-wrap .blackPop .blackPop-in {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.blackPop-wrap .blackPop .blackPop-in .inTop .ul1 {
+  border-bottom: .04rem solid #394d5f;
+  padding: .08rem 0 .15rem 0;
+}
+.blackPop-wrap .blackPop .blackPop-in .inTop .ul2 {
+  padding-top: .08rem;
+}
+.blackPop-wrap .blackPop .blackPop-in .inTop .ul2 .leftSpan .white {
+  width: 60% !important;
+}
+.blackPop-wrap .blackPop .blackPop-in .inTop .ul2 .leftSpan .yellow {
+  width: 40% !important;
+}
+.blackPop-wrap .blackPop .blackPop-in .inTop li {
+  margin-top: .14rem;
+  overflow: hidden;
+  padding: 0 .15rem;
+  font-size: 0;
+}
+.blackPop-wrap .blackPop .blackPop-in .inTop li .span1 {
+  float: left;
+  font-size: .18rem;
+  color: #0cfffb;
+}
+.blackPop-wrap .blackPop .blackPop-in .inTop li .span2 {
+  float: right;
+  font-size: .18rem;
+  color: #efb788;
+}
+.blackPop-wrap .blackPop .blackPop-in .inTop li .leftSpan {
+  display: inline-block;
+  vertical-align: middle;
+  width: 45%;
+  font-size: 0;
+}
+.blackPop-wrap .blackPop .blackPop-in .inTop li .rightSpan {
+  display: inline-block;
+  vertical-align: middle;
+  width: 55%;
+  font-size: 0;
+}
+.blackPop-wrap .blackPop .blackPop-in .inTop li .white {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  width: 50%;
+  color: white;
+  font-size: .16rem;
+}
+.blackPop-wrap .blackPop .blackPop-in .inTop li .yellow {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  padding-left: .08rem;
+  width: 50%;
+  color: #efb788;
+  font-size: .16rem;
+}
+.blackPop-wrap .blackPop .blackPop-in:after {
+  position: absolute;
+  left: 1.95rem;
+  bottom: -0.6rem;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: .3rem solid transparent;
+  border-right: .05rem solid transparent;
+  border-top: 0.8rem solid rgba(0, 0, 0, 0.8);
+  transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  /* IE 9 */
+  -moz-transform: rotate(-30deg);
+  /* Firefox */
+  -webkit-transform: rotate(-30deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(-30deg);
 }
 /*生态环境结束*/
 

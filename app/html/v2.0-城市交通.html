@@ -124,7 +124,7 @@
                 </div>
             </div>
         </div>
-        <div class="city-middle">
+        <div class="city-middle ecology-middle">
             <div class="bigTit-wrap">
                 <div class="big-title">交通综合指数</div>
             </div>
@@ -144,6 +144,11 @@
                     </li>
                 </ul>
             </div>
+            <div class="mapPart-box">
+                <div class="mapPartImg clearfix">
+                    <img src="../images/v2.0/map-part.png">
+                </div>
+            </div>
         </div>
         <div class="city-right">
             <div class="con-tit">
@@ -157,7 +162,28 @@
                     <i class="jiao4"></i>
                 </div>
                 <div class="city-right-top">
-                    <div class="meterWrap">2</div>
+                    <div class="meterWrap clearfix">
+                        <p class="gaugeTit">交通拥堵指数</p>
+                        <div class="gaugeWrap">
+                            <div class="chart" id="gauge3"></div>
+                            <div class="gaugeVal">
+                                <p class="p1">指数值</p>
+                                <p class="p2"><i class="digital orange">1.23</i></p>
+                                <p class="p3">
+                                    <span class="span1">
+                                        上周同比
+                                        <i class="digital green">28.2%</i>
+                                        <i class="ic-greenDown"></i>
+                                    </span>
+                                    <span class="span2">
+                                        上周同比
+                                        <i class="digital orange2">28.2%</i>
+                                        <i class="ic-yellowUp"></i>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="numWrap">
                         <ul>
                             <li>
@@ -371,6 +397,153 @@
             // 使用刚指定的配置项和数据显示图表。
             myChart2.setOption(option);
             arrchart.push(myChart2);
+        }
+        //交通运行仪表盘
+        gauge3();
+        function gauge3() {
+            // 基于准备好的dom，初始化echarts实例
+            var myChart3 = echarts.init(document.getElementById('gauge3'));
+            var val = 1.23, //指数值
+                all = 2, //指数总值
+                other = all - val, //除了值剩下的部分
+            // 指定图表的配置项和数据
+            option = {
+                //backgroundColor: "#031845",
+                color: ['#0cfffb', '#155cc6', '#fcfa3c', '#f44061'],
+                series: [
+                    {
+                        name: "",
+                        type: "gauge",
+                        radius: "95%",
+                        startAngle: 0,
+                        //endAngle: 359.9,
+                        endAngle: 179.9,
+                        splitNumber: 13,
+                        axisTick: {
+                            show: false
+                        },
+                        splitLine: {
+                            length: 50,
+                            lineStyle: {
+                                width: 5,
+                                color:"#000a18"
+                            }
+                        },
+                        axisLabel: {
+                            show: false
+                        },
+                        pointer: {
+                            show: false
+                        },
+                        axisLine: {
+                            lineStyle: {
+                                opacity: 0
+                            }
+                        },
+                        detail: {
+                            show: false
+                        },
+                        data: [{
+                            value: 0,
+                            name: ""
+                        }]
+                    },{
+                        name: '',
+                        type: 'pie',
+                        center: ['50%', '50%'],
+                        radius: ['70%', '95%'],
+                        silent: true,
+                        z: 0,
+                        startAngle: 180,
+                        label: {
+                            show:false
+                        },
+                        data: [{
+                            value: val,
+                            name: '数据1'
+                        },
+                            {
+                                value: other,
+                                name: '数据2'
+                            },
+                            {
+                                value: all,
+                                name: '半圆',
+                                itemStyle: {
+                                    color: 'transparent'
+                                }
+                            }
+
+                        ]
+                    }, {
+                        name: "",
+                        type: "gauge",
+                        radius: "55%",
+                        startAngle: 0,
+                        endAngle: 179.9,
+                        splitNumber: 32,
+                        axisTick: {
+                            show: false
+                        },
+                        splitLine: {
+                            length: 40,
+                            lineStyle: {
+                                width: 6,
+                                color:"#000a1a"
+                            }
+                        },
+                        axisLabel: {
+                            show: false
+                        },
+                        pointer: {
+                            show: false
+                        },
+                        axisLine: {
+                            lineStyle: {
+                                opacity: 0
+                            }
+                        },
+                        detail: {
+                            show: false
+                        },
+                        data: [{
+                            value: 0,
+                            name: ""
+                        }]
+                    },{
+                        name: '',
+                        type: 'pie',
+                        center: ['50%', '50%'],
+                        radius: ['45%', '55%'],
+                        silent: true,
+                        z: 0,
+                        startAngle: 180,
+                        label: {
+                            show:false
+                        },
+                        data: [{
+                            value: val,
+                            name: '数据1'
+                        },
+                            {
+                                value: other,
+                                name: '数据2'
+                            },
+                            {
+                                value: all,
+                                name: '半圆',
+                                itemStyle: {
+                                    color: 'transparent'
+                                }
+                            }
+
+                        ]
+                    }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart3.setOption(option);
+            arrchart.push(myChart3);
         }
         //人口概况柱状图右
         line4();
